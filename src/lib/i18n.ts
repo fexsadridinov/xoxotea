@@ -36,17 +36,6 @@ export function localePath(locale: Locale): string {
   return locale === defaultLocale ? "/" : `/${locale}`;
 }
 
-/** Public URL prefixes. Ukrainian lives at `/`, never `/uk`. */
-export const prefixedLocales = ["en", "ru"] as const;
-
-export function resolveLocaleSegments(segments?: string[]): Locale | null {
-  if (!segments || segments.length === 0) return defaultLocale;
-  if (segments.length === 1 && (segments[0] === "en" || segments[0] === "ru")) {
-    return segments[0];
-  }
-  return null;
-}
-
 export function withLocale(pathname: string, locale: Locale): string {
   const clean = pathname.startsWith("/") ? pathname : `/${pathname}`;
   const pathOnly = clean.split("#")[0] || "/";
