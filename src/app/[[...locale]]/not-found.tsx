@@ -7,7 +7,7 @@ import { isLocale, localePath } from "@/lib/i18n";
 export default function NotFound() {
   const pathname = usePathname() || "/";
   const maybe = pathname.split("/")[1];
-  const locale = maybe && isLocale(maybe) ? maybe : "uk";
+  const locale = maybe && isLocale(maybe) && maybe !== "uk" ? maybe : "uk";
   const content = getContent(locale);
 
   return (

@@ -1,11 +1,11 @@
 import { Manrope, Neucha } from "next/font/google";
 import type { Metadata, Viewport } from "next";
+import { notFound } from "next/navigation";
 import { getContent } from "@/content";
-import { isLocale, locales, localeHtmlLang, type Locale } from "@/lib/i18n";
+import { localeHtmlLang, prefixedLocales, resolveLocaleSegments, type Locale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 import { SiteShell } from "@/components/layout/SiteShell";
-import { notFound } from "next/navigation";
 
 const manrope = Manrope({
   subsets: ["latin", "cyrillic", "cyrillic-ext"],
@@ -20,25 +20,32 @@ const neucha = Neucha({
   display: "swap",
 });
 
+type LocaleParams = { locale?: string[] };
+
 export const viewport: Viewport = {
   themeColor: "#F3EFE7",
   width: "device-width",
   initialScale: 1,
 };
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+export function generateStaticParams(): LocaleParams[] {
+  return [{ locale: [] }, ...prefixedLocales.map((code) => ({ locale: [code] }))];
 }
 
 export const dynamicParams = false;
 
+function localeFromParams(params: LocaleParams): Locale {
+  const locale = resolveLocaleSegments(params.locale);
+  if (!locale) notFound();
+  return locale;
+}
+
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<LocaleParams>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  if (!isLocale(locale)) return {};
+  const locale = localeFromParams(await params);
   const content = getContent(locale);
   return {
     ...buildMetadata(locale, {
@@ -83,10 +90,9 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<LocaleParams>;
 }) {
-  const { locale } = await params;
-  if (!isLocale(locale)) notFound();
+  const locale = localeFromParams(await params);
   const content = getContent(locale);
 
   return (
