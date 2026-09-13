@@ -1,11 +1,153 @@
-'use client';
-import { useState } from 'react';
-import { LazyMotion, domAnimation, m, useReducedMotion } from 'framer-motion';
-import type { Copy, Locale } from '@/lib/investor-content';
-import { calculate, defaults, scenarios, formatMoney } from '@/lib/store-model';
-export function Economics({c,locale}:{c:Copy['economics'];locale:Locale}) {
- const [inputs,setInputs]=useState(defaults),[usd,setUsd]=useState(false);const result=calculate(inputs);const reduced=useReducedMotion();
- const money=(n:number)=>formatMoney(n,locale,usd);
- const fields=[{key:'cups',min:30,max:350,step:5},{key:'ticket',min:120,max:260,step:5},{key:'rent',min:15000,max:120000,step:5000},{key:'staff',min:100000,max:350000,step:10000}] as const;
- return <div className="model"><fieldset className="currency"><legend>{c.currency}</legend><button type="button" aria-pressed={!usd} onClick={()=>setUsd(false)}>{c.uah}</button><button type="button" aria-pressed={usd} onClick={()=>setUsd(true)}>{c.usd}</button></fieldset><div className="model-grid"><div className="sliders">{fields.map(f=><label key={f.key} htmlFor={f.key}><span>{c[f.key]}<output htmlFor={f.key}>{f.key==='cups'?inputs[f.key]:money(inputs[f.key])}</output></span><input id={f.key} type="range" min={f.min} max={f.max} step={f.step} value={inputs[f.key]} aria-valuetext={f.key==='cups'?String(inputs[f.key]):money(inputs[f.key])} onChange={e=>setInputs({...inputs,[f.key]:Number(e.target.value)})}/></label>)}</div><div className="model-results" aria-live="polite" aria-atomic="true"><p>{c.ebitda}</p><LazyMotion features={domAnimation}><m.strong className="ebitda" key={result.ebitda} initial={reduced?false:{opacity:.5,y:4}} animate={{opacity:1,y:0}} transition={{duration:.2}}>{money(result.ebitda)}</m.strong></LazyMotion><dl className="result-grid"><div><dt>{c.gross}</dt><dd>{(result.grossMargin*100).toLocaleString(locale,{maximumFractionDigits:1})}%</dd></div><div><dt>{c.contribution}</dt><dd>{money(result.contribution)}</dd></div><div><dt>{c.payback}</dt><dd>{result.payback===null?c.none:result.payback.toLocaleString(locale,{maximumFractionDigits:1})}</dd></div><div><dt>{c.breakEven}</dt><dd>{result.breakEven??c.none}</dd></div></dl></div></div><h3>{c.scenarioTitle}</h3><div className="scenario-grid">{scenarios.map((s,i)=>{const r=calculate(s);return <article key={i} className={i===1?'scenario base':'scenario'}><h4>{c.scenarios[i]}</h4><p>{s.cups} · {c.cups} / {money(s.ticket)}</p><dl>{([[c.revenue,money(r.revenue)],[c.ebitda,money(r.ebitda)],[c.payback,r.payback===null?c.none:r.payback.toLocaleString(locale,{maximumFractionDigits:1})]]).map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl></article>})}</div><p className="assumption">{c.assumptions}</p><p className="note">{c.explanation}</p></div>;
+"use client";
+import { useRef, useState } from "react";
+import type { Copy, Locale } from "@/lib/investor-content";
+import { calculate, defaults, scenarios, formatMoney } from "@/lib/store-model";
+export function Economics({
+  c,
+  locale,
+}: {
+  c: Copy["economics"];
+  locale: Locale;
+}) {
+  const [inputs, setInputs] = useState(defaults),
+    [usd, setUsd] = useState(false);
+  const result = calculate(inputs);
+  const number = useRef<HTMLElement>(null);
+  const animateNumber = () => {
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches)
+      import("framer-motion/dom/mini")
+        .then(({ animate }) => {
+          if (number.current)
+            animate(
+              number.current,
+              {
+                opacity: [0.5, 1],
+                transform: ["translateY(4px)", "translateY(0px)"],
+              },
+              { duration: 0.2 },
+            );
+        })
+        .catch(() => {});
+  };
+  const money = (n: number) => formatMoney(n, locale, usd);
+  const fields = [
+    { key: "cups", min: 30, max: 350, step: 5 },
+    { key: "ticket", min: 120, max: 260, step: 5 },
+    { key: "rent", min: 15000, max: 120000, step: 5000 },
+    { key: "staff", min: 100000, max: 350000, step: 10000 },
+  ] as const;
+  return (
+    <div className="model">
+      <fieldset className="currency">
+        <legend>{c.currency}</legend>
+        <button type="button" aria-pressed={!usd} onClick={() => setUsd(false)}>
+          {c.uah}
+        </button>
+        <button type="button" aria-pressed={usd} onClick={() => setUsd(true)}>
+          {c.usd}
+        </button>
+      </fieldset>
+      <div className="model-grid">
+        <div className="sliders">
+          {fields.map((f) => (
+            <label key={f.key} htmlFor={f.key}>
+              <span>
+                {c[f.key]}
+                <output htmlFor={f.key}>
+                  {f.key === "cups" ? inputs[f.key] : money(inputs[f.key])}
+                </output>
+              </span>
+              <input
+                id={f.key}
+                type="range"
+                min={f.min}
+                max={f.max}
+                step={f.step}
+                value={inputs[f.key]}
+                aria-valuetext={
+                  f.key === "cups"
+                    ? String(inputs[f.key])
+                    : money(inputs[f.key])
+                }
+                onChange={(e) => {
+                  setInputs({ ...inputs, [f.key]: Number(e.target.value) });
+                  animateNumber();
+                }}
+              />
+            </label>
+          ))}
+        </div>
+        <div className="model-results" aria-live="polite" aria-atomic="true">
+          <p>{c.ebitda}</p>
+          <strong ref={number} className="ebitda">
+            {money(result.ebitda)}
+          </strong>
+          <dl className="result-grid">
+            <div>
+              <dt>{c.gross}</dt>
+              <dd>
+                {(result.grossMargin * 100).toLocaleString(locale, {
+                  maximumFractionDigits: 1,
+                })}
+                %
+              </dd>
+            </div>
+            <div>
+              <dt>{c.contribution}</dt>
+              <dd>{money(result.contribution)}</dd>
+            </div>
+            <div>
+              <dt>{c.payback}</dt>
+              <dd>
+                {result.payback === null
+                  ? c.none
+                  : result.payback.toLocaleString(locale, {
+                      maximumFractionDigits: 1,
+                    })}
+              </dd>
+            </div>
+            <div>
+              <dt>{c.breakEven}</dt>
+              <dd>{result.breakEven ?? c.none}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <h3>{c.scenarioTitle}</h3>
+      <div className="scenario-grid">
+        {scenarios.map((s, i) => {
+          const r = calculate(s);
+          return (
+            <article key={i} className={i === 1 ? "scenario base" : "scenario"}>
+              <h4>{c.scenarios[i]}</h4>
+              <p>
+                {s.cups} · {c.cups} / {money(s.ticket)}
+              </p>
+              <dl>
+                {[
+                  [c.revenue, money(r.revenue)],
+                  [c.ebitda, money(r.ebitda)],
+                  [
+                    c.payback,
+                    r.payback === null
+                      ? c.none
+                      : r.payback.toLocaleString(locale, {
+                          maximumFractionDigits: 1,
+                        }),
+                  ],
+                ].map(([label, value]) => (
+                  <div key={label}>
+                    <dt>{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </article>
+          );
+        })}
+      </div>
+      <p className="assumption">{c.assumptions}</p>
+      <p className="note">{c.explanation}</p>
+    </div>
+  );
 }

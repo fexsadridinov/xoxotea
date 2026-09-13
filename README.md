@@ -38,7 +38,7 @@ Until configured, forms save a text request to the visitor's device and clearly 
 
 ## Assets
 
-Generated campaign set: 19 stills and three clips. `public/press/asset-manifest.json` records exact prompts, generation results and provenance. Images have 480/960/1600 AVIF and WebP derivatives. Videos are muted H.264. `ASSETS.md` documents slots, dimensions and replacement budgets. Replace every derivative of a slot together and keep dimensions stable. The 4 texture files are a library, not automatically downloaded as page decoration.
+Generated campaign set: 19 still outputs and three clips; the ceramic texture output is rejected for its requested role (see ASSETS.md). `public/press/asset-manifest.json` records exact prompts, generation results and provenance. Images have 480/960/1600 AVIF and WebP derivatives. Videos are muted H.264. `ASSETS.md` documents slots, dimensions and replacement budgets. Replace every derivative of a slot together and keep dimensions stable. The 4 texture files are a library, not automatically downloaded as page decoration.
 
 Logo SVGs and ZIP: `public/press/`. PDFs: `public/assets/`. `scripts/documents.py` reproduces bilingual one-pagers and menus using ReportLab and DejaVu Sans; inspect rendered PDFs after changes.
 
