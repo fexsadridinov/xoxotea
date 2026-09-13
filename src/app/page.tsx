@@ -1,7 +1,3 @@
-import { HomeRoute, homeMetadata } from "@/components/home/HomeRoute";
-
-export const generateMetadata = () => homeMetadata("uk");
-
-export default function Page() {
-  return <HomeRoute locale="uk" />;
-}
+import { Experience, pageMetadata } from '@/components/investor/Experience';
+export const metadata=pageMetadata('uk','home');
+export default function Page(){return <Experience locale="uk" kind="home"/>;}

@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# XoXo Tea
 
-## Getting Started
+Bilingual pre-launch tea brand and investor website. Next.js 16 App Router, TypeScript, Tailwind v4, Framer Motion. Static export for Vercel.
 
-First, run the development server:
+## Run
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+Node 22+ and pnpm 11.19.0:
+
+```sh
+pnpm install --frozen-lockfile
 pnpm dev
-# or
-bun dev
+pnpm build
+pnpm test:model
+pnpm typecheck
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`pnpm build` emits `out/`. `vercel.json` sets the export directory and legacy-language redirects. No server runtime is required for pages. The repository's existing stack is retained. Tailwind v4's active tokens are in `src/app/globals.css`; `tailwind.config.ts` is a typed inspection mirror.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All active user-facing prose lives in `content/uk.json` and `content/en.json`. Keep matching keys and array positions. Ukrainian is default; English URLs have `/en`. `src/components/investor/Experience.tsx` composes the server-rendered sections. Client boundaries are limited to financial inputs, imagery loader, motion, form state and instrumentation.
 
-## Learn More
+Financial assumptions live in `src/lib/store-model.ts`, with matching disclosure in both content files. If model constants change, update disclosures, worked examples and regenerate PDFs. Store scenarios use the repository's latest 130/190/260 cups/day and 180/195/205 UAH tickets, rather than an older conversation's 85/140/220 inputs.
 
-To learn more about Next.js, take a look at the following resources:
+## Connect real lead delivery
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Set these public build-time environment variables in the hosting project, then rebuild:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `NEXT_PUBLIC_SITE_URL`: actual canonical production origin. The fallback `https://xoxotea.vercel.app` is an unverified assumption.
+- `NEXT_PUBLIC_LEAD_ENDPOINT`: owner-approved HTTPS receiving endpoint.
+- `NEXT_PUBLIC_CONTACT_EMAIL`: verified monitored fallback email.
+- `NEXT_PUBLIC_CALENDAR_URL`: actual booking URL.
+- `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`: registered Plausible domain.
 
-## Deploy on Vercel
+Do not put private API tokens in `NEXT_PUBLIC_*`. With a static export, use an external form endpoint that accepts JSON and supports your site's origin. The endpoint must validate input server-side, enforce origin/rate limits, reject honeypots, store the request durably and return 2xx only after accepting it. See `LEAD-CONTRACT.md`. The client alone is not an anti-spam boundary.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Until configured, forms save a text request to the visitor's device and clearly state that it was not sent. Calendar/social links are not fabricated. Acceptance for real delivery and analytics is blocked until configuration and one authorized end-to-end delivery test.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Assets
+
+Generated campaign set: 19 stills and three clips. `public/press/asset-manifest.json` records exact prompts, generation results and provenance. Images have 480/960/1600 AVIF and WebP derivatives. Videos are muted H.264. `ASSETS.md` documents slots, dimensions and replacement budgets. Replace every derivative of a slot together and keep dimensions stable. The 4 texture files are a library, not automatically downloaded as page decoration.
+
+Logo SVGs and ZIP: `public/press/`. PDFs: `public/assets/`. `scripts/documents.py` reproduces bilingual one-pagers and menus using ReportLab and DejaVu Sans; inspect rendered PDFs after changes.
+
+## Validation
+
+`tests/model.test.mjs` contains three independently worked scenarios, a negative EBITDA case, sensitivity and invalid-input checks. `audit/` contains browser and Lighthouse evidence; `ACCEPTANCE.md` distinguishes measured passes from owner-input blockers. Do not call the site production-ready while blocked gates remain.
