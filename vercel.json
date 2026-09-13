@@ -1,5 +1,6 @@
 {
   "buildCommand": "pnpm build",
+  "outputDirectory": ".next",
   "framework": "nextjs",
   "trailingSlash": true,
   "redirects": [
