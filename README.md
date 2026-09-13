@@ -14,7 +14,9 @@ pnpm test:model
 pnpm typecheck
 ```
 
-`pnpm build` emits `out/`. `vercel.json` sets the export directory and legacy-language redirects. No server runtime is required for pages. The repository's existing stack is retained. Tailwind v4's active tokens are in `src/app/globals.css`; `tailwind.config.ts` is a typed inspection mirror.
+`pnpm build` creates Next.js build metadata in `.next/` and the static export in `out/`. `vercel.json` selects the Next.js framework preset and sets legacy-language redirects. Let Vercel detect the output automatically; do not set an Output Directory override to `out` in either `vercel.json` or the project dashboard. The Next.js builder needs `.next/routes-manifest.json` even for static exports. See [Vercel's routes-manifest troubleshooting guide](https://github.com/vercel/vercel/blob/main/errors/now-next-routes-manifest.md).
+
+No server runtime is required for pages. The repository's existing stack is retained. Tailwind v4's active tokens are in `src/app/globals.css`; `tailwind.config.ts` is a typed inspection mirror.
 
 ## Content
 

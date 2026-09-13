@@ -10,11 +10,11 @@ Paths preserve the full directory hierarchy. Generated build/dependency director
 | `ASSETS.md` | 37677 |
 | `ASSUMPTIONS.md` | 3728 |
 | `CLAUDE.md` | 11 |
-| `CODE.md` | 327716 |
+| `CODE.md` | 327688 |
 | `DESIGN.md` | 3784 |
 | `FILE-TREE.md` | — |
 | `LEAD-CONTRACT.md` | 1595 |
-| `README.md` | 3512 |
+| `README.md` | 3947 |
 | `REVIEW.md` | 1204 |
 | `audit/asset-sizes.json` | 15279 |
 | `audit/browser.json` | 2028 |
@@ -239,4 +239,4 @@ Paths preserve the full directory hierarchy. Generated build/dependency director
 | `tailwind.config.ts` | 638 |
 | `tests/model.test.mjs` | 1140 |
 | `tsconfig.json` | 670 |
-| `vercel.json` | 693 |
+| `vercel.json` | 665 |
