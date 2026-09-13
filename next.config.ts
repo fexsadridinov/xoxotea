@@ -1,12 +1,7 @@
 import type { NextConfig } from "next";
-
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      { source: "/uk", destination: "/", permanent: true },
-      { source: "/uk/:path*", destination: "/:path*", permanent: true },
-    ];
-  },
+  output: "export",
+  trailingSlash: true,
+  images: { deviceSizes: [480, 960, 1600], imageSizes: [] },
 };
-
 export default nextConfig;

@@ -1,0 +1,35 @@
+{
+  "fixtureOnly": true,
+  "realDestinationVerified": false,
+  "whitespaceRejected": true,
+  "invalidRejected": true,
+  "errorThenSuccess": true,
+  "payloads": [
+    {
+      "kind": "data-room",
+      "name": "QA synthetic",
+      "organization": "",
+      "ticket": "Advice / location partnership",
+      "contact": "test@example.com",
+      "consent": true,
+      "locale": "en",
+      "attribution": {
+        "ref": "qa",
+        "utm_source": "fixture"
+      }
+    },
+    {
+      "kind": "data-room",
+      "name": "QA synthetic",
+      "organization": "",
+      "ticket": "Advice / location partnership",
+      "contact": "test@example.com",
+      "consent": true,
+      "locale": "en",
+      "attribution": {
+        "ref": "qa",
+        "utm_source": "fixture"
+      }
+    }
+  ]
+}

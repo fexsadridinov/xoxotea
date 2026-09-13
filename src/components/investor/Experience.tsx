@@ -1,0 +1,668 @@
+import { CityMap } from "./CityMap";
+import type { Metadata } from "next";
+import {
+  copy,
+  route,
+  origin,
+  connection,
+  type Locale,
+  type Copy,
+} from "@/lib/investor-content";
+import { formatMoney } from "@/lib/store-model";
+import { Photo } from "./Photo";
+import { Film } from "./Film";
+import { Behavior } from "./Behavior";
+import { Economics } from "./Economics";
+import { LeadForm } from "./LeadForm";
+export type PageKind = "home" | "menu" | "investors" | "press";
+export function pageMetadata(locale: Locale, kind: PageKind): Metadata {
+  const c = copy(locale),
+    path = kind === "home" ? "" : kind;
+  return {
+    title: c.metadata[kind],
+    description: c.metadata.description,
+    alternates: {
+      canonical: origin + route(locale, path),
+      languages: {
+        "uk-UA": origin + route("uk", path),
+        en: origin + route("en", path),
+        "x-default": origin + route("uk", path),
+      },
+    },
+    openGraph: {
+      title: c.metadata[kind],
+      description: c.metadata.description,
+      locale: locale === "uk" ? "uk_UA" : "en_US",
+      images: [
+        { url: "/assets/og.jpg", width: 1200, height: 630, alt: c.hero.alt },
+      ],
+      url: origin + route(locale, path),
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: c.metadata[kind],
+      description: c.metadata.description,
+      images: ["/assets/og.jpg"],
+    },
+  };
+}
+function Heading({
+  label,
+  title,
+  body,
+}: {
+  label: string;
+  title: string;
+  body?: string;
+}) {
+  return (
+    <div className="section-heading">
+      <p className="eyebrow">{label}</p>
+      <h2>{title}</h2>
+      {body && <p className="intro">{body}</p>}
+    </div>
+  );
+}
+function Signatures({
+  c,
+  locale,
+  full = false,
+}: {
+  c: Copy;
+  locale: Locale;
+  full?: boolean;
+}) {
+  return (
+    <section id="menu" className="section signatures">
+      <div className="section-top">
+        <Heading {...c.signature} />
+        {!full && (
+          <a
+            className="text-link"
+            href={route(locale, "menu")}
+            data-track="full-menu"
+          >
+            {c.signature.all} ↗
+          </a>
+        )}
+      </div>
+      <div
+        className={full ? "full-menu" : "drink-grid"}
+        tabIndex={full ? undefined : 0}
+        role={full ? undefined : "region"}
+        aria-label={full ? undefined : c.signature.title}
+      >
+        {c.drinks.slice(0, full ? undefined : 5).map((d, i) => (
+          <article className="drink" key={d.name}>
+            {d.image && i < 5 && (
+              <div className="drink-image">
+                <Photo name={d.image} alt={`${d.name}: ${d.base}`} />
+                <span className="product-number" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+            )}
+            <div className="drink-copy">
+              <div className="drink-title">
+                <h3>{d.name}</h3>
+                <span>{formatMoney(d.price, locale)}</span>
+              </div>
+              <p lang={locale === "uk" ? "en" : "uk"} className="note">
+                {d.other}
+              </p>
+              <p>{d.base}</p>
+              <p className="sensory">{d.line}</p>
+              {full && (
+                <p className="note">
+                  {c.signature.size} · {c.signature.allergens}: {d.allergens}
+                </p>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+      <p className="assumption">{c.signature.note}</p>
+      {full && <p>{c.signature.crossContact}</p>}
+    </section>
+  );
+}
+function Market({ c }: { c: Copy }) {
+  const sources = [
+    {
+      title: c.market.global,
+      values: [3.35, 3.62],
+      labels: ["2025", "2026"],
+      note: c.market.globalNote,
+      url: "https://www.researchandmarkets.com/reports/5851209/bubble-tea-market-report",
+      publisher: c.sources.global,
+    },
+    {
+      title: c.market.europe,
+      values: [727.2, 1262.6],
+      labels: ["2026", "2033"],
+      note: c.market.europeNote,
+      url: "https://www.persistencemarketresearch.com/market-research/europe-bubble-tea-market.asp",
+      publisher: c.sources.europe,
+    },
+  ];
+  return (
+    <section className="section market" id="market" data-investor>
+      <Heading {...c.market} />
+      <div className="charts">
+        {sources.map((s) => (
+          <figure className="chart" key={s.title}>
+            <figcaption>{s.title}</figcaption>
+            <div className="bars">
+              {s.values.map((n, i) => (
+                <div className="bar-column" key={n}>
+                  <strong>{n.toLocaleString("uk-UA")}</strong>
+                  <div
+                    className="bar"
+                    style={{ height: `${(n / Math.max(...s.values)) * 145}px` }}
+                  />
+                  <span>{s.labels[i]}</span>
+                </div>
+              ))}
+            </div>
+            <p>{s.note}</p>
+            <a
+              href={s.url}
+              target="_blank"
+              rel="noreferrer"
+              data-track="market-source"
+            >
+              {s.publisher} ↗
+            </a>
+          </figure>
+        ))}
+      </div>
+      <p className="note">
+        {c.market.date}. {c.market.scope}
+      </p>
+      <p className="market-travel">
+        {c.market.travel}{" "}
+        <a
+          href="https://global.chinadaily.com.cn/a/202607/13/WS6a543cffa310986e2b464e2b.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {c.sources.chinaDaily} ↗
+        </a>{" "}
+        ·{" "}
+        <a
+          href="https://global.chagee.com/id/en"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {c.sources.chagee} ↗
+        </a>
+      </p>
+      <details>
+        <summary>{c.market.fmi}</summary>
+        <a
+          href="https://www.futuremarketinsights.com/reports/demand-for-bubble-tea-in-eu"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {c.sources.fmi} ↗
+        </a>
+      </details>
+      <h3>{c.market.localTitle}</h3>
+      <div className="three-grid">
+        {c.market.local.map(([a, b]) => (
+          <article key={a}>
+            <h4>{a}</h4>
+            <p className="assumption">{b}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+function Scale({ c }: { c: Copy }) {
+  return (
+    <section id="scale" className="section" data-investor>
+      <Heading {...c.scale} />
+      <div className="formats">
+        {c.scale.formats.map((f, i) => (
+          <article
+            className={i === 1 ? "format selected" : "format"}
+            key={f[0]}
+          >
+            <span className="format-plan" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+            </span>
+            <h3>{f[0]}</h3>
+            <strong>{f[1]}</strong>
+            <p>{f[2]}</p>
+            <p>{f[3]}</p>
+          </article>
+        ))}
+      </div>
+      <p className="assumption">{c.scale.note}</p>
+      <div className="roadmap">
+        {c.scale.roadmap.map(([a, b, d]) => (
+          <article key={a}>
+            <p className="eyebrow">{a}</p>
+            <h3>{b}</h3>
+            <p>{d}</p>
+          </article>
+        ))}
+      </div>
+      <p>{c.scale.future}</p>
+    </section>
+  );
+}
+function Funds({ c, locale }: { c: Copy; locale: Locale }) {
+  return (
+    <section id="funds" className="section funds" data-investor>
+      <Heading {...c.funds} />
+      <div className="funds-grid">
+        <div className="funds-total">
+          <p>{c.funds.budget}</p>
+          <strong>{c.funds.amount}</strong>
+          <Photo name="packaging-0" ratio={0.8} alt={c.pressPage.logo} />
+        </div>
+        <div>
+          {c.funds.items.map(([name, amount, milestone]) => (
+            <div className="fund-row" key={name}>
+              <div>
+                <h3>{name}</h3>
+                <strong>{formatMoney(Number(amount), locale)}</strong>
+              </div>
+              <div className="allocation" aria-hidden="true">
+                <span
+                  style={{ width: `${(Number(amount) / 2100000) * 100}%` }}
+                />
+              </div>
+              <p>{milestone}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p className="assumption">{c.funds.note}</p>
+      <h3>{c.funds.termsTitle}</h3>
+      <dl className="terms">
+        {c.funds.terms.map(([a, b]) => (
+          <div key={a}>
+            <dt>{a}</dt>
+            <dd>{b}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
+function Traction({ c }: { c: Copy }) {
+  return (
+    <section className="section" id="traction" data-investor>
+      <Heading {...c.traction} />
+      <div className="two-grid">
+        {c.traction.items.map(([a, b]) => (
+          <article className="evidence" key={a}>
+            <h3>{a}</h3>
+            <p>{b}</p>
+          </article>
+        ))}
+      </div>
+      <h3>{c.traction.riskTitle}</h3>
+      <div className="risks">
+        {c.traction.risks.map(([a, b]) => (
+          <details key={a}>
+            <summary>
+              {a}
+              <span aria-hidden="true">+</span>
+            </summary>
+            <p>{b}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+function Team({ c }: { c: Copy }) {
+  return (
+    <section className="section team" id="team" data-investor>
+      <Heading {...c.team} />
+      <div className="team-row">
+        <div className="founder-mark" aria-hidden="true">
+          {c.wordmark.slice(0, 2)}
+        </div>
+        <div>
+          <h3>{c.team.name}</h3>
+          <p className="eyebrow">{c.team.role}</p>
+          <p className="intro">{c.team.bio}</p>
+          <p>{c.team.advisors}</p>
+          <p className="assumption">{c.team.note}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+function Contact({ c, locale }: { c: Copy; locale: Locale }) {
+  return (
+    <section className="section contact" id="contact" data-investor>
+      <div>
+        <Heading {...c.contact} />
+        <p>{c.contact.roomNote}</p>
+        <div className="contact-links">
+          <a
+            className="button outline"
+            href={`/assets/xoxo-one-pager-${locale}.pdf`}
+            download
+            data-track="one-pager"
+          >
+            {c.contact.pdf} ↗
+          </a>
+          {connection.calendar ? (
+            <a
+              className="text-link"
+              href={connection.calendar}
+              target="_blank"
+              rel="noreferrer"
+              data-track="calendar"
+            >
+              {c.contact.calendar} ↗
+            </a>
+          ) : (
+            <p className="note">{c.contact.calendarPending}</p>
+          )}
+        </div>
+      </div>
+      <LeadForm c={c.contact} locale={locale} />
+    </section>
+  );
+}
+export function Experience({
+  locale,
+  kind = "home",
+}: {
+  locale: Locale;
+  kind?: PageKind;
+}) {
+  const c = copy(locale),
+    path = kind === "home" ? "" : kind;
+  const structured = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: c.brand,
+        url: origin,
+        description: c.metadata.description,
+        logo: origin + "/press/xoxo-green.svg",
+      },
+      {
+        "@type": "LocalBusiness",
+        name: c.brand,
+        description: c.hero.note,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Миколаїв",
+          addressCountry: "UA",
+        },
+        url: origin,
+        hasMenu: origin + route(locale, "menu"),
+      },
+    ],
+  };
+  return (
+    <>
+      <Behavior locale={locale} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structured).replace(/</g, "\\u003c"),
+        }}
+      />
+      <a className="skip" href="#main">
+        {c.skip}
+      </a>
+      <header className="header" lang={locale}>
+        <a className="wordmark" href={route(locale)}>
+          {c.wordmark}
+          <span>{c.brandSuffix}</span>
+        </a>
+        <nav aria-label={c.navigation}>
+          <a href={route(locale, "menu")} data-track="nav-menu">
+            {c.menu}
+          </a>
+          <a href={route(locale, "investors")} data-track="nav-investors">
+            {c.investors}
+          </a>
+        </nav>
+        <a
+          className="language"
+          href={route(locale === "uk" ? "en" : "uk", path)}
+          hrefLang={locale === "uk" ? "en" : "uk"}
+          aria-label={c.otherLocaleLabel}
+        >
+          {c.otherLocale}
+        </a>
+      </header>
+      <main id="main" lang={locale}>
+        {kind === "home" && (
+          <>
+            <section className="hero">
+              <div className="hero-media">
+                <Photo name="hero" alt={c.hero.alt} ratio={16 / 9} hero />
+                <Film pause={c.hero.pause} play={c.hero.play} />
+              </div>
+              <div className="hero-copy">
+                <p className="eyebrow">{c.hero.eyebrow}</p>
+                <h1>{c.hero.title}</h1>
+                <p className="intro">{c.hero.description}</p>
+                <div className="hero-actions">
+                  <a
+                    href="#contact"
+                    className="button primary"
+                    data-track="hero-invest"
+                  >
+                    {c.invest}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <a
+                    href="#menu"
+                    className="button outline"
+                    data-track="hero-menu"
+                  >
+                    {c.menu}
+                  </a>
+                </div>
+              </div>
+              <p className="hero-note">{c.hero.note}</p>
+              <div className="hero-index" aria-hidden="true">
+                01 — ∞
+              </div>
+            </section>
+            <section className="section thesis">
+              <p className="eyebrow">{c.thesis.label}</p>
+              <h2>{c.thesis.title}</h2>
+              <p>{c.thesis.body}</p>
+            </section>
+            <Signatures c={c} locale={locale} />
+            <section id="world" className="section world">
+              <Heading {...c.world} />
+              <figure className="interior">
+                <Photo
+                  name="interior-0"
+                  alt={c.world.interiorAlt}
+                  ratio={1.5}
+                />
+                <figcaption>{c.world.caption}</figcaption>
+              </figure>
+              <div className="ritual-grid">
+                {[9, 8, 10, 11].map((n, i) => (
+                  <figure key={n}>
+                    <Photo
+                      name={`ritual-${n === 9 ? 1 : n === 8 ? 0 : n === 10 ? 2 : 3}`}
+                      alt={c.world.ritualAlt[i]}
+                      ratio={0.8}
+                    />
+                    <figcaption>
+                      <span>0{i + 1}</span>
+                      {c.world.ritual[i]}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          </>
+        )}
+        {kind === "menu" && (
+          <>
+            <section className="subhero section">
+              <p className="eyebrow">{c.signature.subtitle}</p>
+              <h1>{c.signature.title}</h1>
+              <p>{c.signature.body}</p>
+              <a
+                className="text-link"
+                href={`/assets/xoxo-menu-${locale}.pdf`}
+                download
+                data-track="menu-pdf"
+              >
+                {c.signature.print} ↗
+              </a>
+            </section>
+            <Signatures c={c} locale={locale} full />
+          </>
+        )}
+        {kind === "investors" && (
+          <section className="section subhero investor-intro">
+            <p className="eyebrow">{c.hero.eyebrow}</p>
+            <h1>{c.funds.title}</h1>
+            <p className="intro">{c.funds.body}</p>
+            <a
+              href="#contact"
+              className="button primary"
+              data-track="investor-intro"
+            >
+              {c.meet} ↗
+            </a>
+          </section>
+        )}
+        {(kind === "home" || kind === "investors") && (
+          <>
+            <Market c={c} />
+            <section className="section economics" id="economics" data-investor>
+              <Heading {...c.economics} />
+              <Economics c={c.economics} locale={locale} />
+              <p className="note">
+                {c.economics.benchmark}{" "}
+                <a
+                  href="https://dojobusiness.com/blogs/news/bubble-tea-business-worth-it"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {c.sources.dojo} ↗
+                </a>{" "}
+                ·{" "}
+                <a
+                  href="https://store.yenchuan.co/blog/2026-guide-for-beginners/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {c.sources.yenchuan} ↗
+                </a>
+              </p>
+            </section>
+            <Scale c={c} />
+            <Funds c={c} locale={locale} />
+            <Traction c={c} />
+            <Team c={c} />
+            <Contact c={c} locale={locale} />
+          </>
+        )}
+        {kind === "press" && (
+          <section className="section subhero press-page">
+            <p className="eyebrow">{c.pressPage.label}</p>
+            <h1>{c.pressPage.title}</h1>
+            <p className="intro">{c.pressPage.body}</p>
+            <div
+              className="brand-lockup"
+              aria-label={c.wordmark + " " + c.brandSuffix}
+            >
+              {c.wordmark}
+              <span>{c.brandSuffix}</span>
+            </div>
+            <p>{c.pressPage.guidance}</p>
+            <div className="hero-actions">
+              <a
+                className="button primary"
+                href="/press/xoxo-logo-pack.zip"
+                download
+                data-track="logo-pack"
+              >
+                {c.pressPage.pack} ↗
+              </a>
+              <a
+                className="button outline"
+                href="/press/asset-manifest.json"
+                download
+                data-track="assets"
+              >
+                {c.pressPage.assets} ↗
+              </a>
+            </div>
+            <div className="two-grid">
+              <Photo name="packaging-0" alt={c.pressPage.logo} ratio={0.8} />
+              <Photo name="packaging-1" alt={c.pressPage.logo} ratio={0.8} />
+            </div>
+          </section>
+        )}
+      </main>
+      <footer className="footer" lang={locale}>
+        <div className="footer-top">
+          <div>
+            <p className="eyebrow">{c.tagline}</p>
+            <h2>{c.contact.waitlistTitle}</h2>
+            <LeadForm c={c.contact} locale={locale} waitlist />
+          </div>
+          <div className="footer-location">
+            <h3>{c.footer.city}</h3>
+            <p>{c.footer.location}</p>
+            <p>{c.footer.hours}</p>
+            <p>{c.footer.social}</p>
+            <CityMap label={c.footer.map} title={c.footer.mapLabel} />
+            <p className="note">{c.footer.mapLabel}</p>
+            <a href={route(locale, "press")}>{c.press}</a>
+          </div>
+        </div>
+        <details id="privacy">
+          <summary>{c.footer.privacy}</summary>
+          <p>{c.contact.privacy}</p>
+        </details>
+        <div className="footer-bottom">
+          <span>{c.footer.copyright}</span>
+          <p>{c.footer.legal}</p>
+        </div>
+        <div className="footer-wordmark" aria-hidden="true">
+          {c.wordmark}
+        </div>
+      </footer>
+      <div className="mobile-cta" lang={locale}>
+        <a
+          href={
+            kind === "menu" || kind === "press"
+              ? route(locale, "investors") + "#contact"
+              : "#contact"
+          }
+          className="button primary"
+          data-track="mobile-invest"
+        >
+          {c.meet} ↗
+        </a>
+        <a
+          href={route(locale, "menu")}
+          className="button outline"
+          data-track="mobile-menu"
+        >
+          {c.menu}
+        </a>
+      </div>
+    </>
+  );
+}

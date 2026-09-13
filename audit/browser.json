@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "route": "/",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "smallText": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "smallText": []
+    },
+    {
+      "route": "/",
+      "width": 430,
+      "scrollWidth": 430,
+      "overflow": [],
+      "smallText": []
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "scrollWidth": 768,
+      "overflow": [],
+      "smallText": []
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "overflow": [],
+      "smallText": []
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "overflow": [],
+      "smallText": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "smallText": []
+    },
+    {
+      "route": "/",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "overflow": [],
+      "smallText": []
+    }
+  ],
+  "accessibility": [
+    {
+      "route": "/",
+      "violations": []
+    },
+    {
+      "route": "/en/",
+      "violations": []
+    },
+    {
+      "route": "/menu/",
+      "violations": []
+    },
+    {
+      "route": "/en/menu/",
+      "violations": []
+    },
+    {
+      "route": "/investors/",
+      "violations": []
+    },
+    {
+      "route": "/en/investors/",
+      "violations": []
+    },
+    {
+      "route": "/press/",
+      "violations": []
+    },
+    {
+      "route": "/en/press/",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "calculated": "77 540 ₴",
+  "downloads": [
+    "{\n  \"kind\": \"meeting\",\n  \"name\": \"QA test\",\n  \"organization\": \"\",\n  \"ticket\": \"Порада / партнерство щодо приміщення\",\n  \"contact\": \"test@example.com\",\n  \"consent\": true,\n  \"locale\": \"uk\",\n  \"attribution\": {\n    \"ref\": \"qa\"\n  }\n}"
+  ],
+  "videoCount": 0,
+  "focus": {
+    "text": "До основного вмісту",
+    "outline": "solid"
+  }
+}

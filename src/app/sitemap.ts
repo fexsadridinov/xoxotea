@@ -1,15 +1,12 @@
 import type { MetadataRoute } from "next";
-import { localePath, locales } from "@/lib/i18n";
-import { site } from "@/lib/site";
-
+import { origin, route } from "@/lib/investor-content";
+export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
-  return locales.map((locale) => {
-    const path = localePath(locale);
-    return {
-      url: path === "/" ? site.url : `${site.url}${path}`,
-      lastModified: new Date("2026-09-11"),
-      changeFrequency: "monthly" as const,
-      priority: 1,
-    };
-  });
+  return (["uk", "en"] as const).flatMap((l) =>
+    ["", "menu", "investors", "press"].map((p) => ({
+      url: origin + route(l, p),
+      lastModified: new Date("2026-09-13"),
+      priority: p ? 0.7 : 1,
+    })),
+  );
 }

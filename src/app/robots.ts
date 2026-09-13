@@ -1,9 +1,8 @@
-import type { MetadataRoute } from "next";
-import { site } from "@/lib/site";
-
-export default function robots(): MetadataRoute.Robots {
+import { origin } from "@/lib/investor-content";
+export const dynamic = "force-static";
+export default function robots() {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: `${site.url}/sitemap.xml`,
+    sitemap: origin + "/sitemap.xml",
   };
 }
