@@ -1,42 +1,10 @@
-import { Manrope, Noto_Serif } from "next/font/google";
-import type { Metadata, Viewport } from "next";
-import uk from "../../content/uk.json";
-import { origin } from "@/lib/investor-content";
-import "./globals.css";
-const manrope = Manrope({
-  subsets: ["latin", "latin-ext", "cyrillic"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-const display = Noto_Serif({
-  subsets: ["latin", "cyrillic"],
-  weight: "500",
-  variable: "--font-display-face",
-  display: "swap",
-});
-export const metadata: Metadata = {
-  metadataBase: new URL(origin),
-  title: uk.metadata.home,
-  description: uk.metadata.description,
-  icons: { icon: "/press/favicon.svg" },
-};
-export const viewport: Viewport = {
-  themeColor: "#173f35",
-  width: "device-width",
-  initialScale: 1,
-};
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html
-      lang="uk"
-      className={`${manrope.variable} ${display.variable}`}
-      suppressHydrationWarning
-    >
-      <body>{children}</body>
-    </html>
-  );
-}
+import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import uk from '../../content/uk.json';
+import { origin } from '@/lib/content';
+import './globals.css';
+const sans = IBM_Plex_Sans({ subsets:['latin','cyrillic'], weight:['400','500','600'], variable:'--sans', display:'swap' });
+const mono = IBM_Plex_Mono({ subsets:['latin','cyrillic'], weight:'400', variable:'--mono', display:'swap' });
+export const metadata: Metadata = { metadataBase:new URL(origin),title:uk.metadata.title,description:uk.metadata.description,icons:{icon:'/favicon.svg'} };
+export const viewport: Viewport = { themeColor:'#f3f1ea',width:'device-width',initialScale:1 };
+export default function Layout({children}:{children:React.ReactNode}) { return <html lang="uk" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning><body>{children}</body></html>; }

@@ -49,3 +49,6 @@ next-env.d.ts
 audit/lighthouse-*.html
 audit/lighthouse-*.json
 audit/screenshots/*.png
+
+# Isolated local audit dependencies
+scripts/qa/node_modules/

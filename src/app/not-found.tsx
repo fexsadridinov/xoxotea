@@ -1,12 +1,3 @@
-import Link from "next/link";
-import uk from "../../content/uk.json";
-export default function NotFound() {
-  return (
-    <main className="section subhero">
-      <h1>{uk.notFound.title}</h1>
-      <Link className="button primary" href="/">
-        {uk.notFound.body}
-      </Link>
-    </main>
-  );
-}
+import Link from 'next/link';
+import uk from '../../content/uk.json';
+export default function NotFound(){return <main className="error-page"><span>404</span><h1>{uk.notFound}</h1><Link href="/">{uk.back}</Link></main>;}

@@ -1,5 +1,5 @@
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("en", "investors");
-export default function Page() {
-  return <Experience locale="en" kind="investors" />;
-}
+import {System} from "@/components/v2/System";
+import {getCopy,pathFor,origin} from "@/lib/content";
+const c=getCopy("en");
+export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("en","investors"),languages:{uk:origin+pathFor("uk","investors"),en:origin+pathFor("en","investors")}}};
+export default function Page(){return <System locale="en" view="investors"/>;}
