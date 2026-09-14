@@ -1,14 +1,16 @@
 # XoXo Tea / v2
 
-Technical tea-and-numbers website in Ukrainian, English and Russian on `feat/rebuild-v2`. The 14 September localization revision adds Russian home, menu and investor pages. All four calculator inputs now accept zero, with existing maxima, defaults, scenario results and cost assumptions preserved. Gross margin is explicitly undefined at a zero ticket; remaining fixed costs are still charged.
+Technical tea-and-numbers website in Ukrainian, English and Russian published from `main`. The 14 September localization revision adds Russian home, menu and investor pages. All four calculator inputs now accept zero, with existing maxima, defaults, scenario results and cost assumptions preserved. Gross margin is explicitly undefined at a zero ticket; remaining fixed costs are still charged.
 
 ## Run
 
-Node 22+, pnpm 11.19.0. `pnpm install --frozen-lockfile`, `pnpm dev`, `pnpm build`, `pnpm lint`, `pnpm test:model`.
+Node 24, pnpm 11.19.0. `pnpm install --frozen-lockfile`, `pnpm dev`, `pnpm build`, `pnpm lint`, `pnpm test:model`.
 
-Next.js static export with nine localized routes. The Vercel Next.js preset must use `.next` for build metadata; `vercel.json` overrides the stale dashboard `out` setting. Portable HTML exports to `out`.
+Next.js static export with nine localized routes. The Vercel Next.js preset must use `.next` for build metadata; the repository and Vercel dashboard both use `.next`. Portable HTML exports to `out`.
 
-## Ship gate: BLOCKED
+## Published release and remaining quality gates
+
+The owner authorized publication on 14 September 2026. PR #5 is merged and the Russian site is live at https://xoxotea.vercel.app/ru/. See `DEPLOYMENT.md` for local setup and direct Vercel commands. Publication does not mean every quality gate has passed.
 
 Higgsfield returned insufficient credits for the 36-frame turntable. Three still variants have observed consistency defects and require corrections. The new design must not be described as passing the requested asset gates. See `ACCEPTANCE.md` and `ASSETS.md`.
 
