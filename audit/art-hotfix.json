@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-14",
+  "widths": [
+    360,
+    390,
+    430,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "routeCount": 9,
+  "layoutCases": 63,
+  "overflowFailures": 0,
+  "legacyRenderedArt": 0,
+  "catalogueBytes": 80222,
+  "verified": [
+    "Russian mobile hero/menu",
+    "investor CTA",
+    "zero inputs",
+    "USD conversion",
+    "reset",
+    "locale preserves investors route",
+    "keyboard disclosure",
+    "back navigation"
+  ],
+  "consoleErrorsObserved": 0,
+  "newLighthouse": false,
+  "newAxe": false,
+  "physicalDeviceVerified": false
+}

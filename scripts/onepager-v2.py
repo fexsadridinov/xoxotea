@@ -13,12 +13,12 @@ font_root = Path(__import__('os').environ.get('XOXO_FONT_DIR', '/usr/share/fonts
 pdfmetrics.registerFont(TTFont('Sans', str(font_root / 'DejaVuSans.ttf')))
 pdfmetrics.registerFont(TTFont('Mono', str(font_root / 'DejaVuSansMono.ttf')))
 results = json.loads(subprocess.check_output(['node', '--experimental-strip-types', '--input-type=module', '-e', "import {calculate,scenarios} from './src/lib/store-model.ts';process.stdout.write(JSON.stringify(scenarios.map(calculate)))"], cwd=root))
-ink = HexColor('#172e28')
+ink = HexColor('#202420')
 for lang in ['uk', 'en', 'ru']:
     c = json.loads((root / f'content/{lang}.json').read_text())
     f = canvas.Canvas(str(root / f'public/downloads/xoxo-{lang}.pdf'), pagesize=(595, 842), invariant=1)
     f.setTitle(c['metadata']['title']); f.setAuthor('XoXo'); f.setSubject(c['metadata']['description'])
-    f.setFillColor(HexColor('#f3f1ea')); f.rect(0, 0, 595, 842, fill=1, stroke=0)
+    f.setFillColor(HexColor('#ffffff')); f.rect(0, 0, 595, 842, fill=1, stroke=0)
     f.setFillColor(ink); f.setStrokeColor(HexColor('#a5afa5'))
     def txt(text, x, y, size=10, font='Sans'):
         f.setFont(font, size); f.drawString(x, y, text)

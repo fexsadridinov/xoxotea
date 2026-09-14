@@ -1,3 +1,13 @@
+# Investor hero and illustration hotfix - 14 September 2026
+
+Current presentation: investor-focused hero in three languages, original line illustrations, white surfaces and ten lightweight Higgsfield drink concepts. The previous arch, shaded cup diagrams, decorative floor plans, floating progress cups and blocking page wipe are removed from rendered pages. The inventory and economics formulas are unchanged.
+
+Current verification is documented in ART-DIRECTION.md: production build/TypeScript, lint, 13 tests, static audit and 63 responsive route/width cases, plus calculator, keyboard, language, navigation and mobile visual checks. The catalogue images total 80,222 bytes. Old gallery/turntable, pointer-following and page-wipe interaction results below are historical and no longer describe the active interface.
+
+Known operational gaps remain: recipe validation/costing, live lead delivery and calendar configuration, physical-device verification and a fresh performance/accessibility lab pass. Removing retired artwork does not close those unrelated gates.
+
+---
+
 # Source-led inventory revision - 14 September 2026
 
 This revision replaces the active six-image product gallery with a 6 core / 4 seasonal source-led catalogue. Old assets and historical evidence below remain preserved; gallery and turntable interaction results below do not describe the current menu.
