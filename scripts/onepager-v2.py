@@ -9,8 +9,9 @@ from reportlab.lib.colors import HexColor
 from reportlab.platypus import Paragraph, Table, TableStyle
 from reportlab.lib.styles import ParagraphStyle
 root = Path(__file__).resolve().parents[1]
-pdfmetrics.registerFont(TTFont('Sans', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'))
-pdfmetrics.registerFont(TTFont('Mono', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf'))
+font_root = Path(__import__('os').environ.get('XOXO_FONT_DIR', '/usr/share/fonts/truetype/dejavu'))
+pdfmetrics.registerFont(TTFont('Sans', str(font_root / 'DejaVuSans.ttf')))
+pdfmetrics.registerFont(TTFont('Mono', str(font_root / 'DejaVuSansMono.ttf')))
 results = json.loads(subprocess.check_output(['node', '--experimental-strip-types', '--input-type=module', '-e', "import {calculate,scenarios} from './src/lib/store-model.ts';process.stdout.write(JSON.stringify(scenarios.map(calculate)))"], cwd=root))
 ink = HexColor('#172e28')
 for lang in ['uk', 'en', 'ru']:
@@ -28,9 +29,13 @@ for lang in ['uk', 'en', 'ru']:
     txt('XoXo',40,790,31); txt(c['status'],40,765,8,'Mono'); f.line(40,748,555,748)
     txt(' / '.join(c['thesis']),40,708,24)
     txt('02 / '+c['sections'][1],40,666,10,'Mono')
-    for i,d in enumerate(c['product']['drinks']):
-        y=642-i*22; txt(d['name'],40,y,10); txt(str(d['price'])+' ₴',478,y,10,'Mono'); f.line(40,y-7,555,y-7)
-    y=para(c['product']['assumption'],514,8.5)-23
+    inventory=json.loads((root/'content/inventory.json').read_text())
+    for i,d in enumerate(inventory):
+        y=642-i*18
+        txt(d['id']+' / '+d['name'][lang],40,y,9)
+        txt(str(d['volumeMl'])+' '+c['catalogue']['ml'],485,y,9,'Mono')
+        f.line(40,y-6,555,y-6)
+    y=para(c['catalogue']['core']+' / C01-C06. '+c['catalogue']['seasonal']+' / S01-S04. '+c['catalogue']['note'],455,8)-16
     txt('04 / '+c['sections'][3],40,y,10,'Mono'); y-=14
     econ=c['economics']
     headers=[c['economicsExtra']['scenario'],econ['revenue']+' / ₴','EBITDA / ₴',econ['payback']]
@@ -42,7 +47,7 @@ for lang in ['uk', 'en', 'ru']:
     table=Table(rows,colWidths=[160,130,110,115],hAlign='LEFT')
     table.setStyle(TableStyle([('FONTNAME',(0,0),(-1,-1),'Mono'),('FONTSIZE',(0,0),(-1,-1),9),('TEXTCOLOR',(0,0),(-1,-1),ink),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),12),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),6),('LINEBELOW',(0,0),(-1,0),.4,HexColor('#a5afa5'))]))
     _,h=table.wrap(515,1000); table.drawOn(f,40,y-h); y-=h+12
-    y=para(econ['assumptions'],y,8.5)-18
+    y=para(econ['assumptions'],y,7.5)-12
     txt('06 / '+c['sections'][5],40,y,10,'Mono'); y-=14
     y=para(c['terms']['tag']+'. '+c['terms']['instrumentValue']+' / '+c['terms']['ticketValue']+' / '+c['terms']['returnValue'],y,8.5)-9
     y=para(c['terms']['note'],y,8.5)-10

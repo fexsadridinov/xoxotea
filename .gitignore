@@ -52,3 +52,8 @@ audit/screenshots/*.png
 
 # Isolated local audit dependencies
 scripts/qa/node_modules/
+
+# Owner-provided reference originals and OCR stay local, outside public/.
+/Sources/originals/
+/Sources/extracted/
+/Sources/

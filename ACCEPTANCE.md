@@ -1,3 +1,15 @@
+# Source-led inventory revision - 14 September 2026
+
+This revision replaces the active six-image product gallery with a 6 core / 4 seasonal source-led catalogue. Old assets and historical evidence below remain preserved; gallery and turntable interaction results below do not describe the current menu.
+
+Current checks: production build including TypeScript, lint, 11 economics tests and 2 inventory tests pass. Static audit passes all nine localized routes. Browser inspection covers nine routes at 360, 768 and 1440 px (27 cases), with no page overflow; all menus contain ten products and correct document language. Localized menu headings/body text fit at all three widths. Visually hidden investor h1 elements are excluded from text-width interpretation. Russian desktop/mobile composition and native recipe expansion were visually reviewed. No browser console errors were observed in this pass. All three regenerated PDFs use the canonical menu; Russian PDF visually inspected with no clipping.
+
+The four original documents, hashes, extracted text and translated working technical cards are local under Sources/. The whole directory is ignored by Git and excluded from Vercel. No original document or internal recipe card is a public asset. The public menu preserves source page references and explicitly labels substitutions.
+
+Recipes are pilot specifications, not approved kitchen SOPs. Missing gram yields, supplier validation, local handling controls and recipe costing remain open. The scenario model retains its existing inputs, with explicit disclosure that 56 UAH is not the calculated cost of the new menu. Live leads/calendar and physical-device checks remain open. No fresh Lighthouse or axe result is claimed for this revision; previous metrics below are historical.
+
+---
+
 # Localization and refinement acceptance — 14 September 2026
 
 Russian localization and zero-minimum calculator changes are complete. The owner authorized publication on 14 September 2026; PR #5 is merged and deployed. The generated-media, performance, physical-device and live-integration gates below remain open.
