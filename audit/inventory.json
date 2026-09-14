@@ -1,0 +1,32 @@
+{
+  "revision": "source-led-inventory",
+  "date": "2026-09-14",
+  "routes": [
+    "/",
+    "/en/",
+    "/ru/",
+    "/menu/",
+    "/en/menu/",
+    "/ru/menu/",
+    "/investors/",
+    "/en/investors/",
+    "/ru/investors/"
+  ],
+  "widths": [
+    360,
+    768,
+    1440
+  ],
+  "cases": 27,
+  "pageOverflow": false,
+  "menuCount": 10,
+  "menuTextOverflow": false,
+  "recipeDisclosure": "Russian mobile native details visually checked",
+  "consoleErrorsObserved": 0,
+  "localSources": "Git and Vercel excluded",
+  "limitations": [
+    "No new Lighthouse/axe run",
+    "Recipe kitchen validation pending",
+    "Existing live leads/calendar remain unconfigured"
+  ]
+}

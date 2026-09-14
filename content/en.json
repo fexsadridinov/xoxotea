@@ -47,8 +47,8 @@
   ],
   "lang": "en",
   "metadata": {
-    "title": "XoXo — Tea. Precision. Scale.",
-    "description": "A modern tea system for Mykolaiv. Six drinks. Transparent unit economics. An independent pre-launch concept."
+    "title": "XoXo — Tea. Season. Together.",
+    "description": "A menu built around the taste of tea: clear foundations, shared preparations and fruit worth waiting for. Our opening menu is in development. Volumes include ice. Prices will follow tasting and recipe costing."
   },
   "nav": {
     "menu": "Menu",
@@ -63,70 +63,19 @@
   "status": "MYKOLAIV, UA / PRE-LAUNCH",
   "thesis": [
     "Tea.",
-    "Precision.",
-    "Scale."
+    "Season.",
+    "Together."
   ],
   "thesisFoot": [
-    "01 LOCATION TO START",
-    "01 SYSTEM TO REPEAT"
+    "6 CORE RECIPES",
+    "4 SEASONAL DIRECTIONS"
   ],
   "product": {
     "title": [
-      "One vessel.",
-      "Six expressions."
+      "Tea every day.",
+      "Fruit in its season."
     ],
-    "subtitle": "PRODUCT SYSTEM / 001",
-    "rotate": "PRODUCT VIEW",
-    "angle": "ROTATION",
-    "collection": "THE COLLECTION",
-    "volume": "VOLUME",
-    "energy": "ENERGY",
-    "sugar": "SUGAR TIERS",
-    "price": "CONCEPT PRICE",
-    "previous": "Previous drink",
-    "next": "Next drink",
-    "alt": "Blank tall cup with a clear dome lid and straw",
-    "assumption": "ASSUMPTION A01 Concept recipes, prices, 500 ml volume and sugar tiers. Nutrition awaits recipe testing; renders are visual concepts.",
-    "kcal": "kcal / TBC",
-    "drinks": [
-      {
-        "name": "Brown sugar",
-        "other": "Milk tea with tapioca pearls",
-        "tea": "BLACK TEA / MILK / TAPIOCA",
-        "price": 185
-      },
-      {
-        "name": "Grape cloud",
-        "other": "Grape tea with cheese foam",
-        "tea": "JASMINE / GRAPE / CHEESE FOAM",
-        "price": 205
-      },
-      {
-        "name": "Jasmine pearl",
-        "other": "Jasmine green tea with tapioca pearls",
-        "tea": "JASMINE GREEN TEA / TAPIOCA",
-        "price": 165
-      },
-      {
-        "name": "Coconut mango",
-        "other": "Jasmine tea with coconut and mango",
-        "tea": "JASMINE / COCONUT / MANGO",
-        "price": 205
-      },
-      {
-        "name": "Matcha pearl",
-        "other": "Matcha latte with tapioca pearls",
-        "tea": "MATCHA / MILK / TAPIOCA",
-        "price": 215
-      },
-      {
-        "name": "Peach oolong",
-        "other": "Oolong tea with peach and ice",
-        "tea": "OOLONG / PEACH / ICE",
-        "price": 175
-      }
-    ],
-    "static": "STATIC VIEW"
+    "assumption": "Our opening menu is in development. Volumes include ice. Prices will follow tasting and recipe costing."
   },
   "market": {
     "title": [
@@ -170,7 +119,7 @@
       "Upside"
     ],
     "scenarioTitle": "Three scenarios. The same formula.",
-    "assumptions": "ASSUMPTION A02. 30 trading days/month; ingredients and packaging 56 ₴/cup; transaction fees 3%; rent 55 000 ₴; fully loaded staffing 210 000 ₴; other fixed costs 120 000 ₴/month; initial funding 2 100 000 ₴; illustrative FX 42 ₴/$, not a live exchange rate.",
+    "assumptions": "ASSUMPTION A02. 30 trading days/month; ingredients and packaging 56 ₴/cup; transaction fees 3%; rent 55 000 ₴; fully loaded staffing 210 000 ₴; other fixed costs 120 000 ₴/month; initial funding 2 100 000 ₴; illustrative FX 42 ₴/$, not a live exchange rate. 56 ₴ remains an earlier planning assumption, not the calculated cost of the new recipes. The 500/700 ml formats need separate costing.",
     "explanation": "Gross margin excludes labor and occupancy. Contribution deducts direct cost and transaction fees. EBITDA deducts rent, staffing and other fixed costs. Payback divides initial funding by steady-state EBITDA: it excludes ramp-up, financing, tax, depreciation, replacement capex and working-capital changes. EBITDA is not distributable cash.",
     "benchmark": "Category articles describe roughly 65–80% cup gross margins and $30k–$150k startup formats; these are broad editorial benchmarks, not validated Ukrainian budgets.",
     "undefined": "Not defined",
@@ -309,5 +258,29 @@
     "PRE-LAUNCH / 2026"
   ],
   "notFound": "Page not found",
-  "back": "Return to the system"
+  "back": "Return to the system",
+  "catalogue": {
+    "title": "Tea every day.\nFruit in its season.",
+    "intro": "A menu built around the taste of tea: clear foundations, shared preparations and fruit worth waiting for.",
+    "core": "The everyday collection",
+    "seasonal": "The seasonal collection",
+    "coreNote": "Six recipes take priority for launch. Tea, milk and cheese foam form the foundation; tapioca complements just two drinks.",
+    "seasonalNote": "Four recipes to follow the seasons. Introduced when fruit quality and supply are consistent, rather than all at once.",
+    "detail": "Ingredients & recipe",
+    "milk": "Contains milk",
+    "noMilk": "No dairy ingredients",
+    "cold": "Served cold",
+    "ml": "ml",
+    "source": "Recipe reference",
+    "page": "p.",
+    "adaptation": "XoXo adaptation",
+    "note": "Our opening menu is in development. Volumes include ice. Prices will follow tasting and recipe costing.",
+    "sweetness": "Sweetness is calibrated for each recipe. Even without added syrup, fruit, jam, milk, foam or pearls may still contribute sugar.",
+    "methodTitle": "Shared foundations. Considered combinations.",
+    "method": "Green tea connects lemon and the fruit collection; oolong connects everyday tea and seasonal pairings. Shared dairy preparations, foam and tapioca reduce separate processes.",
+    "design": "A place for tea and conversation. Pale stone, soft light and greenery shape the mood of our future space.",
+    "pilot": "RECIPE COLLECTION / PREPARING TO OPEN",
+    "allergy": "Ingredients are preliminary. Confirm allergens and possible cross-contact before ordering.",
+    "cost": "56 ₴ remains an earlier planning assumption, not the calculated cost of the new recipes. The 500/700 ml formats need separate costing."
+  }
 }
