@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import uk from '../../content/uk.json';
 import { origin } from '@/lib/content';
 import './globals.css';
-const sans = IBM_Plex_Sans({ subsets:['latin','cyrillic'], weight:'500', variable:'--sans', display:'swap' });
+const sans = IBM_Plex_Sans({ subsets:['latin','cyrillic'], weight:'500', preload:false, variable:'--sans', display:'swap' });
 const mono = IBM_Plex_Mono({ subsets:['latin','cyrillic'], weight:'400', preload:false, variable:'--mono', display:'swap' });
 export const metadata: Metadata = { metadataBase:new URL(origin),title:uk.metadata.title,description:uk.metadata.description,icons:{icon:'/favicon.svg'} };
 export const viewport: Viewport = { themeColor:'#f3f1ea',width:'device-width',initialScale:1 };

@@ -1,1 +1,5 @@
-{"frames":[],"status":"generation_blocked_insufficient_credits","requestedFrames":36,"requestedHeight":1200,"fallback":"/drinks/drink-0-960.avif"}
+{
+  "frames": [],
+  "status": "unavailable",
+  "reason": "Turntable generation rejected for insufficient credits; static fallback."
+}

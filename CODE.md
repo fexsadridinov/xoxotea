@@ -123,7 +123,8 @@ scripts/qa/node_modules/
     "skip": "Skip to content",
     "label": "Section index",
     "home": "Home",
-    "language": "Українська"
+    "language": "Українська",
+    "index": "Page sections"
   },
   "status": "MYKOLAIV, UA / PRE-LAUNCH",
   "thesis": [
@@ -434,7 +435,8 @@ scripts/qa/node_modules/
     "skip": "Перейти до вмісту",
     "label": "Індекс розділів",
     "home": "Головна",
-    "language": "English"
+    "language": "English",
+    "index": "Розділи сторінки"
   },
   "status": "МИКОЛАЇВ, UA / ДО ЗАПУСКУ",
   "thesis": [
@@ -5023,7 +5025,11 @@ export default config;
 ## public/sequence/manifest.json
 
 ````json
-{"frames":[],"status":"generation_blocked_insufficient_credits","requestedFrames":36,"requestedHeight":1200,"fallback":"/drinks/drink-0-960.avif"}
+{
+  "frames": [],
+  "status": "unavailable",
+  "reason": "Turntable generation rejected for insufficient credits; static fallback."
+}
 ````
 
 ## scripts/media-v2.py
@@ -5078,6 +5084,59 @@ for lang in ['uk','en']:
  para(c['terms']['note'],160,7)
  para(c['contact']['notice'],112,7)
  f.line(40,55,555,55);txt('xoxotea.vercel.app / '+c['sourceDate'],40,38,8,'Mono');txt('01 / 01',510,38,8,'Mono');f.showPage();f.save()
+````
+
+## scripts/qa/interactions.mjs
+
+````javascript
+import fs from 'node:fs';
+import cp from 'node:child_process';
+import zlib from 'node:zlib';
+import {chromium} from 'playwright';
+
+const server=cp.spawn('node',['scripts/qa/server.cjs','out','4176']);
+const base='http://127.0.0.1:4176';
+for(let i=0;i<30;i++){try{await fetch(base);break;}catch{await new Promise(r=>setTimeout(r,100));}}
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox','--disable-dev-shm-usage']});
+const results=[];
+try{
+ for(const width of [390,1440]){
+  const context=await browser.newContext({viewport:{width,height:900},isMobile:width<768,hasTouch:width<768});
+  const page=await context.newPage();const scripts=new Set();
+  page.on('response',r=>{if(new URL(r.url()).pathname.endsWith('.js'))scripts.add(new URL(r.url()).pathname);});
+  await page.goto(base);await page.waitForTimeout(400);
+  const at=async(selector,fraction=0)=>{await page.locator(selector).evaluate((e,f)=>scrollTo({top:e.getBoundingClientRect().top+scrollY-100+f*Math.max(1,e.clientHeight-innerHeight),behavior:'instant'}),fraction);await page.waitForTimeout(100);};
+  await at('[data-cup-stage]');
+  const parallax=await page.locator('[data-depth]').evaluateAll(es=>es.map(e=>e.style.transform));
+  const progress=await page.locator('.top-progress i').evaluate(e=>e.style.transform);
+  await at('.gallery');await page.locator('.gallery').evaluate(e=>e.scrollTo({left:e.scrollWidth,behavior:'instant'}));await page.waitForTimeout(200);
+  const gallery=await page.locator('[data-gallery-index]').innerText();
+  const cycle=[];
+  for(const f of [0,.6,.99]){await at('[data-economics]',f);cycle.push(await page.locator('.scenario-tabs [aria-pressed=true]').innerText());}
+  await page.locator('.scenario-tabs button').nth(1).click();
+  const conservative=await page.locator('[data-ebitda]').innerText();
+  await page.locator('#rent').evaluate(e=>{e.focus();});await page.keyboard.press('ArrowRight');
+  const changed=await page.locator('[data-ebitda]').innerText();
+  await page.locator('.currency button').nth(1).click();const usd=await page.locator('[data-ebitda]').innerText();
+  await at('#contact');
+  await page.locator('input[name=name]').fill('Audit Example');
+  await page.locator('input[name=contact]').fill('bad-contact');await page.locator('input[name=consent]').check();await page.locator('button.cta').click();
+  const invalid=await page.locator('[role=alert]').count();
+  await page.locator('input[name=contact]').fill('audit@example.invalid');
+  const downloaded=page.waitForEvent('download');await page.locator('button.cta').click();await downloaded;
+  const fallback=await page.locator('.confirmation').innerText();
+  await page.locator('.confirmation button').click();
+  const press=await page.locator('.magnet').last().evaluate(e=>{e.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerType:'touch'}));const value=e.style.transform;e.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,pointerType:'touch'}));return value;});
+  await page.waitForTimeout(350);
+  const gzipJs=[...scripts].reduce((sum,path)=>sum+zlib.gzipSync(fs.readFileSync('out'+path)).length,0);
+  await page.locator('header nav a').first().click();await page.waitForURL('**/menu/');await page.waitForTimeout(500);
+  const transition=await page.locator('.page-wipe').evaluate(e=>getComputedStyle(e).visibility);
+  results.push({width,parallax,progress,gallery,cycle,conservative,changed,usd,invalid,fallback,press,gzipJs,transition});
+  await context.close();
+ }
+ fs.writeFileSync('audit/interactions.json',JSON.stringify({environment:'Emulated Chromium; does not certify physical Android 60fps',results},null,2));
+ console.log(JSON.stringify(results));
+}finally{await browser.close();server.kill();}
 ````
 
 ## scripts/qa/lighthouse.mjs
@@ -6515,6 +6574,56 @@ try {
 }
 ````
 
+## scripts/qa/responsive.mjs
+
+````javascript
+import fs from 'node:fs';
+import cp from 'node:child_process';
+import { chromium } from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
+
+const server = cp.spawn('node', ['scripts/qa/server.cjs', 'out', '4175']);
+const base = 'http://127.0.0.1:4175';
+for (let i = 0; i < 30; i++) {
+  try { await fetch(base); break; } catch { await new Promise(r => setTimeout(r, 100)); }
+}
+const browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH, args:['--no-sandbox','--disable-dev-shm-usage']});
+fs.mkdirSync('audit/screenshots', {recursive:true});
+const results = [];
+try {
+  for (const width of [360,390,430,768,1024,1440,1920]) {
+    const context = await browser.newContext({viewport:{width,height:width < 768 ? 844 : 900},isMobile:width < 768,hasTouch:width < 768});
+    const page = await context.newPage();
+    for (const route of ['/', '/en/', '/menu/', '/en/menu/', '/investors/', '/en/investors/']) {
+      const errors=[];const handler=e=>errors.push(e.message);page.on('pageerror',handler);
+      await page.goto(base+route);
+      await page.evaluate(()=>document.fonts.ready);
+      const sections = await page.locator('main > section').evaluateAll(es=>es.map(e=>e.id));
+      const overflow=[];
+      for (const id of sections) {
+        await page.locator('#'+id).evaluate(e=>window.scrollTo({top:e.getBoundingClientRect().top+scrollY-80,behavior:'instant'}));
+        await page.waitForTimeout(650);
+        const flags = await page.evaluate(()=>[...document.querySelectorAll('h1,h2,h3,p,dt,dd,label,button')].filter(e=>e.getBoundingClientRect().width>0&&!e.closest('.honey,.sr-only')&&e.scrollWidth>e.clientWidth+2).map(e=>({tag:e.tagName,text:e.textContent.slice(0,80),width:e.clientWidth,scroll:e.scrollWidth})));
+        overflow.push(...flags);
+        if (route==='/' && [390,1440].includes(width)) await page.screenshot({path:`audit/screenshots/${width}-${id}.jpg`,type:'jpeg',quality:85});
+      }
+      const layout=await page.evaluate(()=>({documentWidth:document.documentElement.scrollWidth,width:innerWidth,lang:document.documentElement.lang}));
+      const axe = [390,1440].includes(width) ? await new AxeBuilder({page}).analyze() : null;
+      results.push({width,route,...layout,overflow:[...new Map(overflow.map(x=>[x.text,x])).values()],errors,violations:axe?.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)}))??null});
+      page.off('pageerror',handler);
+    }
+    await context.close();
+    console.log(`Completed ${width}px`);
+  }
+  const page=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+  await page.goto(base);await page.locator('#economics').scrollIntoViewIfNeeded();
+  const reduced=await page.evaluate(()=>({preference:document.documentElement.dataset.reduced,pin:getComputedStyle(document.querySelector('.economics-pin')).position,canvas:getComputedStyle(document.querySelector('canvas')).display,animations:document.getAnimations().length}));
+  await page.screenshot({path:'audit/screenshots/390-reduced-motion.jpg',type:'jpeg',quality:85});
+  fs.writeFileSync('audit/responsive.json',JSON.stringify({testedAt:new Date().toISOString(),environment:'Chromium emulated viewports; not physical hardware',results,reduced},null,2));
+  console.log(JSON.stringify({cases:results.length,failures:results.filter(x=>x.documentWidth>x.width||x.overflow.length||x.errors.length||x.violations?.length),reduced}));
+} finally { await browser.close();server.kill(); }
+````
+
 ## scripts/qa/server.cjs
 
 ````javascript
@@ -6643,9 +6752,13 @@ export default function Page(){return <System locale="en" view="all"/>;}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.economics-scroll,.gallery-region{height:auto!important}.economics-pin,.gallery-pin,.gallery-heading{position:relative;top:auto}.gallery{scroll-snap-type:x mandatory}.cup-canvas{display:none}.cup-liquid{transform:scaleY(1)!important}.top-progress i{transform:scaleX(1)!important}.cta:active{transform:none}.page-wipe{display:none}}
 
 /* Explicit rail surface keeps contrast stable over every section. */
+.thesis h1{font-family:"Xoxo Thesis",var(--sans),sans-serif}
 .rail{mix-blend-mode:normal;color:var(--ink);background:var(--paper);padding:12px 8px;width:116px;left:20px}
 .mobile-cup{display:none}
 @media(max-width:767px){.mobile-cup{display:block;position:fixed;right:7px;bottom:8px;width:20px;height:34px;z-index:20;color:var(--ink);background:var(--paper);pointer-events:none}}
+
+/* Small bilingual headline subset is inline to avoid a critical font round trip. */
+@font-face{font-family:"Xoxo Thesis";font-style:normal;font-weight:500;font-display:swap;src:url(data:font/woff2;base64,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) format("woff2")}
 ````
 
 ## src/app/investors/page.tsx
@@ -6666,7 +6779,7 @@ import type { Metadata, Viewport } from 'next';
 import uk from '../../content/uk.json';
 import { origin } from '@/lib/content';
 import './globals.css';
-const sans = IBM_Plex_Sans({ subsets:['latin','cyrillic'], weight:'500', variable:'--sans', display:'swap' });
+const sans = IBM_Plex_Sans({ subsets:['latin','cyrillic'], weight:'500', preload:false, variable:'--sans', display:'swap' });
 const mono = IBM_Plex_Mono({ subsets:['latin','cyrillic'], weight:'400', preload:false, variable:'--mono', display:'swap' });
 export const metadata: Metadata = { metadataBase:new URL(origin),title:uk.metadata.title,description:uk.metadata.description,icons:{icon:'/favicon.svg'} };
 export const viewport: Viewport = { themeColor:'#f3f1ea',width:'device-width',initialScale:1 };
@@ -6785,7 +6898,7 @@ export function Runtime({locale}:{locale:Locale}){
  const play=(el:HTMLElement,frames:Keyframe[],duration=450,delay=0)=>{el.style.willChange='transform';const a=el.animate(frames,{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.add(a);a.finished.catch(()=>{}).finally(()=>{animations.delete(a);el.style.willChange='';});};
  const reveal=new IntersectionObserver(entries=>{for(const {target,isIntersecting} of entries){if(!isIntersecting)continue;reveal.unobserve(target);if(reduced.matches)continue;const el=target as HTMLElement;if(el.matches('.section-title')){el.querySelectorAll<HTMLElement>('.reveal-line>span').forEach((line,i)=>play(line,[{transform:'translateY(110%)'},{transform:'translateY(0)'}],450,i*60));}else if(el.matches('[data-count]')){el.style.minWidth=el.getBoundingClientRect().width+'px';const v=Number(el.dataset.count),dec=Number(el.dataset.decimals||0),suffix=el.dataset.suffix||'';let start:number|undefined;const fmt=new Intl.NumberFormat(locale,{minimumFractionDigits:dec,maximumFractionDigits:dec});const update=(now:number)=>{if(disposed||reduced.matches){el.textContent=fmt.format(v)+suffix;return;}start??=now;const p=Math.min((now-start)/500,1),eased=1-Math.pow(1-p,3);el.textContent=fmt.format(v*eased)+suffix;if(p<1)requestAnimationFrame(update);};requestAnimationFrame(update);}else{play(el,[{transform:'scaleX(0)'},{transform:'scaleX(1)'}]);}}},{threshold:.15});
  all('.section-title,.section-head,.chart-reveal,.allocation,[data-count]').forEach(e=>reveal.observe(e));
- const updateGallery=()=>{if(!gallery)return;const step=(gallery.firstElementChild as HTMLElement)?.offsetWidth+20;const i=Math.min(5,Math.max(0,Math.round(gallery.scrollLeft/step)));const label=document.querySelector('[data-gallery-index]');if(label)label.textContent=String(i+1).padStart(2,'0');};
+ const updateGallery=()=>{if(!gallery)return;const step=(gallery.firstElementChild as HTMLElement)?.offsetWidth+parseFloat(getComputedStyle(gallery).columnGap);const i=Math.min(5,Math.max(0,Math.round(gallery.scrollLeft/step)));const label=document.querySelector('[data-gallery-index]');if(label)label.textContent=String(i+1).padStart(2,'0');};
  const update=()=>{raf=0;if(disposed)return;const h=innerHeight,p=Math.max(0,Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-h)));if(!reduced.matches){progress.forEach(el=>el.style.transform=el.classList.contains('cup-liquid')?`scaleY(${p})`:`scaleX(${p})`);if(progressLabel)progressLabel.textContent=String(Math.round(p*100)).padStart(2,'0')+'%';}
  let active=sections[0]?.id;for(const s of sections){if(s.getBoundingClientRect().top<h*.45)active=s.id;}all<HTMLAnchorElement>('[data-section-link]').forEach(a=>{if(a.dataset.sectionLink===active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
  if(cup&&!reduced.matches){const box=cup.getBoundingClientRect();if(box.bottom>0&&box.top<h){const q=Math.max(0,Math.min(1,(h-box.top)/(h+box.height)));cup.querySelectorAll<HTMLElement>('[data-depth]').forEach(el=>el.style.transform=`translate3d(0,${(q-.5)*40*Number(el.dataset.depth)}px,0)`);const f=Math.min(35,Math.floor(q*36));cup.dispatchEvent(new CustomEvent('cupframe',{detail:f}));if(cup.querySelector('[data-ready="true"]')){const angle=document.querySelector('[data-angle]');if(angle)angle.textContent=String(f*10).padStart(3,'0')+'°';}}}
@@ -6793,8 +6906,14 @@ export function Runtime({locale}:{locale:Locale}){
  if(gallery&&galleryRegion&&innerWidth>=1024&&!reduced.matches){const b=galleryRegion.getBoundingClientRect();if(b.top<90&&b.bottom>h*.5){const q=Math.max(0,Math.min(1,(90-b.top)/Math.max(1,b.height-h)));gallery.scrollLeft=q*(gallery.scrollWidth-gallery.clientWidth);updateGallery();}}
  };const onScroll=()=>{if(!raf)raf=requestAnimationFrame(update);};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll,{passive:true});gallery?.addEventListener('scroll',updateGallery,{passive:true});
  const change=()=>{root.dataset.reduced=String(reduced.matches);if(reduced.matches){animations.forEach(a=>a.cancel());all<HTMLElement>('[data-depth]').forEach(e=>e.style.transform='');counters.forEach(el=>el.textContent=new Intl.NumberFormat(locale,{maximumFractionDigits:Number(el.dataset.decimals||0),minimumFractionDigits:Number(el.dataset.decimals||0)}).format(Number(el.dataset.count))+(el.dataset.suffix||''));progress.forEach(e=>e.style.transform='');}onScroll();};reduced.addEventListener('change',change);change();
- for(const [selector,dir] of [['[data-gallery-prev]',-1],['[data-gallery-next]',1]] as const){const b=document.querySelector(selector);const handler=()=>{if(gallery)gallery.scrollBy({left:dir*((gallery.firstElementChild as HTMLElement).offsetWidth+20),behavior:reduced.matches?'instant':'smooth'});};b?.addEventListener('click',handler);cleanup.push(()=>b?.removeEventListener('click',handler));}
- all<HTMLElement>('.magnet').forEach(el=>{const move=(e:PointerEvent)=>{if(reduced.matches||!fine.matches)return;const b=el.getBoundingClientRect();el.style.willChange='transform';el.style.transform=`translate3d(${(e.clientX-b.left-b.width/2)*.08}px,${(e.clientY-b.top-b.height/2)*.12}px,0)`;};const leave=()=>{el.style.transform='';el.style.willChange='';};const down=()=>{if(reduced.matches)return;el.style.transform='scale(.97)';};const up=()=>{if(reduced.matches)return;import('framer-motion/dom/mini').then(({animate})=>{if(!disposed)animate(el,{transform:'scale(1)'},{duration:.3,ease:[.22,1,.36,1]});});};el.addEventListener('pointermove',move);el.addEventListener('pointerleave',leave);el.addEventListener('pointerdown',down);el.addEventListener('pointerup',up);cleanup.push(()=>{el.removeEventListener('pointermove',move);el.removeEventListener('pointerleave',leave);el.removeEventListener('pointerdown',down);el.removeEventListener('pointerup',up);});});
+ for(const [selector,dir] of [['[data-gallery-prev]',-1],['[data-gallery-next]',1]] as const){const b=document.querySelector(selector);const handler=()=>{if(gallery)gallery.scrollBy({left:dir*((gallery.firstElementChild as HTMLElement).offsetWidth+parseFloat(getComputedStyle(gallery).columnGap)),behavior:reduced.matches?'instant':'smooth'});};b?.addEventListener('click',handler);cleanup.push(()=>b?.removeEventListener('click',handler));}
+ const magnet=(e:Event)=>(e.target as Element)?.closest<HTMLElement>('.magnet');
+ const move=(e:PointerEvent)=>{const el=magnet(e);if(!el||reduced.matches||!fine.matches)return;const b=el.getBoundingClientRect();el.style.willChange='transform';el.style.transform=`translate3d(${(e.clientX-b.left-b.width/2)*.08}px,${(e.clientY-b.top-b.height/2)*.12}px,0)`;};
+ const leave=(e:PointerEvent)=>{const el=magnet(e);if(!el||e.relatedTarget instanceof Node&&el.contains(e.relatedTarget))return;el.style.transform='';el.style.willChange='';};
+ const down=(e:PointerEvent)=>{const el=magnet(e);if(el&&!reduced.matches)el.style.transform='scale(.97)';};
+ const up=(e:PointerEvent)=>{const el=magnet(e);if(!el||reduced.matches)return;import('framer-motion/dom/mini').then(({animate})=>{if(!disposed&&el.isConnected)animate(el,{transform:'scale(1)'},{duration:.3,ease:[.22,1,.36,1]});});};
+ document.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerout',leave,{passive:true});document.addEventListener('pointerdown',down,{passive:true});document.addEventListener('pointerup',up,{passive:true});
+ cleanup.push(()=>{document.removeEventListener('pointermove',move);document.removeEventListener('pointerout',leave);document.removeEventListener('pointerdown',down);document.removeEventListener('pointerup',up);});
  const navigate=(e:MouseEvent)=>{const a=(e.target as HTMLElement).closest<HTMLAnchorElement>('a[href]');if(!a||a.hasAttribute('download')||a.target||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0||reduced.matches)return;const u=new URL(a.href);if(u.origin!==location.origin||u.pathname===location.pathname)return;e.preventDefault();const wipe=document.querySelector<HTMLElement>('.page-wipe');if(!wipe){location.assign(u.href);return;}wipe.style.transform='translateY(100%)';wipe.style.visibility='visible';const animation=wipe.animate([{transform:'translateY(100%)'},{transform:'translateY(0)'}],{duration:240,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});animation.finished.then(()=>{sessionStorage.setItem('xoxo-transition','1');location.assign(u.href);});};document.addEventListener('click',navigate);
  const wipe=document.querySelector<HTMLElement>('.page-wipe');if(wipe&&sessionStorage.getItem('xoxo-transition')){sessionStorage.removeItem('xoxo-transition');if(!reduced.matches){wipe.style.visibility='visible';const a=wipe.animate([{transform:'translateY(0)'},{transform:'translateY(-100%)'}],{duration:350,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});a.finished.then(()=>wipe.style.visibility='hidden');}}
  return()=>{disposed=true;cancelAnimationFrame(raf);reveal.disconnect();animations.forEach(a=>a.cancel());removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);gallery?.removeEventListener('scroll',updateGallery);reduced.removeEventListener('change',change);document.removeEventListener('click',navigate);cleanup.forEach(f=>f());};
@@ -6821,12 +6940,12 @@ export function System({locale='uk',view='all'}:{locale?:Locale;view?:'all'|'men
  const here=view==='all'?'':view; const home=pathFor(locale);
  return <div lang={locale} className="system"><Runtime locale={locale}/><a href="#main" className="skip">{c.nav.skip}</a>
  <header className="topbar"><a href={home} className="wordmark" aria-label={c.brand+' / '+c.nav.home}>{c.brand}</a><span className="edition">{c.edition}</span><nav aria-label={c.nav.label}><a href={pathFor(locale,'menu')}>{c.nav.menu}</a><a href={pathFor(locale,'investors')}>{c.nav.investors}</a><a href={pathFor(locale==='uk'?'en':'uk',here)} className="language" hrefLang={locale==='uk'?'en':'uk'}>{locale==='uk'?'EN':'UA'}</a></nav></header>
- <aside className="rail"><nav aria-label={c.nav.label}>{ids.filter(visible).map(id=><a key={id} href={`#${id}`} data-section-link={id}><span>{String(ids.indexOf(id)+1).padStart(2,'0')}</span><span>{c.sections[ids.indexOf(id)]}</span></a>)}</nav><div className="progress-cup" aria-hidden="true"><svg viewBox="0 0 32 52"><defs><clipPath id="cup-clip"><path d="M6 14h20l-3 33H9z"/></clipPath></defs><g clipPath="url(#cup-clip)"><rect className="cup-liquid" x="4" y="14" width="24" height="35"/></g><path d="M6 14h20l-3 33H9zM4 14h24M7 11q9-15 18 0M17 12l3-11" fill="none" stroke="currentColor" strokeWidth="1"/></svg><span data-progress-label>00%</span></div></aside>
+ <aside className="rail"><nav aria-label={c.nav.index}>{ids.filter(visible).map(id=><a key={id} href={`#${id}`} data-section-link={id}><span>{String(ids.indexOf(id)+1).padStart(2,'0')}</span><span>{c.sections[ids.indexOf(id)]}</span></a>)}</nav><div className="progress-cup" aria-hidden="true"><svg viewBox="0 0 32 52"><defs><clipPath id="cup-clip"><path d="M6 14h20l-3 33H9z"/></clipPath></defs><g clipPath="url(#cup-clip)"><rect className="cup-liquid" x="4" y="14" width="24" height="35"/></g><path d="M6 14h20l-3 33H9zM4 14h24M7 11q9-15 18 0M17 12l3-11" fill="none" stroke="currentColor" strokeWidth="1"/></svg><span data-progress-label>00%</span></div></aside>
  <div className="top-progress" aria-hidden="true"><i/></div><svg className="mobile-cup" viewBox="0 0 32 52" aria-hidden="true"><defs><clipPath id="mobile-cup-clip"><path d="M6 14h20l-3 33H9z"/></clipPath></defs><g clipPath="url(#mobile-cup-clip)"><rect className="cup-liquid" x="4" y="14" width="24" height="35"/></g><path d="M6 14h20l-3 33H9zM4 14h24M7 11q9-15 18 0M17 12l3-11" fill="none" stroke="currentColor" strokeWidth="1"/></svg><main id="main">{view!=="all"&&<h1 className="sr-only">{view==="menu"?c.nav.menu:c.nav.investors}</h1>}
  {visible('thesis')&&<section id="thesis" className="section thesis"><Head i={0} c={c}/><p className="micro status">{c.status}</p><h1>{c.thesis.map(line=><span key={line}>{line}</span>)}</h1><div className="thesis-foot"><span>{c.thesisFoot[0]}</span><span>{c.thesisFoot[1]}</span><a className="magnet arrow-link" href="#product" aria-label={c.sections[1]}>↓</a></div></section>}
  {visible('product')&&<section id="product" className="section product"><div className="product-intro"><Head i={1} c={c}/><Title lines={c.product.title}/><div className="cup-stage" data-cup-stage><div className="stage-grid" data-depth="0.25" aria-hidden="true"/><div className="cup-shadow" data-depth="0.6" aria-hidden="true"/><div className="cup-render" data-depth="1"><CupSequence alt={c.product.alt} label={c.product.rotate}/></div><div className="stage-corner top-left micro">{c.product.subtitle}</div><div className="stage-corner bottom-left micro">{c.product.rotate}</div><div className="stage-corner bottom-right micro">{c.product.angle} / <span data-angle>000°</span></div></div></div>
  <div className="gallery-region"><div className="gallery-heading"><span className="micro">{c.product.collection}</span><span className="micro"><span data-gallery-index>01</span> / 06</span><div><button className="gallery-button" data-gallery-prev aria-label={c.product.previous}>←</button><button className="gallery-button" data-gallery-next aria-label={c.product.next}>→</button></div></div><div className="gallery-pin"><div className="gallery" tabIndex={0} aria-label={c.product.collection}>{c.product.drinks.map((d,i)=><article className="drink" key={d.name}><div className="drink-image"><span className="drink-code micro">D / {String(i+1).padStart(2,'0')}</span><picture><source type="image/avif" srcSet={`/drinks/drink-${i}-480.avif 480w, /drinks/drink-${i}-960.avif 960w`} sizes="(max-width: 767px) 82vw, 32vw"/><img src={`/drinks/drink-${i}-480.webp`} srcSet={`/drinks/drink-${i}-480.webp 480w, /drinks/drink-${i}-960.webp 960w`} sizes="(max-width: 767px) 82vw, 32vw" width="720" height="960" loading="lazy" decoding="async" alt={`${d.name}. ${c.product.alt}`}/></picture></div><div className="drink-description"><div className="drink-name"><h3>{d.name}</h3><span className="price">{d.price} ₴</span></div><p className="other-name">{d.other}</p><p className="micro tea-base">{d.tea}</p><dl className="specs"><div><dt>{c.product.volume}</dt><dd>{c.units.volume}</dd></div><div><dt>{c.product.energy}</dt><dd>{c.product.kcal}</dd></div><div><dt>{c.product.sugar}</dt><dd>{c.units.sugar}</dd></div></dl></div></article>)}</div></div></div><p className="assumption">{c.product.assumption}</p></section>}
- {visible('market')&&<section id="market" className="section market"><Head i={2} c={c}/><Title lines={c.market.title}/><div className="market-grid">{[{label:c.market.world,from:3.35,to:3.62,y1:'2025',y2:'2026',cagr:8.4,source:0,decimals:2},{label:c.market.europe,from:727.2,to:1262.6,y1:'2026',y2:'2033',cagr:8.2,source:1,decimals:1}].map((x,i)=><article key={x.label} className="market-card"><p className="micro">{x.label}</p><div className="chart-values"><div><strong><Num v={x.from} decimals={x.decimals} locale={locale}/></strong><small>{x.y1}</small></div><span aria-hidden="true">→</span><div><strong><Num v={x.to} decimals={x.decimals} locale={locale}/></strong><small>{x.y2}</small></div></div><svg className="data-chart" viewBox="0 0 500 100" role="img" aria-label={c.market.chart}><path className="chart-grid" d="M0 24H500M0 60H500M0 96H500M1 0V100M166 0V100M333 0V100M499 0V100"/><g className="chart-reveal"><path className="chart-line" d={i===0?'M1 80L80 77L166 64L250 53L333 42L415 30L499 12':'M1 90L80 80L166 74L250 55L333 46L415 20L499 6'}/></g></svg><div className="market-caption"><span><Num v={x.cagr} decimals={1} suffix="%" locale={locale}/> {c.market.cagr}</span><a href={c.sources[x.source].url} target="_blank" rel="noreferrer">{c.sources[x.source].name} ↗</a></div></article>)}</div><div className="market-bottom"><article><span className="micro">{c.market.eu}</span><strong><Num v={10} suffix="%" locale={locale}/></strong><a href={c.sources[2].url} target="_blank" rel="noreferrer">{c.sources[2].name} ↗</a></article><article><span className="micro">{c.market.stores}</span><strong><Num v={4000} suffix="+" locale={locale}/></strong><a href={c.sources[3].url} target="_blank" rel="noreferrer">{c.sources[3].name} ↗</a></article><article><span className="micro">{c.market.overseas}</span><strong><span className="micro">{c.market.nearly} </span><Num v={600} suffix="%" locale={locale}/></strong><a href={c.sources[4].url} target="_blank" rel="noreferrer">{c.sources[4].name} ↗</a></article></div><div className="source-foot micro"><span>{c.market.forecast}</span><span>{c.market.historical}</span></div></section>}
+ {visible('market')&&<section id="market" className="section market"><Head i={2} c={c}/><Title lines={c.market.title}/><div className="market-grid">{[{label:c.market.world,from:3.35,to:3.62,y1:'2025',y2:'2026',cagr:8.4,source:0,decimals:2},{label:c.market.europe,from:727.2,to:1262.6,y1:'2026',y2:'2033',cagr:8.2,source:1,decimals:1}].map((x,i)=><article key={x.label} className="market-card"><p className="micro">{x.label}</p><div className="chart-values"><div><strong><Num v={x.from} decimals={x.decimals} locale={locale}/></strong><small>{x.y1}</small></div><span aria-hidden="true">→</span><div><strong><Num v={x.to} decimals={x.decimals} locale={locale}/></strong><small>{x.y2}</small></div></div><svg className="data-chart" viewBox="0 0 500 100" role="img" aria-label={c.market.chart}><path className="chart-grid" d="M0 24H500M0 60H500M0 96H500M1 0V100M166 0V100M333 0V100M499 0V100"/><g className="chart-reveal"><path className="chart-line" d={i===0?'M1 80L499 12':'M1 90L499 6'}/></g></svg><div className="market-caption"><span><Num v={x.cagr} decimals={1} suffix="%" locale={locale}/> {c.market.cagr}</span><a href={c.sources[x.source].url} target="_blank" rel="noreferrer">{c.sources[x.source].name} ↗</a></div></article>)}</div><div className="market-bottom"><article><span className="micro">{c.market.eu}</span><strong><Num v={10} suffix="%" locale={locale}/></strong><a href={c.sources[2].url} target="_blank" rel="noreferrer">{c.sources[2].name} ↗</a></article><article><span className="micro">{c.market.stores}</span><strong><Num v={4000} suffix="+" locale={locale}/></strong><a href={c.sources[3].url} target="_blank" rel="noreferrer">{c.sources[3].name} ↗</a></article><article><span className="micro">{c.market.overseas}</span><strong><span className="micro">{c.market.nearly} </span><Num v={600} suffix="%" locale={locale}/></strong><a href={c.sources[4].url} target="_blank" rel="noreferrer">{c.sources[4].name} ↗</a></article></div><div className="source-foot micro"><span>{c.market.forecast}</span><span>{c.market.historical}</span></div></section>}
  {visible('economics')&&<section id="economics" className="section economics"><Head i={3} c={c}/><Title lines={c.economicsTitle}/><Economics c={c.economics} extra={c.economicsExtra} locale={locale}/></section>}
  {visible('scale')&&<section id="scale" className="section scale"><Head i={4} c={c}/><Title lines={c.scale.title}/><div className="format-grid">{scenarios.map((s,i)=><article className="format" key={i}><div className="format-heading"><span className="micro">0{i+1}</span><h3>{c.scale.formats[i]}</h3><span aria-hidden="true">↗</span></div><div className="format-diagram" aria-hidden="true"><div style={{width:`${45+i*22}%`}}><i/><i/><i/><i/></div></div><dl>{[c.scale.areas[i],formatMoney(model.funding,locale),s.cups,calculate(s).payback?.toLocaleString(locale,{maximumFractionDigits:1})].map((v,j)=><div key={j}><dt>{c.scale.labels[j+1]}</dt><dd>{v}</dd></div>)}</dl></article>)}</div><p className="micro scale-repeat">{c.scale.repeat}</p><p className="assumption">{c.scale.note}</p></section>}
  {visible('terms')&&<section id="terms" className="section terms"><Head i={5} c={c}/><Title lines={c.terms.title}/><p className="assumption">{c.terms.tag}</p><dl className="term-facts">{[[c.terms.instrument,c.terms.instrumentValue],[c.terms.ticket,c.terms.ticketValue],[c.terms.return,c.terms.returnValue]].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><div className="terms-grid"><div><h3 className="micro">{c.terms.funds}</h3><div className="allocation" aria-hidden="true">{[35,25,20,12,8].map((n,i)=><span key={n} style={{flex:n,'--tone':`${20+i*15}%`} as CSSProperties}/>)}</div><ol className="allocation-key">{c.terms.allocations.map((x,i)=><li key={x}><span>{x}</span><span>{[35,25,20,12,8][i]}%</span></li>)}</ol></div><ol className="gates">{c.terms.gates.map(x=><li key={x}>{x}</li>)}</ol></div><h3 className="micro risks-title">{c.terms.risksTitle}</h3><div className="risks">{c.terms.risks.map(([a,b])=><div key={a}><span>{a}</span><span>→</span><span>{b}</span></div>)}</div><p className="assumption">{c.terms.note}</p></section>}
@@ -6993,6 +7112,7 @@ test("invalid inputs fail explicitly", () =>
 ````json
 {
   "buildCommand": "pnpm build",
+  "outputDirectory": ".next",
   "framework": "nextjs",
   "trailingSlash": true,
   "redirects": [
@@ -7035,7 +7155,6 @@ test("invalid inputs fail explicitly", () =>
         }
       ]
     }
-  ],
-  "outputDirectory": ".next"
+  ]
 }
 ````

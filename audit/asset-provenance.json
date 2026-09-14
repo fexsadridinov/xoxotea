@@ -1,0 +1,229 @@
+{
+  "all_found": true,
+  "items": [
+    {
+      "createdAt": 1789303019.608342,
+      "id": "b83a0501-300e-46ed-9c49-5ecd0d16327c",
+      "model": "nano_banana_2",
+      "params": {
+        "application": null,
+        "aspect_ratio": "3:4",
+        "batch_size": 1,
+        "height": 2400,
+        "input_image": null,
+        "input_images": [
+          {
+            "id": "a96ec129-ac27-42e0-a290-99ecb95fc4ca",
+            "type": "image_job",
+            "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_123521_a96ec129-ac27-42e0-a290-99ecb95fc4ca.png"
+          }
+        ],
+        "prompt": "Correct ONLY the clear dome lid in the supplied photograph. At the far left edge of the dome, near x=34% y=33% of the full frame, there is still visible embossed lettering. Completely ERASE ALL embossed marks and replace that small area with unmarked transparent plastic. The ENTIRE dome must be smooth blank clear plastic with no manufacturing codes, no numbers, no letters, no logo. Preserve exactly every other pixel-level quality: tall narrow cup silhouette, straw, milk tea, caramel stripes, pearls, condensation, backdrop, camera and lighting. Do not add any labels anywhere.\nresolution: 2k",
+        "resolution": "2k",
+        "surface": null,
+        "width": 1792
+      },
+      "results": {
+        "minUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_123659_b83a0501-300e-46ed-9c49-5ecd0d16327c_min.webp",
+        "rawUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_123659_b83a0501-300e-46ed-9c49-5ecd0d16327c.png"
+      },
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "createdAt": 1789375970.447237,
+      "id": "fc140c57-d9c8-4a55-b549-fc58a247760c",
+      "model": "nano_banana_2",
+      "params": {
+        "application": null,
+        "aspect_ratio": "3:4",
+        "batch_size": 1,
+        "height": 2400,
+        "input_image": null,
+        "input_images": [
+          {
+            "id": "af16f01a-9a6e-4e0a-b3b3-2afc321a6921",
+            "type": "image_job",
+            "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_084804_af16f01a-9a6e-4e0a-b3b3-2afc321a6921.png"
+          }
+        ],
+        "prompt": "Refine the same product image. Preserve the drink contents, droplets and completely blank cup. Only correct its catalog registration and locked lighting. Precise target in this 3:4 canvas: cup lid rim spans x=32% through x=68% at y=36%; bottom of cup at y=88%; center axis x=50%; clear dome apex at y=25%; straw tip y=15%. The cup must therefore be substantially slimmer and smaller in frame, identical to the other tall narrow catalog vessels. Camera is absolutely frontal at mid-cup height, not looking down. Single upper LEFT softbox casts shadow towards the RIGHT and slightly up in the image; pale warm peach/off-white paper backdrop without yellow saturation. Matte commercial photo. All surfaces clear and unprinted. No text, logo or embossed characters anywhere, no secondary objects, equipment, hands, extra straws, asymmetric rim, CGI gloss or HDR. resolution: 2k",
+        "resolution": "2k",
+        "surface": null,
+        "width": 1792
+      },
+      "results": {
+        "minUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085250_fc140c57-d9c8-4a55-b549-fc58a247760c_min.webp",
+        "rawUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085250_fc140c57-d9c8-4a55-b549-fc58a247760c.png"
+      },
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "createdAt": 1789303251.147757,
+      "id": "447afe93-e306-44bd-a3c1-a7fe0a5f3de5",
+      "model": "nano_banana_2",
+      "params": {
+        "application": null,
+        "aspect_ratio": "3:4",
+        "batch_size": 1,
+        "height": 2400,
+        "input_image": null,
+        "input_images": [
+          {
+            "id": "b83a0501-300e-46ed-9c49-5ecd0d16327c",
+            "type": "image_job",
+            "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_123659_b83a0501-300e-46ed-9c49-5ecd0d16327c.png"
+          }
+        ],
+        "prompt": "Photorealistic product photography of a single tall narrow transparent takeaway drink cup, taller and slimmer than a standard bubble tea cup, clear domed lid, wide clear straw inserted. The cup is completely blank — no logo, no text, no printed graphics, no characters, no branding of any kind. Contents: translucent amber jasmine green tea, clearly layered above a bed of dark tapioca pearls, clean gradient boundary. Centered, frontal, camera at exact mid-cup height, 100mm macro lens, f/5.6, full cup sharp. Single large softbox from upper left at 45 degrees, subtle fill from right, warm 3000K. Seamless warm off-white paper backdrop. Soft directional shadow falling to the lower right. Visible condensation beading on the upper third of the cup, larger droplets with trails lower down, faint moisture ring at the base. Accurate glass refraction bending the background through the cup wall and offsetting the straw where it enters the liquid. Soft light caustic cast through the liquid onto the surface. True symmetric ellipses at rim and lid. Matte photographic finish, fine film grain, no gloss, no HDR, no oversaturation, no CGI plastic look. Generous negative space above and below the cup.\nresolution: 2k",
+        "resolution": "2k",
+        "surface": null,
+        "width": 1792
+      },
+      "results": {
+        "minUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_124051_447afe93-e306-44bd-a3c1-a7fe0a5f3de5_min.webp",
+        "rawUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_124051_447afe93-e306-44bd-a3c1-a7fe0a5f3de5.png"
+      },
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "createdAt": 1789303250.955033,
+      "id": "9847f187-ccc6-424d-944a-63a36a77bd56",
+      "model": "nano_banana_2",
+      "params": {
+        "application": null,
+        "aspect_ratio": "3:4",
+        "batch_size": 1,
+        "height": 2400,
+        "input_image": null,
+        "input_images": [
+          {
+            "id": "b83a0501-300e-46ed-9c49-5ecd0d16327c",
+            "type": "image_job",
+            "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_123659_b83a0501-300e-46ed-9c49-5ecd0d16327c.png"
+          }
+        ],
+        "prompt": "Photorealistic product photography of a single tall narrow transparent takeaway drink cup, taller and slimmer than a standard bubble tea cup, clear domed lid, wide clear straw inserted. The cup is completely blank — no logo, no text, no printed graphics, no characters, no branding of any kind. Contents: layered coconut milk and mango purée with a soft diffuse density boundary between the white and orange phases. Centered, frontal, camera at exact mid-cup height, 100mm macro lens, f/5.6, full cup sharp. Single large softbox from upper left at 45 degrees, subtle fill from right, warm 3000K. Seamless warm off-white paper backdrop. Soft directional shadow falling to the lower right. Visible condensation beading on the upper third of the cup, larger droplets with trails lower down, faint moisture ring at the base. Accurate glass refraction bending the background through the cup wall and offsetting the straw where it enters the liquid. Soft light caustic cast through the liquid onto the surface. True symmetric ellipses at rim and lid. Matte photographic finish, fine film grain, no gloss, no HDR, no oversaturation, no CGI plastic look. Generous negative space above and below the cup.\nresolution: 2k",
+        "resolution": "2k",
+        "surface": null,
+        "width": 1792
+      },
+      "results": {
+        "minUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_124050_9847f187-ccc6-424d-944a-63a36a77bd56_min.webp",
+        "rawUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_124050_9847f187-ccc6-424d-944a-63a36a77bd56.png"
+      },
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "createdAt": 1789375970.938367,
+      "id": "b7360a21-b863-4d6d-b472-338c03edf785",
+      "model": "nano_banana_2",
+      "params": {
+        "application": null,
+        "aspect_ratio": "3:4",
+        "batch_size": 1,
+        "height": 2400,
+        "input_image": null,
+        "input_images": [
+          {
+            "id": "cdc37d2d-4114-447f-a2d3-64f59bbec10a",
+            "type": "image_job",
+            "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_084804_cdc37d2d-4114-447f-a2d3-64f59bbec10a.png"
+          }
+        ],
+        "prompt": "Refine the same product image. Preserve the drink contents, droplets and completely blank cup. Only correct its catalog registration and locked lighting. Precise target in this 3:4 canvas: cup lid rim spans x=32% through x=68% at y=36%; bottom of cup at y=88%; center axis x=50%; clear dome apex at y=25%; straw tip y=15%. The cup must therefore be substantially slimmer and smaller in frame, identical to the other tall narrow catalog vessels. Camera is absolutely frontal at mid-cup height, not looking down. Single upper LEFT softbox casts shadow towards the RIGHT and slightly up in the image; pale warm peach/off-white paper backdrop without yellow saturation. Matte commercial photo. All surfaces clear and unprinted. No text, logo or embossed characters anywhere, no secondary objects, equipment, hands, extra straws, asymmetric rim, CGI gloss or HDR. resolution: 2k",
+        "resolution": "2k",
+        "surface": null,
+        "width": 1792
+      },
+      "results": {
+        "minUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085250_b7360a21-b863-4d6d-b472-338c03edf785_min.webp",
+        "rawUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085250_b7360a21-b863-4d6d-b472-338c03edf785.png"
+      },
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "createdAt": 1789375971.173118,
+      "id": "d0fa48b6-88ba-46eb-8e4e-b84abbf979a9",
+      "model": "nano_banana_2",
+      "params": {
+        "application": null,
+        "aspect_ratio": "3:4",
+        "batch_size": 1,
+        "height": 2400,
+        "input_image": null,
+        "input_images": [
+          {
+            "id": "88f60c2d-9bab-4734-8579-77fbfd47f52d",
+            "type": "image_job",
+            "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_084804_88f60c2d-9bab-4734-8579-77fbfd47f52d.png"
+          }
+        ],
+        "prompt": "Refine the same product image. Preserve the drink contents, droplets and completely blank cup. Only correct its catalog registration and locked lighting. Precise target in this 3:4 canvas: cup lid rim spans x=32% through x=68% at y=36%; bottom of cup at y=88%; center axis x=50%; clear dome apex at y=25%; straw tip y=15%. The cup must therefore be substantially slimmer and smaller in frame, identical to the other tall narrow catalog vessels. Camera is absolutely frontal at mid-cup height, not looking down. Single upper LEFT softbox casts shadow towards the RIGHT and slightly up in the image; pale warm peach/off-white paper backdrop without yellow saturation. Matte commercial photo. All surfaces clear and unprinted. No text, logo or embossed characters anywhere, no secondary objects, equipment, hands, extra straws, asymmetric rim, CGI gloss or HDR. resolution: 2k",
+        "resolution": "2k",
+        "surface": null,
+        "width": 1792
+      },
+      "results": {
+        "minUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085251_d0fa48b6-88ba-46eb-8e4e-b84abbf979a9_min.webp",
+        "rawUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085251_d0fa48b6-88ba-46eb-8e4e-b84abbf979a9.png"
+      },
+      "status": "completed",
+      "type": "image"
+    }
+  ],
+  "jobs": [
+    {
+      "index": 0,
+      "job_id": "b83a0501-300e-46ed-9c49-5ecd0d16327c",
+      "model": "nano_banana_2",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_123659_b83a0501-300e-46ed-9c49-5ecd0d16327c.png",
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "index": 1,
+      "job_id": "fc140c57-d9c8-4a55-b549-fc58a247760c",
+      "model": "nano_banana_2",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085250_fc140c57-d9c8-4a55-b549-fc58a247760c.png",
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "index": 2,
+      "job_id": "447afe93-e306-44bd-a3c1-a7fe0a5f3de5",
+      "model": "nano_banana_2",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_124051_447afe93-e306-44bd-a3c1-a7fe0a5f3de5.png",
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "index": 3,
+      "job_id": "9847f187-ccc6-424d-944a-63a36a77bd56",
+      "model": "nano_banana_2",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_124050_9847f187-ccc6-424d-944a-63a36a77bd56.png",
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "index": 4,
+      "job_id": "b7360a21-b863-4d6d-b472-338c03edf785",
+      "model": "nano_banana_2",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085250_b7360a21-b863-4d6d-b472-338c03edf785.png",
+      "status": "completed",
+      "type": "image"
+    },
+    {
+      "index": 5,
+      "job_id": "d0fa48b6-88ba-46eb-8e4e-b84abbf979a9",
+      "model": "nano_banana_2",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260914_085251_d0fa48b6-88ba-46eb-8e4e-b84abbf979a9.png",
+      "status": "completed",
+      "type": "image"
+    }
+  ]
+}
