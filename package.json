@@ -8,7 +8,8 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test:model": "node --experimental-strip-types --test tests/model.test.mjs",
-    "test:inventory": "node --test tests/inventory.test.mjs"
+    "test:inventory": "node --test tests/inventory.test.mjs",
+    "test:localization": "node --experimental-strip-types --test tests/localization.test.mjs"
   },
   "dependencies": {
     "framer-motion": "^13.2.0",

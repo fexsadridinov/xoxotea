@@ -1,0 +1,294 @@
+{
+  "date": "2026-09-14",
+  "environment": "Mac Chromium in-app browser; local production export",
+  "responsive": [
+    {
+      "path": "/zh/",
+      "width": 360,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/",
+      "width": 390,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/",
+      "width": 430,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/",
+      "width": 768,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/",
+      "width": 1024,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/",
+      "width": 1440,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/",
+      "width": 1920,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/menu/",
+      "width": 360,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/menu/",
+      "width": 390,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/menu/",
+      "width": 430,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/menu/",
+      "width": 768,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/menu/",
+      "width": 1024,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/menu/",
+      "width": 1440,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/menu/",
+      "width": 1920,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/investors/",
+      "width": 360,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/investors/",
+      "width": 390,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/investors/",
+      "width": 430,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/investors/",
+      "width": 768,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/investors/",
+      "width": 1024,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/investors/",
+      "width": 1440,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/zh/investors/",
+      "width": 1920,
+      "htmlLang": "zh-Hans",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "htmlLang": "uk",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "htmlLang": "uk",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/menu/",
+      "width": 390,
+      "htmlLang": "uk",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/menu/",
+      "width": 1440,
+      "htmlLang": "uk",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/investors/",
+      "width": 390,
+      "htmlLang": "uk",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/investors/",
+      "width": 1440,
+      "htmlLang": "uk",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/en/",
+      "width": 390,
+      "htmlLang": "en",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/en/",
+      "width": 1440,
+      "htmlLang": "en",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/en/menu/",
+      "width": 390,
+      "htmlLang": "en",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/en/menu/",
+      "width": 1440,
+      "htmlLang": "en",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/en/investors/",
+      "width": 390,
+      "htmlLang": "en",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/en/investors/",
+      "width": 1440,
+      "htmlLang": "en",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/ru/",
+      "width": 390,
+      "htmlLang": "ru",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/ru/",
+      "width": 1440,
+      "htmlLang": "ru",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/ru/menu/",
+      "width": 390,
+      "htmlLang": "ru",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/ru/menu/",
+      "width": 1440,
+      "htmlLang": "ru",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/ru/investors/",
+      "width": 390,
+      "htmlLang": "ru",
+      "pageOverflow": false,
+      "headingOverflow": false
+    },
+    {
+      "path": "/ru/investors/",
+      "width": 1440,
+      "htmlLang": "ru",
+      "pageOverflow": false,
+      "headingOverflow": false
+    }
+  ],
+  "interactions": {
+    "languageRoutePreservation": true,
+    "zeroInputs": true,
+    "usdNegativeFormatting": true,
+    "reset": true,
+    "requiredValidationChinese": true,
+    "invalidContactChinese": true,
+    "localRequestPrepared": true,
+    "confirmationFocus": true,
+    "recipeKeyboardExpansion": true
+  },
+  "consoleErrorsObserved": 0,
+  "fontBytes": 91732,
+  "pdfVisuallyReviewed": true,
+  "notes": "No new Lighthouse or physical-device performance claim."
+}

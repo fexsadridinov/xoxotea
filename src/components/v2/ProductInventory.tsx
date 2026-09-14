@@ -16,7 +16,7 @@ export function ProductInventory({locale,c}:{locale:Locale;c:Copy['catalogue']})
       <div className="inventory-grid">{inventory.filter(d=>d.tier===tier).map(d=><article className="recipe-card" key={d.id} data-product-id={d.id}>
         <div className="recipe-photo"><span className="recipe-code" aria-hidden="true">{d.id}</span><Image unoptimized src={`/drinks/catalogue/${d.id}.webp`} width="600" height="600" loading="lazy" decoding="async" alt={d.name[locale]}/></div>
         <div className="recipe-body"><p className="micro recipe-serving">{c.cold} / {d.volumeMl} {c.ml}</p><h4>{d.name[locale]}</h4><p className="recipe-taste">{d.taste[locale]}</p><p className="recipe-allergen">{d.dairy?c.milk:c.noMilk}</p>
-          <details><summary>{c.detail}<span aria-hidden="true">+</span></summary><div className="recipe-details"><p>{d.ingredients[locale]}</p><p><strong>{c.adaptation}</strong>{d.adaptation[locale]}</p><p className="recipe-reference">{c.source}: <span lang="zh-Hans">{d.original}</span> / {c.page} {d.sourcePages.join(', ')}</p></div></details>
+          <details><summary>{c.detail}<span aria-hidden="true">+</span></summary><div className="recipe-details"><p>{d.ingredients[locale]}</p><p><strong>{c.adaptation}</strong>{d.adaptation[locale]}</p><p className="recipe-reference">{c.source}{locale==='zh'?'：':': '}<span lang="zh-Hans">{d.original}</span> / {c.page} {d.sourcePages.join(locale==='zh'?'、':', ')}</p></div></details>
         </div>
       </article>)}</div>
     </div>)}

@@ -16,22 +16,26 @@
     "name": {
       "ru": "Зелёный чай с сырной пенкой",
       "uk": "Зелений чай із сирною пінкою",
-      "en": "Green tea & cheese foam"
+      "en": "Green tea & cheese foam",
+      "zh": "芝士绿茶"
     },
     "taste": {
       "ru": "Лёгкий чай, сливочная пенка и тонкая солёная нота.",
       "uk": "Легкий чай, вершкова пінка й делікатна солона нота.",
-      "en": "Light tea, creamy foam and a delicate salty finish."
+      "en": "Light tea, creamy foam and a delicate salty finish.",
+      "zh": "清爽茶香，绵密奶盖，尾韵微咸。"
     },
     "ingredients": {
       "ru": "Зелёный чай · сливочный сыр · сливки · молоко · сгущённое молоко · сироп",
       "uk": "Зелений чай · вершковий сир · вершки · молоко · згущене молоко · сироп",
-      "en": "Green tea · cream cheese · cream · milk · condensed milk · syrup"
+      "en": "Green tea · cream cheese · cream · milk · condensed milk · syrup",
+      "zh": "绿茶 · 奶油奶酪 · 稀奶油 · 牛奶 · 炼乳 · 糖浆"
     },
     "adaptation": {
       "ru": "Сохраняем чай и сырную пенку. Сорт зелёного чая выбираем на дегустации; происхождение не заявляем.",
       "uk": "Зберігаємо чай і сирну пінку. Сорт зеленого чаю обираємо на дегустації; походження не заявляємо.",
-      "en": "Tea and cheese foam retained. Green tea cultivar will be selected through tasting; no origin claim."
+      "en": "Tea and cheese foam retained. Green tea cultivar will be selected through tasting; no origin claim.",
+      "zh": "保留茶底与芝士奶盖的组合。绿茶品种经试饮后选定；暂不作产地承诺。"
     }
   },
   {
@@ -51,22 +55,26 @@
     "name": {
       "ru": "Улун «Четыре сезона»",
       "uk": "Улун «Чотири сезони»",
-      "en": "Four Seasons oolong"
+      "en": "Four Seasons oolong",
+      "zh": "芝士四季春"
     },
     "taste": {
       "ru": "Цветочный улун под мягкой сырной пенкой.",
       "uk": "Квітковий улун під ніжною сирною пінкою.",
-      "en": "Floral oolong beneath a soft cheese foam."
+      "en": "Floral oolong beneath a soft cheese foam.",
+      "zh": "四季春乌龙的花香，配上柔滑芝士奶盖。"
     },
     "ingredients": {
       "ru": "Улун «Четыре сезона» · сырная пенка · сироп",
       "uk": "Улун «Чотири сезони» · сирна пінка · сироп",
-      "en": "Four Seasons oolong · cheese foam · syrup"
+      "en": "Four Seasons oolong · cheese foam · syrup",
+      "zh": "四季春乌龙茶 · 芝士奶盖 · 糖浆"
     },
     "adaptation": {
       "ru": "Основа — 四季春. Экстракцию на нашем оборудовании фиксируем после тестов; не подменяем её рецептом зелёного чая.",
       "uk": "Основа — 四季春. Екстракцію на нашому обладнанні фіксуємо після тестів; не підміняємо її рецептом зеленого чаю.",
-      "en": "Built on 四季春. Extraction must be tested on our equipment; the green tea steep is not a substitute."
+      "en": "Built on 四季春. Extraction must be tested on our equipment; the green tea steep is not a substitute.",
+      "zh": "以四季春为茶底，须在本店设备上测试并确定萃取参数，不直接套用绿茶的浸泡方法。"
     }
   },
   {
@@ -87,22 +95,26 @@
     "name": {
       "ru": "Молочный чай с жемчужинами",
       "uk": "Молочний чай з перлинами",
-      "en": "Pearl milk tea"
+      "en": "Pearl milk tea",
+      "zh": "红玉珍珠奶茶"
     },
     "taste": {
       "ru": "Красный чай «Рубин», молочная мягкость и тапиока.",
       "uk": "Червоний чай «Рубін», молочна м’якість і тапіока.",
-      "en": "Ruby black tea, fresh dairy and chewy tapioca."
+      "en": "Ruby black tea, fresh dairy and chewy tapioca.",
+      "zh": "红玉红茶搭配醇和乳香，木薯珍珠带来弹润口感。"
     },
     "ingredients": {
       "ru": "Чай «Рубин» · молоко · концентрированное молоко · тапиока · коричневый сахар · сироп",
       "uk": "Чай «Рубін» · молоко · концентроване молоко · тапіока · коричневий цукор · сироп",
-      "en": "Ruby black tea · milk · evaporated milk · tapioca · brown sugar · syrup"
+      "en": "Ruby black tea · milk · evaporated milk · tapioca · brown sugar · syrup",
+      "zh": "红玉红茶 · 牛奶 · 淡奶 · 木薯珍珠 · 红糖 · 糖浆"
     },
     "adaptation": {
       "ru": "Убираем крем-брюле из карты с жемчужинами. Используем молочную основу со стр. 33 вместо смеси со сливочным порошком. Это адаптация, требующая дегустации.",
       "uk": "Прибираємо крем-брюле з карти з перлинами. Використовуємо молочну основу зі стор. 33 замість суміші з вершковим порошком. Це адаптація, що потребує дегустації.",
-      "en": "Brûlée topping removed. Fresh dairy base from page 33 replaces the creamer base. This adaptation needs tasting."
+      "en": "Brûlée topping removed. Fresh dairy base from page 33 replaces the creamer base. This adaptation needs tasting.",
+      "zh": "去除原配方中的布蕾，以第33页的乳基底替代奶精基底。调整后的配方须重新试饮验证。"
     }
   },
   {
@@ -122,22 +134,26 @@
     "name": {
       "ru": "Молоко с коричневым сахаром",
       "uk": "Молоко з коричневим цукром",
-      "en": "Brown sugar pearl milk"
+      "en": "Brown sugar pearl milk",
+      "zh": "黑糖波波鲜奶"
     },
     "taste": {
       "ru": "Тёплые карамельные ноты, молоко и тапиока. Без чайной основы.",
       "uk": "Теплі карамельні ноти, молоко й тапіока. Без чайної основи.",
-      "en": "Caramel notes, fresh milk and tapioca. Made without tea."
+      "en": "Caramel notes, fresh milk and tapioca. Made without tea.",
+      "zh": "牛奶与木薯珍珠相融，带出焦糖香气；不含茶底。"
     },
     "ingredients": {
       "ru": "Молоко · тапиока · коричневый сахар",
       "uk": "Молоко · тапіока · коричневий цукор",
-      "en": "Milk · tapioca · brown sugar"
+      "en": "Milk · tapioca · brown sugar",
+      "zh": "牛奶 · 木薯珍珠 · 红糖"
     },
     "adaptation": {
       "ru": "Сохраняем молоко и жемчужины в сахарном сиропе. Убираем брюле и обжиг. Стакан 500 мл — выбор XoXo для пилота.",
       "uk": "Зберігаємо молоко й перлини в цукровому сиропі. Прибираємо брюле та обпалювання. Склянка 500 мл — вибір XoXo для пілота.",
-      "en": "Milk and brown sugar pearls retained; brûlée and torching removed. The 500 ml cup is an XoXo pilot choice."
+      "en": "Milk and brown sugar pearls retained; brûlée and torching removed. The 500 ml cup is an XoXo pilot choice.",
+      "zh": "保留牛奶与红糖珍珠，去除布蕾及炙烤工序。500毫升规格为 XoXo 试点阶段的选择。"
     }
   },
   {
@@ -157,22 +173,26 @@
     "name": {
       "ru": "Лимонный зелёный чай",
       "uk": "Лимонний зелений чай",
-      "en": "Whole lemon green tea"
+      "en": "Whole lemon green tea",
+      "zh": "整颗柠檬绿茶"
     },
     "taste": {
       "ru": "Выразительный лимон и свежий зелёный чай.",
       "uk": "Виразний лимон і свіжий зелений чай.",
-      "en": "Bright lemon with fresh green tea."
+      "en": "Bright lemon with fresh green tea.",
+      "zh": "鲜明柠檬香气，衬托清爽绿茶。"
     },
     "ingredients": {
       "ru": "Зелёный чай · целый лимон · лимонный сок · сироп",
       "uk": "Зелений чай · цілий лимон · лимонний сік · сироп",
-      "en": "Green tea · whole lemon · lemon juice · syrup"
+      "en": "Green tea · whole lemon · lemon juice · syrup",
+      "zh": "绿茶 · 整颗柠檬 · 柠檬汁 · 糖浆"
     },
     "adaptation": {
       "ru": "Сохраняем большой формат 700 мл. Кислотность и выход сока проверяем для каждой партии лимонов.",
       "uk": "Зберігаємо великий формат 700 мл. Кислотність і вихід соку перевіряємо для кожної партії лимонів.",
-      "en": "The 700 ml format is retained. Acidity and juice yield need checking for each lemon batch."
+      "en": "The 700 ml format is retained. Acidity and juice yield need checking for each lemon batch.",
+      "zh": "保留700毫升规格。每批柠檬均须检查酸度与出汁率。"
     }
   },
   {
@@ -192,22 +212,26 @@
     "name": {
       "ru": "Матча с сырной пенкой",
       "uk": "Матча із сирною пінкою",
-      "en": "Matcha & cheese foam"
+      "en": "Matcha & cheese foam",
+      "zh": "芝士抹茶"
     },
     "taste": {
       "ru": "Насыщенная матча и сливочный финиш. Без тапиоки.",
       "uk": "Насичена матча й вершковий післясмак. Без тапіоки.",
-      "en": "Full matcha flavour with a creamy finish. No tapioca."
+      "en": "Full matcha flavour with a creamy finish. No tapioca.",
+      "zh": "浓郁抹茶，绵柔乳香；不添加木薯珍珠。"
     },
     "ingredients": {
       "ru": "Матча · молоко · концентрированное и сгущённое молоко · сырная пенка · сироп",
       "uk": "Матча · молоко · концентроване та згущене молоко · сирна пінка · сироп",
-      "en": "Matcha · milk · evaporated and condensed milk · cheese foam · syrup"
+      "en": "Matcha · milk · evaporated and condensed milk · cheese foam · syrup",
+      "zh": "抹茶 · 牛奶 · 淡奶 · 炼乳 · 芝士奶盖 · 糖浆"
     },
     "adaptation": {
       "ru": "Берём холодную версию с сырной пенкой. Не заявляем происхождение из Сидзуоки без подтверждённого поставщика.",
       "uk": "Беремо холодну версію із сирною пінкою. Не заявляємо походження із Сідзуоки без підтвердженого постачальника.",
-      "en": "Uses the cold cheese foam version. Shizuoka origin is not claimed without a verified supplier."
+      "en": "Uses the cold cheese foam version. Shizuoka origin is not claimed without a verified supplier.",
+      "zh": "采用冷饮搭配芝士奶盖的版本。供应商及产地未经核实前，不作“静冈抹茶”的产地宣传。"
     }
   },
   {
@@ -227,22 +251,26 @@
     "name": {
       "ru": "Клубника и сырная пенка",
       "uk": "Полуниця й сирна пінка",
-      "en": "Strawberry & cheese foam"
+      "en": "Strawberry & cheese foam",
+      "zh": "芝士草莓"
     },
     "taste": {
       "ru": "Клубничная мякоть, зелёный чай и нежная пенка.",
       "uk": "Полунична м’якоть, зелений чай й ніжна пінка.",
-      "en": "Strawberry pulp, green tea and soft cheese foam."
+      "en": "Strawberry pulp, green tea and soft cheese foam.",
+      "zh": "草莓果肉、绿茶与轻柔芝士奶盖，层次清新。"
     },
     "ingredients": {
       "ru": "Зелёный чай · клубника · клубничный джем · сырная пенка · сироп",
       "uk": "Зелений чай · полуниця · полуничний джем · сирна пінка · сироп",
-      "en": "Green tea · strawberries · strawberry jam · cheese foam · syrup"
+      "en": "Green tea · strawberries · strawberry jam · cheese foam · syrup",
+      "zh": "绿茶 · 草莓 · 草莓果酱 · 芝士奶盖 · 糖浆"
     },
     "adaptation": {
       "ru": "В источнике ягоды указаны поштучно. Перед запуском переводим восемь ягод в массу по фактической партии.",
       "uk": "У джерелі ягоди вказані поштучно. Перед запуском переводимо вісім ягід у масу за фактичною партією.",
-      "en": "The source counts eight berries. Their gram weight must be calibrated against the actual fruit batch."
+      "en": "The source counts eight berries. Their gram weight must be calibrated against the actual fruit batch.",
+      "zh": "原配方按8颗草莓计量。上市前须根据实际批次，将颗数换算并校准为克重。"
     }
   },
   {
@@ -261,22 +289,26 @@
     "name": {
       "ru": "Персик и улун",
       "uk": "Персик та улун",
-      "en": "Peach & oolong"
+      "en": "Peach & oolong",
+      "zh": "蜜桃四季春"
     },
     "taste": {
       "ru": "Много персика, цветочный чай и чистый фруктовый вкус.",
       "uk": "Багато персика, квітковий чай і чистий фруктовий смак.",
-      "en": "Generous peach, floral tea and a clean fruit finish."
+      "en": "Generous peach, floral tea and a clean fruit finish.",
+      "zh": "充足桃肉搭配花香乌龙，果味清透。"
     },
     "ingredients": {
       "ru": "Улун «Четыре сезона» · персик · сироп",
       "uk": "Улун «Чотири сезони» · персик · сироп",
-      "en": "Four Seasons oolong · peach · syrup"
+      "en": "Four Seasons oolong · peach · syrup",
+      "zh": "四季春乌龙茶 · 桃肉 · 糖浆"
     },
     "adaptation": {
       "ru": "Два китайских региональных сорта заменяем одобренной партией персика, сохраняя 220 г мякоти. Вкус проверяем заново.",
       "uk": "Два китайські регіональні сорти замінюємо схваленою партією персика, зберігаючи 220 г м’якоті. Смак перевіряємо наново.",
-      "en": "Two Chinese regional peach varieties become one approved supply, retaining 220 g fruit. Flavour must be retested."
+      "en": "Two Chinese regional peach varieties become one approved supply, retaining 220 g fruit. Flavour must be retested.",
+      "zh": "将原配方中的两种中国地方桃品种，替换为经确认的一批供应原料，保留220克果肉总量，并重新验证风味。"
     }
   },
   {
@@ -296,22 +328,26 @@
     "name": {
       "ru": "Тёмный виноград и улун",
       "uk": "Темний виноград та улун",
-      "en": "Dark grape & oolong"
+      "en": "Dark grape & oolong",
+      "zh": "芝士黑提乌龙"
     },
     "taste": {
       "ru": "Виноградная мякоть, немного яблока и сырная пенка.",
       "uk": "Виноградна м’якоть, трохи яблука й сирна пінка.",
-      "en": "Dark grape pulp, a touch of apple and cheese foam."
+      "en": "Dark grape pulp, a touch of apple and cheese foam.",
+      "zh": "黑提果肉加少许苹果，搭配柔滑芝士奶盖。"
     },
     "ingredients": {
       "ru": "Улун «Четыре сезона» · тёмный виноград без косточек · яблоко · сырная пенка · сироп",
       "uk": "Улун «Чотири сезони» · темний виноград без кісточок · яблуко · сирна пінка · сироп",
-      "en": "Four Seasons oolong · seedless dark grapes · apple · cheese foam · syrup"
+      "en": "Four Seasons oolong · seedless dark grapes · apple · cheese foam · syrup",
+      "zh": "四季春乌龙茶 · 无籽黑提 · 苹果 · 芝士奶盖 · 糖浆"
     },
     "adaptation": {
       "ru": "Османтусовый улун из источника заменяем общей основой «Четыре сезона». Османтус не заявляем; новый баланс проходит дегустацию.",
       "uk": "Османтусовий улун із джерела замінюємо спільною основою «Чотири сезони». Османтус не заявляємо; новий баланс проходить дегустацію.",
-      "en": "Four Seasons replaces the source’s osmanthus oolong to share a tea base. No osmanthus claim; the new balance needs tasting."
+      "en": "Four Seasons replaces the source’s osmanthus oolong to share a tea base. No osmanthus claim; the new balance needs tasting.",
+      "zh": "将原配方的桂花乌龙替换为共用的四季春茶底。不宣称含桂花；新配比须经试饮校准。"
     }
   },
   {
@@ -331,22 +367,26 @@
     "name": {
       "ru": "Манго и сырная пенка",
       "uk": "Манго й сирна пінка",
-      "en": "Mango & cheese foam"
+      "en": "Mango & cheese foam",
+      "zh": "芝士芒果"
     },
     "taste": {
       "ru": "Спелое манго, лёгкий зелёный чай и сливочная пенка.",
       "uk": "Стигле манго, легкий зелений чай й вершкова пінка.",
-      "en": "Ripe mango, light green tea and creamy foam."
+      "en": "Ripe mango, light green tea and creamy foam.",
+      "zh": "成熟芒果的香甜，配上清淡绿茶与绵密奶盖。"
     },
     "ingredients": {
       "ru": "Зелёный чай · манго · сырная пенка · сироп",
       "uk": "Зелений чай · манго · сирна пінка · сироп",
-      "en": "Green tea · mango · cheese foam · syrup"
+      "en": "Green tea · mango · cheese foam · syrup",
+      "zh": "绿茶 · 芒果 · 芝士奶盖 · 糖浆"
     },
     "adaptation": {
       "ru": "Сохраняем 180 г манго и двухэтапное смешивание. Сезонная позиция по качеству поставки; кокоса в этой карте нет.",
       "uk": "Зберігаємо 180 г манго та двоетапне змішування. Сезонна позиція за якістю постачання; кокоса в цій карті немає.",
-      "en": "Retains 180 g mango and two-stage blending. Released when supply meets the fruit specification; this recipe contains no coconut."
+      "en": "Retains 180 g mango and two-stage blending. Released when supply meets the fruit specification; this recipe contains no coconut.",
+      "zh": "保留180克芒果及分两次搅打的工艺。仅在果品供应达标时推出；本配方不含椰子。"
     }
   }
 ]

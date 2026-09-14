@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { getCopy, pathFor, type Copy, type Locale } from '@/lib/content';
+import { getCopy, pathFor, languageTag, type Copy, type Locale } from '@/lib/content';
 import { calculate, scenarios, model, formatMoney } from '@/lib/store-model';
 import { Runtime } from './Runtime';
 import { Economics } from './Economics';
@@ -14,7 +14,7 @@ function Num({v,decimals=0,suffix='',locale}:{v:number;decimals?:number;suffix?:
 export function System({locale='uk',view='all'}:{locale?:Locale;view?:'all'|'menu'|'investors'}){
  const c=getCopy(locale); const visible=(id:string)=>view==='all'||(view==='menu'?['product','contact'].includes(id):['market','economics','scale','terms','contact'].includes(id));
  const here=view==='all'?'':view; const home=pathFor(locale);
- return <div lang={locale} className="system"><Runtime locale={locale}/><a href="#main" className="skip">{c.nav.skip}</a>
+ return <div lang={languageTag(locale)} className="system"><Runtime locale={locale}/><a href="#main" className="skip">{c.nav.skip}</a>
  <header className="topbar"><a href={home} className="wordmark" aria-label={c.brand+' / '+c.nav.home}>{c.brand}</a><span className="edition">{c.edition}</span><nav aria-label={c.nav.label}><a href={pathFor(locale,'menu')}>{c.nav.menu}</a><a href={pathFor(locale,'investors')}>{c.nav.investors}</a><LanguageSwitcher locale={locale} path={here} label={c.nav.language}/></nav></header>
  <aside className="rail"><nav aria-label={c.nav.index}>{ids.filter(visible).map(id=><a key={id} href={`#${id}`} data-section-link={id}><span>{String(ids.indexOf(id)+1).padStart(2,'0')}</span><span>{c.sections[ids.indexOf(id)]}</span></a>)}</nav><span className="reading-progress" aria-hidden="true" data-progress-label>00%</span></aside>
  <div className="top-progress" aria-hidden="true"><i/></div><main id="main" tabIndex={-1}>{view!=="all"&&<h1 className="sr-only">{view==="menu"?c.nav.menu:c.nav.investors}</h1>}

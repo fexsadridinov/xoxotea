@@ -1,9 +1,9 @@
 'use client';
 import {useEffect} from 'react';
-import type {Locale} from '@/lib/content';
+import {type Locale,languageTag} from '@/lib/content';
 export function Runtime({locale}:{locale:Locale}){
  useEffect(()=>{
-  const root=document.documentElement;root.lang=locale;
+  const root=document.documentElement;root.lang=languageTag(locale);
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const all=<T extends Element=HTMLElement>(s:string)=>Array.from(document.querySelectorAll<T>(s));
   const sections=all<HTMLElement>('main > section');

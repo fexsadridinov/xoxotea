@@ -72,6 +72,30 @@
       "singleHeading": true,
       "uniqueIds": true,
       "internalTargets": true
+    },
+    {
+      "locale": "zh",
+      "view": "home",
+      "serverLanguage": "zh-Hans",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "zh",
+      "view": "menu",
+      "serverLanguage": "zh-Hans",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "zh",
+      "view": "investors",
+      "serverLanguage": "zh-Hans",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
     }
   ]
 }
