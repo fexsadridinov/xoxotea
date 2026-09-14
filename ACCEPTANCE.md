@@ -1,6 +1,6 @@
 # Localization and refinement acceptance — 14 September 2026
 
-Russian localization and zero-minimum calculator changes are complete. The existing review branch remains a draft because the previously required generated-media and physical-device gates remain open.
+Russian localization and zero-minimum calculator changes are complete. The owner authorized publication on 14 September 2026; PR #5 is merged and deployed. The generated-media, performance, physical-device and live-integration gates below remain open.
 
 ## Verified
 
@@ -35,7 +35,7 @@ The user authorized lower minima on 14 September. The economic source is therefo
 - The real 36-frame turntable is absent after the generation service rejected it for insufficient credits. The site labels its static view; no fabricated sequence is used.
 - Physical Android 60fps is not verified.
 - Live lead delivery and calendar are not configured. Local form downloads are explicitly unsent. The endpoint contract now matches the implementation.
-- Main merge is withheld under the earlier mandatory ship gate. The Vercel branch preview requires sign-in; a sign-in page is not counted as public site verification.
+- PR #5 was merged after the owner authorized publication. The production domain is publicly accessible; protected preview URLs are not used as evidence of public availability. Publication does not certify the remaining quality gates.
 
 ## Evidence
 
@@ -43,4 +43,8 @@ The user authorized lower minima on 14 September. The economic source is therefo
 
 ## Publication status
 
-The completed localization is saved in the local Git checkout. Automatic approval review repeatedly rejected uploading the Russian PDF to the public `fexsadridinov/xoxotea` repository, citing missing explicit disclosure authorization. Repository visibility and pre-existing source/PDF content were verified; the block remained. The new localization has not been published, and the prior draft preview must not be presented as containing it. Explicit user approval to publish the completed website and localized PDFs is needed before retrying.
+The owner explicitly authorized GitHub publication and Vercel deployment on 14 September 2026, superseding the earlier publication hold. The implementation checkpoint `49595e1` was pushed and merged through PR #5 as `caeeaa3a40422fe647b04f6e0998d4ff7ce3c876`.
+
+Vercel reported production deployment `dpl_5RvyVPA46D9pSjbWqY5jDYrGszgW` Ready. All nine routes returned HTTP 200 without authentication and with the expected server HTML language. The public Russian PDF matched the local release byte-for-byte. The Mac production build (including TypeScript), lint, 11 model tests, and static route audit passed.
+
+Direct Vercel CLI access is linked to `grow-field-os/xoxotea`. Dashboard settings have been reconciled with `vercel.json`: Next.js, `pnpm build`, `.next`, Node 24.x. No project environment variables are configured, so live leads and calendar booking remain unavailable. Existing performance measurements above remain the historical lab results; no new Lighthouse result is claimed.
