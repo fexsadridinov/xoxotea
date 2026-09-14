@@ -49,10 +49,11 @@ export function calculate(input: Inputs) {
       contribution > 0 ? Math.ceil(fixed / contribution / model.days) : null,
   };
 }
-export function formatMoney(value: number, locale: "uk" | "en" | "ru", usd = false) {
-  const n = new Intl.NumberFormat({uk:"uk-UA", en:"en-US", ru:"ru-RU"}[locale], {
+export function formatMoney(value: number, locale: "uk" | "en" | "ru" | "zh", usd = false) {
+  const n = new Intl.NumberFormat({uk:"uk-UA", en:"en-US", ru:"ru-RU", zh:"zh-CN"}[locale], {
     maximumFractionDigits: 0,
   }).format(value / (usd ? model.fx : 1));
+  if (locale === "zh") return `${value < 0 ? "-" : ""}${usd ? "US$" : "₴"}${n.replace(/^-/, "")}`;
   if (usd && locale === "en") return value < 0 ? `-$${n.slice(1)}` : `$${n}`;
   return `${n.replace(/\u00a0/g, " ")} ${usd ? "$" : "₴"}`;
 }

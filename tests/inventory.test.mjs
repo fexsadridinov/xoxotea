@@ -10,7 +10,7 @@ test('launch priorities and source lineage are complete',()=>{
  for(const d of inventory){
   assert.ok(d.original && d.sourcePages.length);
   assert.ok(d.sourcePages.every(p=>Number.isInteger(p)&&p>=2&&p<=40));
-  for(const locale of ['uk','en','ru']) for(const key of ['name','taste','ingredients','adaptation']) assert.ok(d[key][locale]?.trim());
+  for(const locale of ['uk','en','ru','zh']) for(const key of ['name','taste','ingredients','adaptation']) assert.ok(d[key][locale]?.trim());
   assert.ok(!('price' in d) && !('calories' in d));
  }
 });

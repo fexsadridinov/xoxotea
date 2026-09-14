@@ -1,3 +1,11 @@
+# Mandarin addition - 14 September 2026
+
+Simplified Chinese adds /zh/, /zh/menu/ and /zh/investors/, with complete investor, recipe, form and PDF copy. Existing languages, artwork, source lineage and financial formulas are preserved. See MANDARIN.md for terminology and implementation details, and audit/mandarin.json for the current browser checks.
+
+Current validation: production build/TypeScript, lint, 17 tests, static checks for 12 routes, 39 responsive cases and Chinese calculator, form, recipe, language and PDF checks. No new Lighthouse or physical-device performance result is claimed. Existing operational gaps below remain open.
+
+---
+
 # Investor hero and illustration hotfix - 14 September 2026
 
 Current presentation: investor-focused hero in three languages, original line illustrations, white surfaces and ten lightweight Higgsfield drink concepts. The previous arch, shaded cup diagrams, decorative floor plans, floating progress cups and blocking page wipe are removed from rendered pages. The inventory and economics formulas are unchanged.
