@@ -6993,6 +6993,7 @@ test("invalid inputs fail explicitly", () =>
 ````json
 {
   "buildCommand": "pnpm build",
+  "outputDirectory": ".next",
   "framework": "nextjs",
   "trailingSlash": true,
   "redirects": [
