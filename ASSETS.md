@@ -1,3 +1,9 @@
+# Current visual release - investor/art hotfix
+
+The active website now uses original pen-style SVG illustrations and ten coordinated Higgsfield drink concepts. Prior photos, 3D/turntable work and schematic CSS art are preserved as historical work but not displayed. See ART-DIRECTION.md and audit/catalogue-assets.json for current provenance, source references and file hashes. Sources/generated/ holds the two full-resolution contact sheets locally, excluded from Git and Vercel. No competitor image or mascot is deployed.
+
+---
+
 # V2 asset review
 
 The requested Nano Banana Pro model was submitted through Higgsfield; service metadata reports `nano_banana_2`. Every liquid variant references the same base image and uses the user's unchanged base prompt, changing only the liquid description. New working previews are in `public/drinks`; all old imagery was removed.

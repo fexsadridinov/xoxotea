@@ -47,8 +47,8 @@
   ],
   "lang": "en",
   "metadata": {
-    "title": "XoXo — Tea. Season. Together.",
-    "description": "A menu built around the taste of tea: clear foundations, shared preparations and fruit worth waiting for. Our opening menu is in development. Volumes include ice. Prices will follow tasting and recipe costing."
+    "title": "XoXo — Build the next chapter of tea.",
+    "description": "A new daily ritual. A business designed to grow. XoXo turns modern tea into a business format of its own. We start with a pilot in Mykolaiv: test demand, refine the economics and build the foundation for a network across Ukraine."
   },
   "nav": {
     "menu": "Menu",
@@ -62,13 +62,12 @@
   },
   "status": "MYKOLAIV, UA / PRE-LAUNCH",
   "thesis": [
-    "Tea.",
-    "Season.",
-    "Together."
+    "Build the next",
+    "chapter of tea."
   ],
   "thesisFoot": [
-    "6 CORE RECIPES",
-    "4 SEASONAL DIRECTIONS"
+    "FROM ONE PILOT TO A NETWORK",
+    "UKRAINE / PARTNERS WANTED"
   ],
   "product": {
     "title": [
@@ -281,6 +280,13 @@
     "design": "A place for tea and conversation. Pale stone, soft light and greenery shape the mood of our future space.",
     "pilot": "RECIPE COLLECTION / PREPARING TO OPEN",
     "allergy": "Ingredients are preliminary. Confirm allergens and possible cross-contact before ordering.",
-    "cost": "56 ₴ remains an earlier planning assumption, not the calculated cost of the new recipes. The 500/700 ml formats need separate costing."
+    "cost": "56 ₴ remains an earlier planning assumption, not the calculated cost of the new recipes. The 500/700 ml formats need separate costing.",
+    "visualNote": "Drink concepts. Final presentation will be refined through tasting."
+  },
+  "hero": {
+    "lead": "A new daily ritual. A business designed to grow.",
+    "body": "XoXo turns modern tea into a business format of its own. We start with a pilot in Mykolaiv: test demand, refine the economics and build the foundation for a network across Ukraine.",
+    "model": "Explore the economics",
+    "partner": "Become a partner"
   }
 }

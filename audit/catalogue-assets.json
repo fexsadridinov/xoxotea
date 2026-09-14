@@ -1,0 +1,132 @@
+[
+  {
+    "product": "C01",
+    "file": "/drinks/catalogue/C01.webp",
+    "sourceJob": "c39d33f1-648e-4ce8-9d81-331e446e43d7",
+    "crop": [
+      6,
+      6,
+      837,
+      842
+    ],
+    "sha256": "c31a8410aa77a57778f49854725a591504aa2c855f3d950f14423ce414ccf7ee",
+    "bytes": 5628
+  },
+  {
+    "product": "C02",
+    "file": "/drinks/catalogue/C02.webp",
+    "sourceJob": "c39d33f1-648e-4ce8-9d81-331e446e43d7",
+    "crop": [
+      849,
+      6,
+      1679,
+      842
+    ],
+    "sha256": "8c95e2abe800f99bf22ee02918ec8e1f3cdbd7134ef2088506084880243c0967",
+    "bytes": 7084
+  },
+  {
+    "product": "C03",
+    "file": "/drinks/catalogue/C03.webp",
+    "sourceJob": "c39d33f1-648e-4ce8-9d81-331e446e43d7",
+    "crop": [
+      1691,
+      6,
+      2522,
+      842
+    ],
+    "sha256": "8c823bc11ff40a225ce01cccf3ad20ed7cbafcee62f1d65913f1e1dc347e5a53",
+    "bytes": 7850
+  },
+  {
+    "product": "C04",
+    "file": "/drinks/catalogue/C04.webp",
+    "sourceJob": "c39d33f1-648e-4ce8-9d81-331e446e43d7",
+    "crop": [
+      6,
+      854,
+      837,
+      1690
+    ],
+    "sha256": "8f8fd448bc25f1cf6c20b1e7fa4b4dd76ff219bc157788b057cc753bb4d894dd",
+    "bytes": 12386
+  },
+  {
+    "product": "C05",
+    "file": "/drinks/catalogue/C05.webp",
+    "sourceJob": "c39d33f1-648e-4ce8-9d81-331e446e43d7",
+    "crop": [
+      849,
+      854,
+      1679,
+      1690
+    ],
+    "sha256": "78043c34e5c07106c36c716d4cbb14721571ec6217bcf574ef21b6fec51c0bd3",
+    "bytes": 8058
+  },
+  {
+    "product": "C06",
+    "file": "/drinks/catalogue/C06.webp",
+    "sourceJob": "c39d33f1-648e-4ce8-9d81-331e446e43d7",
+    "crop": [
+      1691,
+      854,
+      2522,
+      1690
+    ],
+    "sha256": "b8343c59f4d60e2acd80bca76e70c0f4d0fad69cbc86a2d6f4fa56f68ed43b7f",
+    "bytes": 6600
+  },
+  {
+    "product": "S01",
+    "file": "/drinks/catalogue/S01.webp",
+    "sourceJob": "b9a45b9a-a69c-47d8-a464-f5236c1b042e",
+    "crop": [
+      6,
+      6,
+      1018,
+      1018
+    ],
+    "sha256": "66ac1e6ca9220f8ec8d7cc28a2b4313e8586082c4213f5d16ee8a8ceb7507a1f",
+    "bytes": 9156
+  },
+  {
+    "product": "S02",
+    "file": "/drinks/catalogue/S02.webp",
+    "sourceJob": "b9a45b9a-a69c-47d8-a464-f5236c1b042e",
+    "crop": [
+      1030,
+      6,
+      2042,
+      1018
+    ],
+    "sha256": "b432b2ec788dc499d0fbc58cc019f909488899633835147b50185b44ad741262",
+    "bytes": 8702
+  },
+  {
+    "product": "S03",
+    "file": "/drinks/catalogue/S03.webp",
+    "sourceJob": "b9a45b9a-a69c-47d8-a464-f5236c1b042e",
+    "crop": [
+      6,
+      1030,
+      1018,
+      2042
+    ],
+    "sha256": "597598630fe14833ef83fe397dda7c49cd3eab9397ffa0795eff24560493129b",
+    "bytes": 8152
+  },
+  {
+    "product": "S04",
+    "file": "/drinks/catalogue/S04.webp",
+    "sourceJob": "b9a45b9a-a69c-47d8-a464-f5236c1b042e",
+    "crop": [
+      1030,
+      1030,
+      2042,
+      2042
+    ],
+    "sha256": "9276ad4a3b87ba4724ddb191a6ce2c823a29e11cbf37eb5250ae57c95e182b51",
+    "bytes": 6606
+  }
+]

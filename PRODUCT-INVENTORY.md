@@ -10,4 +10,4 @@ The store proposal informs pale stone, layered translucent surfaces, greenery an
 
 All ten cards are pilot recipes. Unspecified spoon/foam portions, extraction gaps, ingredient substitutions, local handling requirements and per-recipe costing must be resolved before operational release. Seasonal means supply-qualified rotation, not current stock. The investor model remains a scenario model; its 56 UAH ingredient/packaging cost is not validated against this new menu.
 
-The former generated gallery and CupSequence assets are preserved in the repository but are not used to illustrate the revised catalogue. New schematic glass artwork is ingredient-aware and makes no claim to be finished product photography.
+The former generated gallery and CupSequence assets are preserved in the repository but are not used to illustrate the revised catalogue. The investor/art hotfix replaces schematic glass artwork with ten Higgsfield-generated drink concepts, explicitly labeled as concepts pending final presentation. Recipes and their source lineage remain unchanged.
