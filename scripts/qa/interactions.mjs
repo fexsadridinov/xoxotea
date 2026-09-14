@@ -30,7 +30,7 @@ try{
   await at('#contact');
   await page.locator('input[name=name]').fill('Audit Example');
   await page.locator('input[name=contact]').fill('bad-contact');await page.locator('input[name=consent]').check();await page.locator('button.cta').click();
-  const invalid=await page.locator('[role=alert]').count();
+  const invalid=await page.locator('#contact-error').count();
   await page.locator('input[name=contact]').fill('audit@example.invalid');
   const downloaded=page.waitForEvent('download');await page.locator('button.cta').click();await downloaded;
   const fallback=await page.locator('.confirmation').innerText();

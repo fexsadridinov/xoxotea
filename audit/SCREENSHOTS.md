@@ -11,3 +11,15 @@ Chromium emulation: 390×844 mobile and 1440×900 desktop. These are viewport sc
 | 05 Scale | [390 px](screenshots/390-scale.jpg) | [1440 px](screenshots/1440-scale.jpg) |
 | 06 Terms | [390 px](screenshots/390-terms.jpg) | [1440 px](screenshots/1440-terms.jpg) |
 | 07 Contact | [390 px](screenshots/390-contact.jpg) | [1440 px](screenshots/1440-contact.jpg) |
+
+## Russian localization
+
+| Section | Mobile | Desktop |
+| --- | --- | --- |
+| thesis | [390 px](screenshots/ru-390-thesis.jpg) | [1440 px](screenshots/ru-1440-thesis.jpg) |
+| product | [390 px](screenshots/ru-390-product.jpg) | [1440 px](screenshots/ru-1440-product.jpg) |
+| market | [390 px](screenshots/ru-390-market.jpg) | [1440 px](screenshots/ru-1440-market.jpg) |
+| economics | [390 px](screenshots/ru-390-economics.jpg) | [1440 px](screenshots/ru-1440-economics.jpg) |
+| scale | [390 px](screenshots/ru-390-scale.jpg) | [1440 px](screenshots/ru-1440-scale.jpg) |
+| terms | [390 px](screenshots/ru-390-terms.jpg) | [1440 px](screenshots/ru-1440-terms.jpg) |
+| contact | [390 px](screenshots/ru-390-contact.jpg) | [1440 px](screenshots/ru-1440-contact.jpg) |

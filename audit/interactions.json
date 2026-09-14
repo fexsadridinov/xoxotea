@@ -8,7 +8,7 @@
         "translate3d(0px, 0.933333px, 0px)",
         "translate3d(0px, 1.55556px, 0px)"
       ],
-      "progress": "scaleX(0.111944)",
+      "progress": "scaleX(0.110095)",
       "gallery": "06",
       "cycle": [
         "Базовий",
@@ -17,11 +17,11 @@
       ],
       "conservative": "77 540 ₴",
       "changed": "72 540 ₴",
-      "usd": "$1 727",
-      "invalid": 2,
+      "usd": "1 727 $",
+      "invalid": 1,
       "fallback": "07 / 01\nЗапит підготовлено.\n\nФайл готовий. Запит не надіслано. Передайте його засновнику через ваш наявний канал зв’язку.\n\nПідготувати ще один запит ↗",
       "press": "scale(0.97)",
-      "gzipJs": 146302,
+      "gzipJs": 140239,
       "transition": "hidden"
     },
     {
@@ -31,7 +31,7 @@
         "translate3d(0px, -0.461261px, 0px)",
         "translate3d(0px, -0.768769px, 0px)"
       ],
-      "progress": "scaleX(0.099827)",
+      "progress": "scaleX(0.0991398)",
       "gallery": "04",
       "cycle": [
         "Базовий",
@@ -40,11 +40,11 @@
       ],
       "conservative": "77 540 ₴",
       "changed": "72 540 ₴",
-      "usd": "$1 727",
-      "invalid": 2,
+      "usd": "1 727 $",
+      "invalid": 1,
       "fallback": "07 / 01\nЗапит підготовлено.\n\nФайл готовий. Запит не надіслано. Передайте його засновнику через ваш наявний канал зв’язку.\n\nПідготувати ще один запит ↗",
       "press": "scale(0.97)",
-      "gzipJs": 146302,
+      "gzipJs": 140239,
       "transition": "hidden"
     }
   ]

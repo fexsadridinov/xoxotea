@@ -13,11 +13,6 @@
       "source": "/uk/:path*",
       "destination": "/:path*",
       "permanent": true
-    },
-    {
-      "source": "/ru",
-      "destination": "/",
-      "permanent": true
     }
   ],
   "headers": [

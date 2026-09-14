@@ -121,9 +121,9 @@ scripts/qa/node_modules/
     "investors": "Investors",
     "contact": "Start a conversation",
     "skip": "Skip to content",
-    "label": "Section index",
+    "label": "Main navigation",
     "home": "Home",
-    "language": "Українська",
+    "language": "Website language",
     "index": "Page sections"
   },
   "status": "MYKOLAIV, UA / PRE-LAUNCH",
@@ -152,46 +152,47 @@ scripts/qa/node_modules/
     "previous": "Previous drink",
     "next": "Next drink",
     "alt": "Blank tall cup with a clear dome lid and straw",
-    "assumption": "[[ASSUMPTION A01]] Concept recipes, prices, 500 ml volume and sugar tiers. Nutrition awaits recipe testing; renders are visual concepts.",
+    "assumption": "ASSUMPTION A01 Concept recipes, prices, 500 ml volume and sugar tiers. Nutrition awaits recipe testing; renders are visual concepts.",
     "kcal": "kcal / TBC",
     "drinks": [
       {
         "name": "Brown sugar",
-        "other": "Молочний чай із перлинами",
+        "other": "Milk tea with tapioca pearls",
         "tea": "BLACK TEA / MILK / TAPIOCA",
         "price": 185
       },
       {
         "name": "Grape cloud",
-        "other": "Виноградний чай із сирною пінкою",
+        "other": "Grape tea with cheese foam",
         "tea": "JASMINE / GRAPE / CHEESE FOAM",
         "price": 205
       },
       {
         "name": "Jasmine pearl",
-        "other": "Жасминовий чай із перлинами",
+        "other": "Jasmine green tea with tapioca pearls",
         "tea": "JASMINE GREEN TEA / TAPIOCA",
         "price": 165
       },
       {
         "name": "Coconut mango",
-        "other": "Кокос і манго",
+        "other": "Jasmine tea with coconut and mango",
         "tea": "JASMINE / COCONUT / MANGO",
         "price": 205
       },
       {
         "name": "Matcha pearl",
-        "other": "Матча-лате з перлинами",
+        "other": "Matcha latte with tapioca pearls",
         "tea": "MATCHA / MILK / TAPIOCA",
         "price": 215
       },
       {
         "name": "Peach oolong",
-        "other": "Персиковий улун",
+        "other": "Oolong tea with peach and ice",
         "tea": "OOLONG / PEACH / ICE",
         "price": 175
       }
-    ]
+    ],
+    "static": "STATIC VIEW"
   },
   "market": {
     "title": [
@@ -235,16 +236,18 @@ scripts/qa/node_modules/
       "Upside"
     ],
     "scenarioTitle": "Three scenarios. The same formula.",
-    "assumptions": "[[ASSUMPTION: 30 trading days/month; ingredients and packaging 56 ₴/cup; transaction fees 3%; rent 55 000 ₴; fully loaded staffing 210 000 ₴; other fixed costs 120 000 ₴/month; initial funding 2 100 000 ₴; illustrative FX 42 ₴/$, not a live exchange rate.]]",
+    "assumptions": "ASSUMPTION A02. 30 trading days/month; ingredients and packaging 56 ₴/cup; transaction fees 3%; rent 55 000 ₴; fully loaded staffing 210 000 ₴; other fixed costs 120 000 ₴/month; initial funding 2 100 000 ₴; illustrative FX 42 ₴/$, not a live exchange rate.",
     "explanation": "Gross margin excludes labor and occupancy. Contribution deducts direct cost and transaction fees. EBITDA deducts rent, staffing and other fixed costs. Payback divides initial funding by steady-state EBITDA: it excludes ramp-up, financing, tax, depreciation, replacement capex and working-capital changes. EBITDA is not distributable cash.",
-    "benchmark": "Category articles describe roughly 65–80% cup gross margins and $30k–$150k startup formats; these are broad editorial benchmarks, not validated Ukrainian budgets."
+    "benchmark": "Category articles describe roughly 65–80% cup gross margins and $30k–$150k startup formats; these are broad editorial benchmarks, not validated Ukrainian budgets.",
+    "undefined": "Not defined",
+    "zeroNote": "Gross margin is undefined at a zero ticket. Setting every slider to zero still leaves other fixed costs of 120,000 ₴ per month."
   },
   "economicsTitle": [
     "One store.",
     "Every variable."
   ],
   "economicsExtra": {
-    "tag": "[[ASSUMPTION A02]] / APPROVED PLANNING MODEL",
+    "tag": "ASSUMPTION A02 / APPROVED PLANNING MODEL",
     "scroll": "SCROLL THROUGH SCENARIOS",
     "custom": "CUSTOM",
     "reset": "Reset model",
@@ -276,7 +279,7 @@ scripts/qa/node_modules/
       "35 m²",
       "55 m²"
     ],
-    "note": "[[ASSUMPTION A03]] Illustrative format footprints. All three use the same approved 2.1M ₴ funding baseline and conservative/base/upside math. These are not site-specific budgets or quotes.",
+    "note": "ASSUMPTION A03 Illustrative format footprints. All three use the same approved 2.1M ₴ funding baseline and conservative/base/upside math. These are not site-specific budgets or quotes.",
     "repeat": "STANDARDIZE → VALIDATE → REPEAT"
   },
   "terms": {
@@ -284,7 +287,7 @@ scripts/qa/node_modules/
       "Capital with",
       "clear conditions."
     ],
-    "tag": "[[ASSUMPTION A04]] / DISCUSSION TERMS",
+    "tag": "ASSUMPTION A04 / DISCUSSION TERMS",
     "instrument": "INSTRUMENT",
     "instrumentValue": "Equity / structure to agree",
     "ticket": "INDICATIVE TICKET",
@@ -324,7 +327,7 @@ scripts/qa/node_modules/
         "Recipe cards and daily cost control"
       ]
     ],
-    "note": "[[ASSUMPTION A05]] Allocation 35 / 25 / 20 / 12 / 8%. Milestone gates and mitigations are proposed, not completed. Equity, valuation, rights and distributions remain open."
+    "note": "ASSUMPTION A05 Allocation 35 / 25 / 20 / 12 / 8%. Milestone gates and mitigations are proposed, not completed. Equity, valuation, rights and distributions remain open."
   },
   "contact": {
     "title": [
@@ -348,20 +351,23 @@ scripts/qa/node_modules/
     "sending": "Sending…",
     "download": "One-pager / PDF",
     "calendar": "Calendar / to be confirmed",
-    "notice": "[[ASSUMPTION A06]] Direct delivery and calendar are not connected yet. Prepare a request to download locally; it is not sent.",
-    "privacy": "Your details stay on this device unless a configured delivery endpoint accepts them.",
+    "notice": "ASSUMPTION A06 Direct delivery and calendar are not connected yet. Prepare a request to download locally; it is not sent.",
+    "privacy": "Until delivery is connected, your details stay on this device. Once connected, clicking “Send request” transmits them to the delivery service.",
     "success": "Request prepared.",
     "successBody": "Your request file is ready. It has not been sent. Share it with the founder through your existing contact.",
     "sent": "Request received.",
-    "sentBody": "Your request was accepted. We will use the contact you supplied.",
-    "error": "Delivery failed. Your entries are kept; please retry.",
+    "sentBody": "The delivery service confirmed receipt of your request. Your contact details were included.",
+    "error": "We could not confirm delivery. Your entries remain in the form; please retry.",
     "invalid": "Enter a name and a valid email or Telegram handle.",
     "again": "Prepare another request",
     "file": "xoxo-investor-request.txt",
     "notSent": "NOT SENT — LOCAL REQUEST",
     "required": "Required",
     "consent": "I agree to be contacted about this request.",
-    "trap": "Leave this field empty"
+    "trap": "Leave this field empty",
+    "yes": "Yes",
+    "no": "No",
+    "calendarReady": "Book a meeting"
   },
   "footer": [
     "XOXO / TEA SYSTEM",
@@ -373,20 +379,338 @@ scripts/qa/node_modules/
 }
 ````
 
+## content/ru.json
+
+````json
+{
+  "brand": "XoXo",
+  "edition": "ЧАЙНАЯ СИСТЕМА / V.02",
+  "sections": [
+    "ИДЕЯ",
+    "ПРОДУКТ",
+    "РЫНОК",
+    "ЭКОНОМИКА",
+    "МАСШТАБ",
+    "УСЛОВИЯ",
+    "КОНТАКТ"
+  ],
+  "sourceDate": "13.09.2026",
+  "units": {
+    "volume": "500 мл",
+    "sugar": "0 / 30 / 50 / 100%",
+    "currency": [
+      "UAH",
+      "USD"
+    ],
+    "angle": "°",
+    "percent": "%",
+    "frames": "36",
+    "range": "01 — 06"
+  },
+  "sources": [
+    {
+      "name": "Research & Markets · 2026",
+      "url": "https://www.researchandmarkets.com/reports/5851209/bubble-tea-market-report"
+    },
+    {
+      "name": "Persistence · 2026",
+      "url": "https://www.persistencemarketresearch.com/market-research/europe-bubble-tea-market.asp"
+    },
+    {
+      "name": "Future Market Insights · 2026",
+      "url": "https://www.futuremarketinsights.com/reports/demand-for-bubble-tea-in-eu"
+    },
+    {
+      "name": "Wikipedia · 2024",
+      "url": "https://en.wikipedia.org/wiki/Heytea"
+    },
+    {
+      "name": "China Daily · 13.07.2026",
+      "url": "https://global.chinadaily.com.cn/a/202607/13/WS6a543cffa310986e2b464e2b.html"
+    }
+  ],
+  "lang": "ru",
+  "metadata": {
+    "title": "XoXo — Чай. Точность. Масштаб.",
+    "description": "Современная чайная концепция для Николаева. Шесть напитков, прозрачная экономика одной точки и условия партнёрства. Независимый проект на этапе подготовки к запуску."
+  },
+  "nav": {
+    "menu": "Меню",
+    "investors": "Инвесторам",
+    "contact": "Обсудить проект",
+    "skip": "Перейти к содержанию",
+    "label": "Основная навигация",
+    "home": "Главная",
+    "language": "Язык сайта",
+    "index": "Разделы страницы"
+  },
+  "status": "НИКОЛАЕВ, УКРАИНА / ПОДГОТОВКА К ЗАПУСКУ",
+  "thesis": [
+    "Чай.",
+    "Точность.",
+    "Масштаб."
+  ],
+  "thesisFoot": [
+    "01 ТОЧКА ДЛЯ СТАРТА",
+    "01 СИСТЕМА ДЛЯ РОСТА"
+  ],
+  "product": {
+    "title": [
+      "Одна форма.",
+      "Шесть вкусов."
+    ],
+    "subtitle": "СИСТЕМА НАПИТКОВ / 001",
+    "rotate": "ВИД НАПИТКА",
+    "angle": "ПОВОРОТ",
+    "collection": "КОЛЛЕКЦИЯ",
+    "volume": "ОБЪЁМ",
+    "energy": "КАЛОРИЙНОСТЬ",
+    "sugar": "УРОВЕНЬ САХАРА",
+    "price": "ПЛАНОВАЯ ЦЕНА",
+    "previous": "Предыдущий напиток",
+    "next": "Следующий напиток",
+    "alt": "Высокий прозрачный стакан с купольной крышкой и трубочкой",
+    "assumption": "ДОПУЩЕНИЕ A01. Рецептуры, цены, объём 500 мл и уровни сахара — предварительные. Калорийность определим после тестирования рецептур. Изображения показывают концепцию продукта.",
+    "kcal": "ккал / уточняется",
+    "drinks": [
+      {
+        "name": "Коричневый сахар",
+        "other": "Молочный чай с тапиокой",
+        "tea": "ЧЁРНЫЙ ЧАЙ / МОЛОКО / ТАПИОКА",
+        "price": 185
+      },
+      {
+        "name": "Виноградное облако",
+        "other": "Виноградный чай с сырной пенкой",
+        "tea": "ЖАСМИНОВЫЙ ЧАЙ / ВИНОГРАД / СЫРНАЯ ПЕНКА",
+        "price": 205
+      },
+      {
+        "name": "Жасминовый жемчуг",
+        "other": "Зелёный жасминовый чай с тапиокой",
+        "tea": "ЗЕЛЁНЫЙ ЖАСМИНОВЫЙ ЧАЙ / ТАПИОКА",
+        "price": 165
+      },
+      {
+        "name": "Кокос и манго",
+        "other": "Жасминовый чай с кокосом и манго",
+        "tea": "ЖАСМИНОВЫЙ ЧАЙ / КОКОС / МАНГО",
+        "price": 205
+      },
+      {
+        "name": "Матча с жемчугом",
+        "other": "Матча-латте с тапиокой",
+        "tea": "МАТЧА / МОЛОКО / ТАПИОКА",
+        "price": 215
+      },
+      {
+        "name": "Персиковый улун",
+        "other": "Улун с персиком и льдом",
+        "tea": "УЛУН / ПЕРСИК / ЛЁД",
+        "price": 175
+      }
+    ],
+    "static": "СТАТИЧНЫЙ ВИД"
+  },
+  "market": {
+    "title": [
+      "Динамика рынка.",
+      "В цифрах."
+    ],
+    "world": "МИР / МЛРД ДОЛЛАРОВ США",
+    "europe": "ЕВРОПА / МЛН ДОЛЛАРОВ США",
+    "cagr": "СРЕДНЕГОДОВОЙ РОСТ",
+    "eu": "СПРОС В ЕС / 2026–2036",
+    "stores": "HEYTEA / ТОЧКИ / 2024",
+    "overseas": "HEYTEA / РОСТ ЗА РУБЕЖОМ",
+    "forecast": "ПРОГНОЗЫ ИССЛЕДОВАТЕЛЕЙ / ГРАНИЦЫ РЫНКОВ РАЗЛИЧАЮТСЯ",
+    "historical": "МАСШТАБ HEYTEA / НЕ ТОЧКИ XOXO",
+    "source": "ИСТОЧНИК",
+    "chart": "Мировой рынок бабл-ти: 3,35 млрд долларов в 2025 году и 3,62 млрд в 2026-м. Европа: 727,2 млн долларов в 2026 году и 1 262,6 млн в 2033-м.",
+    "nearly": "ПОЧТИ",
+    "period": "ЗА ГОД К ИЮЛЮ 2026"
+  },
+  "economics": {
+    "label": "04 / МОДЕЛЬ ТОЧКИ",
+    "title": "Стакан. День. Бизнес.",
+    "body": "Меняйте параметры и смотрите, как меняется результат.",
+    "currency": "Валюта отображения",
+    "uah": "ГРН",
+    "usd": "USD",
+    "cups": "Стаканов в день",
+    "ticket": "Средний чек",
+    "rent": "Аренда в месяц",
+    "staff": "Персонал в месяц",
+    "revenue": "Выручка в месяц",
+    "gross": "Валовая маржа напитка",
+    "contribution": "Маржинальный доход / стакан",
+    "ebitda": "EBITDA точки в месяц",
+    "payback": "Простая окупаемость / мес.",
+    "breakEven": "Безубыточность / стаканов в день",
+    "none": "Не достигается",
+    "scenarios": [
+      "Консервативный",
+      "Базовый",
+      "Оптимистичный"
+    ],
+    "scenarioTitle": "Три сценария. Одна формула.",
+    "assumptions": "ДОПУЩЕНИЕ A02. 30 рабочих дней в месяц; ингредиенты и упаковка — 56 ₴ на стакан; комиссии — 3%; аренда — 55 000 ₴; персонал с начислениями — 210 000 ₴; прочие постоянные расходы — 120 000 ₴ в месяц; стартовый бюджет — 2 100 000 ₴. Расчётный курс — 42 ₴ за доллар США; это не текущий валютный курс. Аренда и персонал указаны для базового сценария.",
+    "explanation": "Валовая маржа учитывает ингредиенты и упаковку, но не персонал и аренду. Маржинальный доход на стакан дополнительно учитывает комиссии. EBITDA точки рассчитана после вычета аренды, расходов на персонал и прочих постоянных затрат. Простая окупаемость — стартовый бюджет, делённый на стабильную месячную EBITDA. Расчёт не учитывает выход на плановые продажи, финансирование, налоги, амортизацию, замену оборудования и изменения оборотного капитала. EBITDA не равна сумме, доступной для выплаты дивидендов.",
+    "benchmark": "В отраслевых публикациях встречаются ориентиры валовой маржи напитка 65–80% и стартовых затрат 30–150 тыс. долларов. Это общие оценки, а не подтверждённые сметы для Украины.",
+    "undefined": "Не определяется",
+    "zeroNote": "При нулевом чеке валовая маржа не определяется. Даже если все ползунки установлены на ноль, остаются прочие постоянные расходы — 120 000 ₴ в месяц."
+  },
+  "economicsTitle": [
+    "Одна точка.",
+    "Каждый параметр."
+  ],
+  "economicsExtra": {
+    "tag": "ДОПУЩЕНИЕ A02 / ПЛАНОВАЯ МОДЕЛЬ",
+    "scroll": "ПРОКРУТКА ПЕРЕКЛЮЧАЕТ СЦЕНАРИИ",
+    "custom": "СВОИ ПАРАМЕТРЫ",
+    "reset": "Сбросить параметры",
+    "period": "В МЕСЯЦ",
+    "fixed": "ПОСТОЯННЫЕ РАСХОДЫ",
+    "funding": "СТАРТОВЫЙ БЮДЖЕТ",
+    "exchange": "РАСЧЁТНЫЙ КУРС",
+    "scenario": "Сценарий"
+  },
+  "scale": {
+    "title": [
+      "Масштабируем систему.",
+      "Сохраняем простоту."
+    ],
+    "labels": [
+      "ФОРМАТ",
+      "ПЛОЩАДЬ",
+      "СТАРТОВЫЙ БЮДЖЕТ",
+      "СТАКАНОВ В ДЕНЬ",
+      "ОКУПАЕМОСТЬ / МЕС."
+    ],
+    "formats": [
+      "Киоск",
+      "Чайная стойка",
+      "Гибридный формат"
+    ],
+    "areas": [
+      "14 м²",
+      "35 м²",
+      "55 м²"
+    ],
+    "note": "ДОПУЩЕНИЕ A03. Площади форматов приведены для сравнения. Для всех трёх используется единый стартовый бюджет 2,1 млн ₴ и расчёты консервативного, базового и оптимистичного сценариев. Это не сметы конкретных помещений и не предложения поставщиков.",
+    "repeat": "СТАНДАРТИЗИРУЕМ → ПРОВЕРЯЕМ → МАСШТАБИРУЕМ"
+  },
+  "terms": {
+    "title": [
+      "Капитал.",
+      "Понятные условия."
+    ],
+    "tag": "ДОПУЩЕНИЕ A04 / УСЛОВИЯ ДЛЯ ОБСУЖДЕНИЯ",
+    "instrument": "ФОРМА УЧАСТИЯ",
+    "instrumentValue": "Доля в капитале / структура обсуждается",
+    "ticket": "ОРИЕНТИР СУММЫ УЧАСТИЯ",
+    "ticketValue": "5 000–50 000 $",
+    "return": "ЦЕЛЕВАЯ ДОХОДНОСТЬ ИНВЕСТОРА",
+    "returnValue": "Обсуждается / не гарантирована",
+    "funds": "РАСПРЕДЕЛЕНИЕ СРЕДСТВ / 2 100 000 ₴",
+    "allocations": [
+      "Оборудование",
+      "Ремонт и оснащение",
+      "Оборотный капитал",
+      "Запуск и разработка продукта",
+      "Резерв"
+    ],
+    "gates": [
+      "01 / Помещение и предложения поставщиков",
+      "02 / Проверка рецептур и себестоимости",
+      "03 / Экономика пилотной точки",
+      "04 / Масштабирование после подтверждения модели"
+    ],
+    "risksTitle": "РИСК → МЕРА СНИЖЕНИЯ",
+    "risks": [
+      [
+        "Спрос",
+        "Пилот до масштабирования"
+      ],
+      [
+        "Поставки и курс валют",
+        "Два поставщика и страховой запас"
+      ],
+      [
+        "Электроснабжение и безопасность",
+        "Резервное питание и план непрерывной работы"
+      ],
+      [
+        "Исполнение",
+        "Технологические карты и ежедневный контроль затрат"
+      ]
+    ],
+    "note": "ДОПУЩЕНИЕ A05. Распределение бюджета: 35 / 25 / 20 / 12 / 8%. Этапы проверки и меры снижения рисков предложены, но ещё не реализованы. Доля участия, оценка бизнеса, права сторон и порядок выплат обсуждаются."
+  },
+  "contact": {
+    "title": [
+      "Следующий шаг —",
+      "обсудить вместе."
+    ],
+    "lead": "ОБСУЖДЕНИЕ ПРОЕКТА / 001",
+    "name": "Имя",
+    "org": "Организация (необязательно)",
+    "range": "Планируемая сумма участия",
+    "email": "Email или имя пользователя в Telegram",
+    "ranges": [
+      "Знакомство с проектом / консультация",
+      "5 000–10 000 $",
+      "10 000–25 000 $",
+      "25 000–50 000 $"
+    ],
+    "room": "Запросить доступ к документам проекта",
+    "submit": "Подготовить обращение",
+    "send": "Отправить обращение",
+    "sending": "Отправляем…",
+    "download": "Кратко о проекте / PDF",
+    "calendar": "Запись на встречу / уточняется",
+    "notice": "ДОПУЩЕНИЕ A06. Отправка обращений и запись на встречу пока не подключены. Форма подготовит файл для скачивания на ваше устройство. Обращение не будет отправлено.",
+    "privacy": "Пока отправка не подключена, данные остаются на вашем устройстве. После подключения сервиса отправки они будут передаваться при нажатии «Отправить обращение».",
+    "success": "Обращение подготовлено.",
+    "successBody": "Файл готов к скачиванию. Обращение не отправлено. Передайте файл основателю через уже известный вам канал связи.",
+    "sent": "Обращение принято.",
+    "sentBody": "Сервис подтвердил приём обращения. Вы указали контакт для обратной связи.",
+    "error": "Не удалось подтвердить отправку. Данные сохранены в форме. Попробуйте ещё раз.",
+    "invalid": "Укажите имя и корректный email или имя пользователя в Telegram, начиная с @.",
+    "again": "Новое обращение",
+    "file": "xoxo-investor-request-ru.txt",
+    "notSent": "НЕ ОТПРАВЛЕНО — ФАЙЛ ОБРАЩЕНИЯ",
+    "required": "Обязательное поле",
+    "consent": "Даю согласие на обратную связь по этому обращению.",
+    "trap": "Оставьте это поле пустым",
+    "yes": "Да",
+    "no": "Нет",
+    "calendarReady": "Выбрать время встречи"
+  },
+  "footer": [
+    "XOXO / ЧАЙНАЯ СИСТЕМА",
+    "НИКОЛАЕВ, УКРАИНА",
+    "ПОДГОТОВКА К ЗАПУСКУ / 2026"
+  ],
+  "notFound": "Страница не найдена",
+  "back": "На главную"
+}
+````
+
 ## content/uk.json
 
 ````json
 {
   "brand": "XoXo",
-  "edition": "TEA SYSTEM / V.02",
+  "edition": "ЧАЙНА СИСТЕМА / V.02",
   "sections": [
-    "THESIS",
-    "PRODUCT",
-    "MARKET",
-    "ECONOMICS",
-    "SCALE",
-    "TERMS",
-    "CONTACT"
+    "ІДЕЯ",
+    "ПРОДУКТ",
+    "РИНОК",
+    "ЕКОНОМІКА",
+    "МАСШТАБ",
+    "УМОВИ",
+    "КОНТАКТ"
   ],
   "sourceDate": "13.09.2026",
   "units": {
@@ -433,9 +757,9 @@ scripts/qa/node_modules/
     "investors": "Інвесторам",
     "contact": "Почати розмову",
     "skip": "Перейти до вмісту",
-    "label": "Індекс розділів",
+    "label": "Основна навігація",
     "home": "Головна",
-    "language": "English",
+    "language": "Мова сайту",
     "index": "Розділи сторінки"
   },
   "status": "МИКОЛАЇВ, UA / ДО ЗАПУСКУ",
@@ -464,7 +788,7 @@ scripts/qa/node_modules/
     "previous": "Попередній напій",
     "next": "Наступний напій",
     "alt": "Прозора висока склянка без написів із купольною кришкою та трубочкою",
-    "assumption": "[[ASSUMPTION A01]] Концепти рецептур, ціни, об’єм 500 мл та рівні цукру. Калорійність — після тестування рецептур; зображення є концептами.",
+    "assumption": "ПРИПУЩЕННЯ A01 Концепти рецептур, ціни, об’єм 500 мл та рівні цукру. Калорійність — після тестування рецептур; зображення є концептами.",
     "kcal": "ккал / уточнюємо",
     "drinks": [
       {
@@ -503,7 +827,8 @@ scripts/qa/node_modules/
         "tea": "УЛУН / ПЕРСИК / ЛІД",
         "price": 175
       }
-    ]
+    ],
+    "static": "СТАТИЧНИЙ ВИГЛЯД"
   },
   "market": {
     "title": [
@@ -547,16 +872,18 @@ scripts/qa/node_modules/
       "Сильний"
     ],
     "scenarioTitle": "Три сценарії. Одна формула.",
-    "assumptions": "[[ASSUMPTION: 30 робочих днів на місяць; інгредієнти й пакування 56 ₴/стакан; комісії 3%; оренда 55 000 ₴; персонал з усіма нарахуваннями 210 000 ₴; інші постійні витрати 120 000 ₴/місяць; стартовий бюджет 2 100 000 ₴; умовний курс 42 ₴/$ — не поточний валютний курс.]]",
+    "assumptions": "ПРИПУЩЕННЯ A02. 30 робочих днів на місяць; інгредієнти й пакування 56 ₴/стакан; комісії 3%; оренда 55 000 ₴; персонал з усіма нарахуваннями 210 000 ₴; інші постійні витрати 120 000 ₴/місяць; стартовий бюджет 2 100 000 ₴; умовний курс 42 ₴/$ — не поточний валютний курс.",
     "explanation": "Валова маржа не включає персонал та оренду. Внесок стакана враховує прямі витрати й комісії. EBITDA віднімає оренду, персонал та інші постійні витрати. Окупність — стартовий бюджет, поділений на стабілізовану EBITDA: без періоду розгону, фінансування, податків, амортизації, заміни обладнання та змін оборотного капіталу. EBITDA не дорівнює коштам для дивідендів.",
-    "benchmark": "Галузеві статті наводять близько 65–80% валової маржі напою та $30–150 тис. стартових витрат. Це загальні редакційні орієнтири, а не перевірені кошториси для України."
+    "benchmark": "Галузеві статті наводять близько 65–80% валової маржі напою та $30–150 тис. стартових витрат. Це загальні редакційні орієнтири, а не перевірені кошториси для України.",
+    "undefined": "Не визначається",
+    "zeroNote": "За нульового чека валова маржа не визначається. Навіть за нульових значень усіх повзунків залишаються інші постійні витрати: 120 000 ₴ на місяць."
   },
   "economicsTitle": [
     "Одна точка.",
     "Кожна змінна."
   ],
   "economicsExtra": {
-    "tag": "[[ASSUMPTION A02]] / ПОГОДЖЕНА ПЛАНОВА МОДЕЛЬ",
+    "tag": "ПРИПУЩЕННЯ A02 / ПОГОДЖЕНА ПЛАНОВА МОДЕЛЬ",
     "scroll": "ГОРТАЙТЕ СЦЕНАРІЇ",
     "custom": "ВЛАСНИЙ",
     "reset": "Скинути модель",
@@ -588,7 +915,7 @@ scripts/qa/node_modules/
       "35 м²",
       "55 м²"
     ],
-    "note": "[[ASSUMPTION A03]] Ілюстративні площі форматів. Усі три використовують погоджену базу фінансування 2,1 млн ₴ та консервативний/базовий/оптимістичний розрахунки. Це не кошториси конкретних приміщень.",
+    "note": "ПРИПУЩЕННЯ A03 Ілюстративні площі форматів. Усі три використовують погоджену базу фінансування 2,1 млн ₴ та консервативний/базовий/оптимістичний розрахунки. Це не кошториси конкретних приміщень.",
     "repeat": "СТАНДАРТ → ПЕРЕВІРКА → ПОВТОРЕННЯ"
   },
   "terms": {
@@ -596,7 +923,7 @@ scripts/qa/node_modules/
       "Капітал із",
       "чіткими умовами."
     ],
-    "tag": "[[ASSUMPTION A04]] / УМОВИ ДЛЯ ОБГОВОРЕННЯ",
+    "tag": "ПРИПУЩЕННЯ A04 / УМОВИ ДЛЯ ОБГОВОРЕННЯ",
     "instrument": "ІНСТРУМЕНТ",
     "instrumentValue": "Частка / структуру узгодимо",
     "ticket": "ОРІЄНТОВНИЙ ВНЕСОК",
@@ -636,7 +963,7 @@ scripts/qa/node_modules/
         "Технологічні карти та щоденний контроль витрат"
       ]
     ],
-    "note": "[[ASSUMPTION A05]] Розподіл 35 / 25 / 20 / 12 / 8%. Етапи й заходи запропоновано, а не виконано. Частка, оцінка, права та виплати відкриті для обговорення."
+    "note": "ПРИПУЩЕННЯ A05 Розподіл 35 / 25 / 20 / 12 / 8%. Етапи й заходи запропоновано, а не виконано. Частка, оцінка, права та виплати відкриті для обговорення."
   },
   "contact": {
     "title": [
@@ -660,20 +987,23 @@ scripts/qa/node_modules/
     "sending": "Надсилаємо…",
     "download": "Короткий опис / PDF",
     "calendar": "Календар / узгодимо",
-    "notice": "[[ASSUMPTION A06]] Надсилання та календар ще не підключені. Підготуйте запит для завантаження на пристрій; його не буде надіслано.",
-    "privacy": "Дані залишаються на вашому пристрої, доки підключений сервіс не прийме запит.",
+    "notice": "ПРИПУЩЕННЯ A06 Надсилання та календар ще не підключені. Підготуйте запит для завантаження на пристрій; його не буде надіслано.",
+    "privacy": "Поки відправлення не підключене, дані залишаються на вашому пристрої. Після підключення натискання «Надіслати запит» передаватиме їх сервісу відправлення.",
     "success": "Запит підготовлено.",
     "successBody": "Файл готовий. Запит не надіслано. Передайте його засновнику через ваш наявний канал зв’язку.",
     "sent": "Запит отримано.",
-    "sentBody": "Ваш запит прийнято. Для відповіді використаємо вказаний контакт.",
-    "error": "Надсилання не вдалося. Дані збережено у формі; спробуйте ще раз.",
+    "sentBody": "Сервіс підтвердив отримання запиту. До нього додано ваші контактні дані.",
+    "error": "Не вдалося підтвердити відправлення. Дані залишилися у формі; спробуйте ще раз.",
     "invalid": "Вкажіть ім’я та коректний email або ім’я користувача Telegram.",
     "again": "Підготувати ще один запит",
     "file": "xoxo-investor-request.txt",
     "notSent": "НЕ НАДІСЛАНО — ЛОКАЛЬНИЙ ЗАПИТ",
     "required": "Обов’язково",
     "consent": "Погоджуюся на зв’язок щодо цього запиту.",
-    "trap": "Залиште це поле порожнім"
+    "trap": "Залиште це поле порожнім",
+    "yes": "Так",
+    "no": "Ні",
+    "calendarReady": "Обрати час зустрічі"
   },
   "footer": [
     "XOXO / СИСТЕМА ЧАЮ",
@@ -714,7 +1044,7 @@ export default eslintConfig;
 import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
-  experimental: { inlineCss: true },
+  experimental: { inlineCss: true, globalNotFound: true },
   trailingSlash: true,
   images: { deviceSizes: [480, 960, 1600], imageSizes: [] },
 };
@@ -5051,39 +5381,81 @@ print('Compressed 6 images into 24 AVIF/WebP derivatives')
 ## scripts/onepager-v2.py
 
 ````python
+"""Render localized one-pagers from the same copy and model as the website."""
 from pathlib import Path
-import json
+import json, subprocess
+from xml.sax.saxutils import escape
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.colors import HexColor
-from reportlab.platypus import Paragraph
+from reportlab.platypus import Paragraph, Table, TableStyle
 from reportlab.lib.styles import ParagraphStyle
-root=Path(__file__).resolve().parents[1]
-pdfmetrics.registerFont(TTFont('Sans','/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'))
-pdfmetrics.registerFont(TTFont('Mono','/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf'))
-for lang in ['uk','en']:
- c=json.loads((root/f'content/{lang}.json').read_text()); f=canvas.Canvas(str(root/f'public/downloads/xoxo-{lang}.pdf'),pagesize=(595,842));f.setTitle(c['metadata']['title']);f.setFillColor(HexColor('#f3f1ea'));f.rect(0,0,595,842,fill=1,stroke=0);f.setFillColor(HexColor('#172e28'));f.setStrokeColor(HexColor('#a5afa5'))
- def txt(text,x,y,size=10,font='Sans'):f.setFont(font,size);f.drawString(x,y,text)
- def para(text,y,size=8):
-  p=Paragraph(text,ParagraphStyle('p',fontName='Sans',fontSize=size,leading=size*1.5,textColor=HexColor('#172e28')));_,h=p.wrap(515,1000);p.drawOn(f,40,y-h);return y-h
- txt('XoXo',40,787,31);txt(c['status'],40,761,8,'Mono');f.line(40,744,555,744)
- txt(' / '.join(c['thesis']),40,704,24)
- txt('02 / '+c['sections'][1],40,659,10,'Mono')
- for i,d in enumerate(c['product']['drinks']):
-  y=634-i*23;txt(d['name'],40,y,10);txt(str(d['price'])+' ₴',478,y,10,'Mono');f.line(40,y-8,555,y-8)
- para(c['product']['assumption'],487,7)
- txt('04 / '+c['sections'][3],40,429,10,'Mono')
- rows=[(c['economics']['scenarios'][0],'702 000','77 540','27.1'),(c['economics']['scenarios'][1],'1 111 500','373 955','5.6'),(c['economics']['scenarios'][2],'1 599 000','729 230','2.9')]
- for x,t in [(40,c['economicsExtra']['scenario']),(225,c['economics']['revenue']),(350,'EBITDA / ₴'),(465,c['economics']['payback'])]:txt(t,x,405,7,'Mono')
- for i,row in enumerate(rows):
-  for x,t in zip([40,225,350,465],row):txt(t,x,380-i*25,9,'Mono')
- para(c['economicsExtra']['tag']+' '+c['economics']['assumptions'],300,7)
- txt('06 / '+c['sections'][5],40,221,10,'Mono')
- para(c['terms']['tag']+' '+c['terms']['instrumentValue']+' / '+c['terms']['ticketValue']+' / '+c['terms']['returnValue'],199,8)
- para(c['terms']['note'],160,7)
- para(c['contact']['notice'],112,7)
- f.line(40,55,555,55);txt('xoxotea.vercel.app / '+c['sourceDate'],40,38,8,'Mono');txt('01 / 01',510,38,8,'Mono');f.showPage();f.save()
+root = Path(__file__).resolve().parents[1]
+pdfmetrics.registerFont(TTFont('Sans', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'))
+pdfmetrics.registerFont(TTFont('Mono', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf'))
+results = json.loads(subprocess.check_output(['node', '--experimental-strip-types', '--input-type=module', '-e', "import {calculate,scenarios} from './src/lib/store-model.ts';process.stdout.write(JSON.stringify(scenarios.map(calculate)))"], cwd=root))
+ink = HexColor('#172e28')
+for lang in ['uk', 'en', 'ru']:
+    c = json.loads((root / f'content/{lang}.json').read_text())
+    f = canvas.Canvas(str(root / f'public/downloads/xoxo-{lang}.pdf'), pagesize=(595, 842), invariant=1)
+    f.setTitle(c['metadata']['title']); f.setAuthor('XoXo'); f.setSubject(c['metadata']['description'])
+    f.setFillColor(HexColor('#f3f1ea')); f.rect(0, 0, 595, 842, fill=1, stroke=0)
+    f.setFillColor(ink); f.setStrokeColor(HexColor('#a5afa5'))
+    def txt(text, x, y, size=10, font='Sans'):
+        f.setFont(font, size); f.drawString(x, y, text)
+    def paragraph(text, size=8, leading=None):
+        return Paragraph(escape(text), ParagraphStyle('p', fontName='Sans', fontSize=size, leading=leading or size*1.4, textColor=ink))
+    def para(text, y, size=8):
+        p=paragraph(text,size); _,h=p.wrap(515,1000); p.drawOn(f,40,y-h); return y-h
+    txt('XoXo',40,790,31); txt(c['status'],40,765,8,'Mono'); f.line(40,748,555,748)
+    txt(' / '.join(c['thesis']),40,708,24)
+    txt('02 / '+c['sections'][1],40,666,10,'Mono')
+    for i,d in enumerate(c['product']['drinks']):
+        y=642-i*22; txt(d['name'],40,y,10); txt(str(d['price'])+' ₴',478,y,10,'Mono'); f.line(40,y-7,555,y-7)
+    y=para(c['product']['assumption'],514,8.5)-23
+    txt('04 / '+c['sections'][3],40,y,10,'Mono'); y-=14
+    econ=c['economics']
+    headers=[c['economicsExtra']['scenario'],econ['revenue']+' / ₴','EBITDA / ₴',econ['payback']]
+    rows=[[paragraph(t,8) for t in headers]]
+    for i,v in enumerate(results):
+        money=lambda n: format(round(n),',').replace(',',' ')
+        payback=format(v['payback'],'.1f').replace('.',',' if lang!='en' else '.')
+        rows.append([paragraph(econ['scenarios'][i],8),money(v['revenue']),money(v['ebitda']),payback])
+    table=Table(rows,colWidths=[160,130,110,115],hAlign='LEFT')
+    table.setStyle(TableStyle([('FONTNAME',(0,0),(-1,-1),'Mono'),('FONTSIZE',(0,0),(-1,-1),9),('TEXTCOLOR',(0,0),(-1,-1),ink),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),12),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),6),('LINEBELOW',(0,0),(-1,0),.4,HexColor('#a5afa5'))]))
+    _,h=table.wrap(515,1000); table.drawOn(f,40,y-h); y-=h+12
+    y=para(econ['assumptions'],y,8.5)-18
+    txt('06 / '+c['sections'][5],40,y,10,'Mono'); y-=14
+    y=para(c['terms']['tag']+'. '+c['terms']['instrumentValue']+' / '+c['terms']['ticketValue']+' / '+c['terms']['returnValue'],y,8.5)-9
+    y=para(c['terms']['note'],y,8.5)-10
+    y=para(c['contact']['notice'],y,8.5)
+    if y<65: raise ValueError(f'{lang}: content overlaps footer ({y:.1f})')
+    url='xoxotea.vercel.app'+('/' if lang=='uk' else f'/{lang}/')
+    f.line(40,53,555,53); txt(url+' / '+c['sourceDate'],40,36,8,'Mono'); txt('01 / 01',510,36,8,'Mono')
+    f.linkURL('https://'+url,(40,30,420,47),relative=0)
+    f.showPage(); f.save(); print(lang, 'content bottom',round(y,1))
+````
+
+## scripts/qa/final-layout.mjs
+
+````javascript
+import fs from 'node:fs';import cp from 'node:child_process';import assert from 'node:assert/strict';import {chromium} from 'playwright';import AxeBuilder from '@axe-core/playwright';
+const server=cp.spawn('node',['scripts/qa/server.cjs','out','4179'],{stdio:'ignore'});await new Promise(r=>setTimeout(r,600));
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox','--disable-dev-shm-usage']});const results=[];
+try{
+ for(const width of [360,390,430,768,1024,1440,1920]){
+  const context=await browser.newContext({viewport:{width,height:width<768?844:900}});const page=await context.newPage();
+  for(const locale of ['uk','ru','en'])for(const view of ['','menu','investors']){
+   const path=(locale==='uk'?'':`/${locale}`)+'/'+(view?view+'/':'');await page.goto('http://127.0.0.1:4179'+path);await page.evaluate(()=>document.fonts.ready);
+   const layout=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,headerOverlap:document.querySelector('.wordmark').getBoundingClientRect().right>document.querySelector('.topbar nav').getBoundingClientRect().left,heading:[...document.querySelectorAll('h1')].filter(e=>!e.classList.contains('sr-only')).some(e=>e.scrollWidth>e.clientWidth+2)}));assert.deepEqual(layout,{overflow:false,headerOverlap:false,heading:false});
+   if(!view&&[390,1440].includes(width)&&locale!=='en')for(const id of ['thesis','product','market','economics','scale','terms','contact']){await page.locator('#'+id).evaluate(e=>scrollTo({top:e.getBoundingClientRect().top+scrollY-80,behavior:'instant'}));await page.waitForTimeout(600);await page.screenshot({path:`audit/screenshots/${locale==='ru'?'ru-':''}${width}-${id}.jpg`,type:'jpeg',quality:85});}
+   let violations=null;if([390,1440].includes(width)){const a=await new AxeBuilder({page}).analyze();violations=a.violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}));assert.equal(violations.length,0,JSON.stringify(violations));}
+   results.push({width,locale,view:view||'home',...layout,violations});
+  }await context.close();console.log(`Final header/layout ${width}px passed`);
+ }
+ fs.writeFileSync('audit/final-layout.json',JSON.stringify({testedAt:new Date().toISOString(),results},null,2));
+}finally{await browser.close();server.kill();}
 ````
 
 ## scripts/qa/interactions.mjs
@@ -5121,7 +5493,7 @@ try{
   await at('#contact');
   await page.locator('input[name=name]').fill('Audit Example');
   await page.locator('input[name=contact]').fill('bad-contact');await page.locator('input[name=consent]').check();await page.locator('button.cta').click();
-  const invalid=await page.locator('[role=alert]').count();
+  const invalid=await page.locator('#contact-error').count();
   await page.locator('input[name=contact]').fill('audit@example.invalid');
   const downloaded=page.waitForEvent('download');await page.locator('button.cta').click();await downloaded;
   const fallback=await page.locator('.confirmation').innerText();
@@ -5161,8 +5533,8 @@ const chrome = await chromeLauncher.launch({
   ],
 });
 try {
-  for (const formFactor of ["mobile", "desktop"]) {
-    const result = await lighthouse("http://127.0.0.1:4174/", {
+  for (const locale of ["uk", "ru", "en"]) for (const formFactor of ["mobile", "desktop"]) {
+    const result = await lighthouse(`http://127.0.0.1:4174/${locale==="uk"?"":locale+"/"}`, {
       port: chrome.port,
       output: ["json", "html"],
       logLevel: "error",
@@ -5185,10 +5557,10 @@ try {
           }
         : {}),
     });
-    fs.writeFileSync(`audit/lighthouse-${formFactor}.json`, result.report[0]);
-    fs.writeFileSync(`audit/lighthouse-${formFactor}.html`, result.report[1]);
+    fs.writeFileSync(`audit/lighthouse-${locale}-${formFactor}.json`, result.report[0]);
+    fs.writeFileSync(`audit/lighthouse-${locale}-${formFactor}.html`, result.report[1]);
     console.log(
-      formFactor,
+      locale, formFactor,
       JSON.stringify({
         scores: Object.fromEntries(
           Object.entries(result.lhr.categories).map(([k, v]) => [
@@ -5208,6 +5580,68 @@ try {
   await chrome.kill();
   server.kill();
 }
+````
+
+## scripts/qa/localization.mjs
+
+````javascript
+import fs from 'node:fs';
+import cp from 'node:child_process';
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright';
+const server=cp.spawn('node',['scripts/qa/server.cjs','out','4177'],{stdio:'ignore'});
+const base='http://127.0.0.1:4177';
+for(let i=0;i<30;i++){try{await fetch(base);break;}catch{await new Promise(r=>setTimeout(r,100));}}
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox','--disable-dev-shm-usage']});
+const results=[];
+try{
+ for(const locale of ['uk','en','ru'])for(const width of [390,1440]){
+  const prefix=locale==='uk'?'':`/${locale}`;
+  const copy=JSON.parse(fs.readFileSync(`content/${locale}.json`,'utf8'));
+  const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce',acceptDownloads:true});
+  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  for(const path of ['/','/menu/','/investors/']){
+   const response=await page.goto(base+prefix+path);assert.equal(response.status(),200);
+   const html=await response.text();assert.match(html,new RegExp(`<html[^>]*lang="${locale}"`));
+   assert.equal(await page.locator('link[rel=alternate][hreflang=ru]').getAttribute('href'),`https://xoxotea.vercel.app/ru${path}`);
+   await page.locator('.language-trigger').click();
+   assert.equal(await page.locator('.language-options a').count(),3);
+   for(const target of ['uk','en','ru'])assert.equal(await page.locator(`.language-options a[hreflang=${target}]`).getAttribute('href'),(target==='uk'?'':`/${target}`)+path);
+   await page.keyboard.press('Escape');assert.equal(await page.locator('.language-trigger').getAttribute('aria-expanded'),'false');
+   assert.equal(await page.locator('.language-trigger').evaluate(e=>document.activeElement===e),true);
+  }
+  await page.locator('#economics').scrollIntoViewIfNeeded();
+  for(const [id,max] of [['cups',350],['ticket',260],['rent',120000],['staff',350000]]){
+   const slider=page.locator('#'+id);assert.equal(await slider.getAttribute('min'),'0');assert.equal(await slider.getAttribute('max'),String(max));
+   await slider.focus();await page.keyboard.press('Home');assert.equal(await slider.inputValue(),'0');
+  }
+  assert.equal((await page.locator('[data-ebitda]').innerText()).replace(/[\s,]/g,''),'-120000₴');
+  assert.ok((await page.locator('.result-grid').innerText()).includes(copy.economics.undefined));
+  assert.doesNotMatch(await page.locator('.results').innerText(),/NaN|Infinity/);
+  await page.locator('#ticket').focus();await page.keyboard.press('End');assert.equal(await page.locator('#ticket').inputValue(),'260');
+  await page.locator('.model-bottom button').click();assert.equal(await page.locator('#ticket').inputValue(),'195');
+  assert.equal(await page.locator('.scenario-tabs [aria-pressed=true]').innerText(),copy.economics.scenarios[1]);
+  await page.locator('input[name=name]').fill('Проверка локализации');await page.locator('input[name=contact]').fill('invalid');await page.locator('input[name=consent]').check();await page.locator('button.cta').click();
+  assert.equal(await page.locator('#contact-error').innerText(),copy.contact.invalid);
+  assert.equal(await page.locator('input[name=contact]').getAttribute('aria-invalid'),'true');
+  await page.locator('input[name=contact]').fill('audit@example.invalid');await page.locator('input[name=dataRoom]').check();
+  const downloadEvent=page.waitForEvent('download');await page.locator('button.cta').click();const download=await downloadEvent;
+  const text=fs.readFileSync(await download.path(),'utf8');assert.ok(text.includes(copy.contact.notSent));assert.ok(text.includes(`${copy.contact.room}: ${copy.contact.yes}`));assert.ok(text.includes('Проверка локализации'));
+  assert.equal(await page.locator('.confirmation h3').innerText(),copy.contact.success);
+  await page.waitForFunction(()=>document.activeElement===document.querySelector('.confirmation h3'));
+  await page.locator('header nav > a').first().click();await page.waitForURL(`${base}${prefix}/menu/`);
+  await page.locator('.language-trigger').click();await page.locator('.language-options a[hreflang=ru]').click();await page.waitForURL(`${base}/ru/menu/`);
+  assert.equal(await page.locator('html').getAttribute('lang'),'ru');
+  assert.equal(errors.length,0,errors.join('\n'));
+  results.push({locale,width,serverLanguage:true,alternateLinks:true,languageMenuKeyboard:true,zeroInputs:true,maximumsPreserved:true,undefinedMargin:true,reset:true,localizedValidation:true,localizedDownload:true,confirmationFocus:true,routePreserved:true,errors});await context.close();
+ }
+ const page=await browser.newPage();await page.addInitScript(()=>{Storage.prototype.getItem=()=>{throw new Error('Storage disabled')};Storage.prototype.setItem=()=>{throw new Error('Storage disabled')};});
+ await page.goto(base+'/ru/');await page.locator('header nav > a').first().click();await page.waitForURL('**/ru/menu/');await page.waitForTimeout(450);
+ assert.equal(await page.locator('.page-wipe').evaluate(e=>getComputedStyle(e).visibility),'hidden');
+ await page.goBack();await page.waitForTimeout(450);assert.equal(await page.locator('.page-wipe').evaluate(e=>getComputedStyle(e).visibility),'hidden');
+ await page.emulateMedia({reducedMotion:'reduce'});await page.locator('#economics').scrollIntoViewIfNeeded();assert.equal(await page.locator('.economics-pin').evaluate(e=>getComputedStyle(e).position),'relative');assert.equal(await page.evaluate(()=>document.getAnimations().length),0);
+ const audit={testedAt:new Date().toISOString(),results,storageDisabledNavigation:true,backNavigation:true,dynamicReducedMotion:true};fs.writeFileSync('audit/localization.json',JSON.stringify(audit,null,2));console.log(JSON.stringify(audit));
+}finally{await browser.close();server.kill();}
 ````
 
 ## scripts/qa/package-lock.json
@@ -6594,7 +7028,7 @@ try {
   for (const width of [360,390,430,768,1024,1440,1920]) {
     const context = await browser.newContext({viewport:{width,height:width < 768 ? 844 : 900},isMobile:width < 768,hasTouch:width < 768});
     const page = await context.newPage();
-    for (const route of ['/', '/en/', '/menu/', '/en/menu/', '/investors/', '/en/investors/']) {
+    for (const route of ['/', '/en/', '/menu/', '/en/menu/', '/investors/', '/en/investors/', '/ru/', '/ru/menu/', '/ru/investors/']) {
       const errors=[];const handler=e=>errors.push(e.message);page.on('pageerror',handler);
       await page.goto(base+route);
       await page.evaluate(()=>document.fonts.ready);
@@ -6605,7 +7039,7 @@ try {
         await page.waitForTimeout(650);
         const flags = await page.evaluate(()=>[...document.querySelectorAll('h1,h2,h3,p,dt,dd,label,button')].filter(e=>e.getBoundingClientRect().width>0&&!e.closest('.honey,.sr-only')&&e.scrollWidth>e.clientWidth+2).map(e=>({tag:e.tagName,text:e.textContent.slice(0,80),width:e.clientWidth,scroll:e.scrollWidth})));
         overflow.push(...flags);
-        if (route==='/' && [390,1440].includes(width)) await page.screenshot({path:`audit/screenshots/${width}-${id}.jpg`,type:'jpeg',quality:85});
+        if (['/','/ru/'].includes(route) && [390,1440].includes(width)) await page.screenshot({path:`audit/screenshots/${route==='/ru/'?'ru-':''}${width}-${id}.jpg`,type:'jpeg',quality:85});
       }
       const layout=await page.evaluate(()=>({documentWidth:document.documentElement.scrollWidth,width:innerWidth,lang:document.documentElement.lang}));
       const axe = [390,1440].includes(width) ? await new AxeBuilder({page}).analyze() : null;
@@ -6681,6 +7115,47 @@ http
   .listen(Number(process.argv[3] || 4174), "127.0.0.1");
 ````
 
+## scripts/qa/static-audit.py
+
+````python
+"""Check language parity, static document semantics and internal file targets."""
+from pathlib import Path
+from html.parser import HTMLParser
+import json
+root=Path(__file__).resolve().parents[2]
+content={l:json.loads((root/f'content/{l}.json').read_text()) for l in ['uk','en','ru']}
+def shape(v):
+    if isinstance(v,dict):return {k:shape(x) for k,x in v.items()}
+    if isinstance(v,list):return [shape(x) for x in v]
+    return type(v).__name__
+assert shape(content['uk'])==shape(content['en'])==shape(content['ru'])
+class Page(HTMLParser):
+    def __init__(self):super().__init__();self.ids=[];self.targets=[];self.lang=None;self.h1=0
+    def handle_starttag(self,tag,attributes):
+        a=dict(attributes)
+        if tag=='html':self.lang=a.get('lang')
+        if tag=='h1':self.h1+=1
+        if 'id' in a:self.ids.append(a['id'])
+        if tag=='a' and 'href' in a:self.targets.append(a['href'])
+        if tag in ['img','script'] and 'src' in a:self.targets.append(a['src'])
+checked=[]
+for l in content:
+    for view in ['', 'menu', 'investors']:
+        folder=root/'out'/('' if l=='uk' else l)/view
+        page=Page();page.feed((folder/'index.html').read_text())
+        assert page.lang==l and page.h1==1,(folder,page.lang,page.h1)
+        assert len(page.ids)==len(set(page.ids)),folder
+        for href in page.targets:
+            if href.startswith('#'):assert href[1:] in page.ids,(folder,href)
+            elif href.startswith('/') and not href.startswith('//'):
+                p=root/'out'/href.split('?')[0].split('#')[0].lstrip('/')
+                assert p.exists(),(folder,href)
+        checked.append({'locale':l,'view':view or 'home','serverLanguage':page.lang,'singleHeading':True,'uniqueIds':True,'internalTargets':True})
+assert (root/'out/404.html').is_file()
+(root/'audit/static.json').write_text(json.dumps({'translationKeyParity':True,'pages':checked},indent=2)+'\n')
+print('PASS: translation key parity, 9 HTML languages, headings, IDs, links and media targets; 404 generated.')
+````
+
 ## scripts/source-packet.py
 
 ````python
@@ -6708,34 +7183,82 @@ for name in all_paths:
 print(f'{len(code)} complete source files; {len(all_paths)} repository paths')
 ````
 
+## src/app/(uk)/investors/page.tsx
+
+````tsx
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('uk','investors');
+export default function Page(){return <System locale="uk" view="investors"/>;}
+````
+
+## src/app/(uk)/layout.tsx
+
+````tsx
+import {Document} from '@/components/v2/Document';
+export {metadata,viewport} from '@/components/v2/Document';
+export default function Layout({children}:{children:React.ReactNode}){return <Document locale="uk">{children}</Document>;}
+````
+
+## src/app/(uk)/menu/page.tsx
+
+````tsx
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('uk','menu');
+export default function Page(){return <System locale="uk" view="menu"/>;}
+````
+
+## src/app/(uk)/page.tsx
+
+````tsx
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('uk','');
+export default function Page(){return <System locale="uk" view="all"/>;}
+````
+
 ## src/app/en/investors/page.tsx
 
 ````tsx
-import {System} from "@/components/v2/System";
-import {getCopy,pathFor,origin} from "@/lib/content";
-const c=getCopy("en");
-export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("en","investors"),languages:{uk:origin+pathFor("uk","investors"),en:origin+pathFor("en","investors")}}};
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('en','investors');
 export default function Page(){return <System locale="en" view="investors"/>;}
+````
+
+## src/app/en/layout.tsx
+
+````tsx
+import {Document} from '@/components/v2/Document';
+export {metadata,viewport} from '@/components/v2/Document';
+export default function Layout({children}:{children:React.ReactNode}){return <Document locale="en">{children}</Document>;}
 ````
 
 ## src/app/en/menu/page.tsx
 
 ````tsx
-import {System} from "@/components/v2/System";
-import {getCopy,pathFor,origin} from "@/lib/content";
-const c=getCopy("en");
-export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("en","menu"),languages:{uk:origin+pathFor("uk","menu"),en:origin+pathFor("en","menu")}}};
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('en','menu');
 export default function Page(){return <System locale="en" view="menu"/>;}
 ````
 
 ## src/app/en/page.tsx
 
 ````tsx
-import {System} from "@/components/v2/System";
-import {getCopy,pathFor,origin} from "@/lib/content";
-const c=getCopy("en");
-export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("en",""),languages:{uk:origin+pathFor("uk",""),en:origin+pathFor("en","")}}};
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('en','');
 export default function Page(){return <System locale="en" view="all"/>;}
+````
+
+## src/app/global-not-found.tsx
+
+````tsx
+import {Document} from '@/components/v2/Document';
+import {getCopy,locales,pathFor} from '@/lib/content';
+export default function NotFound(){return <Document locale="uk"><main className="error-page"><span>404</span><h1>{getCopy('uk').notFound}</h1><p lang="ru">{getCopy('ru').notFound}</p><p lang="en">{getCopy('en').notFound}</p><nav aria-label="Мова / Язык / Language">{locales.map(l=><p key={l}><a href={pathFor(l)} lang={l} hrefLang={l}>{getCopy(l).back}</a></p>)}</nav></main></Document>;}
 ````
 
 ## src/app/globals.css
@@ -6757,33 +7280,33 @@ export default function Page(){return <System locale="en" view="all"/>;}
 .mobile-cup{display:none}
 @media(max-width:767px){.mobile-cup{display:block;position:fixed;right:7px;bottom:8px;width:20px;height:34px;z-index:20;color:var(--ink);background:var(--paper);pointer-events:none}}
 
-/* Small bilingual headline subset is inline to avoid a critical font round trip. */
-@font-face{font-family:"Xoxo Thesis";font-style:normal;font-weight:500;font-display:swap;src:url(data:font/woff2;base64,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) format("woff2")}
-````
+/* Small trilingual headline subset is inline to avoid a critical font round trip. */
+@font-face{font-family:"Xoxo Thesis";font-style:normal;font-weight:500;font-display:block;src:url(data:font/woff2;base64,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) format("woff2")}
 
-## src/app/investors/page.tsx
+/* Language navigation remains reachable without crowding the mobile header. */
+.language-switcher{position:relative;border-left:1px solid var(--line);padding-left:16px}
+.language-trigger{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;gap:5px}
+.language-options{position:absolute;right:0;top:calc(100% + 8px);min-width:165px;list-style:none;background:var(--paper);border:1px solid var(--line);padding:8px;box-shadow:0 12px 24px #172e2814}
+.language-options[hidden]{display:none}
+.topbar nav .language-options a{padding:0 12px;gap:8px;white-space:nowrap}
+.language-options a[aria-current]{background:#172e280d}
+.section-head{position:relative;border-top:0}
+.section-head::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:currentColor;transform-origin:left}
+.section-head.rule-revealed::before{animation:rule-reveal 450ms var(--ease) both}
+@keyframes rule-reveal{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:767px){.topbar nav{gap:12px}.language-switcher{padding-left:9px}.scenario-tabs button{font-size:10px;min-height:44px}.currency button{min-height:44px}.gallery-button{min-width:44px;min-height:44px}.result-grid dd{overflow-wrap:anywhere}.result-grid dt{font-size:9px}.privacy{font-size:11px}.assumption{font-size:11px;line-height:1.65}.sliders label>span{font-size:10px}.model-bottom{font-size:9px}}
 
-````tsx
-import {System} from "@/components/v2/System";
-import {getCopy,pathFor,origin} from "@/lib/content";
-const c=getCopy("uk");
-export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("uk","investors"),languages:{uk:origin+pathFor("uk","investors"),en:origin+pathFor("en","investors")}}};
-export default function Page(){return <System locale="uk" view="investors"/>;}
-````
-
-## src/app/layout.tsx
-
-````tsx
-import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
-import type { Metadata, Viewport } from 'next';
-import uk from '../../content/uk.json';
-import { origin } from '@/lib/content';
-import './globals.css';
-const sans = IBM_Plex_Sans({ subsets:['latin','cyrillic'], weight:'500', preload:false, variable:'--sans', display:'swap' });
-const mono = IBM_Plex_Mono({ subsets:['latin','cyrillic'], weight:'400', preload:false, variable:'--mono', display:'swap' });
-export const metadata: Metadata = { metadataBase:new URL(origin),title:uk.metadata.title,description:uk.metadata.description,icons:{icon:'/favicon.svg'} };
-export const viewport: Viewport = { themeColor:'#f3f1ea',width:'device-width',initialScale:1 };
-export default function Layout({children}:{children:React.ReactNode}) { return <html lang="uk" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning><body>{children}</body></html>; }
+.gallery-button:disabled{opacity:.4;cursor:default}
+/* Reserve headline rows and header links while web fonts finish loading. */
+.thesis h1>span{flex:none;height:1lh}
+.topbar nav>a:first-child{width:44px;flex:none}
+.topbar nav>a:nth-child(2){width:88px;flex:none}
+.language-trigger{width:52px;flex:none}
+.wordmark{width:64px;flex:none}
+.edition{width:180px;flex:none}
+/* Reveal rail labels at full contrast, including keyboard focus. */
+.rail a span:last-child{opacity:1;clip-path:inset(0 100% 0 0);transition:clip-path .25s var(--ease)}
+.rail a:hover span:last-child,.rail a:focus-visible span:last-child,.rail a[aria-current] span:last-child{clip-path:inset(0)}
 ````
 
 ## src/app/manifest.ts
@@ -6791,34 +7314,6 @@ export default function Layout({children}:{children:React.ReactNode}) { return <
 ````typescript
 export const dynamic = "force-static";
 export default function manifest(){return {name:'XoXo Tea',short_name:'XoXo',start_url:'/',display:'standalone' as const,background_color:'#f3f1ea',theme_color:'#172e28',icons:[{src:'/favicon.svg',sizes:'any',type:'image/svg+xml'}]};}
-````
-
-## src/app/menu/page.tsx
-
-````tsx
-import {System} from "@/components/v2/System";
-import {getCopy,pathFor,origin} from "@/lib/content";
-const c=getCopy("uk");
-export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("uk","menu"),languages:{uk:origin+pathFor("uk","menu"),en:origin+pathFor("en","menu")}}};
-export default function Page(){return <System locale="uk" view="menu"/>;}
-````
-
-## src/app/not-found.tsx
-
-````tsx
-import Link from 'next/link';
-import uk from '../../content/uk.json';
-export default function NotFound(){return <main className="error-page"><span>404</span><h1>{uk.notFound}</h1><Link href="/">{uk.back}</Link></main>;}
-````
-
-## src/app/page.tsx
-
-````tsx
-import {System} from "@/components/v2/System";
-import {getCopy,pathFor,origin} from "@/lib/content";
-const c=getCopy("uk");
-export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("uk",""),languages:{uk:origin+pathFor("uk",""),en:origin+pathFor("en","")}}};
-export default function Page(){return <System locale="uk" view="all"/>;}
 ````
 
 ## src/app/robots.ts
@@ -6829,26 +7324,62 @@ import { origin } from '@/lib/content';
 export default function robots(){return {rules:{userAgent:'*',allow:'/'},sitemap:origin+'/sitemap.xml'};}
 ````
 
+## src/app/ru/investors/page.tsx
+
+````tsx
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('ru','investors');
+export default function Page(){return <System locale="ru" view="investors"/>;}
+````
+
+## src/app/ru/layout.tsx
+
+````tsx
+import {Document} from '@/components/v2/Document';
+export {metadata,viewport} from '@/components/v2/Document';
+export default function Layout({children}:{children:React.ReactNode}){return <Document locale="ru">{children}</Document>;}
+````
+
+## src/app/ru/menu/page.tsx
+
+````tsx
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('ru','menu');
+export default function Page(){return <System locale="ru" view="menu"/>;}
+````
+
+## src/app/ru/page.tsx
+
+````tsx
+import {System} from '@/components/v2/System';
+import {pageMetadata} from '@/lib/content';
+export const metadata=pageMetadata('ru','');
+export default function Page(){return <System locale="ru" view="all"/>;}
+````
+
 ## src/app/sitemap.ts
 
 ````typescript
-export const dynamic = "force-static";
-import {origin,pathFor} from '@/lib/content';
-export default function sitemap(){return (['uk','en'] as const).flatMap(lang=>['','menu','investors'].map(p=>({url:origin+pathFor(lang,p),lastModified:new Date('2026-09-13'),alternates:{languages:{uk:origin+pathFor('uk',p),en:origin+pathFor('en',p)}}})));}
+export const dynamic = 'force-static';
+import {origin,pathFor,locales,languagesFor} from '@/lib/content';
+export default function sitemap(){return locales.flatMap(lang=>['','menu','investors'].map(p=>({url:origin+pathFor(lang,p),lastModified:new Date('2026-09-14'),alternates:{languages:languagesFor(p)}})));}
 ````
 
 ## src/components/v2/Contact.tsx
 
 ````tsx
 'use client';
-import {useRef,useState,type FormEvent} from 'react';
+import {useEffect,useRef,useState,type FormEvent} from 'react';
 import type {Copy} from '@/lib/content';
 export function Contact({c}:{c:Copy['contact']}){
  const [state,setState]=useState('idle'),[error,setError]=useState('');const heading=useRef<HTMLHeadingElement>(null); const endpoint=process.env.NEXT_PUBLIC_LEAD_ENDPOINT||'';
- async function submit(e:FormEvent<HTMLFormElement>){e.preventDefault();const f=e.currentTarget;const data=new FormData(f); const name=String(data.get('name')||'').trim(),contact=String(data.get('contact')||'').trim();if(!name||!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact)||/^@[A-Za-z][A-Za-z0-9_]{4,31}$/.test(contact))){setError(c.invalid);return;}if(data.get('website'))return;setError('');setState('sending');const params=new URLSearchParams(location.search);const payload={name,contact,organization:String(data.get('organization')||'').trim(),ticket:String(data.get('ticket')),dataRoom:data.get('dataRoom')==='on',consent:true,ref:params.get('ref')||'',utm:Object.fromEntries([...params.entries()].filter(([k])=>k.startsWith('utm_')))};
- try{if(endpoint){const result=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:AbortSignal.timeout(12000)});if(!result.ok)throw new Error();setState('sent');}else{const url=URL.createObjectURL(new Blob([c.notSent+'\n\n'+JSON.stringify(payload,null,2)],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=c.file;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setState('prepared');}requestAnimationFrame(()=>heading.current?.focus());}catch{setState('idle');setError(c.error);}}
+ useEffect(()=>{if(state==='prepared'||state==='sent')heading.current?.focus();},[state]);
+ async function submit(e:FormEvent<HTMLFormElement>){e.preventDefault();const f=e.currentTarget;const data=new FormData(f); const name=String(data.get('name')||'').trim(),contact=String(data.get('contact')||'').trim();if(!name||!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact)||/^@[A-Za-z][A-Za-z0-9_]{4,31}$/.test(contact))){setError(c.invalid);(f.elements.namedItem(!name?'name':'contact') as HTMLInputElement)?.focus();return;}if(data.get('website'))return;setError('');setState('sending');const params=new URLSearchParams(location.search);const payload={name,contact,organization:String(data.get('organization')||'').trim(),ticket:String(data.get('ticket')),dataRoom:data.get('dataRoom')==='on',consent:true,ref:params.get('ref')||'',utm:Object.fromEntries([...params.entries()].filter(([k])=>k.startsWith('utm_')))};
+ try{if(endpoint){const result=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:AbortSignal.timeout(12000)});if(!result.ok)throw new Error();setState('sent');}else{const url=URL.createObjectURL(new Blob([[c.notSent, '', `${c.name}: ${payload.name}`, `${c.email}: ${payload.contact}`, `${c.org}: ${payload.organization}`, `${c.range}: ${payload.ticket}`, `${c.room}: ${payload.dataRoom?c.yes:c.no}`, `${c.consent}: ${c.yes}`].join('\n')],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=c.file;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setState('prepared');}}catch{setState('idle');setError(c.error);}}
  if(state==='prepared'||state==='sent')return <div className="confirmation" role="status"><span className="micro">07 / 01</span><h3 tabIndex={-1} ref={heading}>{state==='sent'?c.sent:c.success}</h3><p>{state==='sent'?c.sentBody:c.successBody}</p><button className="cta" onClick={()=>setState('idle')}>{c.again} ↗</button></div>;
- return <form className="investor-form" onSubmit={submit}><div className="form-row"><label>{c.name}<input name="name" autoComplete="name" required maxLength={100}/></label><label>{c.org}<input name="organization" autoComplete="organization" maxLength={150}/></label></div><label>{c.email}<input name="contact" required autoComplete="email" maxLength={254}/></label><label>{c.range}<select name="ticket">{c.ranges.map(x=><option key={x}>{x}</option>)}</select></label><label className="check"><input type="checkbox" name="dataRoom"/>{c.room}</label><label className="check"><input type="checkbox" name="consent" required/>{c.consent}</label><div className="honey" aria-hidden="true"><label>{c.trap}<input name="website" tabIndex={-1} autoComplete="off"/></label></div>{error&&<p role="alert" className="form-error">{error}</p>}<button className="cta magnet" disabled={state==='sending'}>{state==='sending'?c.sending:endpoint?c.send:c.submit}<span aria-hidden="true">↗</span></button>{!endpoint&&<p className="assumption">{c.notice}</p>}<p className="privacy">{c.privacy}</p></form>;
+ return <form className="investor-form" onSubmit={submit}><div className="form-row"><label>{c.name}<input name="name" autoComplete="name" required maxLength={100}/></label><label>{c.org}<input name="organization" autoComplete="organization" maxLength={150}/></label></div><label>{c.email}<input name="contact" required autoComplete="email" aria-invalid={error===c.invalid||undefined} aria-describedby={error===c.invalid?"contact-error":undefined} maxLength={254}/></label><label>{c.range}<select name="ticket">{c.ranges.map(x=><option key={x}>{x}</option>)}</select></label><label className="check"><input type="checkbox" name="dataRoom"/>{c.room}</label><label className="check"><input type="checkbox" name="consent" required/>{c.consent}</label><div className="honey" aria-hidden="true"><label>{c.trap}<input name="website" tabIndex={-1} autoComplete="off"/></label></div>{error&&<p id="contact-error" role="alert" className="form-error">{error}</p>}<button className="cta magnet" disabled={state==='sending'}>{state==='sending'?c.sending:endpoint?c.send:c.submit}<span aria-hidden="true">↗</span></button>{!endpoint&&<p className="assumption">{c.notice}</p>}<p className="privacy">{c.privacy}</p></form>;
 }
 ````
 
@@ -6857,14 +7388,60 @@ export function Contact({c}:{c:Copy['contact']}){
 ````tsx
 'use client';
 import {useEffect,useRef} from 'react';
-// A generated sequence is deliberately optional. Never fabricate turntable views from a flat photograph.
-export function CupSequence({alt,label}:{alt:string;label:string}){const canvas=useRef<HTMLCanvasElement>(null);
- useEffect(()=>{const el=canvas.current;if(!el)return;const reduced=matchMedia('(prefers-reduced-motion: reduce)');let stopped=false;const bitmaps:ImageBitmap[]=[];let frame=0;const stage=el.closest('[data-cup-stage]');let controller:AbortController|undefined;
- const draw=(e:Event)=>{frame=(e as CustomEvent<number>).detail;const b=bitmaps[frame];if(!b||reduced.matches)return;const ctx=el.getContext('2d');if(ctx){el.width=b.width;el.height=b.height;ctx.drawImage(b,0,0);el.dataset.ready='true';}};
- const observer=new IntersectionObserver(async entries=>{if(!entries.some(x=>x.isIntersecting)||reduced.matches)return;observer.disconnect();controller=new AbortController();try{const res=await fetch('/sequence/manifest.json',{signal:controller.signal});const manifest=await res.json();if(!Array.isArray(manifest.frames)||manifest.frames.length!==36)return;for(let i=0;i<36;i++){if(stopped||reduced.matches)break;const blob=await fetch(manifest.frames[i],{signal:controller.signal}).then(r=>r.blob());bitmaps[i]=await createImageBitmap(blob);draw(new CustomEvent('cupframe',{detail:frame}));await new Promise<void>(r=>requestAnimationFrame(()=>r()));}}catch{/* Static product photography remains available. */}},{rootMargin:'100px'});
- const change=()=>{if(reduced.matches){controller?.abort();el.dataset.ready='false';}else if(stage)observer.observe(stage);};if(stage){observer.observe(stage);stage.addEventListener('cupframe',draw);}reduced.addEventListener('change',change);return()=>{stopped=true;controller?.abort();observer.disconnect();stage?.removeEventListener('cupframe',draw);reduced.removeEventListener('change',change);bitmaps.forEach(b=>b.close());};},[]);
- return <><picture><source type="image/avif" srcSet="/drinks/drink-0-480.avif 480w, /drinks/drink-0-960.avif 960w" sizes="(max-width: 767px) 82vw, 440px"/><img src="/drinks/drink-0-480.webp" width="720" height="960" loading="lazy" decoding="async" alt={alt}/></picture><canvas ref={canvas} className="cup-canvas" width={900} height={1200} role="img" aria-label={label}/></>;
+// Only real generated views may replace the photograph. Empty manifests keep the static fallback.
+export function CupSequence({alt}:{alt:string;label:string}){
+ const canvas=useRef<HTMLCanvasElement>(null);
+ useEffect(()=>{
+  const el=canvas.current;if(!el)return;
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');const stage=el.closest('[data-cup-stage]');
+  let stopped=false,loading=false,unavailable=false,frame=0,generation=0;let controller:AbortController|undefined;
+  const bitmaps:ImageBitmap[]=[];
+  const draw=(e:Event)=>{
+   frame=Math.max(0,Math.min(35,Math.round((e as CustomEvent<number>).detail)));
+   const b=bitmaps[frame];if(!b||reduced.matches||stopped)return;
+   const ctx=el.getContext('2d');if(!ctx)return;
+   if(el.width!==b.width)el.width=b.width;if(el.height!==b.height)el.height=b.height;
+   ctx.clearRect(0,0,el.width,el.height);ctx.drawImage(b,0,0);el.dataset.ready='true';
+  };
+  const observer=new IntersectionObserver(async entries=>{
+   if(!entries.some(x=>x.isIntersecting)||reduced.matches||loading||unavailable||stopped)return;
+   observer.disconnect();loading=true;const version=++generation;controller=new AbortController();const signal=controller.signal;
+   try{
+    const res=await fetch('/sequence/manifest.json',{signal});if(!res.ok)throw new Error('Manifest unavailable');
+    const manifest=await res.json();
+    if(!Array.isArray(manifest.frames)||manifest.frames.length!==36||!manifest.frames.every((p:unknown)=>typeof p==='string'&&p.startsWith('/sequence/')&&!p.includes('..'))){unavailable=true;return;}
+    for(let i=0;i<36;i++){
+     if(stopped||reduced.matches||version!==generation)break;if(bitmaps[i])continue;
+     const response=await fetch(manifest.frames[i],{signal});if(!response.ok)throw new Error('Frame unavailable');
+     const bitmap=await createImageBitmap(await response.blob());
+     if(stopped||reduced.matches||version!==generation){bitmap.close();break;}
+     bitmaps[i]=bitmap;draw(new CustomEvent('cupframe',{detail:frame}));
+     await new Promise<void>(resolve=>requestAnimationFrame(()=>resolve()));
+    }
+   }catch{if(!signal.aborted)unavailable=true;/* Keep the accessible static photograph. */}
+   finally{loading=false;if(!stopped&&!reduced.matches&&!unavailable&&bitmaps.length<36&&stage)observer.observe(stage);}
+  },{rootMargin:'100px'});
+  const change=()=>{if(reduced.matches){generation++;controller?.abort();el.dataset.ready='false';}else{draw(new CustomEvent('cupframe',{detail:frame}));if(stage&&!unavailable)observer.observe(stage);}};
+  if(stage){observer.observe(stage);stage.addEventListener('cupframe',draw);}reduced.addEventListener('change',change);
+  return()=>{stopped=true;generation++;controller?.abort();observer.disconnect();stage?.removeEventListener('cupframe',draw);reduced.removeEventListener('change',change);bitmaps.forEach(b=>b.close());};
+ },[]);
+ return <><picture><source type="image/avif" srcSet="/drinks/drink-0-480.avif 480w, /drinks/drink-0-960.avif 960w" sizes="(max-width: 767px) 82vw, 440px"/><img src="/drinks/drink-0-480.webp" width="720" height="960" loading="lazy" decoding="async" alt={alt}/></picture><canvas ref={canvas} className="cup-canvas" width={900} height={1200} aria-hidden="true"/></>;
 }
+````
+
+## src/components/v2/Document.tsx
+
+````tsx
+import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import {type Locale} from '@/lib/content';
+import { origin } from '@/lib/content';
+import '@/app/globals.css';
+const sans = IBM_Plex_Sans({ subsets:['latin','cyrillic'], weight:'500', preload:false, variable:'--sans', display:'swap' });
+const mono = IBM_Plex_Mono({ subsets:['latin','cyrillic'], weight:'400', preload:false, variable:'--mono', display:'swap' });
+export const metadata: Metadata = { metadataBase:new URL(origin),icons:{icon:'/favicon.svg'} };
+export const viewport: Viewport = { themeColor:'#f3f1ea',width:'device-width',initialScale:1 };
+export function Document({children,locale}:{children:React.ReactNode;locale:Locale}) { return <html lang={locale} className={`${sans.variable} ${mono.variable}`}><body>{children}</body></html>; }
 ````
 
 ## src/components/v2/Economics.tsx
@@ -6878,9 +7455,29 @@ export function Economics({c,extra,locale}:{c:Copy['economics'];extra:Copy['econ
  const [inputs,setInputs]=useState(defaults),[usd,setUsd]=useState(false),[active,setActive]=useState(1),[custom,setCustom]=useState(false); const ref=useRef<HTMLDivElement>(null);
  const result=calculate(inputs);const money=(n:number)=>formatMoney(n,locale,usd);
  useEffect(()=>{const el=ref.current;if(!el)return;const update=(event:Event)=>{if(custom)return;const i=(event as CustomEvent<number>).detail;setActive(i);setInputs(scenarios[i]);};el.addEventListener('scenario',update);return()=>el.removeEventListener('scenario',update);},[custom]);
- const fields=[{key:'cups',min:30,max:350,step:5},{key:'ticket',min:120,max:260,step:5},{key:'rent',min:15000,max:120000,step:5000},{key:'staff',min:100000,max:350000,step:10000}] as const;
+ const fields=[{key:'cups',min:0,max:350,step:5},{key:'ticket',min:0,max:260,step:5},{key:'rent',min:0,max:120000,step:5000},{key:'staff',min:0,max:350000,step:10000}] as const;
  const choose=(i:number)=>{setActive(i);setInputs(scenarios[i]);setCustom(true);};
- return <><div className="economics-scroll" data-economics ref={ref}><div className="economics-pin"><div className="model-toolbar"><div className="scenario-tabs" role="group" aria-label={extra.scenario}>{[1,0,2].map(i=><button key={i} type="button" aria-pressed={!custom&&active===i||custom&&active===i} onClick={()=>choose(i)}>{c.scenarios[i]}</button>)}</div><fieldset className="currency"><legend className="sr-only">{c.currency}</legend><button type="button" aria-pressed={!usd} onClick={()=>setUsd(false)}>{c.uah}</button><button type="button" aria-pressed={usd} onClick={()=>setUsd(true)}>{c.usd}</button></fieldset></div><div className="model-grid"><div className="sliders">{fields.map(f=><label key={f.key} htmlFor={f.key}><span>{c[f.key]}<output htmlFor={f.key}>{f.key==='cups'?inputs[f.key]:money(inputs[f.key])}</output></span><input id={f.key} type="range" min={f.min} max={f.max} step={f.step} value={inputs[f.key]} aria-valuetext={f.key==='cups'?String(inputs[f.key]):money(inputs[f.key])} onChange={e=>{setCustom(true);setActive(-1);setInputs({...inputs,[f.key]:Number(e.target.value)} as Inputs);}}/></label>)}</div><div className="results"><p className="micro">{c.ebitda} / {extra.period}</p><strong className="ebitda" data-ebitda>{money(result.ebitda)}</strong><dl className="result-grid">{[[c.revenue,money(result.revenue)],[c.gross,`${(result.grossMargin*100).toLocaleString(locale,{maximumFractionDigits:1})}%`],[c.contribution,money(result.contribution)],[c.payback,result.payback===null?c.none:result.payback.toLocaleString(locale,{maximumFractionDigits:1})],[c.breakEven,result.breakEven??c.none]].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl></div></div><div className="model-bottom micro"><span>{custom?extra.custom:extra.scroll}</span><button type="button" onClick={()=>{setCustom(false);setInputs(defaults);setActive(1);}}>{extra.reset} ↺</button></div></div></div><div className="scenario-comparison">{[1,0,2].map(i=>{const s=scenarios[i],v=calculate(s);return <article key={i}><h3>{c.scenarios[i]}</h3><div className="micro">{s.cups} / {money(s.ticket)}</div><dl><div><dt>{c.revenue}</dt><dd>{money(v.revenue)}</dd></div><div><dt>{c.ebitda}</dt><dd>{money(v.ebitda)}</dd></div><div><dt>{c.payback}</dt><dd>{v.payback?.toLocaleString(locale,{maximumFractionDigits:1})??c.none}</dd></div></dl></article>})}</div><div className="model-assumptions"><p className="micro">{extra.tag}</p><p className="assumption">{c.assumptions}</p><p className="assumption">{c.explanation}</p><div className="baseline micro"><span>{extra.funding} / {money(model.funding)}</span><span>{extra.exchange} / 42 UAH = 1 USD</span></div></div></>;
+ return <><div className="economics-scroll" data-economics ref={ref}><div className="economics-pin"><div className="model-toolbar"><div className="scenario-tabs" role="group" aria-label={extra.scenario}>{[1,0,2].map(i=><button key={i} type="button" aria-pressed={active===i} onClick={()=>choose(i)}>{c.scenarios[i]}</button>)}</div><fieldset className="currency"><legend className="sr-only">{c.currency}</legend><button type="button" aria-pressed={!usd} onClick={()=>setUsd(false)}>{c.uah}</button><button type="button" aria-pressed={usd} onClick={()=>setUsd(true)}>{c.usd}</button></fieldset></div><div className="model-grid"><div className="sliders">{fields.map(f=><label key={f.key} htmlFor={f.key}><span>{c[f.key]}<output htmlFor={f.key}>{f.key==='cups'?inputs[f.key]:money(inputs[f.key])}</output></span><input id={f.key} type="range" min={f.min} max={f.max} step={f.step} value={inputs[f.key]} aria-valuetext={f.key==='cups'?String(inputs[f.key]):money(inputs[f.key])} onChange={e=>{setCustom(true);setActive(-1);setInputs({...inputs,[f.key]:Number(e.target.value)} as Inputs);}}/></label>)}</div><div className="results"><p className="micro">{c.ebitda}</p><strong className="ebitda" data-ebitda>{money(result.ebitda)}</strong><dl className="result-grid">{[[c.revenue,money(result.revenue)],[c.gross,result.grossMargin===null?c.undefined:`${(result.grossMargin*100).toLocaleString(locale,{maximumFractionDigits:1})}%`],[c.contribution,money(result.contribution)],[c.payback,result.payback===null?c.none:result.payback.toLocaleString(locale,{maximumFractionDigits:1})],[c.breakEven,result.breakEven??c.none]].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl></div></div><div className="model-bottom micro"><span>{custom?extra.custom:extra.scroll}</span><button type="button" onClick={()=>{setCustom(false);setInputs(defaults);setActive(1);}}>{extra.reset} ↺</button></div></div></div><div className="scenario-comparison">{[1,0,2].map(i=>{const s=scenarios[i],v=calculate(s);return <article key={i}><h3>{c.scenarios[i]}</h3><div className="micro">{s.cups} / {money(s.ticket)}</div><dl><div><dt>{c.revenue}</dt><dd>{money(v.revenue)}</dd></div><div><dt>{c.ebitda}</dt><dd>{money(v.ebitda)}</dd></div><div><dt>{c.payback}</dt><dd>{v.payback?.toLocaleString(locale,{maximumFractionDigits:1})??c.none}</dd></div></dl></article>})}</div><div className="model-assumptions"><p className="micro">{extra.tag}</p><p className="assumption">{c.assumptions}</p><p className="assumption">{c.explanation}</p><p className="assumption">{c.zeroNote}</p><div className="baseline micro"><span>{extra.funding} / {money(model.funding)}</span><span>{extra.exchange} / {model.fx} {c.uah} = 1 {c.usd}</span></div></div></>;
+}
+````
+
+## src/components/v2/LanguageSwitcher.tsx
+
+````tsx
+'use client';
+import {useEffect,useRef,useState} from 'react';
+import {locales,pathFor,type Locale} from '@/lib/routing';
+const names={uk:'Українська',en:'English',ru:'Русский'};
+export function LanguageSwitcher({locale,path,label}:{locale:Locale;path:string;label:string}){
+ const [open,setOpen]=useState(false);const root=useRef<HTMLDivElement>(null);const button=useRef<HTMLButtonElement>(null);
+ useEffect(()=>{
+  if(!open)return;
+  const outside=(e:PointerEvent)=>{if(!root.current?.contains(e.target as Node))setOpen(false);};
+  const escape=(e:KeyboardEvent)=>{if(e.key==='Escape'){setOpen(false);button.current?.focus();}};
+  document.addEventListener('pointerdown',outside);document.addEventListener('keydown',escape);
+  return()=>{document.removeEventListener('pointerdown',outside);document.removeEventListener('keydown',escape);};
+ },[open]);
+ return <div className="language-switcher" ref={root} onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setOpen(false);}}><button ref={button} className="language-trigger" type="button" aria-label={`${locale==='uk'?'UA':locale.toUpperCase()} — ${label}: ${names[locale]}`} aria-expanded={open} aria-controls="language-options" onClick={()=>setOpen(!open)}>{locale==='uk'?'UA':locale.toUpperCase()} <span aria-hidden="true">⌄</span></button><ul id="language-options" className="language-options" hidden={!open}>{locales.map(l=><li key={l}><a href={pathFor(l,path)} lang={l} hrefLang={l} aria-current={l===locale?'page':undefined}>{names[l]}{l===locale&&<span aria-hidden="true"> ✓</span>}</a></li>)}</ul></div>;
 }
 ````
 
@@ -6896,27 +7493,31 @@ export function Runtime({locale}:{locale:Locale}){
  const all=<T extends Element=HTMLElement>(s:string)=>Array.from(document.querySelectorAll<T>(s));
  const sections=all<HTMLElement>('main > section');const cup=document.querySelector<HTMLElement>('[data-cup-stage]');const econ=document.querySelector<HTMLElement>('[data-economics]');const gallery=document.querySelector<HTMLElement>('.gallery');const galleryRegion=document.querySelector<HTMLElement>('.gallery-region');const progress=all<HTMLElement>('.top-progress i,.cup-liquid');const progressLabel=document.querySelector('[data-progress-label]');const counters=all<HTMLElement>('[data-count]');
  const play=(el:HTMLElement,frames:Keyframe[],duration=450,delay=0)=>{el.style.willChange='transform';const a=el.animate(frames,{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.add(a);a.finished.catch(()=>{}).finally(()=>{animations.delete(a);el.style.willChange='';});};
- const reveal=new IntersectionObserver(entries=>{for(const {target,isIntersecting} of entries){if(!isIntersecting)continue;reveal.unobserve(target);if(reduced.matches)continue;const el=target as HTMLElement;if(el.matches('.section-title')){el.querySelectorAll<HTMLElement>('.reveal-line>span').forEach((line,i)=>play(line,[{transform:'translateY(110%)'},{transform:'translateY(0)'}],450,i*60));}else if(el.matches('[data-count]')){el.style.minWidth=el.getBoundingClientRect().width+'px';const v=Number(el.dataset.count),dec=Number(el.dataset.decimals||0),suffix=el.dataset.suffix||'';let start:number|undefined;const fmt=new Intl.NumberFormat(locale,{minimumFractionDigits:dec,maximumFractionDigits:dec});const update=(now:number)=>{if(disposed||reduced.matches){el.textContent=fmt.format(v)+suffix;return;}start??=now;const p=Math.min((now-start)/500,1),eased=1-Math.pow(1-p,3);el.textContent=fmt.format(v*eased)+suffix;if(p<1)requestAnimationFrame(update);};requestAnimationFrame(update);}else{play(el,[{transform:'scaleX(0)'},{transform:'scaleX(1)'}]);}}},{threshold:.15});
+ const reveal=new IntersectionObserver(entries=>{for(const {target,isIntersecting} of entries){if(!isIntersecting)continue;reveal.unobserve(target);if(reduced.matches)continue;const el=target as HTMLElement;if(el.matches('.section-title')){el.querySelectorAll<HTMLElement>('.reveal-line>span').forEach((line,i)=>play(line,[{transform:'translateY(110%)'},{transform:'translateY(0)'}],450,i*60));}else if(el.matches('[data-count]')){el.style.minWidth=el.getBoundingClientRect().width+'px';const v=Number(el.dataset.count),dec=Number(el.dataset.decimals||0),suffix=el.dataset.suffix||'';let start:number|undefined;const fmt=new Intl.NumberFormat(locale,{minimumFractionDigits:dec,maximumFractionDigits:dec});const update=(now:number)=>{if(disposed||reduced.matches){el.textContent=fmt.format(v)+suffix;return;}start??=now;const p=Math.min((now-start)/500,1),eased=1-Math.pow(1-p,3);el.textContent=fmt.format(v*eased)+suffix;if(p<1)requestAnimationFrame(update);};requestAnimationFrame(update);}else if(el.matches('.section-head')){el.classList.add('rule-revealed');}else{play(el,[{transform:'scaleX(0)'},{transform:'scaleX(1)'}]);}}},{threshold:.15});
  all('.section-title,.section-head,.chart-reveal,.allocation,[data-count]').forEach(e=>reveal.observe(e));
- const updateGallery=()=>{if(!gallery)return;const step=(gallery.firstElementChild as HTMLElement)?.offsetWidth+parseFloat(getComputedStyle(gallery).columnGap);const i=Math.min(5,Math.max(0,Math.round(gallery.scrollLeft/step)));const label=document.querySelector('[data-gallery-index]');if(label)label.textContent=String(i+1).padStart(2,'0');};
+ const updateGallery=()=>{if(!gallery)return;const step=(gallery.firstElementChild as HTMLElement)?.offsetWidth+parseFloat(getComputedStyle(gallery).columnGap);const i=Math.min(5,Math.max(0,Math.round(gallery.scrollLeft/step)));const label=document.querySelector('[data-gallery-index]');if(label)label.textContent=String(i+1).padStart(2,'0');const prev=document.querySelector<HTMLButtonElement>('[data-gallery-prev]'),next=document.querySelector<HTMLButtonElement>('[data-gallery-next]');if(prev)prev.disabled=gallery.scrollLeft<2;if(next)next.disabled=gallery.scrollLeft>=gallery.scrollWidth-gallery.clientWidth-2;};
  const update=()=>{raf=0;if(disposed)return;const h=innerHeight,p=Math.max(0,Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-h)));if(!reduced.matches){progress.forEach(el=>el.style.transform=el.classList.contains('cup-liquid')?`scaleY(${p})`:`scaleX(${p})`);if(progressLabel)progressLabel.textContent=String(Math.round(p*100)).padStart(2,'0')+'%';}
  let active=sections[0]?.id;for(const s of sections){if(s.getBoundingClientRect().top<h*.45)active=s.id;}all<HTMLAnchorElement>('[data-section-link]').forEach(a=>{if(a.dataset.sectionLink===active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
  if(cup&&!reduced.matches){const box=cup.getBoundingClientRect();if(box.bottom>0&&box.top<h){const q=Math.max(0,Math.min(1,(h-box.top)/(h+box.height)));cup.querySelectorAll<HTMLElement>('[data-depth]').forEach(el=>el.style.transform=`translate3d(0,${(q-.5)*40*Number(el.dataset.depth)}px,0)`);const f=Math.min(35,Math.floor(q*36));cup.dispatchEvent(new CustomEvent('cupframe',{detail:f}));if(cup.querySelector('[data-ready="true"]')){const angle=document.querySelector('[data-angle]');if(angle)angle.textContent=String(f*10).padStart(3,'0')+'°';}}}
  if(econ&&!reduced.matches){const b=econ.getBoundingClientRect(),q=Math.max(0,Math.min(.999,-b.top/Math.max(1,b.height-h))),i=[1,0,2][Math.floor(q*3)];if(b.top<h&&b.bottom>0&&i!==scenario){scenario=i;econ.dispatchEvent(new CustomEvent('scenario',{detail:i}));}}
  if(gallery&&galleryRegion&&innerWidth>=1024&&!reduced.matches){const b=galleryRegion.getBoundingClientRect();if(b.top<90&&b.bottom>h*.5){const q=Math.max(0,Math.min(1,(90-b.top)/Math.max(1,b.height-h)));gallery.scrollLeft=q*(gallery.scrollWidth-gallery.clientWidth);updateGallery();}}
- };const onScroll=()=>{if(!raf)raf=requestAnimationFrame(update);};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll,{passive:true});gallery?.addEventListener('scroll',updateGallery,{passive:true});
+ updateGallery();
+ };const onScroll=()=>{if(!raf)raf=requestAnimationFrame(update);};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll,{passive:true});const onGallery=()=>{if(!galleryRaf)galleryRaf=requestAnimationFrame(()=>{galleryRaf=0;updateGallery();});};let galleryRaf=0;gallery?.addEventListener('scroll',onGallery,{passive:true});
  const change=()=>{root.dataset.reduced=String(reduced.matches);if(reduced.matches){animations.forEach(a=>a.cancel());all<HTMLElement>('[data-depth]').forEach(e=>e.style.transform='');counters.forEach(el=>el.textContent=new Intl.NumberFormat(locale,{maximumFractionDigits:Number(el.dataset.decimals||0),minimumFractionDigits:Number(el.dataset.decimals||0)}).format(Number(el.dataset.count))+(el.dataset.suffix||''));progress.forEach(e=>e.style.transform='');}onScroll();};reduced.addEventListener('change',change);change();
  for(const [selector,dir] of [['[data-gallery-prev]',-1],['[data-gallery-next]',1]] as const){const b=document.querySelector(selector);const handler=()=>{if(gallery)gallery.scrollBy({left:dir*((gallery.firstElementChild as HTMLElement).offsetWidth+parseFloat(getComputedStyle(gallery).columnGap)),behavior:reduced.matches?'instant':'smooth'});};b?.addEventListener('click',handler);cleanup.push(()=>b?.removeEventListener('click',handler));}
  const magnet=(e:Event)=>(e.target as Element)?.closest<HTMLElement>('.magnet');
  const move=(e:PointerEvent)=>{const el=magnet(e);if(!el||reduced.matches||!fine.matches)return;const b=el.getBoundingClientRect();el.style.willChange='transform';el.style.transform=`translate3d(${(e.clientX-b.left-b.width/2)*.08}px,${(e.clientY-b.top-b.height/2)*.12}px,0)`;};
  const leave=(e:PointerEvent)=>{const el=magnet(e);if(!el||e.relatedTarget instanceof Node&&el.contains(e.relatedTarget))return;el.style.transform='';el.style.willChange='';};
  const down=(e:PointerEvent)=>{const el=magnet(e);if(el&&!reduced.matches)el.style.transform='scale(.97)';};
- const up=(e:PointerEvent)=>{const el=magnet(e);if(!el||reduced.matches)return;import('framer-motion/dom/mini').then(({animate})=>{if(!disposed&&el.isConnected)animate(el,{transform:'scale(1)'},{duration:.3,ease:[.22,1,.36,1]});});};
- document.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerout',leave,{passive:true});document.addEventListener('pointerdown',down,{passive:true});document.addEventListener('pointerup',up,{passive:true});
- cleanup.push(()=>{document.removeEventListener('pointermove',move);document.removeEventListener('pointerout',leave);document.removeEventListener('pointerdown',down);document.removeEventListener('pointerup',up);});
- const navigate=(e:MouseEvent)=>{const a=(e.target as HTMLElement).closest<HTMLAnchorElement>('a[href]');if(!a||a.hasAttribute('download')||a.target||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0||reduced.matches)return;const u=new URL(a.href);if(u.origin!==location.origin||u.pathname===location.pathname)return;e.preventDefault();const wipe=document.querySelector<HTMLElement>('.page-wipe');if(!wipe){location.assign(u.href);return;}wipe.style.transform='translateY(100%)';wipe.style.visibility='visible';const animation=wipe.animate([{transform:'translateY(100%)'},{transform:'translateY(0)'}],{duration:240,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});animation.finished.then(()=>{sessionStorage.setItem('xoxo-transition','1');location.assign(u.href);});};document.addEventListener('click',navigate);
- const wipe=document.querySelector<HTMLElement>('.page-wipe');if(wipe&&sessionStorage.getItem('xoxo-transition')){sessionStorage.removeItem('xoxo-transition');if(!reduced.matches){wipe.style.visibility='visible';const a=wipe.animate([{transform:'translateY(0)'},{transform:'translateY(-100%)'}],{duration:350,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});a.finished.then(()=>wipe.style.visibility='hidden');}}
- return()=>{disposed=true;cancelAnimationFrame(raf);reveal.disconnect();animations.forEach(a=>a.cancel());removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);gallery?.removeEventListener('scroll',updateGallery);reduced.removeEventListener('change',change);document.removeEventListener('click',navigate);cleanup.forEach(f=>f());};
+ const up=(e:PointerEvent)=>{const el=magnet(e);if(!el||reduced.matches)return;const from=getComputedStyle(el).transform;el.style.transform='';play(el,[{transform:from==='none'?'scale(.97)':from},{transform:'none'}],300);};
+ document.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerout',leave,{passive:true});document.addEventListener('pointerdown',down,{passive:true});document.addEventListener('pointerup',up,{passive:true});document.addEventListener('pointercancel',leave,{passive:true});
+ cleanup.push(()=>{document.removeEventListener('pointermove',move);document.removeEventListener('pointerout',leave);document.removeEventListener('pointerdown',down);document.removeEventListener('pointerup',up);document.removeEventListener('pointercancel',leave);});
+ const wipe=document.querySelector<HTMLElement>('.page-wipe');let navigating=false;
+ const storage=(write:boolean)=>{try{if(write)sessionStorage.setItem('xoxo-transition','1');else{const value=sessionStorage.getItem('xoxo-transition');sessionStorage.removeItem('xoxo-transition');return value;}}catch{/* Navigation also works with storage disabled. */}};
+ const navigate=(e:MouseEvent)=>{const a=(e.target as HTMLElement).closest<HTMLAnchorElement>('a[href]');if(e.defaultPrevented||!a||a.hasAttribute('download')||a.target||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0||reduced.matches)return;const u=new URL(a.href);if(u.origin!==location.origin||u.pathname===location.pathname)return;if(navigating){e.preventDefault();return;}e.preventDefault();navigating=true;const go=()=>{storage(true);location.assign(u.href);};if(!wipe){go();return;}wipe.style.visibility='visible';const animation=wipe.animate([{transform:'translateY(100%)'},{transform:'translateY(0)'}],{duration:240,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});animations.add(animation);animation.finished.then(go,go);};document.addEventListener('click',navigate);
+ if(wipe&&storage(false)&&!reduced.matches){wipe.style.visibility='visible';const a=wipe.animate([{transform:'translateY(0)'},{transform:'translateY(-100%)'}],{duration:350,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});animations.add(a);a.finished.catch(()=>{}).finally(()=>{animations.delete(a);wipe.style.visibility='hidden';a.cancel();});}
+ const restore=()=>{navigating=false;if(wipe){wipe.getAnimations().forEach(a=>a.cancel());wipe.style.visibility='hidden';wipe.style.transform='';}};addEventListener('pageshow',restore);
+ return()=>{disposed=true;cancelAnimationFrame(raf);reveal.disconnect();animations.forEach(a=>a.cancel());removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);gallery?.removeEventListener('scroll',onGallery);cancelAnimationFrame(galleryRaf);removeEventListener('pageshow',restore);reduced.removeEventListener('change',change);document.removeEventListener('click',navigate);cleanup.forEach(f=>f());};
  },[locale]);return null;
 }
 ````
@@ -6930,6 +7531,7 @@ import { calculate, scenarios, model, formatMoney } from '@/lib/store-model';
 import { Runtime } from './Runtime';
 import { Economics } from './Economics';
 import { Contact } from './Contact';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import { CupSequence } from './CupSequence';
 const ids=['thesis','product','market','economics','scale','terms','contact'];
 export function Title({lines}:{lines:string[]}){return <h2 className="section-title">{lines.map((line,i)=><span className="reveal-line" key={line}><span style={{'--delay':`${i*60}ms`} as CSSProperties}>{line}</span></span>)}</h2>}
@@ -6939,17 +7541,17 @@ export function System({locale='uk',view='all'}:{locale?:Locale;view?:'all'|'men
  const c=getCopy(locale); const visible=(id:string)=>view==='all'||(view==='menu'?['product','contact'].includes(id):['market','economics','scale','terms','contact'].includes(id));
  const here=view==='all'?'':view; const home=pathFor(locale);
  return <div lang={locale} className="system"><Runtime locale={locale}/><a href="#main" className="skip">{c.nav.skip}</a>
- <header className="topbar"><a href={home} className="wordmark" aria-label={c.brand+' / '+c.nav.home}>{c.brand}</a><span className="edition">{c.edition}</span><nav aria-label={c.nav.label}><a href={pathFor(locale,'menu')}>{c.nav.menu}</a><a href={pathFor(locale,'investors')}>{c.nav.investors}</a><a href={pathFor(locale==='uk'?'en':'uk',here)} className="language" hrefLang={locale==='uk'?'en':'uk'}>{locale==='uk'?'EN':'UA'}</a></nav></header>
+ <header className="topbar"><a href={home} className="wordmark" aria-label={c.brand+' / '+c.nav.home}>{c.brand}</a><span className="edition">{c.edition}</span><nav aria-label={c.nav.label}><a href={pathFor(locale,'menu')}>{c.nav.menu}</a><a href={pathFor(locale,'investors')}>{c.nav.investors}</a><LanguageSwitcher locale={locale} path={here} label={c.nav.language}/></nav></header>
  <aside className="rail"><nav aria-label={c.nav.index}>{ids.filter(visible).map(id=><a key={id} href={`#${id}`} data-section-link={id}><span>{String(ids.indexOf(id)+1).padStart(2,'0')}</span><span>{c.sections[ids.indexOf(id)]}</span></a>)}</nav><div className="progress-cup" aria-hidden="true"><svg viewBox="0 0 32 52"><defs><clipPath id="cup-clip"><path d="M6 14h20l-3 33H9z"/></clipPath></defs><g clipPath="url(#cup-clip)"><rect className="cup-liquid" x="4" y="14" width="24" height="35"/></g><path d="M6 14h20l-3 33H9zM4 14h24M7 11q9-15 18 0M17 12l3-11" fill="none" stroke="currentColor" strokeWidth="1"/></svg><span data-progress-label>00%</span></div></aside>
- <div className="top-progress" aria-hidden="true"><i/></div><svg className="mobile-cup" viewBox="0 0 32 52" aria-hidden="true"><defs><clipPath id="mobile-cup-clip"><path d="M6 14h20l-3 33H9z"/></clipPath></defs><g clipPath="url(#mobile-cup-clip)"><rect className="cup-liquid" x="4" y="14" width="24" height="35"/></g><path d="M6 14h20l-3 33H9zM4 14h24M7 11q9-15 18 0M17 12l3-11" fill="none" stroke="currentColor" strokeWidth="1"/></svg><main id="main">{view!=="all"&&<h1 className="sr-only">{view==="menu"?c.nav.menu:c.nav.investors}</h1>}
+ <div className="top-progress" aria-hidden="true"><i/></div><svg className="mobile-cup" viewBox="0 0 32 52" aria-hidden="true"><defs><clipPath id="mobile-cup-clip"><path d="M6 14h20l-3 33H9z"/></clipPath></defs><g clipPath="url(#mobile-cup-clip)"><rect className="cup-liquid" x="4" y="14" width="24" height="35"/></g><path d="M6 14h20l-3 33H9zM4 14h24M7 11q9-15 18 0M17 12l3-11" fill="none" stroke="currentColor" strokeWidth="1"/></svg><main id="main" tabIndex={-1}>{view!=="all"&&<h1 className="sr-only">{view==="menu"?c.nav.menu:c.nav.investors}</h1>}
  {visible('thesis')&&<section id="thesis" className="section thesis"><Head i={0} c={c}/><p className="micro status">{c.status}</p><h1>{c.thesis.map(line=><span key={line}>{line}</span>)}</h1><div className="thesis-foot"><span>{c.thesisFoot[0]}</span><span>{c.thesisFoot[1]}</span><a className="magnet arrow-link" href="#product" aria-label={c.sections[1]}>↓</a></div></section>}
- {visible('product')&&<section id="product" className="section product"><div className="product-intro"><Head i={1} c={c}/><Title lines={c.product.title}/><div className="cup-stage" data-cup-stage><div className="stage-grid" data-depth="0.25" aria-hidden="true"/><div className="cup-shadow" data-depth="0.6" aria-hidden="true"/><div className="cup-render" data-depth="1"><CupSequence alt={c.product.alt} label={c.product.rotate}/></div><div className="stage-corner top-left micro">{c.product.subtitle}</div><div className="stage-corner bottom-left micro">{c.product.rotate}</div><div className="stage-corner bottom-right micro">{c.product.angle} / <span data-angle>000°</span></div></div></div>
+ {visible('product')&&<section id="product" className="section product"><div className="product-intro"><Head i={1} c={c}/><Title lines={c.product.title}/><div className="cup-stage" data-cup-stage><div className="stage-grid" data-depth="0.25" aria-hidden="true"/><div className="cup-shadow" data-depth="0.6" aria-hidden="true"/><div className="cup-render" data-depth="1"><CupSequence alt={c.product.alt} label={c.product.rotate}/></div><div className="stage-corner top-left micro">{c.product.subtitle}</div><div className="stage-corner bottom-left micro">{c.product.rotate}</div><div className="stage-corner bottom-right micro"><span data-angle>{c.product.static}</span></div></div></div>
  <div className="gallery-region"><div className="gallery-heading"><span className="micro">{c.product.collection}</span><span className="micro"><span data-gallery-index>01</span> / 06</span><div><button className="gallery-button" data-gallery-prev aria-label={c.product.previous}>←</button><button className="gallery-button" data-gallery-next aria-label={c.product.next}>→</button></div></div><div className="gallery-pin"><div className="gallery" tabIndex={0} aria-label={c.product.collection}>{c.product.drinks.map((d,i)=><article className="drink" key={d.name}><div className="drink-image"><span className="drink-code micro">D / {String(i+1).padStart(2,'0')}</span><picture><source type="image/avif" srcSet={`/drinks/drink-${i}-480.avif 480w, /drinks/drink-${i}-960.avif 960w`} sizes="(max-width: 767px) 82vw, 32vw"/><img src={`/drinks/drink-${i}-480.webp`} srcSet={`/drinks/drink-${i}-480.webp 480w, /drinks/drink-${i}-960.webp 960w`} sizes="(max-width: 767px) 82vw, 32vw" width="720" height="960" loading="lazy" decoding="async" alt={`${d.name}. ${c.product.alt}`}/></picture></div><div className="drink-description"><div className="drink-name"><h3>{d.name}</h3><span className="price">{d.price} ₴</span></div><p className="other-name">{d.other}</p><p className="micro tea-base">{d.tea}</p><dl className="specs"><div><dt>{c.product.volume}</dt><dd>{c.units.volume}</dd></div><div><dt>{c.product.energy}</dt><dd>{c.product.kcal}</dd></div><div><dt>{c.product.sugar}</dt><dd>{c.units.sugar}</dd></div></dl></div></article>)}</div></div></div><p className="assumption">{c.product.assumption}</p></section>}
- {visible('market')&&<section id="market" className="section market"><Head i={2} c={c}/><Title lines={c.market.title}/><div className="market-grid">{[{label:c.market.world,from:3.35,to:3.62,y1:'2025',y2:'2026',cagr:8.4,source:0,decimals:2},{label:c.market.europe,from:727.2,to:1262.6,y1:'2026',y2:'2033',cagr:8.2,source:1,decimals:1}].map((x,i)=><article key={x.label} className="market-card"><p className="micro">{x.label}</p><div className="chart-values"><div><strong><Num v={x.from} decimals={x.decimals} locale={locale}/></strong><small>{x.y1}</small></div><span aria-hidden="true">→</span><div><strong><Num v={x.to} decimals={x.decimals} locale={locale}/></strong><small>{x.y2}</small></div></div><svg className="data-chart" viewBox="0 0 500 100" role="img" aria-label={c.market.chart}><path className="chart-grid" d="M0 24H500M0 60H500M0 96H500M1 0V100M166 0V100M333 0V100M499 0V100"/><g className="chart-reveal"><path className="chart-line" d={i===0?'M1 80L499 12':'M1 90L499 6'}/></g></svg><div className="market-caption"><span><Num v={x.cagr} decimals={1} suffix="%" locale={locale}/> {c.market.cagr}</span><a href={c.sources[x.source].url} target="_blank" rel="noreferrer">{c.sources[x.source].name} ↗</a></div></article>)}</div><div className="market-bottom"><article><span className="micro">{c.market.eu}</span><strong><Num v={10} suffix="%" locale={locale}/></strong><a href={c.sources[2].url} target="_blank" rel="noreferrer">{c.sources[2].name} ↗</a></article><article><span className="micro">{c.market.stores}</span><strong><Num v={4000} suffix="+" locale={locale}/></strong><a href={c.sources[3].url} target="_blank" rel="noreferrer">{c.sources[3].name} ↗</a></article><article><span className="micro">{c.market.overseas}</span><strong><span className="micro">{c.market.nearly} </span><Num v={600} suffix="%" locale={locale}/></strong><a href={c.sources[4].url} target="_blank" rel="noreferrer">{c.sources[4].name} ↗</a></article></div><div className="source-foot micro"><span>{c.market.forecast}</span><span>{c.market.historical}</span></div></section>}
+ {visible('market')&&<section id="market" className="section market"><Head i={2} c={c}/><Title lines={c.market.title}/><div className="market-grid">{[{label:c.market.world,from:3.35,to:3.62,y1:'2025',y2:'2026',cagr:8.4,source:0,decimals:2},{label:c.market.europe,from:727.2,to:1262.6,y1:'2026',y2:'2033',cagr:8.2,source:1,decimals:1}].map((x,i)=><article key={x.label} className="market-card"><p className="micro">{x.label}</p><div className="chart-values"><div><strong><Num v={x.from} decimals={x.decimals} locale={locale}/></strong><small>{x.y1}</small></div><span aria-hidden="true">→</span><div><strong><Num v={x.to} decimals={x.decimals} locale={locale}/></strong><small>{x.y2}</small></div></div><svg className="data-chart" viewBox="0 0 500 100" role="img" aria-label={c.market.chart}><path className="chart-grid" d="M0 24H500M0 60H500M0 96H500M1 0V100M166 0V100M333 0V100M499 0V100"/><g className="chart-reveal"><path className="chart-line" d={i===0?'M1 80L499 12':'M1 90L499 6'}/></g></svg><div className="market-caption"><span><Num v={x.cagr} decimals={1} suffix="%" locale={locale}/> {c.market.cagr}</span><a href={c.sources[x.source].url} target="_blank" rel="noreferrer">{c.sources[x.source].name} ↗</a></div></article>)}</div><div className="market-bottom"><article><span className="micro">{c.market.eu}</span><strong><Num v={10} suffix="%" locale={locale}/></strong><a href={c.sources[2].url} target="_blank" rel="noreferrer">{c.sources[2].name} ↗</a></article><article><span className="micro">{c.market.stores}</span><strong><Num v={4000} suffix="+" locale={locale}/></strong><a href={c.sources[3].url} target="_blank" rel="noreferrer">{c.sources[3].name} ↗</a></article><article><span className="micro">{c.market.overseas}<br/>{c.market.period}</span><strong><span className="micro">{c.market.nearly} </span><Num v={600} suffix="%" locale={locale}/></strong><a href={c.sources[4].url} target="_blank" rel="noreferrer">{c.sources[4].name} ↗</a></article></div><div className="source-foot micro"><span>{c.market.forecast}</span><span>{c.market.historical}</span></div></section>}
  {visible('economics')&&<section id="economics" className="section economics"><Head i={3} c={c}/><Title lines={c.economicsTitle}/><Economics c={c.economics} extra={c.economicsExtra} locale={locale}/></section>}
  {visible('scale')&&<section id="scale" className="section scale"><Head i={4} c={c}/><Title lines={c.scale.title}/><div className="format-grid">{scenarios.map((s,i)=><article className="format" key={i}><div className="format-heading"><span className="micro">0{i+1}</span><h3>{c.scale.formats[i]}</h3><span aria-hidden="true">↗</span></div><div className="format-diagram" aria-hidden="true"><div style={{width:`${45+i*22}%`}}><i/><i/><i/><i/></div></div><dl>{[c.scale.areas[i],formatMoney(model.funding,locale),s.cups,calculate(s).payback?.toLocaleString(locale,{maximumFractionDigits:1})].map((v,j)=><div key={j}><dt>{c.scale.labels[j+1]}</dt><dd>{v}</dd></div>)}</dl></article>)}</div><p className="micro scale-repeat">{c.scale.repeat}</p><p className="assumption">{c.scale.note}</p></section>}
  {visible('terms')&&<section id="terms" className="section terms"><Head i={5} c={c}/><Title lines={c.terms.title}/><p className="assumption">{c.terms.tag}</p><dl className="term-facts">{[[c.terms.instrument,c.terms.instrumentValue],[c.terms.ticket,c.terms.ticketValue],[c.terms.return,c.terms.returnValue]].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><div className="terms-grid"><div><h3 className="micro">{c.terms.funds}</h3><div className="allocation" aria-hidden="true">{[35,25,20,12,8].map((n,i)=><span key={n} style={{flex:n,'--tone':`${20+i*15}%`} as CSSProperties}/>)}</div><ol className="allocation-key">{c.terms.allocations.map((x,i)=><li key={x}><span>{x}</span><span>{[35,25,20,12,8][i]}%</span></li>)}</ol></div><ol className="gates">{c.terms.gates.map(x=><li key={x}>{x}</li>)}</ol></div><h3 className="micro risks-title">{c.terms.risksTitle}</h3><div className="risks">{c.terms.risks.map(([a,b])=><div key={a}><span>{a}</span><span>→</span><span>{b}</span></div>)}</div><p className="assumption">{c.terms.note}</p></section>}
- {visible('contact')&&<section id="contact" className="section contact"><Head i={6} c={c}/><div className="contact-grid"><div><Title lines={c.contact.title}/><p className="micro">{c.contact.lead}</p><a className="download magnet" href={`/downloads/xoxo-${locale}.pdf`} download>{c.contact.download}<span>↗</span></a>{process.env.NEXT_PUBLIC_CALENDAR_URL?<a className="download magnet" href={process.env.NEXT_PUBLIC_CALENDAR_URL}>{c.contact.calendar}<span>↗</span></a>:<span className="calendar-pending">{c.contact.calendar}</span>}</div><Contact c={c.contact}/></div></section>}
+ {visible('contact')&&<section id="contact" className="section contact"><Head i={6} c={c}/><div className="contact-grid"><div><Title lines={c.contact.title}/><p className="micro">{c.contact.lead}</p><a className="download magnet" href={`/downloads/xoxo-${locale}.pdf`} download>{c.contact.download}<span>↗</span></a>{process.env.NEXT_PUBLIC_CALENDAR_URL?<a className="download magnet" href={process.env.NEXT_PUBLIC_CALENDAR_URL}>{c.contact.calendarReady}<span>↗</span></a>:<span className="calendar-pending">{c.contact.calendar}</span>}</div><Contact c={c.contact}/></div></section>}
  </main><footer className="footer">{c.footer.map(s=><span key={s}>{s}</span>)}</footer><div className="page-wipe" aria-hidden="true"/></div>;
 }
 ````
@@ -6959,11 +7561,26 @@ export function System({locale='uk',view='all'}:{locale?:Locale;view?:'all'|'men
 ````typescript
 import uk from '../../content/uk.json';
 import en from '../../content/en.json';
-export type Locale = 'uk' | 'en';
+import ru from '../../content/ru.json';
+import type {Metadata} from 'next';
+import {locales,pathFor,type Locale} from './routing';
+export {locales,pathFor,type Locale} from './routing';
 export type Copy = typeof uk;
-export const getCopy = (locale: Locale): Copy => locale === 'uk' ? uk : en;
-export const pathFor = (locale: Locale, path = '') => `${locale === 'en' ? '/en' : ''}/${path ? path + '/' : ''}`;
+export const getCopy = (locale: Locale): Copy => ({uk,en,ru})[locale];
 export const origin = process.env.NEXT_PUBLIC_SITE_URL || 'https://xoxotea.vercel.app';
+export const languagesFor = (path = '') => Object.fromEntries([...locales.map(l => [l,origin+pathFor(l,path)]),['x-default',origin+pathFor('uk',path)]]);
+export function pageMetadata(locale:Locale, view:''|'menu'|'investors'=''):Metadata {
+ const c=getCopy(locale);
+ return {title:view?`${c.nav[view]} — ${c.metadata.title}`:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor(locale,view),languages:languagesFor(view)},openGraph:{title:view?`${c.nav[view]} — XoXo`:c.metadata.title,description:c.metadata.description,url:origin+pathFor(locale,view),locale:{uk:'uk_UA',en:'en_US',ru:'ru_UA'}[locale],alternateLocale:locales.filter(l=>l!==locale).map(l=>({uk:'uk_UA',en:'en_US',ru:'ru_UA'})[l])}};
+}
+````
+
+## src/lib/routing.ts
+
+````typescript
+export const locales = ['uk', 'en', 'ru'] as const;
+export type Locale = typeof locales[number];
+export const pathFor = (locale: Locale, path = '') => `${locale === 'uk' ? '' : '/'+locale}/${path ? path + '/' : ''}`;
 ````
 
 ## src/lib/store-model.ts
@@ -6999,14 +7616,14 @@ export function calculate(input: Inputs) {
   if (
     ![cups, ticket, rent, staff].every(Number.isFinite) ||
     cups < 0 ||
-    ticket <= 0 ||
+    ticket < 0 ||
     rent < 0 ||
     staff < 0
   )
     throw new RangeError("Invalid model input");
   const volume = cups * model.days;
   const revenue = volume * ticket;
-  const grossMargin = (ticket - model.direct) / ticket;
+  const grossMargin = ticket > 0 ? (ticket - model.direct) / ticket : null;
   const contribution = ticket * (1 - model.fee) - model.direct;
   const fixed = rent + staff + model.other;
   const ebitda = volume * contribution - fixed;
@@ -7020,11 +7637,12 @@ export function calculate(input: Inputs) {
       contribution > 0 ? Math.ceil(fixed / contribution / model.days) : null,
   };
 }
-export function formatMoney(value: number, locale: "uk" | "en", usd = false) {
-  const n = new Intl.NumberFormat(locale === "uk" ? "uk-UA" : "en-US", {
+export function formatMoney(value: number, locale: "uk" | "en" | "ru", usd = false) {
+  const n = new Intl.NumberFormat({uk:"uk-UA", en:"en-US", ru:"ru-RU"}[locale], {
     maximumFractionDigits: 0,
   }).format(value / (usd ? model.fx : 1));
-  return usd ? `$${n}` : `${n.replace(/\u00a0/g, " ")} ₴`;
+  if (usd && locale === "en") return value < 0 ? `-$${n.slice(1)}` : `$${n}`;
+  return `${n.replace(/\u00a0/g, " ")} ${usd ? "$" : "₴"}`;
 }
 ````
 
@@ -7041,7 +7659,7 @@ export default config;
 ````javascript
 import test from "node:test";
 import assert from "node:assert/strict";
-import { calculate, defaults, scenarios } from "../src/lib/store-model.ts";
+import { calculate, defaults, scenarios, formatMoney } from "../src/lib/store-model.ts";
 const expected = [
   { revenue: 702000, contribution: 118.6, ebitda: 77540 },
   { revenue: 1111500, contribution: 133.15, ebitda: 373955 },
@@ -7065,7 +7683,30 @@ test("raising rent lowers EBITDA one for one", () =>
     calculate(defaults).ebitda - 10000,
   ));
 test("invalid inputs fail explicitly", () =>
-  assert.throws(() => calculate({ ...defaults, ticket: 0 }), RangeError));
+  assert.throws(() => calculate({ ...defaults, ticket: -1 }), RangeError));
+
+test("all editable inputs at zero retain other fixed costs without undefined arithmetic", () => {
+ const r=calculate({cups:0,ticket:0,rent:0,staff:0});
+ assert.deepEqual(r,{revenue:0,grossMargin:null,contribution:-56,ebitda:-120000,payback:null,breakEven:null});
+});
+test("free drinks still incur ingredients and packaging",()=>{
+ const r=calculate({...defaults,ticket:0});
+ assert.equal(r.revenue,0);assert.equal(r.ebitda,-704200);assert.equal(r.grossMargin,null);
+});
+test("all 16 combinations of zero and existing maximum inputs are finite or explicitly undefined",()=>{
+ for(const cups of [0,350])for(const ticket of [0,260])for(const rent of [0,120000])for(const staff of [0,350000]){
+  for(const value of Object.values(calculate({cups,ticket,rent,staff})))assert.ok(value===null||Number.isFinite(value));
+ }
+});
+test("every input rejects negative and non-finite values",()=>{
+ for(const key of Object.keys(defaults))for(const value of [-1,NaN,Infinity,-Infinity])assert.throws(()=>calculate({...defaults,[key]:value}),RangeError);
+});
+
+test("currency formatting follows locale conventions, including losses",()=>{
+ assert.equal(formatMoney(-42000,'ru',true),'-1 000 $');
+ assert.equal(formatMoney(-42000,'en',true),'-$1,000');
+ assert.equal(formatMoney(42000,'ru'),'42 000 ₴');
+});
 ````
 
 ## tsconfig.json
@@ -7124,11 +7765,6 @@ test("invalid inputs fail explicitly", () =>
     {
       "source": "/uk/:path*",
       "destination": "/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/ru",
-      "destination": "/",
       "permanent": true
     }
   ],

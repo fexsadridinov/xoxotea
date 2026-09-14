@@ -1,26 +1,76 @@
 {
-  "mobile": {
-    "scores": {
-      "performance": 97,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
+  "uk": {
+    "mobile": {
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2734.409,
+      "cls": 0,
+      "bytes": 279937
     },
-    "lcpMs": 2483.8770000000004,
-    "cls": 0.0012415510953955964,
-    "bytes": 293021
+    "desktop": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 581.8786,
+      "cls": 0,
+      "bytes": 271448
+    }
   },
-  "desktop": {
-    "scores": {
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
+  "ru": {
+    "mobile": {
+      "scores": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2769.77895,
+      "cls": 0,
+      "bytes": 280934
     },
-    "lcpMs": 586.3393000000001,
-    "cls": 0.0032530396703259125,
-    "bytes": 284532
+    "desktop": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 576.93925,
+      "cls": 0,
+      "bytes": 272445
+    }
   },
-  "environment": "Local production gzip server, Chromium 153, Lighthouse 13.4.1; mobile default simulation; desktop 1440x900; font naming metadata subsequently changed to comply with OFL reserved name.",
-  "javascriptGzipBytes": 146302
+  "en": {
+    "mobile": {
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2030.6348000000003,
+      "cls": 0,
+      "bytes": 259477
+    },
+    "desktop": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 533.9139,
+      "cls": 0,
+      "bytes": 250988
+    }
+  },
+  "environment": "Local gzip production export; Chromium 153, Lighthouse 13.4.1; default mobile simulation; desktop1440x900,RTT40ms,throughput10240Kbps,CPUx1. Lab data, not field data.",
+  "javascriptGzipBytes": 140239
 }
