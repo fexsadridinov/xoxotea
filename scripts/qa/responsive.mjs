@@ -15,7 +15,7 @@ try {
   for (const width of [360,390,430,768,1024,1440,1920]) {
     const context = await browser.newContext({viewport:{width,height:width < 768 ? 844 : 900},isMobile:width < 768,hasTouch:width < 768});
     const page = await context.newPage();
-    for (const route of ['/', '/en/', '/menu/', '/en/menu/', '/investors/', '/en/investors/']) {
+    for (const route of ['/', '/en/', '/menu/', '/en/menu/', '/investors/', '/en/investors/', '/ru/', '/ru/menu/', '/ru/investors/']) {
       const errors=[];const handler=e=>errors.push(e.message);page.on('pageerror',handler);
       await page.goto(base+route);
       await page.evaluate(()=>document.fonts.ready);
@@ -26,7 +26,7 @@ try {
         await page.waitForTimeout(650);
         const flags = await page.evaluate(()=>[...document.querySelectorAll('h1,h2,h3,p,dt,dd,label,button')].filter(e=>e.getBoundingClientRect().width>0&&!e.closest('.honey,.sr-only')&&e.scrollWidth>e.clientWidth+2).map(e=>({tag:e.tagName,text:e.textContent.slice(0,80),width:e.clientWidth,scroll:e.scrollWidth})));
         overflow.push(...flags);
-        if (route==='/' && [390,1440].includes(width)) await page.screenshot({path:`audit/screenshots/${width}-${id}.jpg`,type:'jpeg',quality:85});
+        if (['/','/ru/'].includes(route) && [390,1440].includes(width)) await page.screenshot({path:`audit/screenshots/${route==='/ru/'?'ru-':''}${width}-${id}.jpg`,type:'jpeg',quality:85});
       }
       const layout=await page.evaluate(()=>({documentWidth:document.documentElement.scrollWidth,width:innerWidth,lang:document.documentElement.lang}));
       const axe = [390,1440].includes(width) ? await new AxeBuilder({page}).analyze() : null;

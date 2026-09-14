@@ -1,0 +1,572 @@
+{
+  "testedAt": "2026-09-14T10:29:02.249Z",
+  "results": [
+    {
+      "width": 360,
+      "locale": "uk",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 360,
+      "locale": "uk",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 360,
+      "locale": "uk",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 360,
+      "locale": "ru",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 360,
+      "locale": "ru",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 360,
+      "locale": "ru",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 360,
+      "locale": "en",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 360,
+      "locale": "en",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 360,
+      "locale": "en",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 390,
+      "locale": "uk",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "locale": "uk",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "locale": "uk",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "locale": "ru",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "locale": "ru",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "locale": "ru",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 430,
+      "locale": "uk",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 430,
+      "locale": "uk",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 430,
+      "locale": "uk",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 430,
+      "locale": "ru",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 430,
+      "locale": "ru",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 430,
+      "locale": "ru",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 430,
+      "locale": "en",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 430,
+      "locale": "en",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 430,
+      "locale": "en",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "uk",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "uk",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "uk",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "ru",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "ru",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "ru",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "en",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "en",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 768,
+      "locale": "en",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "uk",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "uk",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "uk",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "ru",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "ru",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "ru",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "en",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "en",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "locale": "en",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1440,
+      "locale": "uk",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "locale": "uk",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "locale": "uk",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "locale": "ru",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "locale": "ru",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "locale": "ru",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": []
+    },
+    {
+      "width": 1920,
+      "locale": "uk",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "locale": "uk",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "locale": "uk",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "locale": "ru",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "locale": "ru",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "locale": "ru",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "locale": "en",
+      "view": "home",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "locale": "en",
+      "view": "menu",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "locale": "en",
+      "view": "investors",
+      "overflow": false,
+      "headerOverlap": false,
+      "heading": false,
+      "violations": null
+    }
+  ]
+}

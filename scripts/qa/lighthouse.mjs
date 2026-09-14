@@ -17,8 +17,8 @@ const chrome = await chromeLauncher.launch({
   ],
 });
 try {
-  for (const formFactor of ["mobile", "desktop"]) {
-    const result = await lighthouse("http://127.0.0.1:4174/", {
+  for (const locale of ["uk", "ru", "en"]) for (const formFactor of ["mobile", "desktop"]) {
+    const result = await lighthouse(`http://127.0.0.1:4174/${locale==="uk"?"":locale+"/"}`, {
       port: chrome.port,
       output: ["json", "html"],
       logLevel: "error",
@@ -41,10 +41,10 @@ try {
           }
         : {}),
     });
-    fs.writeFileSync(`audit/lighthouse-${formFactor}.json`, result.report[0]);
-    fs.writeFileSync(`audit/lighthouse-${formFactor}.html`, result.report[1]);
+    fs.writeFileSync(`audit/lighthouse-${locale}-${formFactor}.json`, result.report[0]);
+    fs.writeFileSync(`audit/lighthouse-${locale}-${formFactor}.html`, result.report[1]);
     console.log(
-      formFactor,
+      locale, formFactor,
       JSON.stringify({
         scores: Object.fromEntries(
           Object.entries(result.lhr.categories).map(([k, v]) => [

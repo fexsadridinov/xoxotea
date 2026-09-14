@@ -28,14 +28,14 @@ export function calculate(input: Inputs) {
   if (
     ![cups, ticket, rent, staff].every(Number.isFinite) ||
     cups < 0 ||
-    ticket <= 0 ||
+    ticket < 0 ||
     rent < 0 ||
     staff < 0
   )
     throw new RangeError("Invalid model input");
   const volume = cups * model.days;
   const revenue = volume * ticket;
-  const grossMargin = (ticket - model.direct) / ticket;
+  const grossMargin = ticket > 0 ? (ticket - model.direct) / ticket : null;
   const contribution = ticket * (1 - model.fee) - model.direct;
   const fixed = rent + staff + model.other;
   const ebitda = volume * contribution - fixed;
@@ -49,9 +49,10 @@ export function calculate(input: Inputs) {
       contribution > 0 ? Math.ceil(fixed / contribution / model.days) : null,
   };
 }
-export function formatMoney(value: number, locale: "uk" | "en", usd = false) {
-  const n = new Intl.NumberFormat(locale === "uk" ? "uk-UA" : "en-US", {
+export function formatMoney(value: number, locale: "uk" | "en" | "ru", usd = false) {
+  const n = new Intl.NumberFormat({uk:"uk-UA", en:"en-US", ru:"ru-RU"}[locale], {
     maximumFractionDigits: 0,
   }).format(value / (usd ? model.fx : 1));
-  return usd ? `$${n}` : `${n.replace(/\u00a0/g, " ")} ₴`;
+  if (usd && locale === "en") return value < 0 ? `-$${n.slice(1)}` : `$${n}`;
+  return `${n.replace(/\u00a0/g, " ")} ${usd ? "$" : "₴"}`;
 }

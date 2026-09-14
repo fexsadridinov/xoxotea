@@ -1,24 +1,24 @@
-# Lead endpoint contract
+# Lead endpoint contract / v2
 
-POST the configured HTTPS endpoint with `Content-Type: application/json`.
+Set `NEXT_PUBLIC_LEAD_ENDPOINT` at build time to the verified delivery URL. The browser POSTs JSON:
 
 ```json
 {
-  "kind": "meeting",
   "name": "Example visitor",
-  "organization": "Optional",
-  "ticket": "1",
   "contact": "visitor@example.com",
+  "organization": "Optional organization",
+  "ticket": "5 000–10 000 $",
+  "dataRoom": true,
   "consent": true,
-  "locale": "uk",
-  "attribution": { "ref": "landlord-a", "utm_source": "email" }
+  "ref": "partner-reference",
+  "utm": {"utm_source": "campaign"}
 }
 ```
 
-`kind`: meeting, data-room or waitlist. Ticket values 0–3 map to localized dropdown choices. A Telegram contact must match `@[A-Za-z][A-Za-z0-9_]{4,31}`; waitlist requires email. Name max 100, organization max 150, contact max 254, each attribution field max 150. Fields are plain text, never trusted HTML. The receiver must enforce all constraints again.
+`ticket` is the localized dropdown text, not a numeric index. `dataRoom` requests document access; it does not grant it. Contact accepts email or a Telegram handle matching `@[A-Za-z][A-Za-z0-9_]{4,31}`. The form limits name to 100, organization to 150 and contact to 254 characters. Name and consent are required. The receiver must validate values independently, bound attribution data and apply its own retention, access and rate-limit rules.
 
-Return 2xx only after durable acceptance, 400 for invalid data, 429 for rate limiting, 5xx for transient failure. The client has a 15-second timeout and never clears entered data after failure. Exact retries may require server-side deduplication.
+The client allows 12 seconds and treats 2xx as accepted. Return 2xx only after durable receipt. A failed or timed-out response retains entries and says delivery could not be confirmed; the server may already have received the request, so retries should be deduplicated. No private key may be placed in a public build variable.
 
-Security: no secrets in the browser. Restrict allowed origins, apply rate limits, validate consent, set a retention policy and an owner-accessible deletion process. Do not publicly expose submissions. Data-room access is a reviewed request, not an authorization system or public download URL. A server-side authenticated file store is required before distributing confidential material.
+Without an endpoint, the form generates a localized plain-text download containing the name, contact, organization, selected range, document request and consent. It explicitly states that the request has not been sent. The confirmation receives keyboard focus. No automatic message is sent to anyone in this mode.
 
-Plausible events: CTA action, investor section, scroll depth, form submit/success/error, request draft. No form fields or raw referral values are sent to analytics. Ref/UTM values are retained in sessionStorage and sent only with the lead payload.
+Referral and UTM values are read from the current page URL for the JSON payload; this version does not retain them in session storage or implement analytics events. A real destination and durable receipt have not been verified. The calendar is configured separately with `NEXT_PUBLIC_CALENDAR_URL`.

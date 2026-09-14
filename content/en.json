@@ -55,9 +55,9 @@
     "investors": "Investors",
     "contact": "Start a conversation",
     "skip": "Skip to content",
-    "label": "Section index",
+    "label": "Main navigation",
     "home": "Home",
-    "language": "Українська",
+    "language": "Website language",
     "index": "Page sections"
   },
   "status": "MYKOLAIV, UA / PRE-LAUNCH",
@@ -86,46 +86,47 @@
     "previous": "Previous drink",
     "next": "Next drink",
     "alt": "Blank tall cup with a clear dome lid and straw",
-    "assumption": "[[ASSUMPTION A01]] Concept recipes, prices, 500 ml volume and sugar tiers. Nutrition awaits recipe testing; renders are visual concepts.",
+    "assumption": "ASSUMPTION A01 Concept recipes, prices, 500 ml volume and sugar tiers. Nutrition awaits recipe testing; renders are visual concepts.",
     "kcal": "kcal / TBC",
     "drinks": [
       {
         "name": "Brown sugar",
-        "other": "Молочний чай із перлинами",
+        "other": "Milk tea with tapioca pearls",
         "tea": "BLACK TEA / MILK / TAPIOCA",
         "price": 185
       },
       {
         "name": "Grape cloud",
-        "other": "Виноградний чай із сирною пінкою",
+        "other": "Grape tea with cheese foam",
         "tea": "JASMINE / GRAPE / CHEESE FOAM",
         "price": 205
       },
       {
         "name": "Jasmine pearl",
-        "other": "Жасминовий чай із перлинами",
+        "other": "Jasmine green tea with tapioca pearls",
         "tea": "JASMINE GREEN TEA / TAPIOCA",
         "price": 165
       },
       {
         "name": "Coconut mango",
-        "other": "Кокос і манго",
+        "other": "Jasmine tea with coconut and mango",
         "tea": "JASMINE / COCONUT / MANGO",
         "price": 205
       },
       {
         "name": "Matcha pearl",
-        "other": "Матча-лате з перлинами",
+        "other": "Matcha latte with tapioca pearls",
         "tea": "MATCHA / MILK / TAPIOCA",
         "price": 215
       },
       {
         "name": "Peach oolong",
-        "other": "Персиковий улун",
+        "other": "Oolong tea with peach and ice",
         "tea": "OOLONG / PEACH / ICE",
         "price": 175
       }
-    ]
+    ],
+    "static": "STATIC VIEW"
   },
   "market": {
     "title": [
@@ -169,16 +170,18 @@
       "Upside"
     ],
     "scenarioTitle": "Three scenarios. The same formula.",
-    "assumptions": "[[ASSUMPTION: 30 trading days/month; ingredients and packaging 56 ₴/cup; transaction fees 3%; rent 55 000 ₴; fully loaded staffing 210 000 ₴; other fixed costs 120 000 ₴/month; initial funding 2 100 000 ₴; illustrative FX 42 ₴/$, not a live exchange rate.]]",
+    "assumptions": "ASSUMPTION A02. 30 trading days/month; ingredients and packaging 56 ₴/cup; transaction fees 3%; rent 55 000 ₴; fully loaded staffing 210 000 ₴; other fixed costs 120 000 ₴/month; initial funding 2 100 000 ₴; illustrative FX 42 ₴/$, not a live exchange rate.",
     "explanation": "Gross margin excludes labor and occupancy. Contribution deducts direct cost and transaction fees. EBITDA deducts rent, staffing and other fixed costs. Payback divides initial funding by steady-state EBITDA: it excludes ramp-up, financing, tax, depreciation, replacement capex and working-capital changes. EBITDA is not distributable cash.",
-    "benchmark": "Category articles describe roughly 65–80% cup gross margins and $30k–$150k startup formats; these are broad editorial benchmarks, not validated Ukrainian budgets."
+    "benchmark": "Category articles describe roughly 65–80% cup gross margins and $30k–$150k startup formats; these are broad editorial benchmarks, not validated Ukrainian budgets.",
+    "undefined": "Not defined",
+    "zeroNote": "Gross margin is undefined at a zero ticket. Setting every slider to zero still leaves other fixed costs of 120,000 ₴ per month."
   },
   "economicsTitle": [
     "One store.",
     "Every variable."
   ],
   "economicsExtra": {
-    "tag": "[[ASSUMPTION A02]] / APPROVED PLANNING MODEL",
+    "tag": "ASSUMPTION A02 / APPROVED PLANNING MODEL",
     "scroll": "SCROLL THROUGH SCENARIOS",
     "custom": "CUSTOM",
     "reset": "Reset model",
@@ -210,7 +213,7 @@
       "35 m²",
       "55 m²"
     ],
-    "note": "[[ASSUMPTION A03]] Illustrative format footprints. All three use the same approved 2.1M ₴ funding baseline and conservative/base/upside math. These are not site-specific budgets or quotes.",
+    "note": "ASSUMPTION A03 Illustrative format footprints. All three use the same approved 2.1M ₴ funding baseline and conservative/base/upside math. These are not site-specific budgets or quotes.",
     "repeat": "STANDARDIZE → VALIDATE → REPEAT"
   },
   "terms": {
@@ -218,7 +221,7 @@
       "Capital with",
       "clear conditions."
     ],
-    "tag": "[[ASSUMPTION A04]] / DISCUSSION TERMS",
+    "tag": "ASSUMPTION A04 / DISCUSSION TERMS",
     "instrument": "INSTRUMENT",
     "instrumentValue": "Equity / structure to agree",
     "ticket": "INDICATIVE TICKET",
@@ -258,7 +261,7 @@
         "Recipe cards and daily cost control"
       ]
     ],
-    "note": "[[ASSUMPTION A05]] Allocation 35 / 25 / 20 / 12 / 8%. Milestone gates and mitigations are proposed, not completed. Equity, valuation, rights and distributions remain open."
+    "note": "ASSUMPTION A05 Allocation 35 / 25 / 20 / 12 / 8%. Milestone gates and mitigations are proposed, not completed. Equity, valuation, rights and distributions remain open."
   },
   "contact": {
     "title": [
@@ -282,20 +285,23 @@
     "sending": "Sending…",
     "download": "One-pager / PDF",
     "calendar": "Calendar / to be confirmed",
-    "notice": "[[ASSUMPTION A06]] Direct delivery and calendar are not connected yet. Prepare a request to download locally; it is not sent.",
-    "privacy": "Your details stay on this device unless a configured delivery endpoint accepts them.",
+    "notice": "ASSUMPTION A06 Direct delivery and calendar are not connected yet. Prepare a request to download locally; it is not sent.",
+    "privacy": "Until delivery is connected, your details stay on this device. Once connected, clicking “Send request” transmits them to the delivery service.",
     "success": "Request prepared.",
     "successBody": "Your request file is ready. It has not been sent. Share it with the founder through your existing contact.",
     "sent": "Request received.",
-    "sentBody": "Your request was accepted. We will use the contact you supplied.",
-    "error": "Delivery failed. Your entries are kept; please retry.",
+    "sentBody": "The delivery service confirmed receipt of your request. Your contact details were included.",
+    "error": "We could not confirm delivery. Your entries remain in the form; please retry.",
     "invalid": "Enter a name and a valid email or Telegram handle.",
     "again": "Prepare another request",
     "file": "xoxo-investor-request.txt",
     "notSent": "NOT SENT — LOCAL REQUEST",
     "required": "Required",
     "consent": "I agree to be contacted about this request.",
-    "trap": "Leave this field empty"
+    "trap": "Leave this field empty",
+    "yes": "Yes",
+    "no": "No",
+    "calendarReady": "Book a meeting"
   },
   "footer": [
     "XOXO / TEA SYSTEM",

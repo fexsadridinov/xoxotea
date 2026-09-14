@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-09-14T09:00:58.721Z",
+  "testedAt": "2026-09-14T10:11:06.837Z",
   "environment": "Chromium emulated viewports; not physical hardware",
   "results": [
     {
@@ -57,6 +57,33 @@
       "violations": null
     },
     {
+      "width": 360,
+      "route": "/ru/",
+      "documentWidth": 360,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 360,
+      "route": "/ru/menu/",
+      "documentWidth": 360,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 360,
+      "route": "/ru/investors/",
+      "documentWidth": 360,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
       "width": 390,
       "route": "/",
       "documentWidth": 390,
@@ -106,6 +133,33 @@
       "route": "/en/investors/",
       "documentWidth": 390,
       "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/ru/",
+      "documentWidth": 390,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/ru/menu/",
+      "documentWidth": 390,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/ru/investors/",
+      "documentWidth": 390,
+      "lang": "ru",
       "overflow": [],
       "errors": [],
       "violations": []
@@ -165,6 +219,33 @@
       "violations": null
     },
     {
+      "width": 430,
+      "route": "/ru/",
+      "documentWidth": 430,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 430,
+      "route": "/ru/menu/",
+      "documentWidth": 430,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 430,
+      "route": "/ru/investors/",
+      "documentWidth": 430,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
       "width": 768,
       "route": "/",
       "documentWidth": 768,
@@ -219,6 +300,33 @@
       "violations": null
     },
     {
+      "width": 768,
+      "route": "/ru/",
+      "documentWidth": 768,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 768,
+      "route": "/ru/menu/",
+      "documentWidth": 768,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 768,
+      "route": "/ru/investors/",
+      "documentWidth": 768,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
       "width": 1024,
       "route": "/",
       "documentWidth": 1024,
@@ -273,6 +381,33 @@
       "violations": null
     },
     {
+      "width": 1024,
+      "route": "/ru/",
+      "documentWidth": 1024,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "route": "/ru/menu/",
+      "documentWidth": 1024,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "route": "/ru/investors/",
+      "documentWidth": 1024,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
       "width": 1440,
       "route": "/",
       "documentWidth": 1440,
@@ -327,6 +462,33 @@
       "violations": []
     },
     {
+      "width": 1440,
+      "route": "/ru/",
+      "documentWidth": 1440,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/ru/menu/",
+      "documentWidth": 1440,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/ru/investors/",
+      "documentWidth": 1440,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
       "width": 1920,
       "route": "/",
       "documentWidth": 1920,
@@ -376,6 +538,33 @@
       "route": "/en/investors/",
       "documentWidth": 1920,
       "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "route": "/ru/",
+      "documentWidth": 1920,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "route": "/ru/menu/",
+      "documentWidth": 1920,
+      "lang": "ru",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "route": "/ru/investors/",
+      "documentWidth": 1920,
+      "lang": "ru",
       "overflow": [],
       "errors": [],
       "violations": null

@@ -1,0 +1,77 @@
+{
+  "translationKeyParity": true,
+  "pages": [
+    {
+      "locale": "uk",
+      "view": "home",
+      "serverLanguage": "uk",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "uk",
+      "view": "menu",
+      "serverLanguage": "uk",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "uk",
+      "view": "investors",
+      "serverLanguage": "uk",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "en",
+      "view": "home",
+      "serverLanguage": "en",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "en",
+      "view": "menu",
+      "serverLanguage": "en",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "en",
+      "view": "investors",
+      "serverLanguage": "en",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "ru",
+      "view": "home",
+      "serverLanguage": "ru",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "ru",
+      "view": "menu",
+      "serverLanguage": "ru",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    },
+    {
+      "locale": "ru",
+      "view": "investors",
+      "serverLanguage": "ru",
+      "singleHeading": true,
+      "uniqueIds": true,
+      "internalTargets": true
+    }
+  ]
+}
