@@ -1,58 +1,40 @@
-# Acceptance audit — 13 September 2026
+# V2 acceptance — 14 September 2026
 
-**Reviewable draft; not production-ready.** The implementation is committed for review. Real lead delivery, owner facts and the strict mobile LCP gate remain open. No deployment or merge is claimed.
+**Draft preview deployed; production merge remains blocked by the requested ship gates.**
 
-## Measured Lighthouse results
+| Check | Result |
+| --- | --- |
+| Production export / TypeScript / lint | PASS |
+| Approved economics source | SHA-256 identical to main: `95de80b5dcd56cfc6bbc69848916763ffee3ea973ae5fd126c126112d2c0e4d6` |
+| Six economics tests | PASS; three worked scenarios, loss case, rent sensitivity, invalid input |
+| 360 / 390 / 430 / 768 / 1024 / 1440 / 1920, all six routes | PASS: 42 cases; no visible text or page overflow and no runtime exceptions |
+| Axe accessibility, all six routes at 390 / 1440 | PASS: no violations; duplicate navigation landmark labels fixed |
+| Reduced motion | PASS: zero active animations, canvas hidden, economics pin becomes normal document flow |
+| Local Lighthouse mobile | 97 performance / 100 accessibility / 100 best practices / 100 SEO |
+| Local Lighthouse desktop | 100 in all four categories |
+| LCP < 2.2 seconds | FAIL: mobile 2.484 s; desktop 0.586 s |
+| Zero CLS | NOT EXACTLY ZERO: mobile 0.00124; desktop 0.00325 |
+| JavaScript < 220 KB gzip after interaction | PASS: 146,302 bytes |
+| Cup system | FAIL: improved grape/matcha/peach still differ in framing, proportions or temperature; base lid markings unresolved |
+| 36-frame cup rotation | BLOCKED: generation rejected for insufficient usable credits; empty manifest selects static fallback |
+| All ten motion behaviors at 60fps on physical Android | NOT VERIFIED; missing sequence prevents full motion acceptance |
+| Main merge | Withheld because mandatory asset and performance gates fail |
 
-Production static export, gzip HTTP delivery, Chromium 153, Lighthouse 13.4.1. Mobile uses Lighthouse's default simulated Slow 4G / mobile CPU settings. Desktop uses 1440×900, 40 ms RTT, 10,240 Kbps, CPU multiplier 1. These are local lab results, not Vercel field data.
+Lighthouse is a local production export delivered with gzip, Chromium 153 and Lighthouse 13.4.1. Mobile uses default simulated throttling; desktop uses 1440×900, 40 ms RTT, 10,240 Kbps and CPU multiplier 1. These are lab results, not deployed field data. Font naming metadata was subsequently updated to honor the source font's reserved name, without changing glyphs or layout.
 
-| Category | Mobile | Desktop |
-| --- | ---: | ---: |
-| Performance | 92 | 100 |
-| Accessibility | 100 | 100 |
-| Best practices | 100 | 100 |
-| SEO | 100 | 100 |
-| Largest contentful paint | 3.4 s | 0.7 s |
-| Landing transfer | 514.9 KB | 535.9 KB |
-| Modern JS after calculator interaction | 151.5 KB | 151.5 KB |
+## Verified interaction behavior
 
-KB means 1,000 bytes. Transfers include initial scripts, fonts, selected imagery, the chosen hero clip and near-viewport lazy assets; they do not mean every asset downloaded by scrolling through the entire site. The original unused mobile clip and pour clip are not fetched by the landing route. `audit/metrics.json` records exact values and throttle configuration. Full reports can be regenerated with `scripts/qa/lighthouse.mjs`.
+`audit/interactions.json` records the filling progress indicator, three distinct parallax depths, mobile gallery through item 06, desktop gallery through its last group, base/conservative/upside scroll cycling, currency conversion, validation, unsent-request download, masked route navigation and 0.97 press feedback. Pointer handling now uses delegation so feedback also works after the contact form is reset.
 
-## Protocol audit
+The conservative case displays 77,540 ₴ EBITDA. Increasing rent by 5,000 ₴ changes it to 72,540 ₴; USD shows $1,727 at the preserved 42 UAH/USD assumption. Base and upside remain 373,955 ₴ and 729,230 ₴ in the independent model tests. Real lead delivery and the calendar remain unconfigured and are never represented as connected.
 
-| # | Requirement | Result | Evidence / remaining fix |
-| --- | --- | --- | --- |
-| 1 | 360 / 390 / 430 / 768 / 1024 / 1280 / 1440 / 1920 screenshots | PASS | No document overflow, flagged text overflow or text below 15px. Hero sizing corrected at 360 and 1920. JPEG evidence in `audit/screenshots/`. |
-| 2 | Lighthouse and performance budgets | PARTIAL | Category targets met in the recorded run. **Mobile LCP 3.4 s fails <2.0 s.** Hero transfer reduced 411→73 KB; posters are preloaded; animation imports deferred; font subset dependency preloaded. Remaining work: profile the video paint/hydration dependency on the actual preview and bring LCP below 2 s before approval. |
-| 3 | Bilingual content and route-preserving toggle | PASS | Matching JSON shapes; root/menu/investors/press toggle to English counterparts and English document language after hydration. English landmarks also carry server-rendered language attributes. All active prose is sourced from the JSON files; units, symbols, paths and protocol values are code constants. |
-| 4 | Ukrainian spelling and formatting | PASS | Миколаїв, Ukrainian copy, spaced thousands and ₴ checked. Source assumptions intentionally retain the required `[[ASSUMPTION: ...]]` marker. |
-| 5 | Three independently worked economic examples | PASS | Six model tests; see worked table below. Browser input recomputes conservative EBITDA to 77 540 ₴. |
-| 6 | Investor facts sourced or labeled | PASS WITH OWNER GATES | Market publisher links and dates are visible; local audience/footfall/competition, costs and terms are labeled assumptions. These local claims are not represented as verified. |
-| 7 | Form validation, errors, confirmation and real destination | PARTIAL | Whitespace name and invalid contact rejected; fixture 500 error and 201 success verified; data-room intent and ref/UTM captured. Unconfigured form downloads a request explicitly marked **not sent**. **Real destination not connected or verified.** Configure endpoint and perform one authorized delivery test. |
-| 8 | Reduced motion | PASS | No video source loaded in reduced-motion mode; CSS scroll motion/transitions disabled. Runtime preference changes remove sources. Data-saver and 2G/3G use posters. |
-| 9 | Keyboard-only navigation | PASS | Skip link, carousel, controls and form stops have visible outlines; no interactive stop without focus styling in the recorded traversal. |
-| 10 | Build, type checking, lint and production console | PASS | `pnpm build`, lint and six model tests pass. Browser audit records no runtime errors or warning/error console messages. |
-| 11 | Responsive optimized media, dimensions and page weight | PASS / ASSET QA OPEN | AVIF + WebP at 480/960/1600, explicit dimensions, lazy loading; three silent video concepts and lightweight mobile derivative. Detailed byte/dimension inventory in `audit/asset-sizes.json`. Ceramic texture output rejected; four seamless tiles and exact video seam continuity are not certified. |
-| 12 | Would a stranger believe the brand already has 40 stores? | NOT CERTIFIED | The design provides a coherent product/space system. Actual operating proof is absent: approved founder portrait/CV, real location, supplier evidence and traction. The site clearly says pre-launch. Supply that evidence; do not fabricate stores or endorsements. |
+## Evidence
 
-Detailed financial disclosures intentionally remain visible and can exceed the brief's three-line paragraph limit on small screens. This is an open editorial refinement, not a claim of a complete copy-format pass.
+- `audit/responsive.json`: all 42 route/viewport cases and reduced-motion state.
+- `audit/interactions.json`: measured controls and post-interaction JavaScript.
+- `audit/metrics.json`: exact Lighthouse metrics.
+- `audit/screenshots/`: mobile and desktop viewport captures of all seven sections.
+- `audit/asset-provenance.json` and `ASSETS.md`: completed generations, exact final prompts and rejected quality gates.
+- `ASSUMPTIONS.md`: every grouped owner question.
 
-## Worked model checks
-
-All three use 30 trading days, direct cost 56 ₴/cup, transaction fee 3%, rent 55 000 ₴, staffing 210 000 ₴, other fixed costs 120 000 ₴ and funding 2 100 000 ₴. These are planning assumptions.
-
-| Scenario | Cups/day | Ticket | Revenue/month | Contribution/cup | EBITDA/month | Simple payback |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Conservative | 130 | 180 ₴ | 702 000 ₴ | 118.60 ₴ | 77 540 ₴ | 27.1 months |
-| Base | 190 | 195 ₴ | 1 111 500 ₴ | 133.15 ₴ | 373 955 ₴ | 5.6 months |
-| Upside | 260 | 205 ₴ | 1 599 000 ₴ | 142.85 ₴ | 729 230 ₴ | 2.9 months |
-
-Contribution = ticket × 0.97 − 56. EBITDA = cups/day × 30 × contribution − 385 000. Payback = funding / positive EBITDA; negative EBITDA returns no payback. This steady-state simplification excludes ramp-up, financing, taxes, depreciation, replacement capital and working-capital changes. It is not investor yield or distributable cash.
-
-## Owner inputs before launch
-
-Connect the real lead endpoint, monitored email, calendar, canonical domain and analytics domain. Confirm site/address/hours/socials, final menu/allergens, founder portrait/CV, quotes/permits/traction, and investment terms. `ASSUMPTIONS.md` groups every content assumption as a question. The map currently shows Mykolaiv only and loads on demand.
-
-## Asset service limitation
-
-Higgsfield returned `nsfw` for the ceramic texture correction (job 500a5c44-bb81-4716-8d36-2ca79dab7e61). It was not retried. The original tea still-life image is archived but rejected for the texture role and unused by the site. Corrected takeaway packaging and counter handoff were reviewed and accepted. All visuals are concepts, not photographs of an operating store.
+The public draft-only `__qa.html` harness is removed. The Vercel `.next` override is retained and the main-branch deployment fix has been reconciled. The current public asset tree contains only drinks, technical SVG graphics and the bilingual one-pagers; no people, hands, interiors, storefronts or street imagery.

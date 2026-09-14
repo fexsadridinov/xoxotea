@@ -1,203 +1,149 @@
 {
-  "brand": "XoXo Tea",
-  "wordmark": "xoxo",
-  "tagline": "TEA / PEOPLE / PLACE",
-  "localeName": "English",
-  "otherLocale": "УКР",
-  "skip": "Skip to content",
-  "navigation": "Main navigation",
-  "menu": "Menu",
-  "investors": "For partners",
-  "press": "Press",
-  "home": "Home",
-  "invest": "Become an investor",
-  "meet": "Start a conversation",
-  "hero": {
-    "eyebrow": "NEW TEA CULTURE · MYKOLAIV",
-    "title": "A daily pause.\nA tea ritual.",
-    "description": "Whole-leaf tea. Fresh fruit. A place to come back to.",
-    "note": "First store in development / Southern Ukraine",
-    "alt": "Brown-sugar milk tea with dark tapioca pearls in warm window light",
-    "pause": "Pause film",
-    "play": "Play film"
+  "brand": "XoXo",
+  "edition": "TEA SYSTEM / V.02",
+  "sections": [
+    "THESIS",
+    "PRODUCT",
+    "MARKET",
+    "ECONOMICS",
+    "SCALE",
+    "TERMS",
+    "CONTACT"
+  ],
+  "sourceDate": "13.09.2026",
+  "units": {
+    "volume": "500 ml",
+    "sugar": "0 / 30 / 50 / 100%",
+    "currency": [
+      "UAH",
+      "USD"
+    ],
+    "angle": "°",
+    "percent": "%",
+    "frames": "36",
+    "range": "01 — 06"
   },
-  "thesis": {
-    "label": "01 / THE IDEA",
-    "title": "A new tea culture.\nStarting in Mykolaiv.",
-    "body": "One carefully built tea bar. A repeatable operating system. A brand with room to grow."
-  },
-  "signature": {
-    "label": "02 / SIGNATURE FIVE",
-    "title": "Five ways to pause.",
-    "body": "Tea first. Everything else in balance.",
-    "all": "Explore the menu",
-    "note": "[[ASSUMPTION: concept recipes, 500 ml servings and proposed prices; final testing pending.]]",
-    "allergens": "Allergens",
-    "crossContact": "Recipes and supplier specifications are not final. Milk, soy, nuts and gluten may be handled in the same preparation area. Ask the team before ordering.",
-    "size": "500 ml",
-    "print": "Print / save menu",
-    "qr": "Scan to revisit the menu",
-    "subtitle": "THE MENU / CONCEPT EDITION"
-  },
-  "drinks": [
+  "sources": [
     {
-      "name": "Brown sugar boba",
-      "other": "Боба з тростинним цукром",
-      "base": "Black tea · milk · tapioca",
-      "line": "Deep caramel. A soft, chewy finish.",
-      "price": 180,
-      "allergens": "Milk",
-      "image": "drink-0"
+      "name": "Research & Markets · 2026",
+      "url": "https://www.researchandmarkets.com/reports/5851209/bubble-tea-market-report"
     },
     {
-      "name": "Jasmine milk",
-      "other": "Молочний жасмин",
-      "base": "Jasmine green tea · milk",
-      "line": "Floral, light and quietly familiar.",
-      "price": 165,
-      "allergens": "Milk",
-      "image": "drink-1"
+      "name": "Persistence · 2026",
+      "url": "https://www.persistencemarketresearch.com/market-research/europe-bubble-tea-market.asp"
     },
     {
-      "name": "Matcha boba",
-      "other": "Матча боба",
-      "base": "Matcha · milk · tapioca",
-      "line": "Green intensity. A mellow finish.",
-      "price": 215,
-      "allergens": "Milk",
-      "image": "drink-2"
+      "name": "Future Market Insights · 2026",
+      "url": "https://www.futuremarketinsights.com/reports/demand-for-bubble-tea-in-eu"
     },
     {
-      "name": "Strawberry jasmine",
-      "other": "Полуничний жасмин",
-      "base": "Jasmine green tea · strawberry",
-      "line": "Bright berries. A clean tea finish.",
-      "price": 190,
-      "allergens": "Supplier review pending",
-      "image": "drink-3"
+      "name": "Wikipedia · 2024",
+      "url": "https://en.wikipedia.org/wiki/Heytea"
     },
     {
-      "name": "Mango oolong",
-      "other": "Манговий улун",
-      "base": "Oolong · mango",
-      "line": "Golden fruit with a roasted undertone.",
-      "price": 195,
-      "allergens": "Supplier review pending",
-      "image": "drink-4"
-    },
-    {
-      "name": "Jasmine cloud",
-      "other": "Жасминова хмаринка",
-      "base": "Jasmine tea · cream cheese foam",
-      "line": "A floral brew under a salted cloud.",
-      "price": 195,
-      "allergens": "Milk",
-      "image": "drink-1"
-    },
-    {
-      "name": "Grape tea",
-      "other": "Виноградний чай",
-      "base": "Jasmine tea · grape",
-      "line": "Crisp grape and aromatic tea.",
-      "price": 185,
-      "allergens": "Supplier review pending",
-      "image": ""
-    },
-    {
-      "name": "Grape cloud",
-      "other": "Виноградна хмаринка",
-      "base": "Jasmine tea · grape · cheese foam",
-      "line": "Grape freshness. A creamy finish.",
-      "price": 205,
-      "allergens": "Milk",
-      "image": ""
-    },
-    {
-      "name": "Mango grapefruit",
-      "other": "Манго та грейпфрут",
-      "base": "Jasmine tea · mango · grapefruit",
-      "line": "Sweet fruit. A bright citrus edge.",
-      "price": 195,
-      "allergens": "Supplier review pending",
-      "image": "drink-4"
-    },
-    {
-      "name": "Coconut mango",
-      "other": "Кокосове манго",
-      "base": "Mango · coconut · sago",
-      "line": "Soft coconut. Golden mango.",
-      "price": 195,
-      "allergens": "Supplier review pending",
-      "image": ""
-    },
-    {
-      "name": "Pure jasmine",
-      "other": "Чистий жасмин",
-      "base": "Whole-leaf jasmine green tea",
-      "line": "The leaf, the water, nothing more.",
-      "price": 130,
-      "allergens": "Supplier review pending",
-      "image": ""
-    },
-    {
-      "name": "Roasted oolong",
-      "other": "Обсмажений улун",
-      "base": "Whole-leaf oolong tea",
-      "line": "Warm toasted notes. A long finish.",
-      "price": 140,
-      "allergens": "Supplier review pending",
-      "image": ""
+      "name": "China Daily · 13.07.2026",
+      "url": "https://global.chinadaily.com.cn/a/202607/13/WS6a543cffa310986e2b464e2b.html"
     }
   ],
-  "world": {
-    "label": "03 / THE BRAND WORLD",
-    "title": "Made in full view.",
-    "body": "A measured scoop. A fresh brew. The soft click of a seal. The ritual is part of the drink.",
-    "caption": "Architectural concept · AI visualization · not an operating store",
-    "interiorAlt": "Concept tea bar with an oak counter, green tiles and a visible preparation area",
-    "ritual": [
-      "Measured leaves",
-      "Sealed fresh",
-      "Passed with care",
-      "A moment for yourself"
+  "lang": "en",
+  "metadata": {
+    "title": "XoXo — Tea. Precision. Scale.",
+    "description": "A modern tea system for Mykolaiv. Six drinks. Transparent unit economics. An independent pre-launch concept."
+  },
+  "nav": {
+    "menu": "Menu",
+    "investors": "Investors",
+    "contact": "Start a conversation",
+    "skip": "Skip to content",
+    "label": "Section index",
+    "home": "Home",
+    "language": "Українська",
+    "index": "Page sections"
+  },
+  "status": "MYKOLAIV, UA / PRE-LAUNCH",
+  "thesis": [
+    "Tea.",
+    "Precision.",
+    "Scale."
+  ],
+  "thesisFoot": [
+    "01 LOCATION TO START",
+    "01 SYSTEM TO REPEAT"
+  ],
+  "product": {
+    "title": [
+      "One vessel.",
+      "Six expressions."
     ],
-    "ritualAlt": [
-      "Tea leaves measured into a steel bowl",
-      "A hand sealing an unbranded tea cup",
-      "A tea cup passed over an oak counter",
-      "Condensation on a tea cup by a window"
+    "subtitle": "PRODUCT SYSTEM / 001",
+    "rotate": "PRODUCT VIEW",
+    "angle": "ROTATION",
+    "collection": "THE COLLECTION",
+    "volume": "VOLUME",
+    "energy": "ENERGY",
+    "sugar": "SUGAR TIERS",
+    "price": "CONCEPT PRICE",
+    "previous": "Previous drink",
+    "next": "Next drink",
+    "alt": "Blank tall cup with a clear dome lid and straw",
+    "assumption": "[[ASSUMPTION A01]] Concept recipes, prices, 500 ml volume and sugar tiers. Nutrition awaits recipe testing; renders are visual concepts.",
+    "kcal": "kcal / TBC",
+    "drinks": [
+      {
+        "name": "Brown sugar",
+        "other": "Молочний чай із перлинами",
+        "tea": "BLACK TEA / MILK / TAPIOCA",
+        "price": 185
+      },
+      {
+        "name": "Grape cloud",
+        "other": "Виноградний чай із сирною пінкою",
+        "tea": "JASMINE / GRAPE / CHEESE FOAM",
+        "price": 205
+      },
+      {
+        "name": "Jasmine pearl",
+        "other": "Жасминовий чай із перлинами",
+        "tea": "JASMINE GREEN TEA / TAPIOCA",
+        "price": 165
+      },
+      {
+        "name": "Coconut mango",
+        "other": "Кокос і манго",
+        "tea": "JASMINE / COCONUT / MANGO",
+        "price": 205
+      },
+      {
+        "name": "Matcha pearl",
+        "other": "Матча-лате з перлинами",
+        "tea": "MATCHA / MILK / TAPIOCA",
+        "price": 215
+      },
+      {
+        "name": "Peach oolong",
+        "other": "Персиковий улун",
+        "tea": "OOLONG / PEACH / ICE",
+        "price": 175
+      }
     ]
   },
   "market": {
-    "label": "04 / THE MARKET",
-    "title": "A category crossing borders.",
-    "body": "Independent forecasts point to growth. Local demand still has to be earned.",
-    "global": "Global bubble tea / USD billions",
-    "europe": "Europe bubble tea / USD millions",
-    "cagr": "Publisher-reported CAGR",
-    "forecast": "Forecast",
-    "read": "Read source",
-    "date": "Sources checked 13 September 2026",
-    "scope": "These are separate market studies, with different scopes. Global growth does not forecast XoXo sales.",
-    "globalNote": "2025 → 2026 · 8.4% reported CAGR; rounded endpoints imply 8.1%.",
-    "europeNote": "2026 → 2033 · 8.2% forecast CAGR.",
-    "travel": "HEYTEA reports 100+ overseas outlets; China Daily reported almost 600% overseas outlet growth over the preceding year on 13 July 2026. CHAGEE's official site states 6,000+ stores. These show format portability, not XoXo traction.",
-    "fmi": "FMI publishes a 10% EU growth forecast to 2036, but its page contains inconsistent market-size units. Excluded from our valuation inputs.",
-    "localTitle": "Mykolaiv is the first test.",
-    "local": [
-      [
-        "Catchment",
-        "[[ASSUMPTION: target students and young professionals; current catchment population is unverified.]]"
-      ],
-      [
-        "Footfall",
-        "[[ASSUMPTION: count weekday and weekend pedestrian traffic at each shortlisted site before signing. No measured counts yet.]]"
-      ],
-      [
-        "Competition",
-        "[[ASSUMPTION: map tea shops, cafés and delivery competitors in a 10-minute walk; no verified density or market-share claim.]]"
-      ]
-    ]
+    "title": [
+      "Category momentum.",
+      "Measured."
+    ],
+    "world": "GLOBAL / USD BILLION",
+    "europe": "EUROPE / USD MILLION",
+    "cagr": "CAGR",
+    "eu": "EU DEMAND / 2026–2036",
+    "stores": "HEYTEA / LOCATIONS / 2024",
+    "overseas": "HEYTEA / OVERSEAS GROWTH",
+    "forecast": "PUBLISHER FORECASTS / DIFFERENT MARKET DEFINITIONS",
+    "historical": "HISTORICAL SCALE / NOT XOXO LOCATIONS",
+    "source": "SOURCE",
+    "chart": "Global bubble tea: 3.35 billion dollars in 2025 to 3.62 billion in 2026. Europe: 727.2 million dollars in 2026 to 1262.6 million in 2033.",
+    "nearly": "NEARLY",
+    "period": "YEAR TO JULY 2026"
   },
   "economics": {
     "label": "05 / THE STORE MODEL",
@@ -227,237 +173,135 @@
     "explanation": "Gross margin excludes labor and occupancy. Contribution deducts direct cost and transaction fees. EBITDA deducts rent, staffing and other fixed costs. Payback divides initial funding by steady-state EBITDA: it excludes ramp-up, financing, tax, depreciation, replacement capex and working-capital changes. EBITDA is not distributable cash.",
     "benchmark": "Category articles describe roughly 65–80% cup gross margins and $30k–$150k startup formats; these are broad editorial benchmarks, not validated Ukrainian budgets."
   },
+  "economicsTitle": [
+    "One store.",
+    "Every variable."
+  ],
+  "economicsExtra": {
+    "tag": "[[ASSUMPTION A02]] / APPROVED PLANNING MODEL",
+    "scroll": "SCROLL THROUGH SCENARIOS",
+    "custom": "CUSTOM",
+    "reset": "Reset model",
+    "period": "PER MONTH",
+    "fixed": "FIXED COSTS",
+    "funding": "FUNDING BASELINE",
+    "exchange": "PLANNING FX",
+    "scenario": "Scenario"
+  },
   "scale": {
-    "label": "06 / THE REPEATABLE FORMAT",
-    "title": "One bar. A clear next step.",
-    "body": "Prove store one before expanding the footprint.",
+    "title": [
+      "Repeat the system.",
+      "Not the complexity."
+    ],
+    "labels": [
+      "FORMAT",
+      "FOOTPRINT",
+      "FUNDING",
+      "CUPS / DAY",
+      "PAYBACK / MONTHS"
+    ],
     "formats": [
-      [
-        "Kiosk",
-        "12–18 m²",
-        "1 260 000 ₴",
-        "80–140 cups / day"
-      ],
-      [
-        "Takeaway bar",
-        "35–40 m²",
-        "2 100 000 ₴",
-        "130–260 cups / day"
-      ],
-      [
-        "Hybrid café",
-        "55–75 m²",
-        "3 150 000 ₴",
-        "180–320 cups / day"
-      ]
+      "Kiosk",
+      "Counter",
+      "Hybrid"
     ],
-    "note": "[[ASSUMPTION: format footprints, funding and volumes are planning ranges, not quotes or capacity guarantees.]]",
-    "roadmap": [
-      [
-        "01 / Mykolaiv",
-        "Flagship takeaway bar",
-        "Confirm lease, recipes and paid demand."
-      ],
-      [
-        "02 / Mykolaiv",
-        "Second catchment",
-        "Only after three consecutive profitable months and an independently trained team."
-      ],
-      [
-        "03 / Mykolaiv",
-        "Replicate the system",
-        "Only after the second store reproduces service, waste and margin targets."
-      ]
+    "areas": [
+      "14 m²",
+      "35 m²",
+      "55 m²"
     ],
-    "future": "Then: Odesa → Kyiv → other cities. [[ASSUMPTION: expansion is conditional on security, supply reliability and proven local demand; dates are not committed.]]"
+    "note": "[[ASSUMPTION A03]] Illustrative format footprints. All three use the same approved 2.1M ₴ funding baseline and conservative/base/upside math. These are not site-specific budgets or quotes.",
+    "repeat": "STANDARDIZE → VALIDATE → REPEAT"
   },
-  "funds": {
-    "label": "07 / CAPITAL WITH A PURPOSE",
-    "title": "Build the first. Design for more.",
-    "budget": "Planning envelope",
-    "amount": "≈ $50,000",
-    "body": "The founder can fund the first store. A partner can add location access, operating perspective and regional connections.",
-    "items": [
-      [
-        "Fit-out & resilience",
-        650000,
-        "Lease and technical survey before works."
-      ],
-      [
-        "Equipment",
-        550000,
-        "Supplier comparison, power plan and delivery dates."
-      ],
-      [
-        "Furniture & serviceware",
-        150000,
-        "Approve service layout and material samples."
-      ],
-      [
-        "Opening stock & packaging",
-        100000,
-        "Complete recipe costing and supplier checks."
-      ],
-      [
-        "POS, branding & launch",
-        150000,
-        "Test payment, training and opening campaign."
-      ],
-      [
-        "Working capital & contingency",
-        500000,
-        "Release against cash runway and opening milestones."
-      ]
+  "terms": {
+    "title": [
+      "Capital with",
+      "clear conditions."
     ],
-    "note": "[[ASSUMPTION: 2 100 000 ₴ allocation at 42 ₴/$; no supplier quotations or investment commitments verified.]]",
-    "termsTitle": "Partnership, with terms agreed together.",
-    "terms": [
-      [
-        "Instrument",
-        "[[ASSUMPTION: minority equity in the operating company is a discussion option; valuation and legal structure are unagreed.]]"
-      ],
-      [
-        "Ticket",
-        "[[ASSUMPTION: indicative partner contribution $10,000–$25,000; no minimum commitment set.]]"
-      ],
-      [
-        "Return & dividends",
-        "No fixed yield or guaranteed return. [[ASSUMPTION: dividends only from available after-tax cash after reserve and reinvestment needs.]]"
-      ],
-      [
-        "Timing & exit",
-        "[[ASSUMPTION: opening target 4–6 months after a suitable lease; buyback and transfer rights to be negotiated. No promised exit.]]"
-      ]
-    ]
-  },
-  "traction": {
-    "label": "08 / EVIDENCE BEFORE EXPANSION",
-    "title": "What is real. What comes next.",
-    "items": [
-      [
-        "Defined",
-        "Brand concept, first-city strategy and interactive planning model."
-      ],
-      [
-        "In development",
-        "Menu, store layout and supplier specification."
-      ],
-      [
-        "Not verified",
-        "Signed lease, supplier quotes, permits, equipment lead times and paid pre-orders."
-      ],
-      [
-        "Not published",
-        "Waitlist count, investor commitments and operating-store results."
-      ]
+    "tag": "[[ASSUMPTION A04]] / DISCUSSION TERMS",
+    "instrument": "INSTRUMENT",
+    "instrumentValue": "Equity / structure to agree",
+    "ticket": "INDICATIVE TICKET",
+    "ticketValue": "$5,000–$50,000",
+    "return": "TARGET INVESTOR RETURN",
+    "returnValue": "To agree / not guaranteed",
+    "funds": "USE OF FUNDS / 2 100 000 ₴",
+    "allocations": [
+      "Equipment",
+      "Fit-out",
+      "Working capital",
+      "Launch & product",
+      "Contingency"
     ],
-    "riskTitle": "Risk is part of the operating plan.",
+    "gates": [
+      "01 / Site & supplier quotes",
+      "02 / Recipe and cost validation",
+      "03 / Pilot unit economics",
+      "04 / Repeat only after proof"
+    ],
+    "risksTitle": "RISK → MITIGATION",
     "risks": [
       [
-        "Security & outages",
-        "Shelter access, closure procedures, backup power sizing and a cash reserve. Residual risk remains."
+        "Demand",
+        "Pilot before expansion"
       ],
       [
-        "FX & supply",
-        "Dual sourcing, landed-cost tracking and smaller inventory commitments."
+        "Supply / FX",
+        "Dual sourcing and buffer stock"
       ],
       [
-        "Seasonality",
-        "Hot drinks, monthly demand planning and a low-season downside case."
+        "Power / security",
+        "Backup power and continuity plan"
       ],
       [
         "Execution",
-        "Recipe cards, staff training, waste logs and daily stock reconciliation."
+        "Recipe cards and daily cost control"
       ]
-    ]
-  },
-  "team": {
-    "label": "09 / THE OPERATOR",
-    "title": "Hospitality meets systems.",
-    "name": "Fakhridin Sadridinov",
-    "role": "Founder · operator · builder",
-    "bio": "Restaurant management, venue operations, marketing and web development. Bringing hands-on hospitality experience to the first XoXo Tea store.",
-    "note": "Founder-provided background. [[ASSUMPTION: approved portrait, dated CV and advisor appointments are pending.]]",
-    "portrait": "Founder portrait awaiting approval",
-    "advisors": "Seeking: local property expertise, tea sourcing and regional operating partners."
+    ],
+    "note": "[[ASSUMPTION A05]] Allocation 35 / 25 / 20 / 12 / 8%. Milestone gates and mitigations are proposed, not completed. Equity, valuation, rights and distributions remain open."
   },
   "contact": {
-    "label": "10 / LET'S BUILD THE FIRST",
-    "title": "Good tea starts a conversation.",
-    "body": "A location, a perspective, a partnership. Tell us what you have in mind.",
+    "title": [
+      "The next variable",
+      "is you."
+    ],
+    "lead": "CONVERSATION / 001",
     "name": "Name",
     "org": "Organization (optional)",
-    "ticket": "Indicative contribution",
-    "ranges": [
-      "Advice / location partnership",
-      "Under $10,000",
-      "$10,000–$25,000",
-      "$25,000+"
-    ],
+    "range": "Ticket range",
     "email": "Email or Telegram",
-    "send": "Request a meeting",
+    "ranges": [
+      "Exploring / advice",
+      "$5,000–$10,000",
+      "$10,000–$25,000",
+      "$25,000–$50,000"
+    ],
+    "room": "Include a data-room request",
+    "submit": "Prepare request",
+    "send": "Send request",
     "sending": "Sending…",
-    "sent": "Your request has been received.",
-    "sentBody": "Thank you. We will respond through the contact you provided.",
-    "error": "Your request was not sent. Please try again or use the email option.",
-    "invalid": "Enter a valid email address or a Telegram username beginning with @.",
+    "download": "One-pager / PDF",
+    "calendar": "Calendar / to be confirmed",
+    "notice": "[[ASSUMPTION A06]] Direct delivery and calendar are not connected yet. Prepare a request to download locally; it is not sent.",
+    "privacy": "Your details stay on this device unless a configured delivery endpoint accepts them.",
+    "success": "Request prepared.",
+    "successBody": "Your request file is ready. It has not been sent. Share it with the founder through your existing contact.",
+    "sent": "Request received.",
+    "sentBody": "Your request was accepted. We will use the contact you supplied.",
+    "error": "Delivery failed. Your entries are kept; please retry.",
+    "invalid": "Enter a name and a valid email or Telegram handle.",
+    "again": "Prepare another request",
+    "file": "xoxo-investor-request.txt",
+    "notSent": "NOT SENT — LOCAL REQUEST",
+    "required": "Required",
     "consent": "I agree to be contacted about this request.",
-    "unavailable": "Online requests are not open yet. The founder's receiving address must be confirmed before this form can send.",
-    "draft": "Save request as a text file",
-    "draftNote": "Downloaded to your device. This does not send a request.",
-    "room": "Request the data room",
-    "roomNote": "Data-room access is reviewed individually. No confidential files are exposed by this site.",
-    "calendar": "Book a call",
-    "calendarPending": "Calendar booking will open when the founder's calendar is connected.",
-    "pdf": "Download the one-pager",
-    "waitlistTitle": "Be there for the first pour.",
-    "waitlist": "Join opening updates",
-    "emailOnly": "Email address",
-    "privacy": "We use your contact details only to respond or send the opening updates you request. No personal information is sent to analytics.",
-    "again": "Send another request",
-    "nameInvalid": "Enter your name."
+    "trap": "Leave this field empty"
   },
-  "footer": {
-    "city": "Миколаїв / Mykolaiv",
-    "location": "First location being selected.",
-    "hours": "Opening hours to be announced.",
-    "social": "Social channels awaiting confirmation.",
-    "map": "View Mykolaiv on the map",
-    "mapLabel": "City orientation only; this is not a store address.",
-    "legal": "Pre-launch concept. Illustrations are AI-generated. Financial projections are assumptions, not an offer or a guarantee.",
-    "copyright": "© 2026 XoXo Tea",
-    "privacy": "Privacy"
-  },
-  "pressPage": {
-    "title": "A new ritual, in a few words.",
-    "label": "PRESS / CONCEPT EDITION",
-    "body": "XoXo Tea is a modern tea-bar concept being developed in Mykolaiv, Ukraine. Its planned menu combines whole-leaf teas, milk teas and fruit drinks in a compact, takeaway-first format.",
-    "pack": "Download logo pack",
-    "assets": "Download campaign asset manifest",
-    "logo": "Logo / SVG",
-    "guidance": "Keep the wordmark clear. Use tea green on warm paper, or warm paper on tea green. Do not stretch, outline or add shadows. Generated interiors are concept illustrations and must be captioned as such."
-  },
-  "notFound": {
-    "title": "This page has moved.",
-    "body": "Return to the tea bar."
-  },
-  "metadata": {
-    "home": "XoXo Tea — A new tea ritual in Mykolaiv",
-    "menu": "Menu — XoXo Tea",
-    "investors": "Partner with XoXo Tea — Mykolaiv",
-    "press": "Press & brand assets — XoXo Tea",
-    "description": "A modern tea-bar concept for Mykolaiv. Explore the menu, store model and partnership opportunities."
-  },
-  "brandSuffix": "tea",
-  "otherLocaleLabel": "Українська",
-  "sources": {
-    "global": "Research and Markets / 01.2026",
-    "europe": "Persistence Market Research / 04.2026",
-    "chinaDaily": "China Daily",
-    "chagee": "CHAGEE",
-    "fmi": "Future Market Insights",
-    "dojo": "Dojo Business",
-    "yenchuan": "Yenchuan"
-  },
-  "honeypot": "Website"
+  "footer": [
+    "XOXO / TEA SYSTEM",
+    "MYKOLAIV, UKRAINE",
+    "PRE-LAUNCH / 2026"
+  ],
+  "notFound": "Page not found",
+  "back": "Return to the system"
 }

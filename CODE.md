@@ -56,211 +56,160 @@ next-env.d.ts
 audit/lighthouse-*.html
 audit/lighthouse-*.json
 audit/screenshots/*.png
+
+# Isolated local audit dependencies
+scripts/qa/node_modules/
 ````
 
 ## content/en.json
 
 ````json
 {
-  "brand": "XoXo Tea",
-  "wordmark": "xoxo",
-  "tagline": "TEA / PEOPLE / PLACE",
-  "localeName": "English",
-  "otherLocale": "УКР",
-  "skip": "Skip to content",
-  "navigation": "Main navigation",
-  "menu": "Menu",
-  "investors": "For partners",
-  "press": "Press",
-  "home": "Home",
-  "invest": "Become an investor",
-  "meet": "Start a conversation",
-  "hero": {
-    "eyebrow": "NEW TEA CULTURE · MYKOLAIV",
-    "title": "A daily pause.\nA tea ritual.",
-    "description": "Whole-leaf tea. Fresh fruit. A place to come back to.",
-    "note": "First store in development / Southern Ukraine",
-    "alt": "Brown-sugar milk tea with dark tapioca pearls in warm window light",
-    "pause": "Pause film",
-    "play": "Play film"
+  "brand": "XoXo",
+  "edition": "TEA SYSTEM / V.02",
+  "sections": [
+    "THESIS",
+    "PRODUCT",
+    "MARKET",
+    "ECONOMICS",
+    "SCALE",
+    "TERMS",
+    "CONTACT"
+  ],
+  "sourceDate": "13.09.2026",
+  "units": {
+    "volume": "500 ml",
+    "sugar": "0 / 30 / 50 / 100%",
+    "currency": [
+      "UAH",
+      "USD"
+    ],
+    "angle": "°",
+    "percent": "%",
+    "frames": "36",
+    "range": "01 — 06"
   },
-  "thesis": {
-    "label": "01 / THE IDEA",
-    "title": "A new tea culture.\nStarting in Mykolaiv.",
-    "body": "One carefully built tea bar. A repeatable operating system. A brand with room to grow."
-  },
-  "signature": {
-    "label": "02 / SIGNATURE FIVE",
-    "title": "Five ways to pause.",
-    "body": "Tea first. Everything else in balance.",
-    "all": "Explore the menu",
-    "note": "[[ASSUMPTION: concept recipes, 500 ml servings and proposed prices; final testing pending.]]",
-    "allergens": "Allergens",
-    "crossContact": "Recipes and supplier specifications are not final. Milk, soy, nuts and gluten may be handled in the same preparation area. Ask the team before ordering.",
-    "size": "500 ml",
-    "print": "Print / save menu",
-    "qr": "Scan to revisit the menu",
-    "subtitle": "THE MENU / CONCEPT EDITION"
-  },
-  "drinks": [
+  "sources": [
     {
-      "name": "Brown sugar boba",
-      "other": "Боба з тростинним цукром",
-      "base": "Black tea · milk · tapioca",
-      "line": "Deep caramel. A soft, chewy finish.",
-      "price": 180,
-      "allergens": "Milk",
-      "image": "drink-0"
+      "name": "Research & Markets · 2026",
+      "url": "https://www.researchandmarkets.com/reports/5851209/bubble-tea-market-report"
     },
     {
-      "name": "Jasmine milk",
-      "other": "Молочний жасмин",
-      "base": "Jasmine green tea · milk",
-      "line": "Floral, light and quietly familiar.",
-      "price": 165,
-      "allergens": "Milk",
-      "image": "drink-1"
+      "name": "Persistence · 2026",
+      "url": "https://www.persistencemarketresearch.com/market-research/europe-bubble-tea-market.asp"
     },
     {
-      "name": "Matcha boba",
-      "other": "Матча боба",
-      "base": "Matcha · milk · tapioca",
-      "line": "Green intensity. A mellow finish.",
-      "price": 215,
-      "allergens": "Milk",
-      "image": "drink-2"
+      "name": "Future Market Insights · 2026",
+      "url": "https://www.futuremarketinsights.com/reports/demand-for-bubble-tea-in-eu"
     },
     {
-      "name": "Strawberry jasmine",
-      "other": "Полуничний жасмин",
-      "base": "Jasmine green tea · strawberry",
-      "line": "Bright berries. A clean tea finish.",
-      "price": 190,
-      "allergens": "Supplier review pending",
-      "image": "drink-3"
+      "name": "Wikipedia · 2024",
+      "url": "https://en.wikipedia.org/wiki/Heytea"
     },
     {
-      "name": "Mango oolong",
-      "other": "Манговий улун",
-      "base": "Oolong · mango",
-      "line": "Golden fruit with a roasted undertone.",
-      "price": 195,
-      "allergens": "Supplier review pending",
-      "image": "drink-4"
-    },
-    {
-      "name": "Jasmine cloud",
-      "other": "Жасминова хмаринка",
-      "base": "Jasmine tea · cream cheese foam",
-      "line": "A floral brew under a salted cloud.",
-      "price": 195,
-      "allergens": "Milk",
-      "image": "drink-1"
-    },
-    {
-      "name": "Grape tea",
-      "other": "Виноградний чай",
-      "base": "Jasmine tea · grape",
-      "line": "Crisp grape and aromatic tea.",
-      "price": 185,
-      "allergens": "Supplier review pending",
-      "image": ""
-    },
-    {
-      "name": "Grape cloud",
-      "other": "Виноградна хмаринка",
-      "base": "Jasmine tea · grape · cheese foam",
-      "line": "Grape freshness. A creamy finish.",
-      "price": 205,
-      "allergens": "Milk",
-      "image": ""
-    },
-    {
-      "name": "Mango grapefruit",
-      "other": "Манго та грейпфрут",
-      "base": "Jasmine tea · mango · grapefruit",
-      "line": "Sweet fruit. A bright citrus edge.",
-      "price": 195,
-      "allergens": "Supplier review pending",
-      "image": "drink-4"
-    },
-    {
-      "name": "Coconut mango",
-      "other": "Кокосове манго",
-      "base": "Mango · coconut · sago",
-      "line": "Soft coconut. Golden mango.",
-      "price": 195,
-      "allergens": "Supplier review pending",
-      "image": ""
-    },
-    {
-      "name": "Pure jasmine",
-      "other": "Чистий жасмин",
-      "base": "Whole-leaf jasmine green tea",
-      "line": "The leaf, the water, nothing more.",
-      "price": 130,
-      "allergens": "Supplier review pending",
-      "image": ""
-    },
-    {
-      "name": "Roasted oolong",
-      "other": "Обсмажений улун",
-      "base": "Whole-leaf oolong tea",
-      "line": "Warm toasted notes. A long finish.",
-      "price": 140,
-      "allergens": "Supplier review pending",
-      "image": ""
+      "name": "China Daily · 13.07.2026",
+      "url": "https://global.chinadaily.com.cn/a/202607/13/WS6a543cffa310986e2b464e2b.html"
     }
   ],
-  "world": {
-    "label": "03 / THE BRAND WORLD",
-    "title": "Made in full view.",
-    "body": "A measured scoop. A fresh brew. The soft click of a seal. The ritual is part of the drink.",
-    "caption": "Architectural concept · AI visualization · not an operating store",
-    "interiorAlt": "Concept tea bar with an oak counter, green tiles and a visible preparation area",
-    "ritual": [
-      "Measured leaves",
-      "Sealed fresh",
-      "Passed with care",
-      "A moment for yourself"
+  "lang": "en",
+  "metadata": {
+    "title": "XoXo — Tea. Precision. Scale.",
+    "description": "A modern tea system for Mykolaiv. Six drinks. Transparent unit economics. An independent pre-launch concept."
+  },
+  "nav": {
+    "menu": "Menu",
+    "investors": "Investors",
+    "contact": "Start a conversation",
+    "skip": "Skip to content",
+    "label": "Section index",
+    "home": "Home",
+    "language": "Українська",
+    "index": "Page sections"
+  },
+  "status": "MYKOLAIV, UA / PRE-LAUNCH",
+  "thesis": [
+    "Tea.",
+    "Precision.",
+    "Scale."
+  ],
+  "thesisFoot": [
+    "01 LOCATION TO START",
+    "01 SYSTEM TO REPEAT"
+  ],
+  "product": {
+    "title": [
+      "One vessel.",
+      "Six expressions."
     ],
-    "ritualAlt": [
-      "Tea leaves measured into a steel bowl",
-      "A hand sealing an unbranded tea cup",
-      "A tea cup passed over an oak counter",
-      "Condensation on a tea cup by a window"
+    "subtitle": "PRODUCT SYSTEM / 001",
+    "rotate": "PRODUCT VIEW",
+    "angle": "ROTATION",
+    "collection": "THE COLLECTION",
+    "volume": "VOLUME",
+    "energy": "ENERGY",
+    "sugar": "SUGAR TIERS",
+    "price": "CONCEPT PRICE",
+    "previous": "Previous drink",
+    "next": "Next drink",
+    "alt": "Blank tall cup with a clear dome lid and straw",
+    "assumption": "[[ASSUMPTION A01]] Concept recipes, prices, 500 ml volume and sugar tiers. Nutrition awaits recipe testing; renders are visual concepts.",
+    "kcal": "kcal / TBC",
+    "drinks": [
+      {
+        "name": "Brown sugar",
+        "other": "Молочний чай із перлинами",
+        "tea": "BLACK TEA / MILK / TAPIOCA",
+        "price": 185
+      },
+      {
+        "name": "Grape cloud",
+        "other": "Виноградний чай із сирною пінкою",
+        "tea": "JASMINE / GRAPE / CHEESE FOAM",
+        "price": 205
+      },
+      {
+        "name": "Jasmine pearl",
+        "other": "Жасминовий чай із перлинами",
+        "tea": "JASMINE GREEN TEA / TAPIOCA",
+        "price": 165
+      },
+      {
+        "name": "Coconut mango",
+        "other": "Кокос і манго",
+        "tea": "JASMINE / COCONUT / MANGO",
+        "price": 205
+      },
+      {
+        "name": "Matcha pearl",
+        "other": "Матча-лате з перлинами",
+        "tea": "MATCHA / MILK / TAPIOCA",
+        "price": 215
+      },
+      {
+        "name": "Peach oolong",
+        "other": "Персиковий улун",
+        "tea": "OOLONG / PEACH / ICE",
+        "price": 175
+      }
     ]
   },
   "market": {
-    "label": "04 / THE MARKET",
-    "title": "A category crossing borders.",
-    "body": "Independent forecasts point to growth. Local demand still has to be earned.",
-    "global": "Global bubble tea / USD billions",
-    "europe": "Europe bubble tea / USD millions",
-    "cagr": "Publisher-reported CAGR",
-    "forecast": "Forecast",
-    "read": "Read source",
-    "date": "Sources checked 13 September 2026",
-    "scope": "These are separate market studies, with different scopes. Global growth does not forecast XoXo sales.",
-    "globalNote": "2025 → 2026 · 8.4% reported CAGR; rounded endpoints imply 8.1%.",
-    "europeNote": "2026 → 2033 · 8.2% forecast CAGR.",
-    "travel": "HEYTEA reports 100+ overseas outlets; China Daily reported almost 600% overseas outlet growth over the preceding year on 13 July 2026. CHAGEE's official site states 6,000+ stores. These show format portability, not XoXo traction.",
-    "fmi": "FMI publishes a 10% EU growth forecast to 2036, but its page contains inconsistent market-size units. Excluded from our valuation inputs.",
-    "localTitle": "Mykolaiv is the first test.",
-    "local": [
-      [
-        "Catchment",
-        "[[ASSUMPTION: target students and young professionals; current catchment population is unverified.]]"
-      ],
-      [
-        "Footfall",
-        "[[ASSUMPTION: count weekday and weekend pedestrian traffic at each shortlisted site before signing. No measured counts yet.]]"
-      ],
-      [
-        "Competition",
-        "[[ASSUMPTION: map tea shops, cafés and delivery competitors in a 10-minute walk; no verified density or market-share claim.]]"
-      ]
-    ]
+    "title": [
+      "Category momentum.",
+      "Measured."
+    ],
+    "world": "GLOBAL / USD BILLION",
+    "europe": "EUROPE / USD MILLION",
+    "cagr": "CAGR",
+    "eu": "EU DEMAND / 2026–2036",
+    "stores": "HEYTEA / LOCATIONS / 2024",
+    "overseas": "HEYTEA / OVERSEAS GROWTH",
+    "forecast": "PUBLISHER FORECASTS / DIFFERENT MARKET DEFINITIONS",
+    "historical": "HISTORICAL SCALE / NOT XOXO LOCATIONS",
+    "source": "SOURCE",
+    "chart": "Global bubble tea: 3.35 billion dollars in 2025 to 3.62 billion in 2026. Europe: 727.2 million dollars in 2026 to 1262.6 million in 2033.",
+    "nearly": "NEARLY",
+    "period": "YEAR TO JULY 2026"
   },
   "economics": {
     "label": "05 / THE STORE MODEL",
@@ -290,239 +239,137 @@ audit/screenshots/*.png
     "explanation": "Gross margin excludes labor and occupancy. Contribution deducts direct cost and transaction fees. EBITDA deducts rent, staffing and other fixed costs. Payback divides initial funding by steady-state EBITDA: it excludes ramp-up, financing, tax, depreciation, replacement capex and working-capital changes. EBITDA is not distributable cash.",
     "benchmark": "Category articles describe roughly 65–80% cup gross margins and $30k–$150k startup formats; these are broad editorial benchmarks, not validated Ukrainian budgets."
   },
+  "economicsTitle": [
+    "One store.",
+    "Every variable."
+  ],
+  "economicsExtra": {
+    "tag": "[[ASSUMPTION A02]] / APPROVED PLANNING MODEL",
+    "scroll": "SCROLL THROUGH SCENARIOS",
+    "custom": "CUSTOM",
+    "reset": "Reset model",
+    "period": "PER MONTH",
+    "fixed": "FIXED COSTS",
+    "funding": "FUNDING BASELINE",
+    "exchange": "PLANNING FX",
+    "scenario": "Scenario"
+  },
   "scale": {
-    "label": "06 / THE REPEATABLE FORMAT",
-    "title": "One bar. A clear next step.",
-    "body": "Prove store one before expanding the footprint.",
+    "title": [
+      "Repeat the system.",
+      "Not the complexity."
+    ],
+    "labels": [
+      "FORMAT",
+      "FOOTPRINT",
+      "FUNDING",
+      "CUPS / DAY",
+      "PAYBACK / MONTHS"
+    ],
     "formats": [
-      [
-        "Kiosk",
-        "12–18 m²",
-        "1 260 000 ₴",
-        "80–140 cups / day"
-      ],
-      [
-        "Takeaway bar",
-        "35–40 m²",
-        "2 100 000 ₴",
-        "130–260 cups / day"
-      ],
-      [
-        "Hybrid café",
-        "55–75 m²",
-        "3 150 000 ₴",
-        "180–320 cups / day"
-      ]
+      "Kiosk",
+      "Counter",
+      "Hybrid"
     ],
-    "note": "[[ASSUMPTION: format footprints, funding and volumes are planning ranges, not quotes or capacity guarantees.]]",
-    "roadmap": [
-      [
-        "01 / Mykolaiv",
-        "Flagship takeaway bar",
-        "Confirm lease, recipes and paid demand."
-      ],
-      [
-        "02 / Mykolaiv",
-        "Second catchment",
-        "Only after three consecutive profitable months and an independently trained team."
-      ],
-      [
-        "03 / Mykolaiv",
-        "Replicate the system",
-        "Only after the second store reproduces service, waste and margin targets."
-      ]
+    "areas": [
+      "14 m²",
+      "35 m²",
+      "55 m²"
     ],
-    "future": "Then: Odesa → Kyiv → other cities. [[ASSUMPTION: expansion is conditional on security, supply reliability and proven local demand; dates are not committed.]]"
+    "note": "[[ASSUMPTION A03]] Illustrative format footprints. All three use the same approved 2.1M ₴ funding baseline and conservative/base/upside math. These are not site-specific budgets or quotes.",
+    "repeat": "STANDARDIZE → VALIDATE → REPEAT"
   },
-  "funds": {
-    "label": "07 / CAPITAL WITH A PURPOSE",
-    "title": "Build the first. Design for more.",
-    "budget": "Planning envelope",
-    "amount": "≈ $50,000",
-    "body": "The founder can fund the first store. A partner can add location access, operating perspective and regional connections.",
-    "items": [
-      [
-        "Fit-out & resilience",
-        650000,
-        "Lease and technical survey before works."
-      ],
-      [
-        "Equipment",
-        550000,
-        "Supplier comparison, power plan and delivery dates."
-      ],
-      [
-        "Furniture & serviceware",
-        150000,
-        "Approve service layout and material samples."
-      ],
-      [
-        "Opening stock & packaging",
-        100000,
-        "Complete recipe costing and supplier checks."
-      ],
-      [
-        "POS, branding & launch",
-        150000,
-        "Test payment, training and opening campaign."
-      ],
-      [
-        "Working capital & contingency",
-        500000,
-        "Release against cash runway and opening milestones."
-      ]
+  "terms": {
+    "title": [
+      "Capital with",
+      "clear conditions."
     ],
-    "note": "[[ASSUMPTION: 2 100 000 ₴ allocation at 42 ₴/$; no supplier quotations or investment commitments verified.]]",
-    "termsTitle": "Partnership, with terms agreed together.",
-    "terms": [
-      [
-        "Instrument",
-        "[[ASSUMPTION: minority equity in the operating company is a discussion option; valuation and legal structure are unagreed.]]"
-      ],
-      [
-        "Ticket",
-        "[[ASSUMPTION: indicative partner contribution $10,000–$25,000; no minimum commitment set.]]"
-      ],
-      [
-        "Return & dividends",
-        "No fixed yield or guaranteed return. [[ASSUMPTION: dividends only from available after-tax cash after reserve and reinvestment needs.]]"
-      ],
-      [
-        "Timing & exit",
-        "[[ASSUMPTION: opening target 4–6 months after a suitable lease; buyback and transfer rights to be negotiated. No promised exit.]]"
-      ]
-    ]
-  },
-  "traction": {
-    "label": "08 / EVIDENCE BEFORE EXPANSION",
-    "title": "What is real. What comes next.",
-    "items": [
-      [
-        "Defined",
-        "Brand concept, first-city strategy and interactive planning model."
-      ],
-      [
-        "In development",
-        "Menu, store layout and supplier specification."
-      ],
-      [
-        "Not verified",
-        "Signed lease, supplier quotes, permits, equipment lead times and paid pre-orders."
-      ],
-      [
-        "Not published",
-        "Waitlist count, investor commitments and operating-store results."
-      ]
+    "tag": "[[ASSUMPTION A04]] / DISCUSSION TERMS",
+    "instrument": "INSTRUMENT",
+    "instrumentValue": "Equity / structure to agree",
+    "ticket": "INDICATIVE TICKET",
+    "ticketValue": "$5,000–$50,000",
+    "return": "TARGET INVESTOR RETURN",
+    "returnValue": "To agree / not guaranteed",
+    "funds": "USE OF FUNDS / 2 100 000 ₴",
+    "allocations": [
+      "Equipment",
+      "Fit-out",
+      "Working capital",
+      "Launch & product",
+      "Contingency"
     ],
-    "riskTitle": "Risk is part of the operating plan.",
+    "gates": [
+      "01 / Site & supplier quotes",
+      "02 / Recipe and cost validation",
+      "03 / Pilot unit economics",
+      "04 / Repeat only after proof"
+    ],
+    "risksTitle": "RISK → MITIGATION",
     "risks": [
       [
-        "Security & outages",
-        "Shelter access, closure procedures, backup power sizing and a cash reserve. Residual risk remains."
+        "Demand",
+        "Pilot before expansion"
       ],
       [
-        "FX & supply",
-        "Dual sourcing, landed-cost tracking and smaller inventory commitments."
+        "Supply / FX",
+        "Dual sourcing and buffer stock"
       ],
       [
-        "Seasonality",
-        "Hot drinks, monthly demand planning and a low-season downside case."
+        "Power / security",
+        "Backup power and continuity plan"
       ],
       [
         "Execution",
-        "Recipe cards, staff training, waste logs and daily stock reconciliation."
+        "Recipe cards and daily cost control"
       ]
-    ]
-  },
-  "team": {
-    "label": "09 / THE OPERATOR",
-    "title": "Hospitality meets systems.",
-    "name": "Fakhridin Sadridinov",
-    "role": "Founder · operator · builder",
-    "bio": "Restaurant management, venue operations, marketing and web development. Bringing hands-on hospitality experience to the first XoXo Tea store.",
-    "note": "Founder-provided background. [[ASSUMPTION: approved portrait, dated CV and advisor appointments are pending.]]",
-    "portrait": "Founder portrait awaiting approval",
-    "advisors": "Seeking: local property expertise, tea sourcing and regional operating partners."
+    ],
+    "note": "[[ASSUMPTION A05]] Allocation 35 / 25 / 20 / 12 / 8%. Milestone gates and mitigations are proposed, not completed. Equity, valuation, rights and distributions remain open."
   },
   "contact": {
-    "label": "10 / LET'S BUILD THE FIRST",
-    "title": "Good tea starts a conversation.",
-    "body": "A location, a perspective, a partnership. Tell us what you have in mind.",
+    "title": [
+      "The next variable",
+      "is you."
+    ],
+    "lead": "CONVERSATION / 001",
     "name": "Name",
     "org": "Organization (optional)",
-    "ticket": "Indicative contribution",
-    "ranges": [
-      "Advice / location partnership",
-      "Under $10,000",
-      "$10,000–$25,000",
-      "$25,000+"
-    ],
+    "range": "Ticket range",
     "email": "Email or Telegram",
-    "send": "Request a meeting",
+    "ranges": [
+      "Exploring / advice",
+      "$5,000–$10,000",
+      "$10,000–$25,000",
+      "$25,000–$50,000"
+    ],
+    "room": "Include a data-room request",
+    "submit": "Prepare request",
+    "send": "Send request",
     "sending": "Sending…",
-    "sent": "Your request has been received.",
-    "sentBody": "Thank you. We will respond through the contact you provided.",
-    "error": "Your request was not sent. Please try again or use the email option.",
-    "invalid": "Enter a valid email address or a Telegram username beginning with @.",
+    "download": "One-pager / PDF",
+    "calendar": "Calendar / to be confirmed",
+    "notice": "[[ASSUMPTION A06]] Direct delivery and calendar are not connected yet. Prepare a request to download locally; it is not sent.",
+    "privacy": "Your details stay on this device unless a configured delivery endpoint accepts them.",
+    "success": "Request prepared.",
+    "successBody": "Your request file is ready. It has not been sent. Share it with the founder through your existing contact.",
+    "sent": "Request received.",
+    "sentBody": "Your request was accepted. We will use the contact you supplied.",
+    "error": "Delivery failed. Your entries are kept; please retry.",
+    "invalid": "Enter a name and a valid email or Telegram handle.",
+    "again": "Prepare another request",
+    "file": "xoxo-investor-request.txt",
+    "notSent": "NOT SENT — LOCAL REQUEST",
+    "required": "Required",
     "consent": "I agree to be contacted about this request.",
-    "unavailable": "Online requests are not open yet. The founder's receiving address must be confirmed before this form can send.",
-    "draft": "Save request as a text file",
-    "draftNote": "Downloaded to your device. This does not send a request.",
-    "room": "Request the data room",
-    "roomNote": "Data-room access is reviewed individually. No confidential files are exposed by this site.",
-    "calendar": "Book a call",
-    "calendarPending": "Calendar booking will open when the founder's calendar is connected.",
-    "pdf": "Download the one-pager",
-    "waitlistTitle": "Be there for the first pour.",
-    "waitlist": "Join opening updates",
-    "emailOnly": "Email address",
-    "privacy": "We use your contact details only to respond or send the opening updates you request. No personal information is sent to analytics.",
-    "again": "Send another request",
-    "nameInvalid": "Enter your name."
+    "trap": "Leave this field empty"
   },
-  "footer": {
-    "city": "Миколаїв / Mykolaiv",
-    "location": "First location being selected.",
-    "hours": "Opening hours to be announced.",
-    "social": "Social channels awaiting confirmation.",
-    "map": "View Mykolaiv on the map",
-    "mapLabel": "City orientation only; this is not a store address.",
-    "legal": "Pre-launch concept. Illustrations are AI-generated. Financial projections are assumptions, not an offer or a guarantee.",
-    "copyright": "© 2026 XoXo Tea",
-    "privacy": "Privacy"
-  },
-  "pressPage": {
-    "title": "A new ritual, in a few words.",
-    "label": "PRESS / CONCEPT EDITION",
-    "body": "XoXo Tea is a modern tea-bar concept being developed in Mykolaiv, Ukraine. Its planned menu combines whole-leaf teas, milk teas and fruit drinks in a compact, takeaway-first format.",
-    "pack": "Download logo pack",
-    "assets": "Download campaign asset manifest",
-    "logo": "Logo / SVG",
-    "guidance": "Keep the wordmark clear. Use tea green on warm paper, or warm paper on tea green. Do not stretch, outline or add shadows. Generated interiors are concept illustrations and must be captioned as such."
-  },
-  "notFound": {
-    "title": "This page has moved.",
-    "body": "Return to the tea bar."
-  },
-  "metadata": {
-    "home": "XoXo Tea — A new tea ritual in Mykolaiv",
-    "menu": "Menu — XoXo Tea",
-    "investors": "Partner with XoXo Tea — Mykolaiv",
-    "press": "Press & brand assets — XoXo Tea",
-    "description": "A modern tea-bar concept for Mykolaiv. Explore the menu, store model and partnership opportunities."
-  },
-  "brandSuffix": "tea",
-  "otherLocaleLabel": "Українська",
-  "sources": {
-    "global": "Research and Markets / 01.2026",
-    "europe": "Persistence Market Research / 04.2026",
-    "chinaDaily": "China Daily",
-    "chagee": "CHAGEE",
-    "fmi": "Future Market Insights",
-    "dojo": "Dojo Business",
-    "yenchuan": "Yenchuan"
-  },
-  "honeypot": "Website"
+  "footer": [
+    "XOXO / TEA SYSTEM",
+    "MYKOLAIV, UKRAINE",
+    "PRE-LAUNCH / 2026"
+  ],
+  "notFound": "Page not found",
+  "back": "Return to the system"
 }
 ````
 
@@ -530,205 +377,151 @@ audit/screenshots/*.png
 
 ````json
 {
-  "brand": "XoXo Tea",
-  "wordmark": "xoxo",
-  "tagline": "ЧАЙ / ЛЮДИ / МІСЦЕ",
-  "localeName": "Українська",
-  "otherLocale": "EN",
-  "skip": "До основного вмісту",
-  "navigation": "Головна навігація",
-  "menu": "Меню",
-  "investors": "Партнерам",
-  "press": "Для медіа",
-  "home": "Головна",
-  "invest": "Стати інвестором",
-  "meet": "Почати розмову",
-  "hero": {
-    "eyebrow": "НОВА ЧАЙНА КУЛЬТУРА · МИКОЛАЇВ",
-    "title": "Час для чаю.\nЧас для себе.",
-    "description": "Листовий чай. Свіжі фрукти. Місце, куди хочеться повертатися.",
-    "note": "Перший заклад у розробці / Південь України",
-    "alt": "Молочний чай із тростинним цукром і темними перлинами тапіоки у теплому світлі",
-    "pause": "Призупинити відео",
-    "play": "Відтворити відео"
+  "brand": "XoXo",
+  "edition": "TEA SYSTEM / V.02",
+  "sections": [
+    "THESIS",
+    "PRODUCT",
+    "MARKET",
+    "ECONOMICS",
+    "SCALE",
+    "TERMS",
+    "CONTACT"
+  ],
+  "sourceDate": "13.09.2026",
+  "units": {
+    "volume": "500 мл",
+    "sugar": "0 / 30 / 50 / 100%",
+    "currency": [
+      "UAH",
+      "USD"
+    ],
+    "angle": "°",
+    "percent": "%",
+    "frames": "36",
+    "range": "01 — 06"
   },
-  "thesis": {
-    "label": "01 / ІДЕЯ",
-    "title": "Нова чайна культура.\nПочинаємо з Миколаєва.",
-    "body": "Один продуманий чайний бар. Система, яку можна повторити. Бренд, якому є куди рости."
-  },
-  "signature": {
-    "label": "02 / П’ЯТЬ ГОЛОВНИХ СМАКІВ",
-    "title": "П’ять приводів зупинитися.",
-    "body": "Спочатку чай. Усе інше — у рівновазі.",
-    "all": "Переглянути все меню",
-    "note": "[[ASSUMPTION: концептуальні рецептури, порції 500 мл і попередні ціни; фінальні дегустації ще попереду.]]",
-    "allergens": "Алергени",
-    "crossContact": "Рецептури та специфікації постачальників ще не затверджені. У спільній зоні приготування можуть використовуватися молоко, соя, горіхи та глютен. Перед замовленням уточніть склад у команди.",
-    "size": "500 мл",
-    "print": "Друк / зберегти меню",
-    "qr": "Відскануйте, щоб відкрити меню",
-    "subtitle": "МЕНЮ / КОНЦЕПТУАЛЬНА ВЕРСІЯ"
-  },
-  "drinks": [
+  "sources": [
     {
-      "name": "Боба з тростинним цукром",
-      "other": "Brown sugar boba",
-      "base": "Чорний чай · молоко · тапіока",
-      "line": "Глибока карамель. М’які перлини тапіоки.",
-      "price": 180,
-      "allergens": "Молоко",
-      "image": "drink-0"
+      "name": "Research & Markets · 2026",
+      "url": "https://www.researchandmarkets.com/reports/5851209/bubble-tea-market-report"
     },
     {
-      "name": "Молочний жасмин",
-      "other": "Jasmine milk",
-      "base": "Зелений жасминовий чай · молоко",
-      "line": "Квітковий, легкий і знайомий.",
-      "price": 165,
-      "allergens": "Молоко",
-      "image": "drink-1"
+      "name": "Persistence · 2026",
+      "url": "https://www.persistencemarketresearch.com/market-research/europe-bubble-tea-market.asp"
     },
     {
-      "name": "Матча боба",
-      "other": "Matcha boba",
-      "base": "Матча · молоко · тапіока",
-      "line": "Насичена зелень. М’який післясмак.",
-      "price": 215,
-      "allergens": "Молоко",
-      "image": "drink-2"
+      "name": "Future Market Insights · 2026",
+      "url": "https://www.futuremarketinsights.com/reports/demand-for-bubble-tea-in-eu"
     },
     {
-      "name": "Полуничний жасмин",
-      "other": "Strawberry jasmine",
-      "base": "Зелений жасминовий чай · полуниця",
-      "line": "Яскрава ягода. Чистий чайний післясмак.",
-      "price": 190,
-      "allergens": "Потрібна перевірка постачальника",
-      "image": "drink-3"
+      "name": "Wikipedia · 2024",
+      "url": "https://en.wikipedia.org/wiki/Heytea"
     },
     {
-      "name": "Манговий улун",
-      "other": "Mango oolong",
-      "base": "Улун · манго",
-      "line": "Золотисті фрукти й ноти обсмаження.",
-      "price": 195,
-      "allergens": "Потрібна перевірка постачальника",
-      "image": "drink-4"
-    },
-    {
-      "name": "Жасминова хмаринка",
-      "other": "Jasmine cloud",
-      "base": "Жасминовий чай · сирна пінка",
-      "line": "Квітковий чай під солонуватою хмаринкою.",
-      "price": 195,
-      "allergens": "Молоко",
-      "image": "drink-1"
-    },
-    {
-      "name": "Виноградний чай",
-      "other": "Grape tea",
-      "base": "Жасминовий чай · виноград",
-      "line": "Соковитий виноград та ароматний чай.",
-      "price": 185,
-      "allergens": "Потрібна перевірка постачальника",
-      "image": ""
-    },
-    {
-      "name": "Виноградна хмаринка",
-      "other": "Grape cloud",
-      "base": "Жасминовий чай · виноград · сирна пінка",
-      "line": "Свіжість винограду. Вершкове завершення.",
-      "price": 205,
-      "allergens": "Молоко",
-      "image": ""
-    },
-    {
-      "name": "Манго та грейпфрут",
-      "other": "Mango grapefruit",
-      "base": "Жасминовий чай · манго · грейпфрут",
-      "line": "Солодкі фрукти. Виразна цитрусова нота.",
-      "price": 195,
-      "allergens": "Потрібна перевірка постачальника",
-      "image": "drink-4"
-    },
-    {
-      "name": "Кокосове манго",
-      "other": "Coconut mango",
-      "base": "Манго · кокос · саго",
-      "line": "Ніжний кокос. Золотисте манго.",
-      "price": 195,
-      "allergens": "Потрібна перевірка постачальника",
-      "image": ""
-    },
-    {
-      "name": "Чистий жасмин",
-      "other": "Pure jasmine",
-      "base": "Листовий зелений жасминовий чай",
-      "line": "Чайний лист, вода — і нічого зайвого.",
-      "price": 130,
-      "allergens": "Потрібна перевірка постачальника",
-      "image": ""
-    },
-    {
-      "name": "Обсмажений улун",
-      "other": "Roasted oolong",
-      "base": "Листовий улун",
-      "line": "Теплі ноти обсмаження. Тривалий післясмак.",
-      "price": 140,
-      "allergens": "Потрібна перевірка постачальника",
-      "image": ""
+      "name": "China Daily · 13.07.2026",
+      "url": "https://global.chinadaily.com.cn/a/202607/13/WS6a543cffa310986e2b464e2b.html"
     }
   ],
-  "world": {
-    "label": "03 / СВІТ БРЕНДУ",
-    "title": "Усе готуємо на видноті.",
-    "body": "Точна порція листя. Свіжий настій. Тихе клацання запаювача. Ритуал — частина напою.",
-    "caption": "Концепція інтер’єру · візуалізація ШІ · не чинний заклад",
-    "interiorAlt": "Концепція чайного бару з дубовою стійкою, зеленою плиткою та відкритою зоною приготування",
-    "ritual": [
-      "Відмірюємо листя",
-      "Запаюємо свіжим",
-      "Передаємо з турботою",
-      "Мить для себе"
+  "lang": "uk",
+  "metadata": {
+    "title": "XoXo — Чай. Точність. Масштаб.",
+    "description": "Система сучасного чаю для Миколаєва. Шість напоїв. Прозора економіка однієї точки. Незалежний проєкт до запуску."
+  },
+  "nav": {
+    "menu": "Меню",
+    "investors": "Інвесторам",
+    "contact": "Почати розмову",
+    "skip": "Перейти до вмісту",
+    "label": "Індекс розділів",
+    "home": "Головна",
+    "language": "English",
+    "index": "Розділи сторінки"
+  },
+  "status": "МИКОЛАЇВ, UA / ДО ЗАПУСКУ",
+  "thesis": [
+    "Чай.",
+    "Точність.",
+    "Масштаб."
+  ],
+  "thesisFoot": [
+    "01 ТОЧКА ДЛЯ СТАРТУ",
+    "01 СИСТЕМА ДЛЯ МАСШТАБУ"
+  ],
+  "product": {
+    "title": [
+      "Одна форма.",
+      "Шість смаків."
     ],
-    "ritualAlt": [
-      "Чайне листя зважують у сталевій мисці",
-      "Рука запаює стакан чаю",
-      "Стакан чаю передають через дубову стійку",
-      "Краплі конденсату на стакані біля вікна"
+    "subtitle": "СИСТЕМА НАПОЇВ / 001",
+    "rotate": "ПРЕДМЕТНИЙ ВИГЛЯД",
+    "angle": "ОБЕРТАННЯ",
+    "collection": "КОЛЕКЦІЯ",
+    "volume": "ОБ’ЄМ",
+    "energy": "ЕНЕРГІЯ",
+    "sugar": "РІВНІ ЦУКРУ",
+    "price": "ПЛАНОВА ЦІНА",
+    "previous": "Попередній напій",
+    "next": "Наступний напій",
+    "alt": "Прозора висока склянка без написів із купольною кришкою та трубочкою",
+    "assumption": "[[ASSUMPTION A01]] Концепти рецептур, ціни, об’єм 500 мл та рівні цукру. Калорійність — після тестування рецептур; зображення є концептами.",
+    "kcal": "ккал / уточнюємо",
+    "drinks": [
+      {
+        "name": "Коричневий цукор",
+        "other": "Brown sugar pearl milk tea",
+        "tea": "ЧОРНИЙ ЧАЙ / МОЛОКО / ПЕРЛИНИ",
+        "price": 185
+      },
+      {
+        "name": "Виноградна хмаринка",
+        "other": "Grape cheese tea",
+        "tea": "ЖАСМИН / ВИНОГРАД / СИРНА ПІНКА",
+        "price": 205
+      },
+      {
+        "name": "Жасминові перлини",
+        "other": "Jasmine green tea with pearls",
+        "tea": "ЗЕЛЕНИЙ ЖАСМИНОВИЙ ЧАЙ / ПЕРЛИНИ",
+        "price": 165
+      },
+      {
+        "name": "Кокос і манго",
+        "other": "Coconut mango",
+        "tea": "ЖАСМИН / КОКОС / МАНГО",
+        "price": 205
+      },
+      {
+        "name": "Матча з перлинами",
+        "other": "Matcha latte with pearls",
+        "tea": "МАТЧА / МОЛОКО / ПЕРЛИНИ",
+        "price": 215
+      },
+      {
+        "name": "Персиковий улун",
+        "other": "Clear peach oolong",
+        "tea": "УЛУН / ПЕРСИК / ЛІД",
+        "price": 175
+      }
     ]
   },
   "market": {
-    "label": "04 / РИНОК",
-    "title": "Чайна культура без кордонів.",
-    "body": "Незалежні прогнози показують зростання. Місцевий попит ще потрібно довести.",
-    "global": "Світовий ринок bubble tea / млрд доларів",
-    "europe": "Ринок bubble tea у Європі / млн доларів",
-    "cagr": "Середньорічне зростання за даними видавця",
-    "forecast": "Прогноз",
-    "read": "Переглянути джерело",
-    "date": "Джерела перевірено 13 вересня 2026 року",
-    "scope": "Це окремі дослідження з різним охопленням. Зростання світового ринку не є прогнозом продажів XoXo.",
-    "globalNote": "2025 → 2026 · заявлений CAGR 8,4%; округлені значення дають 8,1%.",
-    "europeNote": "2026 → 2033 · прогнозований CAGR 8,2%.",
-    "travel": "За публікацією China Daily від 13 липня 2026 року HEYTEA має понад 100 закордонних точок; за попередній рік їхня кількість зросла майже на 600%. Офіційний сайт CHAGEE вказує понад 6 000 закладів. Це приклади поширення формату, а не досягнення XoXo.",
-    "fmi": "FMI прогнозує зростання попиту в ЄС на 10% щороку до 2036 року, але сторінка містить суперечливі одиниці обсягу ринку. Ці дані не використано в нашій оцінці.",
-    "localTitle": "Миколаїв — перша перевірка.",
-    "local": [
-      [
-        "Аудиторія",
-        "[[ASSUMPTION: орієнтуємося на студентів і молодих фахівців; актуальну чисельність аудиторії в зоні закладу не перевірено.]]"
-      ],
-      [
-        "Потік людей",
-        "[[ASSUMPTION: перед орендою рахуємо пішоходів у будні та вихідні біля кожного приміщення. Вимірювань поки немає.]]"
-      ],
-      [
-        "Конкуренція",
-        "[[ASSUMPTION: наносимо на карту чайні, кав’ярні та доставку в межах 10 хвилин пішки; щільність конкурентів і частку ринку не підтверджено.]]"
-      ]
-    ]
+    "title": [
+      "Рух категорії.",
+      "У цифрах."
+    ],
+    "world": "СВІТ / МЛРД USD",
+    "europe": "ЄВРОПА / МЛН USD",
+    "cagr": "CAGR",
+    "eu": "ПОПИТ У ЄС / 2026–2036",
+    "stores": "HEYTEA / ТОЧКИ / 2024",
+    "overseas": "HEYTEA / РІСТ ЗА КОРДОНОМ",
+    "forecast": "ПРОГНОЗИ ВИДАВЦІВ / РІЗНІ ВИЗНАЧЕННЯ РИНКУ",
+    "historical": "ІСТОРИЧНИЙ МАСШТАБ / НЕ ТОЧКИ XOXO",
+    "source": "ДЖЕРЕЛО",
+    "chart": "Світовий ринок: 3,35 млрд доларів у 2025 році та 3,62 млрд у 2026. Європа: 727,2 млн доларів у 2026 році та 1262,6 млн у 2033.",
+    "nearly": "МАЙЖЕ",
+    "period": "РІК ДО ЛИПНЯ 2026"
   },
   "economics": {
     "label": "05 / МОДЕЛЬ ЗАКЛАДУ",
@@ -758,239 +551,137 @@ audit/screenshots/*.png
     "explanation": "Валова маржа не включає персонал та оренду. Внесок стакана враховує прямі витрати й комісії. EBITDA віднімає оренду, персонал та інші постійні витрати. Окупність — стартовий бюджет, поділений на стабілізовану EBITDA: без періоду розгону, фінансування, податків, амортизації, заміни обладнання та змін оборотного капіталу. EBITDA не дорівнює коштам для дивідендів.",
     "benchmark": "Галузеві статті наводять близько 65–80% валової маржі напою та $30–150 тис. стартових витрат. Це загальні редакційні орієнтири, а не перевірені кошториси для України."
   },
+  "economicsTitle": [
+    "Одна точка.",
+    "Кожна змінна."
+  ],
+  "economicsExtra": {
+    "tag": "[[ASSUMPTION A02]] / ПОГОДЖЕНА ПЛАНОВА МОДЕЛЬ",
+    "scroll": "ГОРТАЙТЕ СЦЕНАРІЇ",
+    "custom": "ВЛАСНИЙ",
+    "reset": "Скинути модель",
+    "period": "НА МІСЯЦЬ",
+    "fixed": "ПОСТІЙНІ ВИТРАТИ",
+    "funding": "БАЗОВЕ ФІНАНСУВАННЯ",
+    "exchange": "ПЛАНОВИЙ КУРС",
+    "scenario": "Сценарій"
+  },
   "scale": {
-    "label": "06 / ФОРМАТ ДЛЯ ПОВТОРЕННЯ",
-    "title": "Один бар. Зрозумілий наступний крок.",
-    "body": "Спершу довести модель першого закладу. Потім розширювати мережу.",
+    "title": [
+      "Повторюємо систему.",
+      "Без зайвої складності."
+    ],
+    "labels": [
+      "ФОРМАТ",
+      "ПЛОЩА",
+      "ФІНАНСУВАННЯ",
+      "ЧАШОК / ДЕНЬ",
+      "ОКУПНІСТЬ / МІС."
+    ],
     "formats": [
-      [
-        "Кіоск",
-        "12–18 м²",
-        "1 260 000 ₴",
-        "80–140 стаканів на день"
-      ],
-      [
-        "Чайний бар із собою",
-        "35–40 м²",
-        "2 100 000 ₴",
-        "130–260 стаканів на день"
-      ],
-      [
-        "Кафе з посадкою",
-        "55–75 м²",
-        "3 150 000 ₴",
-        "180–320 стаканів на день"
-      ]
+      "Кіоск",
+      "Каунтер",
+      "Гібрид"
     ],
-    "note": "[[ASSUMPTION: площі, фінансування та обсяги — планові діапазони, не комерційні пропозиції чи гарантії потужності.]]",
-    "roadmap": [
-      [
-        "01 / Миколаїв",
-        "Перший чайний бар",
-        "Підтвердити оренду, рецептури та платний попит."
-      ],
-      [
-        "02 / Миколаїв",
-        "Інший район",
-        "Лише після трьох прибуткових місяців поспіль і підготовки самостійної команди."
-      ],
-      [
-        "03 / Миколаїв",
-        "Повторити систему",
-        "Лише коли друга точка відтворить цільовий сервіс, списання та маржу."
-      ]
+    "areas": [
+      "14 м²",
+      "35 м²",
+      "55 м²"
     ],
-    "future": "Далі: Одеса → Київ → інші міста. [[ASSUMPTION: розвиток залежить від безпеки, надійності постачання та доведеного місцевого попиту; дати не визначені.]]"
+    "note": "[[ASSUMPTION A03]] Ілюстративні площі форматів. Усі три використовують погоджену базу фінансування 2,1 млн ₴ та консервативний/базовий/оптимістичний розрахунки. Це не кошториси конкретних приміщень.",
+    "repeat": "СТАНДАРТ → ПЕРЕВІРКА → ПОВТОРЕННЯ"
   },
-  "funds": {
-    "label": "07 / КАПІТАЛ ІЗ ПРИЗНАЧЕННЯМ",
-    "title": "Будуємо перший. Думаємо про мережу.",
-    "budget": "Плановий бюджет",
-    "amount": "≈ $50 000",
-    "body": "Засновник може профінансувати перший заклад. Партнер може додати доступ до приміщень, досвід і зв’язки в регіоні.",
-    "items": [
-      [
-        "Ремонт і стійкість",
-        650000,
-        "Оренда й технічне обстеження до початку робіт."
-      ],
-      [
-        "Обладнання",
-        550000,
-        "Порівняння постачальників, план живлення та строки доставки."
-      ],
-      [
-        "Меблі та інвентар",
-        150000,
-        "Затвердити робочі зони й зразки матеріалів."
-      ],
-      [
-        "Початковий запас і пакування",
-        100000,
-        "Завершити калькуляції та перевірку постачальників."
-      ],
-      [
-        "Каса, брендинг і запуск",
-        150000,
-        "Протестувати оплату, навчання й кампанію відкриття."
-      ],
-      [
-        "Оборотні кошти й резерв",
-        500000,
-        "Виділяти кошти відповідно до запасу ліквідності та етапів запуску."
-      ]
+  "terms": {
+    "title": [
+      "Капітал із",
+      "чіткими умовами."
     ],
-    "note": "[[ASSUMPTION: розподіл 2 100 000 ₴ за умовного курсу 42 ₴/$; пропозиції постачальників та інвестиційні зобов’язання не підтверджені.]]",
-    "termsTitle": "Партнерство з узгодженими умовами.",
-    "terms": [
-      [
-        "Інструмент",
-        "[[ASSUMPTION: міноритарна частка в операційній компанії — варіант для обговорення; оцінку та юридичну структуру не погоджено.]]"
-      ],
-      [
-        "Внесок",
-        "[[ASSUMPTION: орієнтир участі $10 000–25 000; мінімальне зобов’язання не визначене.]]"
-      ],
-      [
-        "Дохідність і дивіденди",
-        "Фіксованої чи гарантованої дохідності немає. [[ASSUMPTION: дивіденди лише з доступних коштів після податків, резерву й реінвестицій.]]"
-      ],
-      [
-        "Строки та вихід",
-        "[[ASSUMPTION: орієнтир відкриття — 4–6 місяців після підписання належної оренди; викуп і передання частки потребують переговорів. Гарантованого виходу немає.]]"
-      ]
-    ]
-  },
-  "traction": {
-    "label": "08 / ДОКАЗИ ПЕРЕД МАСШТАБУВАННЯМ",
-    "title": "Що є. Що попереду.",
-    "items": [
-      [
-        "Визначено",
-        "Концепцію бренду, перше місто та інтерактивну планову модель."
-      ],
-      [
-        "У розробці",
-        "Меню, планування закладу та вимоги до постачальників."
-      ],
-      [
-        "Не підтверджено",
-        "Підписану оренду, ціни постачальників, дозвільні документи, строки обладнання та оплачені передзамовлення."
-      ],
-      [
-        "Не оприлюднено",
-        "Кількість підписників списку очікування, інвестиційні зобов’язання та результати чинних закладів."
-      ]
+    "tag": "[[ASSUMPTION A04]] / УМОВИ ДЛЯ ОБГОВОРЕННЯ",
+    "instrument": "ІНСТРУМЕНТ",
+    "instrumentValue": "Частка / структуру узгодимо",
+    "ticket": "ОРІЄНТОВНИЙ ВНЕСОК",
+    "ticketValue": "$5 000–$50 000",
+    "return": "ЦІЛЬОВА ДОХІДНІСТЬ ІНВЕСТОРА",
+    "returnValue": "Узгодимо / без гарантії",
+    "funds": "ВИКОРИСТАННЯ КОШТІВ / 2 100 000 ₴",
+    "allocations": [
+      "Обладнання",
+      "Облаштування",
+      "Оборотний капітал",
+      "Запуск і продукт",
+      "Резерв"
     ],
-    "riskTitle": "Ризики — частина операційного плану.",
+    "gates": [
+      "01 / Приміщення та комерційні пропозиції",
+      "02 / Перевірка рецептур і собівартості",
+      "03 / Економіка пілотної точки",
+      "04 / Повторення після підтвердження"
+    ],
+    "risksTitle": "РИЗИК → ПРОТИДІЯ",
     "risks": [
       [
-        "Безпека та відключення",
-        "Доступ до укриття, порядок закриття, розрахунок резервного живлення та запас коштів. Залишковий ризик зберігається."
+        "Попит",
+        "Пілот перед розширенням"
       ],
       [
-        "Курс і постачання",
-        "Альтернативні постачальники, контроль повної закупівельної вартості та невеликі партії."
+        "Постачання / курс",
+        "Два постачальники та запас"
       ],
       [
-        "Сезонність",
-        "Гарячі напої, помісячний план попиту та сценарій низького сезону."
+        "Енергія / безпека",
+        "Резервне живлення і план безперервності"
       ],
       [
         "Виконання",
-        "Технологічні карти, навчання, облік списань і щоденна звірка залишків."
+        "Технологічні карти та щоденний контроль витрат"
       ]
-    ]
-  },
-  "team": {
-    "label": "09 / ОПЕРАТОР",
-    "title": "Гостинність зустрічається із системністю.",
-    "name": "Фахрідін Садрідінов",
-    "role": "Засновник · оператор · розробник",
-    "bio": "Управління ресторанами й великими просторами, маркетинг і веброзробка. Практичний досвід гостинності для першого XoXo Tea.",
-    "note": "Досвід зі слів засновника. [[ASSUMPTION: затверджений портрет, актуальне резюме та призначення радників очікуються.]]",
-    "portrait": "Портрет засновника очікує затвердження",
-    "advisors": "Шукаємо експертизу в нерухомості, постачанні чаю та розвитку закладів у регіоні."
+    ],
+    "note": "[[ASSUMPTION A05]] Розподіл 35 / 25 / 20 / 12 / 8%. Етапи й заходи запропоновано, а не виконано. Частка, оцінка, права та виплати відкриті для обговорення."
   },
   "contact": {
-    "label": "10 / СТВОРІМО ПЕРШИЙ РАЗОМ",
-    "title": "Гарний чай починає розмову.",
-    "body": "Приміщення, погляд, партнерство. Розкажіть, що маєте на думці.",
+    "title": [
+      "Наступна змінна —",
+      "ви."
+    ],
+    "lead": "РОЗМОВА / 001",
     "name": "Ім’я",
     "org": "Організація (необов’язково)",
-    "ticket": "Орієнтовна участь",
+    "range": "Діапазон внеску",
+    "email": "Email або Telegram",
     "ranges": [
-      "Порада / партнерство щодо приміщення",
-      "До $10 000",
-      "$10 000–25 000",
-      "Понад $25 000"
+      "Розглядаю / порада",
+      "$5 000–$10 000",
+      "$10 000–$25 000",
+      "$25 000–$50 000"
     ],
-    "email": "Електронна пошта або Telegram",
-    "send": "Запросити зустріч",
+    "room": "Додати запит на матеріали для інвестора",
+    "submit": "Підготувати запит",
+    "send": "Надіслати запит",
     "sending": "Надсилаємо…",
-    "sent": "Ваш запит отримано.",
-    "sentBody": "Дякуємо. Відповімо за вказаним контактом.",
-    "error": "Запит не надіслано. Спробуйте ще раз або скористайтеся електронною поштою.",
-    "invalid": "Введіть коректну пошту або ім’я користувача Telegram, що починається з @.",
+    "download": "Короткий опис / PDF",
+    "calendar": "Календар / узгодимо",
+    "notice": "[[ASSUMPTION A06]] Надсилання та календар ще не підключені. Підготуйте запит для завантаження на пристрій; його не буде надіслано.",
+    "privacy": "Дані залишаються на вашому пристрої, доки підключений сервіс не прийме запит.",
+    "success": "Запит підготовлено.",
+    "successBody": "Файл готовий. Запит не надіслано. Передайте його засновнику через ваш наявний канал зв’язку.",
+    "sent": "Запит отримано.",
+    "sentBody": "Ваш запит прийнято. Для відповіді використаємо вказаний контакт.",
+    "error": "Надсилання не вдалося. Дані збережено у формі; спробуйте ще раз.",
+    "invalid": "Вкажіть ім’я та коректний email або ім’я користувача Telegram.",
+    "again": "Підготувати ще один запит",
+    "file": "xoxo-investor-request.txt",
+    "notSent": "НЕ НАДІСЛАНО — ЛОКАЛЬНИЙ ЗАПИТ",
+    "required": "Обов’язково",
     "consent": "Погоджуюся на зв’язок щодо цього запиту.",
-    "unavailable": "Онлайн-запити ще не відкриті. Перед надсиланням потрібно підтвердити адресу одержувача.",
-    "draft": "Зберегти запит текстовим файлом",
-    "draftNote": "Збережено на вашому пристрої. Це не надсилає запит.",
-    "room": "Запросити матеріали для інвестора",
-    "roomNote": "Доступ до матеріалів розглядаємо індивідуально. Конфіденційні файли не оприлюднюються.",
-    "calendar": "Запланувати дзвінок",
-    "calendarPending": "Запис на дзвінок відкриється після підключення календаря засновника.",
-    "pdf": "Завантажити коротку презентацію",
-    "waitlistTitle": "Будьте на першому наливі.",
-    "waitlist": "Дізнатися про відкриття",
-    "emailOnly": "Електронна пошта",
-    "privacy": "Використовуємо контакти лише для відповіді або запитаних новин про відкриття. Персональні дані не передаємо в аналітику.",
-    "again": "Надіслати ще один запит",
-    "nameInvalid": "Вкажіть своє ім’я."
+    "trap": "Залиште це поле порожнім"
   },
-  "footer": {
-    "city": "Миколаїв / Mykolaiv",
-    "location": "Обираємо перше приміщення.",
-    "hours": "Графік роботи оголосимо перед відкриттям.",
-    "social": "Соціальні канали очікують підтвердження.",
-    "map": "Переглянути Миколаїв на карті",
-    "mapLabel": "Орієнтир міста, а не адреса закладу.",
-    "legal": "Концепція до відкриття. Ілюстрації створені ШІ. Фінансові прогнози — припущення, не пропозиція чи гарантія.",
-    "copyright": "© 2026 XoXo Tea",
-    "privacy": "Конфіденційність"
-  },
-  "pressPage": {
-    "title": "Новий ритуал у кількох словах.",
-    "label": "ДЛЯ МЕДІА / КОНЦЕПТУАЛЬНА ВЕРСІЯ",
-    "body": "XoXo Tea — концепція сучасного чайного бару, яку розробляють у Миколаєві. Планове меню поєднує листові, молочні та фруктові чаї в компактному форматі з акцентом на напої із собою.",
-    "pack": "Завантажити пакет логотипів",
-    "assets": "Завантажити опис візуальних матеріалів",
-    "logo": "Логотип / SVG",
-    "guidance": "Залишайте вільний простір навколо логотипа. Зелений на теплому білому або навпаки. Не розтягуйте, не обводьте й не додавайте тіні. Згенеровані інтер’єри потрібно підписувати як концептуальні візуалізації."
-  },
-  "notFound": {
-    "title": "Ця сторінка переїхала.",
-    "body": "Повернутися до чайного бару."
-  },
-  "metadata": {
-    "home": "XoXo Tea — Новий чайний ритуал у Миколаєві",
-    "menu": "Меню — XoXo Tea",
-    "investors": "Партнерство з XoXo Tea — Миколаїв",
-    "press": "Для медіа та матеріали бренду — XoXo Tea",
-    "description": "Концепція сучасного чайного бару в Миколаєві. Меню, модель закладу та можливості партнерства."
-  },
-  "brandSuffix": "tea",
-  "otherLocaleLabel": "English",
-  "sources": {
-    "global": "Research and Markets / 01.2026",
-    "europe": "Persistence Market Research / 04.2026",
-    "chinaDaily": "China Daily",
-    "chagee": "CHAGEE",
-    "fmi": "Future Market Insights",
-    "dojo": "Dojo Business",
-    "yenchuan": "Yenchuan"
-  },
-  "honeypot": "Вебсайт"
+  "footer": [
+    "XOXO / СИСТЕМА ЧАЮ",
+    "МИКОЛАЇВ, УКРАЇНА",
+    "ДО ЗАПУСКУ / 2026"
+  ],
+  "notFound": "Сторінку не знайдено",
+  "back": "Повернутися до системи"
 }
 ````
 
@@ -1023,6 +714,7 @@ export default eslintConfig;
 import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
+  experimental: { inlineCss: true },
   trailingSlash: true,
   images: { deviceSizes: [480, 960, 1600], imageSizes: [] },
 };
@@ -5324,601 +5016,127 @@ const config = {
 export default config;
 ````
 
-## public/press/asset-manifest.json
+## public/favicon.svg
+
+````xml
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#172e28"/><path d="M16 16L48 48M48 16L16 48" stroke="#f3f1ea" stroke-width="5"/></svg>
+````
+
+## public/sequence/manifest.json
 
 ````json
-[
-  {
-    "index": 0,
-    "job_id": "ebcf56a3-1a21-4c99-a713-bbee146c7e23",
-    "model": "nano_banana_2",
-    "name": "drink-0",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSingle brown-sugar black milk tea with dark tapioca pearls, caramel ribbons on inner walls, tall straight-sided clear cup, subtle condensation, plain lid.\n[COMPOSITION]\nCentered cup fully visible with generous margin on warm paper seamless backdrop, camera level with cup midpoint. Consistent straight-on product system. One prop maximum.\n[LIGHTING]\nLarge window diffusion 45 degrees camera-left, 3000K, shadow falls right with deep soft falloff.\n[LENS & CAMERA]\n85mm f/2, sharp focus on cup rim and condensation.\n[MATERIALS & TEXTURE]\nReal liquid, circular cup ellipse, tactile paper, controlled reflections.\n[COLOR PALETTE]\nTea leaf green, warm ivory, ink, natural ingredient colors.\n[STYLE REFERENCE]\nGeometric minimal still life, museum-quality classical staging, appetizing food editorial.\n[BRAND INTEGRATION]\nRestrained modern tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography, hyper-detailed photorealistic rendering.\n[AVOID]\nNo AI artifacts, warped cup ellipses, fake words, plastic look, waxy surface, cartoon rendering, extra fingers, extra limbs, melted geometry, doubled subjects, oversaturated HDR, halos, oversharpening, flat fluorescent lighting, harsh flash, stock poses, unrelated logos, watermarks, signatures, airbrush sheen, fake bands or rectangular overlays.\nresolution: 2k",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104022_ebcf56a3-1a21-4c99-a713-bbee146c7e23.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 1,
-    "job_id": "005eac03-c49c-4eea-986a-0e63ca63eb6f",
-    "model": "nano_banana_2",
-    "name": "drink-1",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSingle pale ivory jasmine milk tea, tall straight-sided clear cup, subtle condensation, plain lid, one jasmine leaf.\n[COMPOSITION]\nCentered cup fully visible with generous margin on warm paper seamless backdrop, camera level with cup midpoint. Consistent straight-on product system. One prop maximum.\n[LIGHTING]\nLarge window diffusion 45 degrees camera-left, 3000K, shadow falls right with deep soft falloff.\n[LENS & CAMERA]\n85mm f/2, sharp focus on cup rim and condensation.\n[MATERIALS & TEXTURE]\nReal liquid, circular cup ellipse, tactile paper, controlled reflections.\n[COLOR PALETTE]\nTea leaf green, warm ivory, ink, natural ingredient colors.\n[STYLE REFERENCE]\nGeometric minimal still life, museum-quality classical staging, appetizing food editorial.\n[BRAND INTEGRATION]\nRestrained modern tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography, hyper-detailed photorealistic rendering.\n[AVOID]\nNo AI artifacts, warped cup ellipses, fake words, plastic look, waxy surface, cartoon rendering, extra fingers, extra limbs, melted geometry, doubled subjects, oversaturated HDR, halos, oversharpening, flat fluorescent lighting, harsh flash, stock poses, unrelated logos, watermarks, signatures, airbrush sheen, fake bands or rectangular overlays.\nresolution: 2k",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104022_005eac03-c49c-4eea-986a-0e63ca63eb6f.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 2,
-    "job_id": "e1337020-ff3e-4be0-a5d3-55a533caa605",
-    "model": "nano_banana_2",
-    "name": "drink-2",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSingle green matcha milk tea with dark tapioca pearls and pale milk layer, tall straight-sided clear cup, condensation, plain lid.\n[COMPOSITION]\nCentered cup fully visible with generous margin on warm paper seamless backdrop, camera level with cup midpoint. Consistent straight-on product system. One prop maximum.\n[LIGHTING]\nLarge window diffusion 45 degrees camera-left, 3000K, shadow falls right with deep soft falloff.\n[LENS & CAMERA]\n85mm f/2, sharp focus on cup rim and condensation.\n[MATERIALS & TEXTURE]\nReal liquid, circular cup ellipse, tactile paper, controlled reflections.\n[COLOR PALETTE]\nTea leaf green, warm ivory, ink, natural ingredient colors.\n[STYLE REFERENCE]\nGeometric minimal still life, museum-quality classical staging, appetizing food editorial.\n[BRAND INTEGRATION]\nRestrained modern tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography, hyper-detailed photorealistic rendering.\n[AVOID]\nNo AI artifacts, warped cup ellipses, fake words, plastic look, waxy surface, cartoon rendering, extra fingers, extra limbs, melted geometry, doubled subjects, oversaturated HDR, halos, oversharpening, flat fluorescent lighting, harsh flash, stock poses, unrelated logos, watermarks, signatures, airbrush sheen, fake bands or rectangular overlays.\nresolution: 2k",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104022_e1337020-ff3e-4be0-a5d3-55a533caa605.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 3,
-    "job_id": "2f5b8b8a-cffe-4cac-8977-c68a4e8b054f",
-    "model": "nano_banana_2",
-    "name": "drink-3",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSingle ruby strawberry jasmine fruit tea with real strawberry slices and small ice cubes, tall straight-sided clear cup, condensation, plain lid.\n[COMPOSITION]\nCentered cup fully visible with generous margin on warm paper seamless backdrop, camera level with cup midpoint. Consistent straight-on product system. One prop maximum.\n[LIGHTING]\nLarge window diffusion 45 degrees camera-left, 3000K, shadow falls right with deep soft falloff.\n[LENS & CAMERA]\n85mm f/2, sharp focus on cup rim and condensation.\n[MATERIALS & TEXTURE]\nReal liquid, circular cup ellipse, tactile paper, controlled reflections.\n[COLOR PALETTE]\nTea leaf green, warm ivory, ink, natural ingredient colors.\n[STYLE REFERENCE]\nGeometric minimal still life, museum-quality classical staging, appetizing food editorial.\n[BRAND INTEGRATION]\nRestrained modern tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography, hyper-detailed photorealistic rendering.\n[AVOID]\nNo AI artifacts, warped cup ellipses, fake words, plastic look, waxy surface, cartoon rendering, extra fingers, extra limbs, melted geometry, doubled subjects, oversaturated HDR, halos, oversharpening, flat fluorescent lighting, harsh flash, stock poses, unrelated logos, watermarks, signatures, airbrush sheen, fake bands or rectangular overlays.\nresolution: 2k",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104022_2f5b8b8a-cffe-4cac-8977-c68a4e8b054f.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 4,
-    "job_id": "6aea76cd-0e2a-4bb5-b830-ecf53039d6da",
-    "model": "nano_banana_2",
-    "name": "drink-4",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSingle golden mango oolong fruit tea with mango pulp and small ice cubes, tall straight-sided clear cup, condensation, plain lid.\n[COMPOSITION]\nCentered cup fully visible with generous margin on warm paper seamless backdrop, camera level with cup midpoint. Consistent straight-on product system. One prop maximum.\n[LIGHTING]\nLarge window diffusion 45 degrees camera-left, 3000K, shadow falls right with deep soft falloff.\n[LENS & CAMERA]\n85mm f/2, sharp focus on cup rim and condensation.\n[MATERIALS & TEXTURE]\nReal liquid, circular cup ellipse, tactile paper, controlled reflections.\n[COLOR PALETTE]\nTea leaf green, warm ivory, ink, natural ingredient colors.\n[STYLE REFERENCE]\nGeometric minimal still life, museum-quality classical staging, appetizing food editorial.\n[BRAND INTEGRATION]\nRestrained modern tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography, hyper-detailed photorealistic rendering.\n[AVOID]\nNo AI artifacts, warped cup ellipses, fake words, plastic look, waxy surface, cartoon rendering, extra fingers, extra limbs, melted geometry, doubled subjects, oversaturated HDR, halos, oversharpening, flat fluorescent lighting, harsh flash, stock poses, unrelated logos, watermarks, signatures, airbrush sheen, fake bands or rectangular overlays.\nresolution: 2k",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104022_6aea76cd-0e2a-4bb5-b830-ecf53039d6da.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 5,
-    "job_id": "e3ef1049-62db-4ea6-879c-94dd833c133e",
-    "model": "nano_banana_2",
-    "name": "interior-0",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSmall 38 square metre modern tea bar, light oak counter, brushed steel production line, warm pendant lights, matte green tiles. Blank minimal signage plate, queue of two adults out of focus. Mid-size Ukrainian city daylight. Wide interior angle.\n[COMPOSITION]\nEditorial framing, physically plausible proportions.\n[LIGHTING]\n3000K diffused window at camera-left 45 degrees, shadows fall right.\n[LENS & CAMERA]\n85mm f/2, shallow focus on ritual or material.\n[MATERIALS & TEXTURE]\nTactile oak grain, matte ceramic, brushed steel.\n[COLOR PALETTE]\nDeep tea green and warm ivory.\n[STYLE REFERENCE]\nRestrained architectural food editorial, classical still life, natural asymmetry.\n[BRAND INTEGRATION]\nAdult refined modern atmosphere.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo warped geometry, extra fingers or limbs, rubber hands, waxy skin, fake text, plastic look, cartoon rendering, oversaturated HDR, halos, oversharpening, flat lighting, stock poses, logos, watermarks, signatures, doll faces, synthetic sheen, artificial rectangular bands.\nresolution: 2k",
-    "ratio": "3:2",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104146_e3ef1049-62db-4ea6-879c-94dd833c133e.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 6,
-    "job_id": "08cc0722-0235-4354-a27a-b3434d0542ce",
-    "model": "nano_banana_2",
-    "name": "interior-1",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nView along the production counter of the same small tea bar, measured tea stations, brushed steel, matte green tiles and oak, window left, two out of focus adult guests.\n[COMPOSITION]\nEditorial framing, physically plausible proportions.\n[LIGHTING]\n3000K diffused window at camera-left 45 degrees, shadows fall right.\n[LENS & CAMERA]\n85mm f/2, shallow focus on ritual or material.\n[MATERIALS & TEXTURE]\nTactile oak grain, matte ceramic, brushed steel.\n[COLOR PALETTE]\nDeep tea green and warm ivory.\n[STYLE REFERENCE]\nRestrained architectural food editorial, classical still life, natural asymmetry.\n[BRAND INTEGRATION]\nAdult refined modern atmosphere.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo warped geometry, extra fingers or limbs, rubber hands, waxy skin, fake text, plastic look, cartoon rendering, oversaturated HDR, halos, oversharpening, flat lighting, stock poses, logos, watermarks, signatures, doll faces, synthetic sheen, artificial rectangular bands.\nresolution: 2k",
-    "ratio": "3:2",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104146_08cc0722-0235-4354-a27a-b3434d0542ce.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 7,
-    "job_id": "d762efaf-9fc0-4625-98ee-3799a1902970",
-    "model": "nano_banana_2",
-    "name": "interior-2",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSmall tea bar window seating, three stools, light oak, matte green wall, brushed steel counter edge, daylight entering left, quiet Ukrainian streetscape out of focus.\n[COMPOSITION]\nEditorial framing, physically plausible proportions.\n[LIGHTING]\n3000K diffused window at camera-left 45 degrees, shadows fall right.\n[LENS & CAMERA]\n85mm f/2, shallow focus on ritual or material.\n[MATERIALS & TEXTURE]\nTactile oak grain, matte ceramic, brushed steel.\n[COLOR PALETTE]\nDeep tea green and warm ivory.\n[STYLE REFERENCE]\nRestrained architectural food editorial, classical still life, natural asymmetry.\n[BRAND INTEGRATION]\nAdult refined modern atmosphere.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo warped geometry, extra fingers or limbs, rubber hands, waxy skin, fake text, plastic look, cartoon rendering, oversaturated HDR, halos, oversharpening, flat lighting, stock poses, logos, watermarks, signatures, doll faces, synthetic sheen, artificial rectangular bands.\nresolution: 2k",
-    "ratio": "3:2",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104146_d762efaf-9fc0-4625-98ee-3799a1902970.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 8,
-    "job_id": "f26dce52-c42a-403b-883e-519fee1e3687",
-    "model": "nano_banana_2",
-    "name": "ritual-0",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nClose view of anatomically correct adult hand operating a cup sealing machine with a clear unbranded tea cup, brushed steel counter. Natural hand anatomy.\n[COMPOSITION]\nEditorial framing, physically plausible proportions.\n[LIGHTING]\n3000K diffused window at camera-left 45 degrees, shadows fall right.\n[LENS & CAMERA]\n85mm f/2, shallow focus on ritual or material.\n[MATERIALS & TEXTURE]\nTactile oak grain, matte ceramic, brushed steel.\n[COLOR PALETTE]\nDeep tea green and warm ivory.\n[STYLE REFERENCE]\nRestrained architectural food editorial, classical still life, natural asymmetry.\n[BRAND INTEGRATION]\nAdult refined modern atmosphere.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo warped geometry, extra fingers or limbs, rubber hands, waxy skin, fake text, plastic look, cartoon rendering, oversaturated HDR, halos, oversharpening, flat lighting, stock poses, logos, watermarks, signatures, doll faces, synthetic sheen, artificial rectangular bands.\nresolution: 2k",
-    "ratio": "4:5",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104146_f26dce52-c42a-403b-883e-519fee1e3687.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 9,
-    "job_id": "d6b88ac9-136f-4691-9fc0-613da05d7c9e",
-    "model": "nano_banana_2",
-    "name": "ritual-1",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nDry oolong tea leaves being measured with a steel scoop into a weighing bowl, a cropped adult hand, small tea bar worktop.\n[COMPOSITION]\nEditorial framing, physically plausible proportions.\n[LIGHTING]\n3000K diffused window at camera-left 45 degrees, shadows fall right.\n[LENS & CAMERA]\n85mm f/2, shallow focus on ritual or material.\n[MATERIALS & TEXTURE]\nTactile oak grain, matte ceramic, brushed steel.\n[COLOR PALETTE]\nDeep tea green and warm ivory.\n[STYLE REFERENCE]\nRestrained architectural food editorial, classical still life, natural asymmetry.\n[BRAND INTEGRATION]\nAdult refined modern atmosphere.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo warped geometry, extra fingers or limbs, rubber hands, waxy skin, fake text, plastic look, cartoon rendering, oversaturated HDR, halos, oversharpening, flat lighting, stock poses, logos, watermarks, signatures, doll faces, synthetic sheen, artificial rectangular bands.\nresolution: 2k",
-    "ratio": "4:5",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104146_d6b88ac9-136f-4691-9fc0-613da05d7c9e.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 10,
-    "job_id": "455c86c1-19f9-42db-9b6b-ab766bb085d2",
-    "model": "nano_banana_2",
-    "name": "ritual-2",
-    "original_job_id": "0586e78d-6b08-4cf1-bf9d-52502f041128",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\nRefine the previous image. Replace the small saucer and ceramic cup with one tall transparent disposable takeaway cup of milk tea with tapioca pearls and plain lid, passed directly between the same two natural adult hands across the counter. No saucer, no mug handle. Preserve lighting, framing and anatomy.\nNo text, logos, extra fingers, warped ellipses, plastic sheen, artifacts or watermarks.\nresolution: 2k",
-    "ratio": "4:5",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_110844_455c86c1-19f9-42db-9b6b-ab766bb085d2.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 11,
-    "job_id": "906a56e0-6bff-4f3e-941c-c327bd4d80f8",
-    "model": "nano_banana_2",
-    "name": "ritual-3",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nUnbranded brown sugar milk tea cup, condensation droplets, on an oak windowsill with daylight from left, calm warm paper wall behind.\n[COMPOSITION]\nRestrained editorial framing.\n[LIGHTING]\n3000K camera-left diffused window; seamless textures receive even diffusion.\n[LENS & CAMERA]\n85mm f/2, texture detail.\n[MATERIALS & TEXTURE]\nNatural tactile surfaces, physically plausible shapes.\n[COLOR PALETTE]\nWarm paper, dark tea, muted green.\n[STYLE REFERENCE]\nMinimal sculptural still life.\n[BRAND INTEGRATION]\nRefined tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo AI artifacts, text, logos, watermarks, melted geometry, distorted ellipses, waxy skin, plastic sheen, oversaturated HDR, halos, fake rectangular bands.\nresolution: 2k",
-    "ratio": "4:5",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104224_906a56e0-6bff-4f3e-941c-c327bd4d80f8.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 12,
-    "job_id": "083d7a50-d6d8-4839-bc35-9a5841cabda9",
-    "model": "nano_banana_2",
-    "name": "texture-0",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSeamless tileable texture, dry dark oolong tea leaves, top-down evenly covering entire frame.\n[COMPOSITION]\nRestrained editorial framing.\n[LIGHTING]\n3000K camera-left diffused window; seamless textures receive even diffusion.\n[LENS & CAMERA]\n85mm f/2, texture detail.\n[MATERIALS & TEXTURE]\nNatural tactile surfaces, physically plausible shapes.\n[COLOR PALETTE]\nWarm paper, dark tea, muted green.\n[STYLE REFERENCE]\nMinimal sculptural still life.\n[BRAND INTEGRATION]\nRefined tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo AI artifacts, text, logos, watermarks, melted geometry, distorted ellipses, waxy skin, plastic sheen, oversaturated HDR, halos, fake rectangular bands.\nresolution: 2k",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104224_083d7a50-d6d8-4839-bc35-9a5841cabda9.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 13,
-    "job_id": "a6be5c2f-c962-4795-acb6-5a33f22bbc70",
-    "model": "nano_banana_2",
-    "name": "texture-1",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSeamless tileable texture, dark cooked tapioca pearls, controlled subtle highlights, top-down covering frame.\n[COMPOSITION]\nRestrained editorial framing.\n[LIGHTING]\n3000K camera-left diffused window; seamless textures receive even diffusion.\n[LENS & CAMERA]\n85mm f/2, texture detail.\n[MATERIALS & TEXTURE]\nNatural tactile surfaces, physically plausible shapes.\n[COLOR PALETTE]\nWarm paper, dark tea, muted green.\n[STYLE REFERENCE]\nMinimal sculptural still life.\n[BRAND INTEGRATION]\nRefined tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo AI artifacts, text, logos, watermarks, melted geometry, distorted ellipses, waxy skin, plastic sheen, oversaturated HDR, halos, fake rectangular bands.\nresolution: 2k",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104225_a6be5c2f-c962-4795-acb6-5a33f22bbc70.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 14,
-    "job_id": "b691896a-1c33-4595-8476-9441e9432cde",
-    "model": "nano_banana_2",
-    "name": "texture-2",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSeamless tileable warm off-white brushed paper microtexture, no objects, evenly lit.\n[COMPOSITION]\nRestrained editorial framing.\n[LIGHTING]\n3000K camera-left diffused window; seamless textures receive even diffusion.\n[LENS & CAMERA]\n85mm f/2, texture detail.\n[MATERIALS & TEXTURE]\nNatural tactile surfaces, physically plausible shapes.\n[COLOR PALETTE]\nWarm paper, dark tea, muted green.\n[STYLE REFERENCE]\nMinimal sculptural still life.\n[BRAND INTEGRATION]\nRefined tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo AI artifacts, text, logos, watermarks, melted geometry, distorted ellipses, waxy skin, plastic sheen, oversaturated HDR, halos, fake rectangular bands.\nresolution: 2k",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104224_b691896a-1c33-4595-8476-9441e9432cde.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 15,
-    "job_id": "c138df39-dfea-4e94-872f-69c533f1f575",
-    "model": "nano_banana_2",
-    "name": "texture-3",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSeamless tileable matte deep tea-green ceramic surface microtexture, no tiles edges, no grout, evenly lit.\n[COMPOSITION]\nRestrained editorial framing.\n[LIGHTING]\n3000K camera-left diffused window; seamless textures receive even diffusion.\n[LENS & CAMERA]\n85mm f/2, texture detail.\n[MATERIALS & TEXTURE]\nNatural tactile surfaces, physically plausible shapes.\n[COLOR PALETTE]\nWarm paper, dark tea, muted green.\n[STYLE REFERENCE]\nMinimal sculptural still life.\n[BRAND INTEGRATION]\nRefined tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo AI artifacts, text, logos, watermarks, melted geometry, distorted ellipses, waxy skin, plastic sheen, oversaturated HDR, halos, fake rectangular bands.\nresolution: 2k",
-    "quality_note": "Requested texture correction was rejected by the generation service (nsfw status). Original scene retained only in provenance; not suitable as a seamless texture.",
-    "ratio": "1:1",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104224_c138df39-dfea-4e94-872f-69c533f1f575.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 16,
-    "job_id": "c651f916-8803-4a87-86a7-f775d256ad8b",
-    "model": "nano_banana_2",
-    "name": "packaging-0",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nSingle unbranded matte off-white takeaway cup and unprinted kraft paper two-cup carrier on warm paper backdrop, straight frontal view, generous margins, flat frontal soft light.\n[COMPOSITION]\nRestrained editorial framing.\n[LIGHTING]\n3000K camera-left diffused window; seamless textures receive even diffusion.\n[LENS & CAMERA]\n85mm f/2, texture detail.\n[MATERIALS & TEXTURE]\nNatural tactile surfaces, physically plausible shapes.\n[COLOR PALETTE]\nWarm paper, dark tea, muted green.\n[STYLE REFERENCE]\nMinimal sculptural still life.\n[BRAND INTEGRATION]\nRefined tea ritual.\n[QUALITY MARKERS]\nTack-sharp commercial photography.\n[AVOID]\nNo AI artifacts, text, logos, watermarks, melted geometry, distorted ellipses, waxy skin, plastic sheen, oversaturated HDR, halos, fake rectangular bands.\nresolution: 2k",
-    "ratio": "4:5",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104224_c651f916-8803-4a87-86a7-f775d256ad8b.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 17,
-    "job_id": "a6fff911-bc21-41a3-9106-0128962c8a7a",
-    "model": "nano_banana_2",
-    "name": "packaging-1",
-    "original_job_id": "bc8d432d-c6a2-45bf-8f96-8900ca729dc4",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\nRefine the previous image. Correct the two cups: both must be tall disposable unbranded matte paper takeaway cups with flat lids in a kraft paper carrier, not low ceramic mugs. Keep warm off-white paper backdrop, same light and overall placement. Remove handles and any glaze. No visible branding.\nNo text, logos, extra fingers, warped ellipses, plastic sheen, artifacts or watermarks.\nresolution: 2k",
-    "ratio": "4:5",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_110844_a6fff911-bc21-41a3-9106-0128962c8a7a.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 18,
-    "job_id": "46ce2685-b02b-4ac9-84eb-8a2a260023c8",
-    "model": "nano_banana_2",
-    "name": "hero",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\n[SUBJECT]\nPreserve the exact brown sugar tea cup in reference. [COMPOSITION] Cup on right half of wide paper seamless composition, left half naturally calm for website typography. Whole cup visible, huge sculptural presence. [LIGHTING] 3000K camera-left 45 degree window. [LENS & CAMERA] 85mm f/2. [MATERIALS & TEXTURE] Natural condensation and tea. [COLOR PALETTE] Warm offwhite, tea green, amber. [STYLE REFERENCE] Museum quality minimal still life. [BRAND INTEGRATION] Refined modern tea brand. [QUALITY MARKERS] Tack-sharp commercial photography. [AVOID] No text, logos, watermarks, warped ellipses, plastic, HDR, flat rectangular overlays.\nresolution: 2k",
-    "ratio": "16:9",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104317_46ce2685-b02b-4ac9-84eb-8a2a260023c8.png",
-    "status": "completed",
-    "type": "image"
-  },
-  {
-    "index": 19,
-    "job_id": "9fd8aa0c-a3fb-48ab-bfa8-002c57382a6b",
-    "model": "kling3_0_turbo",
-    "name": "hero-mobile",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\nSlow 15 degree orbital rotation around a single tall clear cup of brown sugar milk tea, dark pearls settling, condensation beads, sunlight raking across cup, warm off-white seamless background. Cup centered, fully visible. Gentle return to initial angle, perfectly seamless loop. Silent. No text or marks.",
-    "ratio": "9:16",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104335_9fd8aa0c-a3fb-48ab-bfa8-002c57382a6b.mp4",
-    "status": "completed",
-    "type": "video",
-    "delivery": {
-      "filename": "hero-mobile-fast.mp4",
-      "width": 540,
-      "height": 960,
-      "bytes": 72743,
-      "codec": "H.264",
-      "crf": 35,
-      "audio": false,
-      "processed_url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/633229aa-17e3-428e-8c32-c34ca7668941.mp4"
-    }
-  },
-  {
-    "index": 20,
-    "job_id": "6c304b5f-6576-4be3-89a7-66cf2a42ae4f",
-    "model": "kling3_0_turbo",
-    "name": "hero-desktop",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\nSlow 15 degree orbital rotation around a single tall clear cup of brown sugar milk tea, dark pearls settling, condensation beads, sunlight raking across cup, warm off-white seamless background. Cup on right third, left side naturally calm. Gentle return to initial angle, seamless loop. Silent. No text or marks.",
-    "ratio": "16:9",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104334_6c304b5f-6576-4be3-89a7-66cf2a42ae4f.mp4",
-    "status": "completed",
-    "type": "video"
-  },
-  {
-    "index": 21,
-    "job_id": "f410917b-0171-4fb5-bb4a-071b3855d730",
-    "model": "kling3_0_turbo",
-    "name": "pour",
-    "prompt": "Premium new-style tea brand campaign photography. Warm 3000K light, soft directional daylight from a single window 45 degrees camera-left, deep natural shadows, matte finish, no plastic gloss, no HDR, no oversaturation. Muted palette: tea-leaf green, warm paper off-white, ink black, one soft amber highlight. Editorial composition with generous negative space. Shot on 85mm, f/2.0, shallow depth of field, subtle film grain. Absolutely no text, no logos, no watermarks, no visible brand marks.\nMacro milk cascading into fresh brewed tea in slow motion, marbling ribbons, dark background, single raking hard light camera left. No hands or faces, only vessel and liquid. Silent. No text or marks.",
-    "ratio": "16:9",
-    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JGkZRNMZoKo7njRrN90ceAuh67/hf_20260913_104334_f410917b-0171-4fb5-bb4a-071b3855d730.mp4",
-    "status": "completed",
-    "type": "video"
-  }
-]
+{
+  "frames": [],
+  "status": "unavailable",
+  "reason": "Turntable generation rejected for insufficient credits; static fallback."
+}
 ````
 
-## public/press/favicon.svg
+## scripts/media-v2.py
 
-````xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="8" fill="#173f35"/><text x="8" y="43" fill="#f7f4ee" font-family="Arial,sans-serif" font-size="36" letter-spacing="-4">xo</text></svg>
+````python
+"""Compress the generated source set without changing vessel geometry or colors."""
+from pathlib import Path
+from PIL import Image
+root=Path(__file__).resolve().parents[1]
+src=Path('/workspace/scratch/6191f1019646/v2-media')
+for i in range(6):
+ im=Image.open(src/f'drink-{i}.png').convert('RGB')
+ for w in [480,960]:
+  thumb=im.resize((w,round(im.height*w/im.width)),Image.Resampling.LANCZOS)
+  for fmt,q in [('AVIF',48),('WEBP',78)]:thumb.save(root/f'public/drinks/drink-{i}-{w}.{fmt.lower()}',format=fmt,quality=q,**({'speed':8,'max_threads':2} if fmt=='AVIF' else {}))
+print('Compressed 6 images into 24 AVIF/WebP derivatives')
 ````
 
-## public/press/xoxo-green.svg
-
-````xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230"><title>XoXo Tea</title><text x="12" y="175" fill="#173f35" font-family="Arial,sans-serif" font-size="190" font-weight="600" letter-spacing="-18">xoxo</text><text x="475" y="176" fill="#173f35" font-family="Arial,sans-serif" font-size="42">tea</text></svg>
-````
-
-## public/press/xoxo-paper.svg
-
-````xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230"><title>XoXo Tea</title><text x="12" y="175" fill="#f7f4ee" font-family="Arial,sans-serif" font-size="190" font-weight="600" letter-spacing="-18">xoxo</text><text x="475" y="176" fill="#f7f4ee" font-family="Arial,sans-serif" font-size="42">tea</text></svg>
-````
-
-## scripts/documents.py
+## scripts/onepager-v2.py
 
 ````python
 from pathlib import Path
-import json,zipfile,re
+import json
 from reportlab.pdfgen import canvas
-from reportlab.lib.colors import HexColor
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.lib.colors import HexColor
 from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.lib.enums import TA_LEFT
 root=Path(__file__).resolve().parents[1]
-out=root/'public/assets';out.mkdir(exist_ok=True)
-pdfmetrics.registerFont(TTFont('Body','/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'))
-pdfmetrics.registerFont(TTFont('Bold','/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'))
-W,H=595.28,841.89
-style=ParagraphStyle('body',fontName='Body',fontSize=9.5,leading=14,textColor=HexColor('#182a25'))
-def para(c,text,x,y,w,size=9.5,bold=False):
- st=ParagraphStyle('x',parent=style,fontName='Bold' if bold else 'Body',fontSize=size,leading=size*1.45)
- p=Paragraph(text.replace('&','&amp;').replace('\n','<br/>'),st);pw,ph=p.wrap(w,800);p.drawOn(c,x,y-ph);return y-ph
+pdfmetrics.registerFont(TTFont('Sans','/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'))
+pdfmetrics.registerFont(TTFont('Mono','/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf'))
 for lang in ['uk','en']:
- d=json.loads((root/f'content/{lang}.json').read_text())
- c=canvas.Canvas(str(out/f'xoxo-one-pager-{lang}.pdf'),pagesize=(W,H));c.setTitle(d['metadata']['investors'])
- c.setFillColor(HexColor('#f7f4ee'));c.rect(0,0,W,H,fill=1,stroke=0)
- c.setFillColor(HexColor('#173f35'));c.rect(0,H-145,W,145,fill=1,stroke=0)
- c.setFillColor(HexColor('#f7f4ee'));c.setFont('Bold',46);c.drawString(38,H-64,'xoxo tea');c.setFont('Body',11);c.drawString(40,H-92,d['hero']['eyebrow']);c.setFont('Body',9);c.drawString(40,H-120,d['hero']['note'])
- y=H-175;y=para(c,d['funds']['title'],40,y,W-80,22,True)-14;y=para(c,d['funds']['body'],40,y,W-80,10)-22
- y=para(c,d['funds']['amount']+' / '+d['scale']['formats'][1][1],40,y,W-80,20,True)-18
- y=para(c,d['economics']['scenarioTitle'],40,y,W-80,12,True)-12
- cols=[40,213,386]
- for i,(rev,ebitda,pay) in enumerate([(702000,77540,27.1),(1111500,373955,5.6),(1599000,729230,2.9)]):
-  yy=para(c,d['economics']['scenarios'][i],cols[i],y,155,10,True)-8
-  for label,value in [(d['economics']['revenue'],f'{rev:,} ₴'.replace(',',' ')),(d['economics']['ebitda'],f'{ebitda:,} ₴'.replace(',',' ')),(d['economics']['payback'],(str(pay).replace('.',',') if lang=='uk' else str(pay)))]:
-   yy=para(c,label,cols[i],yy,150,8)-3;yy=para(c,value,cols[i],yy,150,12,True)-10
- y-=170
- y=para(c,d['economics']['assumptions'],40,y,W-80,8)-12
- y=para(c,d['economics']['explanation'],40,y,W-80,8)-14
- y=para(c,d['team']['name']+' / '+d['team']['role'],40,y,W-80,10,True)-10
- y=para(c,d['traction']['items'][2][0]+': '+d['traction']['items'][2][1],40,y,W-80,8)-10
- para(c,d['footer']['legal'],40,y,W-80,8)
- c.setFont('Body',8);c.drawString(40,24,'13.09.2026 / '+d['brand']);c.save()
- c=canvas.Canvas(str(out/f'xoxo-menu-{lang}.pdf'),pagesize=(W,H));c.setTitle(d['metadata']['menu']);y=H-44
- y=para(c,d['brand']+' / '+d['menu'],40,y,W-80,25,True)-15
- y=para(c,d['signature']['note'],40,y,W-80,8)-18
- for drink in d['drinks']:
-  y=para(c,drink['name']+'  /  '+str(drink['price'])+' ₴',40,y,W-80,11,True)-3
-  y=para(c,drink['base']+' · '+d['signature']['allergens']+': '+drink['allergens'],40,y,W-80,8)-13
- y=para(c,d['signature']['crossContact'],40,y,W-80,8)
- if y<28:raise RuntimeError('Menu overflow')
- c.save()
+ c=json.loads((root/f'content/{lang}.json').read_text()); f=canvas.Canvas(str(root/f'public/downloads/xoxo-{lang}.pdf'),pagesize=(595,842));f.setTitle(c['metadata']['title']);f.setFillColor(HexColor('#f3f1ea'));f.rect(0,0,595,842,fill=1,stroke=0);f.setFillColor(HexColor('#172e28'));f.setStrokeColor(HexColor('#a5afa5'))
+ def txt(text,x,y,size=10,font='Sans'):f.setFont(font,size);f.drawString(x,y,text)
+ def para(text,y,size=8):
+  p=Paragraph(text,ParagraphStyle('p',fontName='Sans',fontSize=size,leading=size*1.5,textColor=HexColor('#172e28')));_,h=p.wrap(515,1000);p.drawOn(f,40,y-h);return y-h
+ txt('XoXo',40,787,31);txt(c['status'],40,761,8,'Mono');f.line(40,744,555,744)
+ txt(' / '.join(c['thesis']),40,704,24)
+ txt('02 / '+c['sections'][1],40,659,10,'Mono')
+ for i,d in enumerate(c['product']['drinks']):
+  y=634-i*23;txt(d['name'],40,y,10);txt(str(d['price'])+' ₴',478,y,10,'Mono');f.line(40,y-8,555,y-8)
+ para(c['product']['assumption'],487,7)
+ txt('04 / '+c['sections'][3],40,429,10,'Mono')
+ rows=[(c['economics']['scenarios'][0],'702 000','77 540','27.1'),(c['economics']['scenarios'][1],'1 111 500','373 955','5.6'),(c['economics']['scenarios'][2],'1 599 000','729 230','2.9')]
+ for x,t in [(40,c['economicsExtra']['scenario']),(225,c['economics']['revenue']),(350,'EBITDA / ₴'),(465,c['economics']['payback'])]:txt(t,x,405,7,'Mono')
+ for i,row in enumerate(rows):
+  for x,t in zip([40,225,350,465],row):txt(t,x,380-i*25,9,'Mono')
+ para(c['economicsExtra']['tag']+' '+c['economics']['assumptions'],300,7)
+ txt('06 / '+c['sections'][5],40,221,10,'Mono')
+ para(c['terms']['tag']+' '+c['terms']['instrumentValue']+' / '+c['terms']['ticketValue']+' / '+c['terms']['returnValue'],199,8)
+ para(c['terms']['note'],160,7)
+ para(c['contact']['notice'],112,7)
+ f.line(40,55,555,55);txt('xoxotea.vercel.app / '+c['sourceDate'],40,38,8,'Mono');txt('01 / 01',510,38,8,'Mono');f.showPage();f.save()
 ````
 
-## scripts/qa/browser.cjs
+## scripts/qa/interactions.mjs
 
 ````javascript
-/* eslint-disable @typescript-eslint/no-require-imports -- Node audit utilities use CommonJS. */
-const { chromium } = require("playwright");
-const AxeBuilder = require("@axe-core/playwright").default;
-const fs = require("fs");
-(async () => {
-  const server = require("child_process").spawn(
-    "python3",
-    ["-m", "http.server", "4173", "--directory", "out"],
-    { stdio: "ignore" },
-  );
-  await new Promise((r) => setTimeout(r, 1000));
-  const browser = await chromium.launch({
-    headless: true,
-    executablePath: process.env.CHROMIUM_PATH || undefined,
-    args: ["--no-sandbox"],
-  });
-  const context = await browser.newContext({
-    reducedMotion: "reduce",
-    deviceScaleFactor: 1,
-  });
-  const page = await context.newPage();
-  const errors = [];
-  page.on("pageerror", (e) => errors.push(e.message));
-  page.on("console", (m) => {
-    if (["warning", "error"].includes(m.type())) errors.push(m.text());
-  });
-  const checks = [];
-  fs.mkdirSync("audit/screenshots", { recursive: true });
-  for (const width of [360, 390, 430, 768, 1024, 1280, 1440, 1920]) {
-    await page.setViewportSize({ width, height: 844 });
-    await page.goto("http://127.0.0.1:4173/", { waitUntil: "networkidle" });
-    await page.screenshot({
-      path: `audit/screenshots/home-${width}.jpg`,
-      quality: 78,
-    });
-    const layout = await page.evaluate(() => ({
-      width: innerWidth,
-      scrollWidth: document.documentElement.scrollWidth,
-      overflow: [
-        ...document.querySelectorAll("h1,h2,h3,h4,p,button,label,dt,dd"),
-      ]
-        .filter(
-          (el) =>
-            el.getClientRects().length &&
-            el.scrollWidth > el.clientWidth + 2 &&
-            getComputedStyle(el).display !== "inline",
-        )
-        .map((el) => ({
-          tag: el.tagName,
-          text: el.textContent.slice(0, 90),
-          client: el.clientWidth,
-          scroll: el.scrollWidth,
-        })),
-      smallText: [...document.querySelectorAll("p,a,label,button,dt,dd,span")]
-        .filter(
-          (e) =>
-            e.getClientRects().length &&
-            parseFloat(getComputedStyle(e).fontSize) < 15,
-        )
-        .map((e) => e.textContent.slice(0, 40)),
-    }));
-    checks.push({ route: "/", ...layout });
-  }
-  const accessibility = [];
-  for (const route of [
-    "/",
-    "/en/",
-    "/menu/",
-    "/en/menu/",
-    "/investors/",
-    "/en/investors/",
-    "/press/",
-    "/en/press/",
-  ]) {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("http://127.0.0.1:4173" + route, {
-      waitUntil: "networkidle",
-    });
-    await page.screenshot({
-      path: `audit/screenshots/${route.replaceAll("/", "-") || "home"}-full.png`,
-      fullPage: true,
-    });
-    const a = await new AxeBuilder({ page })
-      .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
-      .analyze();
-    accessibility.push({
-      route,
-      violations: a.violations.map((v) => ({
-        id: v.id,
-        impact: v.impact,
-        nodes: v.nodes.map((n) => ({
-          target: n.target,
-          summary: n.failureSummary,
-        })),
-      })),
-    });
-  }
-  await page.goto("http://127.0.0.1:4173/?ref=qa&ut m_source=test");
-  await page.locator("#cups").fill("130");
-  await page.locator("#ticket").fill("180");
-  const calculated = await page.locator(".ebitda").textContent();
-  const downloads = [];
-  await page.locator("#meeting-name").fill("QA test");
-  await page.locator("#meeting-contact").fill("test@example.com");
-  await page
-    .locator("#meeting input[type=checkbox]")
-    .count()
-    .catch(() => {});
-  await page.locator(".contact input[type=checkbox]").check();
-  const downloadPromise = page.waitForEvent("download");
-  await page.locator(".contact button[type=submit]").click();
-  const download = await downloadPromise;
-  await download.saveAs("/tmp/xoxo-request.txt");
-  downloads.push(fs.readFileSync("/tmp/xoxo-request.txt", "utf8"));
-  await page.goto("http://127.0.0.1:4173/");
-  const videoCount = await page.locator("video[src]").count();
-  await page.keyboard.press("Tab");
-  const focus = await page.evaluate(() => ({
-    text: document.activeElement.textContent,
-    outline: getComputedStyle(document.activeElement).outlineStyle,
-  }));
-  const keyboard = [];
-  for (let i = 0; i < 90; i++) {
-    await page.keyboard.press("Tab");
-    keyboard.push(
-      await page.evaluate(() => ({
-        tag: document.activeElement.tagName,
-        text: (
-          document.activeElement.textContent ||
-          document.activeElement.getAttribute("aria-label") ||
-          ""
-        ).slice(0, 50),
-        outline: getComputedStyle(document.activeElement).outlineStyle,
-      })),
-    );
-  }
-  const language = [];
-  for (const route of ["/", "/menu/", "/investors/", "/press/"]) {
-    await page.goto("http://127.0.0.1:4173" + route);
-    await page.locator(".language").click();
-    await page.waitForLoadState("networkidle");
-    language.push({
-      route,
-      to: new URL(page.url()).pathname,
-      lang: await page.locator("html").getAttribute("lang"),
-    });
-  }
-  fs.writeFileSync(
-    "audit/keyboard-locale.json",
-    JSON.stringify({ keyboard, language }, null, 2),
-  );
-  fs.writeFileSync(
-    "audit/browser.json",
-    JSON.stringify(
-      {
-        checks,
-        accessibility,
-        errors,
-        calculated,
-        downloads,
-        videoCount,
-        focus,
-      },
-      null,
-      2,
-    ),
-  );
-  console.log(
-    JSON.stringify(
-      { checks, accessibility, errors, calculated, videoCount, focus },
-      null,
-      2,
-    ),
-  );
-  await browser.close();
-  server.kill();
-})();
-````
+import fs from 'node:fs';
+import cp from 'node:child_process';
+import zlib from 'node:zlib';
+import {chromium} from 'playwright';
 
-## scripts/qa/form-fixture.cjs
-
-````javascript
-/* eslint-disable @typescript-eslint/no-require-imports -- Node audit utilities use CommonJS. */
-const { chromium } = require("playwright");
-const cp = require("child_process"),
-  fs = require("fs");
-(async () => {
-  const server = cp.spawn(
-    "python3",
-    ["-m", "http.server", "4173", "--directory", "out"],
-    { stdio: "ignore" },
-  );
-  await new Promise((r) => setTimeout(r, 600));
-  const browser = await chromium.launch({
-    headless: true,
-    executablePath: process.env.CHROMIUM_PATH || undefined,
-    args: ["--no-sandbox"],
-  });
-  try {
-    const page = await browser.newPage({ reducedMotion: "reduce" });
-    const en = JSON.parse(fs.readFileSync("content/en.json", "utf8"));
-    const payloads = [];
-    let fail = true;
-    await page.route("https://xoxo-test.invalid/lead", async (route) => {
-      payloads.push(route.request().postDataJSON());
-      await route.fulfill({
-        status: fail ? 500 : 201,
-        contentType: "application/json",
-        body: "{}",
-      });
-    });
-    await page.goto("http://127.0.0.1:4173/en/?ref=qa&utm_source=fixture", {
-      waitUntil: "networkidle",
-    });
-    await page.locator("#meeting-name").fill("   ");
-    await page.locator("#meeting-contact").fill("test@example.com");
-    await page.locator(".contact input[type=checkbox]").check();
-    await page.locator(".contact button[type=submit]").click();
-    const whitespaceRejected = await page
-      .locator("#meeting-name")
-      .evaluate((e) => !e.validity.valid);
-    await page.locator("#meeting-name").fill("QA synthetic");
-    await page.locator("#meeting-contact").fill("invalid");
-    await page.locator(".contact button[type=submit]").click();
-    const invalidRejected = await page
-      .locator("#meeting-contact")
-      .evaluate((e) => !e.validity.valid);
-    await page.locator("#meeting-contact").fill("test@example.com");
-    await page.locator("#meeting-kind").selectOption("data-room");
-    await page.locator(".contact button[type=submit]").click();
-    await page.getByText(en.contact.error, { exact: true }).waitFor();
-    fail = false;
-    await page.locator(".contact button[type=submit]").click();
-    await page.getByText(en.contact.sent, { exact: true }).waitFor();
-    const result = {
-      fixtureOnly: true,
-      realDestinationVerified: false,
-      whitespaceRejected,
-      invalidRejected,
-      errorThenSuccess: true,
-      payloads,
-    };
-    if (
-      !whitespaceRejected ||
-      !invalidRejected ||
-      payloads.length !== 2 ||
-      payloads[1].attribution.ref !== "qa"
-    )
-      throw new Error(JSON.stringify(result));
-    fs.writeFileSync(
-      "audit/form-fixture.json",
-      JSON.stringify(result, null, 2),
-    );
-    console.log(JSON.stringify(result));
-  } finally {
-    await browser.close();
-    server.kill();
-  }
-})();
+const server=cp.spawn('node',['scripts/qa/server.cjs','out','4176']);
+const base='http://127.0.0.1:4176';
+for(let i=0;i<30;i++){try{await fetch(base);break;}catch{await new Promise(r=>setTimeout(r,100));}}
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox','--disable-dev-shm-usage']});
+const results=[];
+try{
+ for(const width of [390,1440]){
+  const context=await browser.newContext({viewport:{width,height:900},isMobile:width<768,hasTouch:width<768});
+  const page=await context.newPage();const scripts=new Set();
+  page.on('response',r=>{if(new URL(r.url()).pathname.endsWith('.js'))scripts.add(new URL(r.url()).pathname);});
+  await page.goto(base);await page.waitForTimeout(400);
+  const at=async(selector,fraction=0)=>{await page.locator(selector).evaluate((e,f)=>scrollTo({top:e.getBoundingClientRect().top+scrollY-100+f*Math.max(1,e.clientHeight-innerHeight),behavior:'instant'}),fraction);await page.waitForTimeout(100);};
+  await at('[data-cup-stage]');
+  const parallax=await page.locator('[data-depth]').evaluateAll(es=>es.map(e=>e.style.transform));
+  const progress=await page.locator('.top-progress i').evaluate(e=>e.style.transform);
+  await at('.gallery');await page.locator('.gallery').evaluate(e=>e.scrollTo({left:e.scrollWidth,behavior:'instant'}));await page.waitForTimeout(200);
+  const gallery=await page.locator('[data-gallery-index]').innerText();
+  const cycle=[];
+  for(const f of [0,.6,.99]){await at('[data-economics]',f);cycle.push(await page.locator('.scenario-tabs [aria-pressed=true]').innerText());}
+  await page.locator('.scenario-tabs button').nth(1).click();
+  const conservative=await page.locator('[data-ebitda]').innerText();
+  await page.locator('#rent').evaluate(e=>{e.focus();});await page.keyboard.press('ArrowRight');
+  const changed=await page.locator('[data-ebitda]').innerText();
+  await page.locator('.currency button').nth(1).click();const usd=await page.locator('[data-ebitda]').innerText();
+  await at('#contact');
+  await page.locator('input[name=name]').fill('Audit Example');
+  await page.locator('input[name=contact]').fill('bad-contact');await page.locator('input[name=consent]').check();await page.locator('button.cta').click();
+  const invalid=await page.locator('[role=alert]').count();
+  await page.locator('input[name=contact]').fill('audit@example.invalid');
+  const downloaded=page.waitForEvent('download');await page.locator('button.cta').click();await downloaded;
+  const fallback=await page.locator('.confirmation').innerText();
+  await page.locator('.confirmation button').click();
+  const press=await page.locator('.magnet').last().evaluate(e=>{e.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerType:'touch'}));const value=e.style.transform;e.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,pointerType:'touch'}));return value;});
+  await page.waitForTimeout(350);
+  const gzipJs=[...scripts].reduce((sum,path)=>sum+zlib.gzipSync(fs.readFileSync('out'+path)).length,0);
+  await page.locator('header nav a').first().click();await page.waitForURL('**/menu/');await page.waitForTimeout(500);
+  const transition=await page.locator('.page-wipe').evaluate(e=>getComputedStyle(e).visibility);
+  results.push({width,parallax,progress,gallery,cycle,conservative,changed,usd,invalid,fallback,press,gzipJs,transition});
+  await context.close();
+ }
+ fs.writeFileSync('audit/interactions.json',JSON.stringify({environment:'Emulated Chromium; does not certify physical Android 60fps',results},null,2));
+ console.log(JSON.stringify(results));
+}finally{await browser.close();server.kill();}
 ````
 
 ## scripts/qa/lighthouse.mjs
@@ -5992,102 +5210,1353 @@ try {
 }
 ````
 
-## scripts/qa/motion.cjs
+## scripts/qa/package-lock.json
 
-````javascript
-/* eslint-disable @typescript-eslint/no-require-imports -- Node audit utility uses CommonJS. */
-const { chromium } = require("playwright");
-const fs = require("fs"),
-  cp = require("child_process"),
-  zlib = require("zlib");
-(async () => {
-  const server = cp.spawn(
-    "python3",
-    ["-m", "http.server", "4173", "--directory", "out"],
-    { stdio: "ignore" },
-  );
-  await new Promise((r) => setTimeout(r, 600));
-  const browser = await chromium.launch({
-    headless: true,
-    executablePath: process.env.CHROMIUM_PATH || undefined,
-    args: ["--no-sandbox"],
-  });
-  try {
-    const page = await browser.newPage({
-      viewport: { width: 390, height: 844 },
-    });
-    const scripts = new Set(),
-      errors = [];
-    page.on("request", (r) => {
-      if (r.resourceType() === "script") scripts.add(new URL(r.url()).pathname);
-    });
-    page.on("pageerror", (e) => errors.push(e.message));
-    await page.goto("http://127.0.0.1:4173/", { waitUntil: "networkidle" });
-    await page.waitForFunction(
-      () => document.querySelector("#hero-film-mobile").currentTime > 0,
-    );
-    const mobile = await page
-      .locator("#hero-film-mobile")
-      .evaluate((v) => ({
-        src: v.getAttribute("src"),
-        playing: !v.paused,
-        readyState: v.readyState,
-      }));
-    await page.screenshot({
-      path: "audit/screenshots/hero-playing-390.jpg",
-      quality: 78,
-    });
-    await page.locator(".film-toggle").click();
-    const paused = await page
-      .locator("#hero-film-mobile")
-      .evaluate((v) => v.paused);
-    await page.setViewportSize({ width: 1440, height: 900 });
-    await page.waitForFunction(
-      () => document.querySelector("#hero-film-desktop").currentTime > 0,
-    );
-    const desktop = await page
-      .locator("#hero-film-desktop")
-      .evaluate((v) => ({ src: v.getAttribute("src"), playing: !v.paused }));
-    const hiddenPaused = await page
-      .locator("#hero-film-mobile")
-      .evaluate((v) => v.paused);
-    await page.locator("#cups").fill("135");
-    await page.waitForTimeout(350);
-    const jsGzipBytes = [...scripts]
-      .filter((x) => x.endsWith(".js"))
-      .reduce(
-        (n, p) => n + zlib.gzipSync(fs.readFileSync("out" + p)).length,
-        0,
-      );
-    await page.emulateMedia({ reducedMotion: "reduce" });
-    await page.waitForTimeout(200);
-    const reducedSources = await page.locator("video[src]").count();
-    const report = {
-      mobile,
-      paused,
-      desktop,
-      hiddenPaused,
-      reducedSources,
-      jsGzipBytesAfterCalculatorInteraction: jsGzipBytes,
-      scriptCount: scripts.size,
-      errors,
-    };
-    if (
-      !mobile.playing ||
-      !paused ||
-      !desktop.playing ||
-      !hiddenPaused ||
-      reducedSources !== 0 ||
-      errors.length
-    )
-      throw new Error(JSON.stringify(report));
-    fs.writeFileSync("audit/motion.json", JSON.stringify(report, null, 2));
-    console.log(JSON.stringify(report));
-  } finally {
-    await browser.close();
-    server.kill();
+````json
+{
+  "name": "qa",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "@axe-core/playwright": "4.13.0",
+        "chrome-launcher": "1.2.1",
+        "lighthouse": "13.4.1",
+        "playwright": "1.62.1"
+      }
+    },
+    "node_modules/@axe-core/playwright": {
+      "version": "4.13.0",
+      "resolved": "https://registry.npmjs.org/@axe-core/playwright/-/playwright-4.13.0.tgz",
+      "integrity": "sha512-6YLx+kxXu5GJceG4ozFg+33a2EMTdjYwWGloJ3sb9Kta5pp+ZNS53uxGVog5JetIY8s++P5UrtX+cri+u0VAVg==",
+      "license": "MPL-2.0",
+      "dependencies": {
+        "axe-core": "~4.13.0"
+      },
+      "peerDependencies": {
+        "playwright-core": ">= 1.0.0"
+      }
+    },
+    "node_modules/@formatjs/ecma402-abstract": {
+      "version": "2.3.6",
+      "resolved": "https://registry.npmjs.org/@formatjs/ecma402-abstract/-/ecma402-abstract-2.3.6.tgz",
+      "integrity": "sha512-HJnTFeRM2kVFVr5gr5kH1XP6K0JcJtE7Lzvtr3FS/so5f1kpsqqqxy5JF+FRaO6H2qmcMfAUIox7AJteieRtVw==",
+      "license": "MIT",
+      "dependencies": {
+        "@formatjs/fast-memoize": "2.2.7",
+        "@formatjs/intl-localematcher": "0.6.2",
+        "decimal.js": "^10.4.3",
+        "tslib": "^2.8.0"
+      }
+    },
+    "node_modules/@formatjs/fast-memoize": {
+      "version": "2.2.7",
+      "resolved": "https://registry.npmjs.org/@formatjs/fast-memoize/-/fast-memoize-2.2.7.tgz",
+      "integrity": "sha512-Yabmi9nSvyOMrlSeGGWDiH7rf3a7sIwplbvo/dlz9WCIjzIQAfy1RMf4S0X3yG724n5Ghu2GmEl5NJIV6O9sZQ==",
+      "license": "MIT",
+      "dependencies": {
+        "tslib": "^2.8.0"
+      }
+    },
+    "node_modules/@formatjs/icu-messageformat-parser": {
+      "version": "2.11.4",
+      "resolved": "https://registry.npmjs.org/@formatjs/icu-messageformat-parser/-/icu-messageformat-parser-2.11.4.tgz",
+      "integrity": "sha512-7kR78cRrPNB4fjGFZg3Rmj5aah8rQj9KPzuLsmcSn4ipLXQvC04keycTI1F7kJYDwIXtT2+7IDEto842CfZBtw==",
+      "license": "MIT",
+      "dependencies": {
+        "@formatjs/ecma402-abstract": "2.3.6",
+        "@formatjs/icu-skeleton-parser": "1.8.16",
+        "tslib": "^2.8.0"
+      }
+    },
+    "node_modules/@formatjs/icu-skeleton-parser": {
+      "version": "1.8.16",
+      "resolved": "https://registry.npmjs.org/@formatjs/icu-skeleton-parser/-/icu-skeleton-parser-1.8.16.tgz",
+      "integrity": "sha512-H13E9Xl+PxBd8D5/6TVUluSpxGNvFSlN/b3coUp0e0JpuWXXnQDiavIpY3NnvSp4xhEMoXyyBvVfdFX8jglOHQ==",
+      "license": "MIT",
+      "dependencies": {
+        "@formatjs/ecma402-abstract": "2.3.6",
+        "tslib": "^2.8.0"
+      }
+    },
+    "node_modules/@formatjs/intl-localematcher": {
+      "version": "0.6.2",
+      "resolved": "https://registry.npmjs.org/@formatjs/intl-localematcher/-/intl-localematcher-0.6.2.tgz",
+      "integrity": "sha512-XOMO2Hupl0wdd172Y06h6kLpBz6Dv+J4okPLl4LPtzbr8f66WbIoy4ev98EBuZ6ZK4h5ydTN6XneT4QVpD7cdA==",
+      "license": "MIT",
+      "dependencies": {
+        "tslib": "^2.8.0"
+      }
+    },
+    "node_modules/@opentelemetry/api": {
+      "version": "1.9.1",
+      "resolved": "https://registry.npmjs.org/@opentelemetry/api/-/api-1.9.1.tgz",
+      "integrity": "sha512-gLyJlPHPZYdAk1JENA9LeHejZe1Ti77/pTeFm/nMXmQH/HFZlcS/O2XJB+L8fkbrNSqhdtlvjBVjxwUYanNH5Q==",
+      "license": "Apache-2.0",
+      "engines": {
+        "node": ">=8.0.0"
+      }
+    },
+    "node_modules/@opentelemetry/api-logs": {
+      "version": "0.220.0",
+      "resolved": "https://registry.npmjs.org/@opentelemetry/api-logs/-/api-logs-0.220.0.tgz",
+      "integrity": "sha512-CmVa4ImJ+ynfrPMNaAXHET6Bhb44SwzmfyVJFq9ni2jgXJR/l7C6gfVFddNmHP+ZOkP9cf4f9DBe68qVLTHc9w==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@opentelemetry/api": "^1.3.0"
+      },
+      "engines": {
+        "node": ">=8.0.0"
+      }
+    },
+    "node_modules/@opentelemetry/core": {
+      "version": "2.11.0",
+      "resolved": "https://registry.npmjs.org/@opentelemetry/core/-/core-2.11.0.tgz",
+      "integrity": "sha512-7YP44XH0tV6+Mb54x2YGf84i7yi+31MBZlE8JwvozkxyTvXbSp10X7cI7YE49ChJ3shMJoBmCJF3+1QFBJctGA==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@opentelemetry/semantic-conventions": "^1.29.0"
+      },
+      "engines": {
+        "node": "^18.19.0 || >=20.6.0"
+      },
+      "peerDependencies": {
+        "@opentelemetry/api": ">=1.0.0 <1.10.0"
+      }
+    },
+    "node_modules/@opentelemetry/instrumentation": {
+      "version": "0.220.0",
+      "resolved": "https://registry.npmjs.org/@opentelemetry/instrumentation/-/instrumentation-0.220.0.tgz",
+      "integrity": "sha512-xQx3E2WxP1mDvKzxLxX+CTCtNLa560YJZ3087qYHerl2YmiKpv7AH+dAy7vmx+eVrZ5BwhfWUAVoKOoxCNHcpw==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@opentelemetry/api-logs": "0.220.0",
+        "import-in-the-middle": "^3.0.0",
+        "require-in-the-middle": "^8.0.0"
+      },
+      "engines": {
+        "node": "^18.19.0 || >=20.6.0"
+      },
+      "peerDependencies": {
+        "@opentelemetry/api": "^1.3.0"
+      }
+    },
+    "node_modules/@opentelemetry/resources": {
+      "version": "2.11.0",
+      "resolved": "https://registry.npmjs.org/@opentelemetry/resources/-/resources-2.11.0.tgz",
+      "integrity": "sha512-Ie7+8q8MDF4FAEQCKVMTx3ReUvxiIAgIiiW3c9JdmP8+HMcDy20puT+AHjexnExgnbvBxjQ9fjkFDWrikJ2jQA==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@opentelemetry/core": "2.11.0",
+        "@opentelemetry/semantic-conventions": "^1.29.0"
+      },
+      "engines": {
+        "node": "^18.19.0 || >=20.6.0"
+      },
+      "peerDependencies": {
+        "@opentelemetry/api": ">=1.3.0 <1.10.0"
+      }
+    },
+    "node_modules/@opentelemetry/sdk-trace": {
+      "version": "2.11.0",
+      "resolved": "https://registry.npmjs.org/@opentelemetry/sdk-trace/-/sdk-trace-2.11.0.tgz",
+      "integrity": "sha512-fFnTqGm8/G73GQVnxYi7LXa1ZVYEUvgL6XI1LpvV0bPC7WQ/ZGgKxCSl8FnlZBKto9JHHEFTO6s6CUpvvtwFrA==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@opentelemetry/core": "2.11.0",
+        "@opentelemetry/resources": "2.11.0",
+        "@opentelemetry/semantic-conventions": "^1.29.0"
+      },
+      "engines": {
+        "node": "^18.19.0 || >=20.6.0"
+      },
+      "peerDependencies": {
+        "@opentelemetry/api": ">=1.3.0 <1.10.0"
+      }
+    },
+    "node_modules/@opentelemetry/sdk-trace-base": {
+      "version": "2.11.0",
+      "resolved": "https://registry.npmjs.org/@opentelemetry/sdk-trace-base/-/sdk-trace-base-2.11.0.tgz",
+      "integrity": "sha512-H19x/TX/LZdqiYOjM7fqtSxwlplC5pgelavqbQdHbhdq0q/AI/TGkM2dfGuuynTXmJPeF2HoZVoPDu+TGoW78A==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@opentelemetry/core": "2.11.0",
+        "@opentelemetry/resources": "2.11.0",
+        "@opentelemetry/sdk-trace": "2.11.0",
+        "@opentelemetry/semantic-conventions": "^1.29.0"
+      },
+      "engines": {
+        "node": "^18.19.0 || >=20.6.0"
+      },
+      "peerDependencies": {
+        "@opentelemetry/api": ">=1.3.0 <1.10.0"
+      }
+    },
+    "node_modules/@opentelemetry/semantic-conventions": {
+      "version": "1.43.0",
+      "resolved": "https://registry.npmjs.org/@opentelemetry/semantic-conventions/-/semantic-conventions-1.43.0.tgz",
+      "integrity": "sha512-eSYWTm620tTk45EKSedaUL8MFYI8hW164hIXsgIHyxu3VobUB3fFCu5t0hQby6OoWRPsG1KkKUG2M5UadiLiVg==",
+      "license": "Apache-2.0",
+      "engines": {
+        "node": ">=14"
+      }
+    },
+    "node_modules/@paulirish/trace_engine": {
+      "version": "0.0.65",
+      "resolved": "https://registry.npmjs.org/@paulirish/trace_engine/-/trace_engine-0.0.65.tgz",
+      "integrity": "sha512-Qsm6F5C8xf6ZzQXbQc2+wcpe6sggfs/gvc/ytqSurdvYg3kyW0ECHCqE0CWBKZpqgjVfPNX9c7SCS3r2nEIRGg==",
+      "license": "BSD-3-Clause",
+      "dependencies": {
+        "legacy-javascript": "latest",
+        "third-party-web": "latest"
+      }
+    },
+    "node_modules/@puppeteer/browsers": {
+      "version": "3.2.2",
+      "resolved": "https://registry.npmjs.org/@puppeteer/browsers/-/browsers-3.2.2.tgz",
+      "integrity": "sha512-q2BU4YfO9h/Wt7IcWPcggpOOqLk2Tbs1hDwolvKZrweRjy751OJBKMN9zO5bfD0pzU7X/tvKw/exQds4pM/LOg==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "modern-tar": "^0.8.4",
+        "yargs": "^18.0.0"
+      },
+      "bin": {
+        "browsers": "lib/main-cli.js"
+      },
+      "engines": {
+        "node": ">=22.12.0"
+      },
+      "peerDependencies": {
+        "proxy-agent": ">=8.0.1",
+        "yauzl": "^2.10.0 || ^3.4.0"
+      },
+      "peerDependenciesMeta": {
+        "proxy-agent": {
+          "optional": true
+        },
+        "yauzl": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/ansi-regex": {
+      "version": "6.3.0",
+      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.3.0.tgz",
+      "integrity": "sha512-WpDfL7NO6j7tH88IDBNVdUJxDh9nmCteAVW9dsep846XdwF4naCBK+/tGLX3KJgcpgMRXCFlTM2hKGoK9FsdrQ==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/chalk/ansi-regex?sponsor=1"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/ansi-styles": {
+      "version": "6.2.3",
+      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz",
+      "integrity": "sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/chalk/ansi-styles?sponsor=1"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/cliui": {
+      "version": "9.0.1",
+      "resolved": "https://registry.npmjs.org/cliui/-/cliui-9.0.1.tgz",
+      "integrity": "sha512-k7ndgKhwoQveBL+/1tqGJYNz097I7WOvwbmmU2AR5+magtbjPWQTS1C5vzGkBC8Ym8UWRzfKUzUUqFLypY4Q+w==",
+      "license": "ISC",
+      "dependencies": {
+        "string-width": "^7.2.0",
+        "strip-ansi": "^7.1.0",
+        "wrap-ansi": "^9.0.0"
+      },
+      "engines": {
+        "node": ">=20"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/cliui/node_modules/string-width": {
+      "version": "7.2.0",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz",
+      "integrity": "sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==",
+      "license": "MIT",
+      "dependencies": {
+        "emoji-regex": "^10.3.0",
+        "get-east-asian-width": "^1.0.0",
+        "strip-ansi": "^7.1.0"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/emoji-regex": {
+      "version": "10.6.0",
+      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz",
+      "integrity": "sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==",
+      "license": "MIT"
+    },
+    "node_modules/@puppeteer/browsers/node_modules/string-width": {
+      "version": "8.2.2",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-8.2.2.tgz",
+      "integrity": "sha512-GaPUh5gfdrYzqeVNZvUfT23vYYxXzKYidUcnMtJg/3rxRV63EFZy3k6xfKlmfeJD0176lnUV/Usr3XcwSvFzpg==",
+      "license": "MIT",
+      "dependencies": {
+        "get-east-asian-width": "^1.5.0",
+        "strip-ansi": "^7.1.2"
+      },
+      "engines": {
+        "node": ">=20"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/strip-ansi": {
+      "version": "7.2.0",
+      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz",
+      "integrity": "sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==",
+      "license": "MIT",
+      "dependencies": {
+        "ansi-regex": "^6.2.2"
+      },
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/chalk/strip-ansi?sponsor=1"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/wrap-ansi": {
+      "version": "9.0.2",
+      "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz",
+      "integrity": "sha512-42AtmgqjV+X1VpdOfyTGOYRi0/zsoLqtXQckTmqTeybT+BDIbM/Guxo7x3pE2vtpr1ok6xRqM9OpBe+Jyoqyww==",
+      "license": "MIT",
+      "dependencies": {
+        "ansi-styles": "^6.2.1",
+        "string-width": "^7.0.0",
+        "strip-ansi": "^7.1.0"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/chalk/wrap-ansi?sponsor=1"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/wrap-ansi/node_modules/string-width": {
+      "version": "7.2.0",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz",
+      "integrity": "sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==",
+      "license": "MIT",
+      "dependencies": {
+        "emoji-regex": "^10.3.0",
+        "get-east-asian-width": "^1.0.0",
+        "strip-ansi": "^7.1.0"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/yargs": {
+      "version": "18.1.0",
+      "resolved": "https://registry.npmjs.org/yargs/-/yargs-18.1.0.tgz",
+      "integrity": "sha512-2rAgRKu54VsHkqI0/tYkmluGXHD4KW7yZoycuqDQ15QOTnc2VVfy0nN/1eMhnQLO00A+dwtK20xuCnc1YGeUyg==",
+      "license": "MIT",
+      "dependencies": {
+        "cliui": "^9.0.1",
+        "escalade": "^3.1.1",
+        "get-caller-file": "^2.0.5",
+        "string-width": "^8.2.1",
+        "y18n": "^5.0.5",
+        "yargs-parser": "^22.0.0"
+      },
+      "engines": {
+        "node": "^20.19.0 || ^22.12.0 || >=23"
+      }
+    },
+    "node_modules/@puppeteer/browsers/node_modules/yargs-parser": {
+      "version": "22.0.0",
+      "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-22.0.0.tgz",
+      "integrity": "sha512-rwu/ClNdSMpkSrUb+d6BRsSkLUq1fmfsY6TOpYzTwvwkg1/NRG85KBy3kq++A8LKQwX6lsu+aWad+2khvuXrqw==",
+      "license": "ISC",
+      "engines": {
+        "node": "^20.19.0 || ^22.12.0 || >=23"
+      }
+    },
+    "node_modules/@sentry/conventions": {
+      "version": "0.16.0",
+      "resolved": "https://registry.npmjs.org/@sentry/conventions/-/conventions-0.16.0.tgz",
+      "integrity": "sha512-fO9PLmHdVURcSPUpWCItWAtgKiMwGdJHbovoSEyLplX5sxs2ugvI4CBPTrkkgqhObnZOD0CnWBKDzSVQYBKEyQ==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=14"
+      }
+    },
+    "node_modules/@sentry/core": {
+      "version": "10.74.0",
+      "resolved": "https://registry.npmjs.org/@sentry/core/-/core-10.74.0.tgz",
+      "integrity": "sha512-u9rY8vcZfktccwm6LznfCZlqP5C9A+p76r4/pFS1grqpuTO0m21Cl8rosnlESrDGP/Xd9tfr91rWYk0jPH8jeQ==",
+      "license": "MIT",
+      "dependencies": {
+        "@sentry/conventions": "^0.16.0"
+      },
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@sentry/node": {
+      "version": "10.74.0",
+      "resolved": "https://registry.npmjs.org/@sentry/node/-/node-10.74.0.tgz",
+      "integrity": "sha512-u1wsarTOWHn9CCev81Da5T4IQHZgdcosXRfX2+4DMII/lVJMBYesKixTQuMwXexjVG2+pkf16zTmgjZDa+75jA==",
+      "license": "MIT",
+      "dependencies": {
+        "@opentelemetry/api": "^1.9.1",
+        "@opentelemetry/instrumentation": "^0.220.0",
+        "@opentelemetry/sdk-trace-base": "^2.9.0",
+        "@sentry/conventions": "^0.16.0",
+        "@sentry/core": "10.74.0",
+        "@sentry/node-core": "10.74.0",
+        "@sentry/opentelemetry": "10.74.0",
+        "@sentry/server-utils": "10.74.0",
+        "import-in-the-middle": "^3.0.0"
+      },
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@sentry/node-core": {
+      "version": "10.74.0",
+      "resolved": "https://registry.npmjs.org/@sentry/node-core/-/node-core-10.74.0.tgz",
+      "integrity": "sha512-btgZXcGmkOGgojbxHo/gfGiyqYpzC9E8zVR78Q3MtM6Xnemk9gwJiQlhNmEX/FM+C36WBRPZrdcZcnMaJhbfJw==",
+      "license": "MIT",
+      "dependencies": {
+        "@sentry/conventions": "^0.16.0",
+        "@sentry/core": "10.74.0",
+        "@sentry/opentelemetry": "10.74.0",
+        "import-in-the-middle": "^3.0.0"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "peerDependencies": {
+        "@opentelemetry/api": "^1.9.0",
+        "@opentelemetry/core": "^1.30.1 || ^2.1.0",
+        "@opentelemetry/exporter-trace-otlp-http": ">=0.57.0 <1",
+        "@opentelemetry/instrumentation": ">=0.57.1 <1",
+        "@opentelemetry/sdk-trace-base": "^1.30.1 || ^2.1.0"
+      },
+      "peerDependenciesMeta": {
+        "@opentelemetry/api": {
+          "optional": true
+        },
+        "@opentelemetry/core": {
+          "optional": true
+        },
+        "@opentelemetry/exporter-trace-otlp-http": {
+          "optional": true
+        },
+        "@opentelemetry/instrumentation": {
+          "optional": true
+        },
+        "@opentelemetry/sdk-trace-base": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/@sentry/opentelemetry": {
+      "version": "10.74.0",
+      "resolved": "https://registry.npmjs.org/@sentry/opentelemetry/-/opentelemetry-10.74.0.tgz",
+      "integrity": "sha512-ua5mt0NDBfye+/ACKjAw9Ad2i+y42lOLvhxXZepZXjszblMz80MEsIZflMB7uLZUCTNH7MbZN8tlzCy8KsJKmQ==",
+      "license": "MIT",
+      "dependencies": {
+        "@sentry/conventions": "^0.16.0",
+        "@sentry/core": "10.74.0"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "peerDependencies": {
+        "@opentelemetry/api": "^1.9.0",
+        "@opentelemetry/core": "^1.30.1 || ^2.1.0",
+        "@opentelemetry/sdk-trace-base": "^1.30.1 || ^2.1.0"
+      }
+    },
+    "node_modules/@sentry/server-utils": {
+      "version": "10.74.0",
+      "resolved": "https://registry.npmjs.org/@sentry/server-utils/-/server-utils-10.74.0.tgz",
+      "integrity": "sha512-AHmPIGE8yVRyywpZRhAkm/H0cHTgsQSPhFZFbaeQLcYHFE/eOP9bAMh8Nj/Apr7WMagFXYHd04tR/63BxtLgKw==",
+      "license": "MIT",
+      "dependencies": {
+        "@sentry/conventions": "^0.16.0",
+        "@sentry/core": "10.74.0"
+      },
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@types/node": {
+      "version": "26.5.1",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-26.5.1.tgz",
+      "integrity": "sha512-CzNm2FezW4VR/LjG6yUdiEgLE/rAQ9Slj5gCu/C2VrdcW7I0ahNZ8DRbHT7zOZ6r3ONgd/bsQIeSaoDGrd1C6g==",
+      "license": "MIT",
+      "dependencies": {
+        "undici-types": "~8.9.0"
+      }
+    },
+    "node_modules/ansi-colors": {
+      "version": "4.1.3",
+      "resolved": "https://registry.npmjs.org/ansi-colors/-/ansi-colors-4.1.3.tgz",
+      "integrity": "sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=6"
+      }
+    },
+    "node_modules/ansi-regex": {
+      "version": "5.0.1",
+      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
+      "integrity": "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "node_modules/ansi-styles": {
+      "version": "4.3.0",
+      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+      "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==",
+      "license": "MIT",
+      "dependencies": {
+        "color-convert": "^2.0.1"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "funding": {
+        "url": "https://github.com/chalk/ansi-styles?sponsor=1"
+      }
+    },
+    "node_modules/atomically": {
+      "version": "2.1.1",
+      "resolved": "https://registry.npmjs.org/atomically/-/atomically-2.1.1.tgz",
+      "integrity": "sha512-P4w9o2dqARji6P7MHprklbfiArZAWvo07yW7qs3pdljb3BWr12FIB7W+p0zJiuiVsUpRO0iZn1kFFcpPegg0tQ==",
+      "license": "MIT",
+      "dependencies": {
+        "stubborn-fs": "^2.0.0",
+        "when-exit": "^2.1.4"
+      }
+    },
+    "node_modules/axe-core": {
+      "version": "4.13.0",
+      "resolved": "https://registry.npmjs.org/axe-core/-/axe-core-4.13.0.tgz",
+      "integrity": "sha512-UzGt8zg7Ny8djbYMhxl2zuEevVa7r2gJjYY5Lwr1xM7+XU2nd6CkIWFTVcCIbAP63vSz71NaVyyuSk9lHKcy0A==",
+      "license": "MPL-2.0",
+      "engines": {
+        "node": ">=4"
+      }
+    },
+    "node_modules/chrome-launcher": {
+      "version": "1.2.1",
+      "resolved": "https://registry.npmjs.org/chrome-launcher/-/chrome-launcher-1.2.1.tgz",
+      "integrity": "sha512-qmFR5PLMzHyuNJHwOloHPAHhbaNglkfeV/xDtt5b7xiFFyU1I+AZZX0PYseMuhenJSSirgxELYIbswcoc+5H4A==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@types/node": "*",
+        "escape-string-regexp": "^4.0.0",
+        "is-wsl": "^2.2.0",
+        "lighthouse-logger": "^2.0.1"
+      },
+      "bin": {
+        "print-chrome-path": "bin/print-chrome-path.cjs"
+      },
+      "engines": {
+        "node": ">=12.13.0"
+      }
+    },
+    "node_modules/chromium-bidi": {
+      "version": "17.0.2",
+      "resolved": "https://registry.npmjs.org/chromium-bidi/-/chromium-bidi-17.0.2.tgz",
+      "integrity": "sha512-5v9GQFhTktFvotn/OFNJBmKLKRAb6n9r0bVCwf7sHgWc3/JryK0bj1nn93L3pHFrfgcsu6Be6EWsDi+1XHTGDg==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "mitt": "^3.0.1",
+        "zod": "^3.24.1"
+      },
+      "engines": {
+        "node": ">=20.19.0 <22.0.0 || >=22.12.0"
+      },
+      "peerDependencies": {
+        "devtools-protocol": "*"
+      }
+    },
+    "node_modules/cjs-module-lexer": {
+      "version": "2.2.1",
+      "resolved": "https://registry.npmjs.org/cjs-module-lexer/-/cjs-module-lexer-2.2.1.tgz",
+      "integrity": "sha512-Ca8swihM+/4yKecYHY52kgJd300hi2lADU/a1RxNTRe+RJ9jvqQlESpbz9DnG9mowez8qwXHB8qYdIUw9e+F5Q==",
+      "license": "MIT"
+    },
+    "node_modules/cliui": {
+      "version": "8.0.1",
+      "resolved": "https://registry.npmjs.org/cliui/-/cliui-8.0.1.tgz",
+      "integrity": "sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==",
+      "license": "ISC",
+      "dependencies": {
+        "string-width": "^4.2.0",
+        "strip-ansi": "^6.0.1",
+        "wrap-ansi": "^7.0.0"
+      },
+      "engines": {
+        "node": ">=12"
+      }
+    },
+    "node_modules/color-convert": {
+      "version": "2.0.1",
+      "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+      "integrity": "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==",
+      "license": "MIT",
+      "dependencies": {
+        "color-name": "~1.1.4"
+      },
+      "engines": {
+        "node": ">=7.0.0"
+      }
+    },
+    "node_modules/color-name": {
+      "version": "1.1.4",
+      "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+      "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==",
+      "license": "MIT"
+    },
+    "node_modules/configstore": {
+      "version": "7.1.0",
+      "resolved": "https://registry.npmjs.org/configstore/-/configstore-7.1.0.tgz",
+      "integrity": "sha512-N4oog6YJWbR9kGyXvS7jEykLDXIE2C0ILYqNBZBp9iwiJpoCBWYsuAdW6PPFn6w06jjnC+3JstVvWHO4cZqvRg==",
+      "license": "BSD-2-Clause",
+      "dependencies": {
+        "atomically": "^2.0.3",
+        "dot-prop": "^9.0.0",
+        "graceful-fs": "^4.2.11",
+        "xdg-basedir": "^5.1.0"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/csp_evaluator": {
+      "version": "1.1.8",
+      "resolved": "https://registry.npmjs.org/csp_evaluator/-/csp_evaluator-1.1.8.tgz",
+      "integrity": "sha512-EwOnfYuNbTytvbMKsLixTrRgnjOa0WZCxGy8A9nnSYAicrdwn+T/epU/yjgymmOxlgKnvH+8wXt+7p/8ak5Feg==",
+      "license": "Apache-2.0"
+    },
+    "node_modules/debug": {
+      "version": "4.4.3",
+      "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
+      "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==",
+      "license": "MIT",
+      "dependencies": {
+        "ms": "^2.1.3"
+      },
+      "engines": {
+        "node": ">=6.0"
+      },
+      "peerDependenciesMeta": {
+        "supports-color": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/decimal.js": {
+      "version": "10.6.0",
+      "resolved": "https://registry.npmjs.org/decimal.js/-/decimal.js-10.6.0.tgz",
+      "integrity": "sha512-YpgQiITW3JXGntzdUmyUR1V812Hn8T1YVXhCu+wO3OpS4eU9l4YdD3qjyiKdV6mvV29zapkMeD390UVEf2lkUg==",
+      "license": "MIT"
+    },
+    "node_modules/define-lazy-prop": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz",
+      "integrity": "sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "node_modules/devtools-protocol": {
+      "version": "0.0.1663043",
+      "resolved": "https://registry.npmjs.org/devtools-protocol/-/devtools-protocol-0.0.1663043.tgz",
+      "integrity": "sha512-33aOY3ZnBP1dgZsshgaL+/XlsQleiFZgyUaDtdZkEa1nbZhVY1MoDeWjk+wxg25fU924l1ZJfoGNmjjeA/5s1w==",
+      "license": "BSD-3-Clause"
+    },
+    "node_modules/dot-prop": {
+      "version": "9.0.0",
+      "resolved": "https://registry.npmjs.org/dot-prop/-/dot-prop-9.0.0.tgz",
+      "integrity": "sha512-1gxPBJpI/pcjQhKgIU91II6Wkay+dLcN3M6rf2uwP8hRur3HtQXjVrdAK3sjC0piaEuxzMwjXChcETiJl47lAQ==",
+      "license": "MIT",
+      "dependencies": {
+        "type-fest": "^4.18.2"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/emoji-regex": {
+      "version": "8.0.0",
+      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+      "license": "MIT"
+    },
+    "node_modules/enquirer": {
+      "version": "2.4.1",
+      "resolved": "https://registry.npmjs.org/enquirer/-/enquirer-2.4.1.tgz",
+      "integrity": "sha512-rRqJg/6gd538VHvR3PSrdRBb/1Vy2YfzHqzvbhGIQpDRKIa4FgV/54b5Q1xYSxOOwKvjXweS26E0Q+nAMwp2pQ==",
+      "license": "MIT",
+      "dependencies": {
+        "ansi-colors": "^4.1.1",
+        "strip-ansi": "^6.0.1"
+      },
+      "engines": {
+        "node": ">=8.6"
+      }
+    },
+    "node_modules/es-module-lexer": {
+      "version": "3.0.2",
+      "resolved": "https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-3.0.2.tgz",
+      "integrity": "sha512-BuIB67FngDSyQ/dpQNOZybwdEBDUGJQvOqwWr4ha/ufYiqzuEwPkKO2zLhRAgay28tStRIHUeWmszZAJo3GCOg==",
+      "license": "MIT"
+    },
+    "node_modules/escalade": {
+      "version": "3.2.0",
+      "resolved": "https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz",
+      "integrity": "sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=6"
+      }
+    },
+    "node_modules/escape-string-regexp": {
+      "version": "4.0.0",
+      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz",
+      "integrity": "sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=10"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/fsevents": {
+      "version": "2.3.2",
+      "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz",
+      "integrity": "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==",
+      "hasInstallScript": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": "^8.16.0 || ^10.6.0 || >=11.0.0"
+      }
+    },
+    "node_modules/get-caller-file": {
+      "version": "2.0.5",
+      "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz",
+      "integrity": "sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==",
+      "license": "ISC",
+      "engines": {
+        "node": "6.* || 8.* || >= 10.*"
+      }
+    },
+    "node_modules/get-east-asian-width": {
+      "version": "1.6.0",
+      "resolved": "https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.6.0.tgz",
+      "integrity": "sha512-QRbvDIbx6YklUe6RxeTeleMR0yv3cYH6PsPZHcnVn7xv7zO1BHN8r0XETu8n6Ye3Q+ahtSarc3WgtNWmehIBfA==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/graceful-fs": {
+      "version": "4.2.11",
+      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz",
+      "integrity": "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==",
+      "license": "ISC"
+    },
+    "node_modules/http-link-header": {
+      "version": "1.1.4",
+      "resolved": "https://registry.npmjs.org/http-link-header/-/http-link-header-1.1.4.tgz",
+      "integrity": "sha512-xT3GPW6/ZbGuw4UvwHqErSCEjNUlwbQJuZn9/q5U4WEKfp2kENVCAlousG1zLxHeaQ/ffOHUNpWamvkbBW0eNw==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=6.0.0"
+      }
+    },
+    "node_modules/image-ssim": {
+      "version": "0.2.0",
+      "resolved": "https://registry.npmjs.org/image-ssim/-/image-ssim-0.2.0.tgz",
+      "integrity": "sha512-W7+sO6/yhxy83L0G7xR8YAc5Z5QFtYEXXRV6EaE8tuYBZJnA3gVgp3q7X7muhLZVodeb9UfvjSbwt9VJwjIYAg==",
+      "license": "MIT"
+    },
+    "node_modules/import-in-the-middle": {
+      "version": "3.5.1",
+      "resolved": "https://registry.npmjs.org/import-in-the-middle/-/import-in-the-middle-3.5.1.tgz",
+      "integrity": "sha512-mPKuL8bPQzecui2KK6Gb+M8JvJoHnhS1FeYGa22QopBmlevF5F0FE6ued/B5EgHDeIoMTONIpDWWFKUPOG0DBQ==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "cjs-module-lexer": "^2.2.0",
+        "es-module-lexer": "^3.0.2",
+        "module-details-from-path": "^1.0.4"
+      },
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/intl-messageformat": {
+      "version": "10.7.18",
+      "resolved": "https://registry.npmjs.org/intl-messageformat/-/intl-messageformat-10.7.18.tgz",
+      "integrity": "sha512-m3Ofv/X/tV8Y3tHXLohcuVuhWKo7BBq62cqY15etqmLxg2DZ34AGGgQDeR+SCta2+zICb1NX83af0GJmbQ1++g==",
+      "license": "BSD-3-Clause",
+      "dependencies": {
+        "@formatjs/ecma402-abstract": "2.3.6",
+        "@formatjs/fast-memoize": "2.2.7",
+        "@formatjs/icu-messageformat-parser": "2.11.4",
+        "tslib": "^2.8.0"
+      }
+    },
+    "node_modules/is-docker": {
+      "version": "2.2.1",
+      "resolved": "https://registry.npmjs.org/is-docker/-/is-docker-2.2.1.tgz",
+      "integrity": "sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==",
+      "license": "MIT",
+      "bin": {
+        "is-docker": "cli.js"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/is-fullwidth-code-point": {
+      "version": "3.0.0",
+      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
+      "integrity": "sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "node_modules/is-wsl": {
+      "version": "2.2.0",
+      "resolved": "https://registry.npmjs.org/is-wsl/-/is-wsl-2.2.0.tgz",
+      "integrity": "sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==",
+      "license": "MIT",
+      "dependencies": {
+        "is-docker": "^2.0.0"
+      },
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "node_modules/jpeg-js": {
+      "version": "0.4.4",
+      "resolved": "https://registry.npmjs.org/jpeg-js/-/jpeg-js-0.4.4.tgz",
+      "integrity": "sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==",
+      "license": "BSD-3-Clause"
+    },
+    "node_modules/js-library-detector": {
+      "version": "6.7.0",
+      "resolved": "https://registry.npmjs.org/js-library-detector/-/js-library-detector-6.7.0.tgz",
+      "integrity": "sha512-c80Qupofp43y4cJ7+8TTDN/AsDwLi5oOm/plBrWI+iQt485vKXCco+yVmOwEgdo9VOdsYTuV0UlTeetVPTriXA==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=12"
+      }
+    },
+    "node_modules/legacy-javascript": {
+      "version": "0.0.1",
+      "resolved": "https://registry.npmjs.org/legacy-javascript/-/legacy-javascript-0.0.1.tgz",
+      "integrity": "sha512-lPyntS4/aS7jpuvOlitZDFifBCb4W8L/3QU0PLbUTUj+zYah8rfVjYic88yG7ZKTxhS5h9iz7duT8oUXKszLhg==",
+      "license": "Apache-2.0"
+    },
+    "node_modules/lighthouse": {
+      "version": "13.4.1",
+      "resolved": "https://registry.npmjs.org/lighthouse/-/lighthouse-13.4.1.tgz",
+      "integrity": "sha512-fDu8lt3QLK/lTqIxtp1HkzQNJ32rsFHhbadYOepcMZFLgA8oINhxutMbMv8XXnpTOvZ0TXCo4JCk1LDTWaRLnA==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@paulirish/trace_engine": "0.0.65",
+        "@sentry/node": "^10.0.0",
+        "axe-core": "^4.12.1",
+        "chrome-launcher": "^1.2.1",
+        "configstore": "^7.0.0",
+        "csp_evaluator": "1.1.8",
+        "devtools-protocol": "0.0.1663043",
+        "enquirer": "^2.3.6",
+        "http-link-header": "^1.1.1",
+        "intl-messageformat": "^10.5.3",
+        "jpeg-js": "^0.4.4",
+        "js-library-detector": "^6.7.0",
+        "lighthouse-logger": "^2.0.2",
+        "lighthouse-stack-packs": "1.12.3",
+        "lodash-es": "^4.17.21",
+        "lookup-closest-locale": "6.2.0",
+        "open": "^8.4.0",
+        "puppeteer-core": "^25.3.0",
+        "robots-parser": "^3.0.1",
+        "speedline-core": "^1.4.3",
+        "third-party-web": "^0.29.2",
+        "tldts-icann": "^7.4.9",
+        "web-features": "^3.34.0",
+        "ws": "^7.0.0",
+        "yargs": "^17.3.1",
+        "yargs-parser": "^21.0.0"
+      },
+      "bin": {
+        "chrome-debug": "core/scripts/manual-chrome-launcher.js",
+        "lighthouse": "cli/index.js",
+        "smokehouse": "cli/test/smokehouse/frontends/smokehouse-bin.js"
+      },
+      "engines": {
+        "node": ">=22.19"
+      }
+    },
+    "node_modules/lighthouse-logger": {
+      "version": "2.0.2",
+      "resolved": "https://registry.npmjs.org/lighthouse-logger/-/lighthouse-logger-2.0.2.tgz",
+      "integrity": "sha512-vWl2+u5jgOQuZR55Z1WM0XDdrJT6mzMP8zHUct7xTlWhuQs+eV0g+QL0RQdFjT54zVmbhLCP8vIVpy1wGn/gCg==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "debug": "^4.4.1",
+        "marky": "^1.2.2"
+      }
+    },
+    "node_modules/lighthouse-stack-packs": {
+      "version": "1.12.3",
+      "resolved": "https://registry.npmjs.org/lighthouse-stack-packs/-/lighthouse-stack-packs-1.12.3.tgz",
+      "integrity": "sha512-d8IsOpE83kbANgnM+Tp8+x6HcMpX9o2ITBiUERssgzAIFdZCQzs/f4k6D0DLQTE59enml9mbAOU52Wu35exWtg==",
+      "license": "Apache-2.0"
+    },
+    "node_modules/lodash-es": {
+      "version": "4.18.1",
+      "resolved": "https://registry.npmjs.org/lodash-es/-/lodash-es-4.18.1.tgz",
+      "integrity": "sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==",
+      "license": "MIT"
+    },
+    "node_modules/lookup-closest-locale": {
+      "version": "6.2.0",
+      "resolved": "https://registry.npmjs.org/lookup-closest-locale/-/lookup-closest-locale-6.2.0.tgz",
+      "integrity": "sha512-/c2kL+Vnp1jnV6K6RpDTHK3dgg0Tu2VVp+elEiJpjfS1UyY7AjOYHohRug6wT0OpoX2qFgNORndE9RqesfVxWQ==",
+      "license": "MIT"
+    },
+    "node_modules/marky": {
+      "version": "1.3.0",
+      "resolved": "https://registry.npmjs.org/marky/-/marky-1.3.0.tgz",
+      "integrity": "sha512-ocnPZQLNpvbedwTy9kNrQEsknEfgvcLMvOtz3sFeWApDq1MXH1TqkCIx58xlpESsfwQOnuBO9beyQuNGzVvuhQ==",
+      "license": "Apache-2.0"
+    },
+    "node_modules/mitt": {
+      "version": "3.0.1",
+      "resolved": "https://registry.npmjs.org/mitt/-/mitt-3.0.1.tgz",
+      "integrity": "sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==",
+      "license": "MIT"
+    },
+    "node_modules/modern-tar": {
+      "version": "0.8.5",
+      "resolved": "https://registry.npmjs.org/modern-tar/-/modern-tar-0.8.5.tgz",
+      "integrity": "sha512-snEhs+6G5Tjd4I7tLCDOaoln2RgE0bD19RzEKgvgK2hZ5VKy3MpLhLTZ2fWpXSTg4K2cyPwp+VHATFJhxfnOeA==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=18.0.0"
+      }
+    },
+    "node_modules/module-details-from-path": {
+      "version": "1.0.4",
+      "resolved": "https://registry.npmjs.org/module-details-from-path/-/module-details-from-path-1.0.4.tgz",
+      "integrity": "sha512-EGWKgxALGMgzvxYF1UyGTy0HXX/2vHLkw6+NvDKW2jypWbHpjQuj4UMcqQWXHERJhVGKikolT06G3bcKe4fi7w==",
+      "license": "MIT"
+    },
+    "node_modules/ms": {
+      "version": "2.1.3",
+      "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+      "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
+      "license": "MIT"
+    },
+    "node_modules/open": {
+      "version": "8.4.2",
+      "resolved": "https://registry.npmjs.org/open/-/open-8.4.2.tgz",
+      "integrity": "sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==",
+      "license": "MIT",
+      "dependencies": {
+        "define-lazy-prop": "^2.0.0",
+        "is-docker": "^2.1.1",
+        "is-wsl": "^2.2.0"
+      },
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/playwright": {
+      "version": "1.62.1",
+      "resolved": "https://registry.npmjs.org/playwright/-/playwright-1.62.1.tgz",
+      "integrity": "sha512-0M+L3LAD8/nm554LOla9Ayx0j0tmFZ0FBcoQ7F1VuVHpM/XpiC8RcDzBQB8W5+hA8L22THxELzeF+2WcUzvcLg==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "playwright-core": "1.62.1"
+      },
+      "bin": {
+        "playwright": "cli.js"
+      },
+      "engines": {
+        "node": ">=20"
+      },
+      "optionalDependencies": {
+        "fsevents": "2.3.2"
+      }
+    },
+    "node_modules/playwright-core": {
+      "version": "1.63.0",
+      "resolved": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.63.0.tgz",
+      "integrity": "sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg==",
+      "license": "Apache-2.0",
+      "peer": true,
+      "bin": {
+        "playwright-core": "cli.js"
+      },
+      "engines": {
+        "node": ">=20"
+      }
+    },
+    "node_modules/playwright/node_modules/playwright-core": {
+      "version": "1.62.1",
+      "resolved": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.62.1.tgz",
+      "integrity": "sha512-wPYSwEBJY9GHraISXqyqtx0na0LpO3XEX7jNDhntbex7tzUS7kLnZsOlFruFJB4Hi/rhDMjXGqHewDZ68nYZVw==",
+      "license": "Apache-2.0",
+      "bin": {
+        "playwright-core": "cli.js"
+      },
+      "engines": {
+        "node": ">=20"
+      }
+    },
+    "node_modules/puppeteer-core": {
+      "version": "25.10.0",
+      "resolved": "https://registry.npmjs.org/puppeteer-core/-/puppeteer-core-25.10.0.tgz",
+      "integrity": "sha512-Hy5eMQshOEMil4JUUx03h5pw1HYkYCso1RG/gcpPlFSd4cYPOcopxcXEAxpLPOkOPJb9LIJtwxuj66bSdvknFg==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@puppeteer/browsers": "3.2.2",
+        "chromium-bidi": "17.0.2",
+        "devtools-protocol": "0.0.1666840",
+        "typed-query-selector": "^2.12.2",
+        "webdriver-bidi-protocol": "0.4.3",
+        "ws": "^8.21.3"
+      },
+      "engines": {
+        "node": ">=22.12.0"
+      }
+    },
+    "node_modules/puppeteer-core/node_modules/devtools-protocol": {
+      "version": "0.0.1666840",
+      "resolved": "https://registry.npmjs.org/devtools-protocol/-/devtools-protocol-0.0.1666840.tgz",
+      "integrity": "sha512-gCcO42XCHKEs7Ag0S7aGYsnJ7hlgrO3qderYqeiY0Eqk+0GFfuvT13IA0hHreJTa2KCdDVyGMeOhdMNmrrTjVg==",
+      "license": "BSD-3-Clause"
+    },
+    "node_modules/puppeteer-core/node_modules/ws": {
+      "version": "8.21.3",
+      "resolved": "https://registry.npmjs.org/ws/-/ws-8.21.3.tgz",
+      "integrity": "sha512-201TZ/kPWxoPr/OKWjquZR1SWKXcvxdH+e1xrx89b3YbmzLMFCLfnaG1HFIgWzJOEWZ7MvpK++odZufgYR50Rw==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "peerDependencies": {
+        "bufferutil": "^4.0.1",
+        "utf-8-validate": ">=5.0.2"
+      },
+      "peerDependenciesMeta": {
+        "bufferutil": {
+          "optional": true
+        },
+        "utf-8-validate": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/require-directory": {
+      "version": "2.1.1",
+      "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
+      "integrity": "sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "node_modules/require-in-the-middle": {
+      "version": "8.0.1",
+      "resolved": "https://registry.npmjs.org/require-in-the-middle/-/require-in-the-middle-8.0.1.tgz",
+      "integrity": "sha512-QT7FVMXfWOYFbeRBF6nu+I6tr2Tf3u0q8RIEjNob/heKY/nh7drD/k7eeMFmSQgnTtCzLDcCu/XEnpW2wk4xCQ==",
+      "license": "MIT",
+      "dependencies": {
+        "debug": "^4.3.5",
+        "module-details-from-path": "^1.0.3"
+      },
+      "engines": {
+        "node": ">=9.3.0 || >=8.10.0 <9.0.0"
+      }
+    },
+    "node_modules/robots-parser": {
+      "version": "3.0.1",
+      "resolved": "https://registry.npmjs.org/robots-parser/-/robots-parser-3.0.1.tgz",
+      "integrity": "sha512-s+pyvQeIKIZ0dx5iJiQk1tPLJAWln39+MI5jtM8wnyws+G5azk+dMnMX0qfbqNetKKNgcWWOdi0sfm+FbQbgdQ==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=10.0.0"
+      }
+    },
+    "node_modules/speedline-core": {
+      "version": "1.4.3",
+      "resolved": "https://registry.npmjs.org/speedline-core/-/speedline-core-1.4.3.tgz",
+      "integrity": "sha512-DI7/OuAUD+GMpR6dmu8lliO2Wg5zfeh+/xsdyJZCzd8o5JgFUjCeLsBDuZjIQJdwXS3J0L/uZYrELKYqx+PXog==",
+      "license": "MIT",
+      "dependencies": {
+        "@types/node": "*",
+        "image-ssim": "^0.2.0",
+        "jpeg-js": "^0.4.1"
+      },
+      "engines": {
+        "node": ">=8.0"
+      }
+    },
+    "node_modules/string-width": {
+      "version": "4.2.3",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+      "license": "MIT",
+      "dependencies": {
+        "emoji-regex": "^8.0.0",
+        "is-fullwidth-code-point": "^3.0.0",
+        "strip-ansi": "^6.0.1"
+      },
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "node_modules/strip-ansi": {
+      "version": "6.0.1",
+      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+      "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
+      "license": "MIT",
+      "dependencies": {
+        "ansi-regex": "^5.0.1"
+      },
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "node_modules/stubborn-fs": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/stubborn-fs/-/stubborn-fs-2.0.0.tgz",
+      "integrity": "sha512-Y0AvSwDw8y+nlSNFXMm2g6L51rBGdAQT20J3YSOqxC53Lo3bjWRtr2BKcfYoAf352WYpsZSTURrA0tqhfgudPA==",
+      "license": "MIT",
+      "dependencies": {
+        "stubborn-utils": "^1.0.1"
+      }
+    },
+    "node_modules/stubborn-utils": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/stubborn-utils/-/stubborn-utils-1.0.2.tgz",
+      "integrity": "sha512-zOh9jPYI+xrNOyisSelgym4tolKTJCQd5GBhK0+0xJvcYDcwlOoxF/rnFKQ2KRZknXSG9jWAp66fwP6AxN9STg==",
+      "license": "MIT"
+    },
+    "node_modules/third-party-web": {
+      "version": "0.29.2",
+      "resolved": "https://registry.npmjs.org/third-party-web/-/third-party-web-0.29.2.tgz",
+      "integrity": "sha512-fegtha91tq2DHphyoiBXVHjVi2YG9zFaRnboT9C28tO1en9Y3wJsfspuy40F+u5wl3hHVbw7cnd1b67kEGHb8g==",
+      "license": "MIT"
+    },
+    "node_modules/tldts-core": {
+      "version": "7.4.12",
+      "resolved": "https://registry.npmjs.org/tldts-core/-/tldts-core-7.4.12.tgz",
+      "integrity": "sha512-nYNzS2WRf4QJmjzFFgAxLOBjyBxAGRbCy9PVBPaglcYyYajh40VBn+v5Ngr96ZMc7oM0+aCJdtQnNejvdBnXMQ==",
+      "license": "MIT"
+    },
+    "node_modules/tldts-icann": {
+      "version": "7.4.12",
+      "resolved": "https://registry.npmjs.org/tldts-icann/-/tldts-icann-7.4.12.tgz",
+      "integrity": "sha512-KYMFombFttNwGKI9GhqlHBn/+QROOk2bvh5p+aVmRSF8VH+YYVS9fEq0ux099jzw0JXmk2yRErCiviveSL/QhA==",
+      "license": "MIT",
+      "dependencies": {
+        "tldts-core": "^7.4.12"
+      }
+    },
+    "node_modules/tslib": {
+      "version": "2.8.1",
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+      "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==",
+      "license": "0BSD"
+    },
+    "node_modules/type-fest": {
+      "version": "4.41.0",
+      "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-4.41.0.tgz",
+      "integrity": "sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==",
+      "license": "(MIT OR CC0-1.0)",
+      "engines": {
+        "node": ">=16"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/typed-query-selector": {
+      "version": "2.12.2",
+      "resolved": "https://registry.npmjs.org/typed-query-selector/-/typed-query-selector-2.12.2.tgz",
+      "integrity": "sha512-EOPFbyIub4ngnEdqi2yOcNeDLaX/0jcE1JoAXQDDMIthap7FoN795lc/SHfIq2d416VufXpM8z/lD+WRm2gfOQ==",
+      "license": "MIT"
+    },
+    "node_modules/undici-types": {
+      "version": "8.9.0",
+      "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-8.9.0.tgz",
+      "integrity": "sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==",
+      "license": "MIT"
+    },
+    "node_modules/web-features": {
+      "version": "3.38.0",
+      "resolved": "https://registry.npmjs.org/web-features/-/web-features-3.38.0.tgz",
+      "integrity": "sha512-FfexTigrIL9tVr/JgX9kBlzIlMfBG4eD38crZQiJPIo46PJ3Qj8RVUM7zmpsozooq2ImHM7xiUY6gIv5mo/7rQ==",
+      "license": "Apache-2.0"
+    },
+    "node_modules/webdriver-bidi-protocol": {
+      "version": "0.4.3",
+      "resolved": "https://registry.npmjs.org/webdriver-bidi-protocol/-/webdriver-bidi-protocol-0.4.3.tgz",
+      "integrity": "sha512-uuN0goWfxP22B7J/uAgBpOYNPttC+XVseYE+rSY5+rQ+YBeVz/VORw8WbmLVcqW78zNg5A4qnjNXYUWR3il2ig==",
+      "license": "Apache-2.0"
+    },
+    "node_modules/when-exit": {
+      "version": "2.1.5",
+      "resolved": "https://registry.npmjs.org/when-exit/-/when-exit-2.1.5.tgz",
+      "integrity": "sha512-VGkKJ564kzt6Ms1dbgPP/yuIoQCrsFAnRbptpC5wOEsDaNsbCB2bnfnaA8i/vRs5tjUSEOtIuvl9/MyVsvQZCg==",
+      "license": "MIT"
+    },
+    "node_modules/wrap-ansi": {
+      "version": "7.0.0",
+      "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz",
+      "integrity": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==",
+      "license": "MIT",
+      "dependencies": {
+        "ansi-styles": "^4.0.0",
+        "string-width": "^4.1.0",
+        "strip-ansi": "^6.0.0"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "funding": {
+        "url": "https://github.com/chalk/wrap-ansi?sponsor=1"
+      }
+    },
+    "node_modules/ws": {
+      "version": "7.5.13",
+      "resolved": "https://registry.npmjs.org/ws/-/ws-7.5.13.tgz",
+      "integrity": "sha512-rsKI6xDBFVf4r/x8XyChGK04QR/XHroxs/jUcoWvtEZM8TPU/X/uIY9B1CsSzYws9ZJb/6bbBu7dPhFW00CAoA==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=8.3.0"
+      },
+      "peerDependencies": {
+        "bufferutil": "^4.0.1",
+        "utf-8-validate": "^5.0.2"
+      },
+      "peerDependenciesMeta": {
+        "bufferutil": {
+          "optional": true
+        },
+        "utf-8-validate": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/xdg-basedir": {
+      "version": "5.1.0",
+      "resolved": "https://registry.npmjs.org/xdg-basedir/-/xdg-basedir-5.1.0.tgz",
+      "integrity": "sha512-GCPAHLvrIH13+c0SuacwvRYj2SxJXQ4kaVTT5xgL3kPrz56XxkF21IGhjSE1+W0aw7gpBWRGXLCPnPby6lSpmQ==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/y18n": {
+      "version": "5.0.8",
+      "resolved": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz",
+      "integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==",
+      "license": "ISC",
+      "engines": {
+        "node": ">=10"
+      }
+    },
+    "node_modules/yargs": {
+      "version": "17.7.3",
+      "resolved": "https://registry.npmjs.org/yargs/-/yargs-17.7.3.tgz",
+      "integrity": "sha512-GZtjxm/J/4TSxuL3FNYjCmLktBTnIw/rVmKSIyKeYAZpmJB2ig9VauCC5xsa82GNKVKDAqpOn3KVzNt0zmrU0g==",
+      "license": "MIT",
+      "dependencies": {
+        "cliui": "^8.0.1",
+        "escalade": "^3.1.1",
+        "get-caller-file": "^2.0.5",
+        "require-directory": "^2.1.1",
+        "string-width": "^4.2.3",
+        "y18n": "^5.0.5",
+        "yargs-parser": "^21.1.1"
+      },
+      "engines": {
+        "node": ">=12"
+      }
+    },
+    "node_modules/yargs-parser": {
+      "version": "21.1.1",
+      "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz",
+      "integrity": "sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==",
+      "license": "ISC",
+      "engines": {
+        "node": ">=12"
+      }
+    },
+    "node_modules/zod": {
+      "version": "3.25.76",
+      "resolved": "https://registry.npmjs.org/zod/-/zod-3.25.76.tgz",
+      "integrity": "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==",
+      "license": "MIT",
+      "funding": {
+        "url": "https://github.com/sponsors/colinhacks"
+      }
+    }
   }
-})();
+}
 ````
 
 ## scripts/qa/package.json
@@ -6103,6 +6572,56 @@ const fs = require("fs"),
     "chrome-launcher": "1.2.1"
   }
 }
+````
+
+## scripts/qa/responsive.mjs
+
+````javascript
+import fs from 'node:fs';
+import cp from 'node:child_process';
+import { chromium } from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
+
+const server = cp.spawn('node', ['scripts/qa/server.cjs', 'out', '4175']);
+const base = 'http://127.0.0.1:4175';
+for (let i = 0; i < 30; i++) {
+  try { await fetch(base); break; } catch { await new Promise(r => setTimeout(r, 100)); }
+}
+const browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH, args:['--no-sandbox','--disable-dev-shm-usage']});
+fs.mkdirSync('audit/screenshots', {recursive:true});
+const results = [];
+try {
+  for (const width of [360,390,430,768,1024,1440,1920]) {
+    const context = await browser.newContext({viewport:{width,height:width < 768 ? 844 : 900},isMobile:width < 768,hasTouch:width < 768});
+    const page = await context.newPage();
+    for (const route of ['/', '/en/', '/menu/', '/en/menu/', '/investors/', '/en/investors/']) {
+      const errors=[];const handler=e=>errors.push(e.message);page.on('pageerror',handler);
+      await page.goto(base+route);
+      await page.evaluate(()=>document.fonts.ready);
+      const sections = await page.locator('main > section').evaluateAll(es=>es.map(e=>e.id));
+      const overflow=[];
+      for (const id of sections) {
+        await page.locator('#'+id).evaluate(e=>window.scrollTo({top:e.getBoundingClientRect().top+scrollY-80,behavior:'instant'}));
+        await page.waitForTimeout(650);
+        const flags = await page.evaluate(()=>[...document.querySelectorAll('h1,h2,h3,p,dt,dd,label,button')].filter(e=>e.getBoundingClientRect().width>0&&!e.closest('.honey,.sr-only')&&e.scrollWidth>e.clientWidth+2).map(e=>({tag:e.tagName,text:e.textContent.slice(0,80),width:e.clientWidth,scroll:e.scrollWidth})));
+        overflow.push(...flags);
+        if (route==='/' && [390,1440].includes(width)) await page.screenshot({path:`audit/screenshots/${width}-${id}.jpg`,type:'jpeg',quality:85});
+      }
+      const layout=await page.evaluate(()=>({documentWidth:document.documentElement.scrollWidth,width:innerWidth,lang:document.documentElement.lang}));
+      const axe = [390,1440].includes(width) ? await new AxeBuilder({page}).analyze() : null;
+      results.push({width,route,...layout,overflow:[...new Map(overflow.map(x=>[x.text,x])).values()],errors,violations:axe?.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)}))??null});
+      page.off('pageerror',handler);
+    }
+    await context.close();
+    console.log(`Completed ${width}px`);
+  }
+  const page=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+  await page.goto(base);await page.locator('#economics').scrollIntoViewIfNeeded();
+  const reduced=await page.evaluate(()=>({preference:document.documentElement.dataset.reduced,pin:getComputedStyle(document.querySelector('.economics-pin')).position,canvas:getComputedStyle(document.querySelector('canvas')).display,animations:document.getAnimations().length}));
+  await page.screenshot({path:'audit/screenshots/390-reduced-motion.jpg',type:'jpeg',quality:85});
+  fs.writeFileSync('audit/responsive.json',JSON.stringify({testedAt:new Date().toISOString(),environment:'Chromium emulated viewports; not physical hardware',results,reduced},null,2));
+  console.log(JSON.stringify({cases:results.length,failures:results.filter(x=>x.documentWidth>x.width||x.overflow.length||x.errors.length||x.violations?.length),reduced}));
+} finally { await browser.close();server.kill(); }
 ````
 
 ## scripts/qa/server.cjs
@@ -6192,3185 +6711,259 @@ print(f'{len(code)} complete source files; {len(all_paths)} repository paths')
 ## src/app/en/investors/page.tsx
 
 ````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("en", "investors");
-export default function Page() {
-  return <Experience locale="en" kind="investors" />;
-}
+import {System} from "@/components/v2/System";
+import {getCopy,pathFor,origin} from "@/lib/content";
+const c=getCopy("en");
+export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("en","investors"),languages:{uk:origin+pathFor("uk","investors"),en:origin+pathFor("en","investors")}}};
+export default function Page(){return <System locale="en" view="investors"/>;}
 ````
 
 ## src/app/en/menu/page.tsx
 
 ````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("en", "menu");
-export default function Page() {
-  return <Experience locale="en" kind="menu" />;
-}
+import {System} from "@/components/v2/System";
+import {getCopy,pathFor,origin} from "@/lib/content";
+const c=getCopy("en");
+export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("en","menu"),languages:{uk:origin+pathFor("uk","menu"),en:origin+pathFor("en","menu")}}};
+export default function Page(){return <System locale="en" view="menu"/>;}
 ````
 
 ## src/app/en/page.tsx
 
 ````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("en", "home");
-export default function Page() {
-  return <Experience locale="en" kind="home" />;
-}
-````
-
-## src/app/en/press/page.tsx
-
-````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("en", "press");
-export default function Page() {
-  return <Experience locale="en" kind="press" />;
-}
+import {System} from "@/components/v2/System";
+import {getCopy,pathFor,origin} from "@/lib/content";
+const c=getCopy("en");
+export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("en",""),languages:{uk:origin+pathFor("uk",""),en:origin+pathFor("en","")}}};
+export default function Page(){return <System locale="en" view="all"/>;}
 ````
 
 ## src/app/globals.css
 
 ````css
 @import "tailwindcss";
-@theme {
-  --color-paper: #f7f4ee;
-  --color-tea: #173f35;
-  --color-ink: #182a25;
-  --color-accent: #dbfb6b;
-  --color-muted: #59665c;
-  --font-sans: var(--font-manrope);
-  --font-display: var(--font-display-face);
-}
-:root {
-  --paper: #f7f4ee;
-  --tea: #173f35;
-  --ink: #182a25;
-  --accent: #dbfb6b;
-  --line: #d7dace;
-  --muted: #59665c;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-}
-* {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-manrope), sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-}
-a {
-  color: inherit;
-  text-underline-offset: 5px;
-}
-button,
-input,
-select {
-  font: inherit;
-}
-button,
-a,
-input,
-select,
-summary {
-  -webkit-tap-highlight-color: transparent;
-}
-button,
-a {
-  touch-action: manipulation;
-}
-button {
-  cursor: pointer;
-}
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-summary:focus-visible {
-  outline: 3px solid #937100;
-  outline-offset: 5px;
-}
-::selection {
-  background: var(--accent);
-  color: var(--ink);
-}
-h1,
-h2,
-h3,
-h4,
-p,
-figure {
-  margin: 0;
-}
-h1,
-h2 {
-  font-family: var(--font-display-face), Georgia, serif;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.13;
-  text-wrap: balance;
-  white-space: pre-line;
-}
-h1 {
-  font-size: clamp(44px, 5.8vw, 100px);
-}
-h2 {
-  font-size: clamp(36px, 4.5vw, 76px);
-}
-h3 {
-  font-size: clamp(21px, 2vw, 28px);
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
-}
-h4 {
-  font-size: 20px;
-  font-weight: 600;
-}
-p {
-  max-width: 68ch;
-}
-p + p {
-  margin-top: 16px;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-a {
-  text-decoration: none;
-}
-main a:not(.button):not(.wordmark),
-footer a:not(.button) {
-  text-decoration: underline;
-}
-svg {
-  max-width: 100%;
-}
-.skip {
-  position: fixed;
-  z-index: 100;
-  top: -100px;
-  left: 16px;
-  background: var(--accent);
-  padding: 16px;
-}
-.skip:focus {
-  top: 16px;
-}
-.header {
-  height: 96px;
-  padding: 0 4vw;
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  background: var(--paper);
-  border-bottom: 1px solid var(--line);
-  position: relative;
-  z-index: 10;
-}
-.wordmark {
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 600;
-  letter-spacing: -0.09em;
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-.wordmark span {
-  font-size: 16px;
-  letter-spacing: -0.02em;
-}
-.header nav {
-  display: flex;
-  margin-left: auto;
-  gap: 40px;
-  align-items: center;
-}
-.header a {
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-}
-.language {
-  font-size: 15px;
-  padding: 8px 16px;
-  border: 1px solid var(--line);
-  border-radius: 100px;
-}
-.eyebrow {
-  font-size: 15px;
-  letter-spacing: 0.08em;
-  font-weight: 600;
-  line-height: 1.5;
-}
-.intro {
-  font-size: clamp(18px, 1.6vw, 24px);
-  line-height: 1.5;
-}
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  min-height: 56px;
-  border-radius: 4px;
-  padding: 14px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  border: 1px solid transparent;
-  transition:
-    background 0.25s var(--ease),
-    transform 0.25s var(--ease);
-  text-align: center;
-}
-.button:hover {
-  transform: translateY(-2px);
-}
-.primary {
-  background: var(--accent);
-  color: var(--ink);
-}
-.primary:hover {
-  background: #e9ffac;
-}
-.outline {
-  border-color: currentColor;
-  background: transparent;
-}
-.button:disabled {
-  opacity: 0.6;
-  cursor: wait;
-}
-.text-link {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-}
-.hero {
-  height: calc(100svh - 96px);
-  min-height: 690px;
-  max-height: 1100px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  isolation: isolate;
-  background: #eae4d9;
-}
-.hero-media {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-.hero-media .photo,
-.hero-media .photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.film {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.film-toggle {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  z-index: 3;
-  border: 1px solid var(--tea);
-  border-radius: 100px;
-  background: var(--paper);
-  color: var(--tea);
-  width: 48px;
-  height: 48px;
-  font-size: 21px;
-}
-.hero-copy {
-  margin-left: 6vw;
-  max-width: 650px;
-  width: 47%;
-  padding: 32px;
-  background: rgba(247, 244, 238, 0.95);
-  border-radius: 2px;
-}
-.hero-copy .eyebrow {
-  margin-bottom: 28px;
-}
-.hero-copy .intro {
-  margin: 28px 0 32px;
-  max-width: 32ch;
-}
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.hero-note {
-  position: absolute;
-  left: 6vw;
-  bottom: 28px;
-  background: var(--paper);
-  padding: 8px 12px;
-  font-size: 15px;
-  max-width: 65%;
-}
-.hero-index {
-  position: absolute;
-  right: 6vw;
-  top: 32px;
-  font-size: 15px;
-}
-.section {
-  padding: 112px 6vw;
-  max-width: 1920px;
-  margin: 0 auto;
-}
-.section-heading {
-  max-width: 960px;
-  margin-bottom: 48px;
-}
-.section-heading .eyebrow {
-  margin-bottom: 24px;
-}
-.section-heading .intro {
-  margin-top: 24px;
-  max-width: 48ch;
-}
-.section-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  align-items: flex-end;
-  margin-bottom: 40px;
-}
-.section-top .section-heading {
-  margin-bottom: 0;
-}
-.thesis {
-  min-height: 560px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: var(--tea);
-  color: var(--paper);
-  max-width: none;
-}
-.thesis h2 {
-  font-size: clamp(40px, 5.6vw, 92px);
-  margin: 32px 0;
-}
-.thesis p:last-child {
-  max-width: 50ch;
-  font-size: 19px;
-}
-.photo {
-  display: block;
-  overflow: hidden;
-}
-.photo img {
-  width: 100%;
-  object-fit: cover;
-}
-.drink-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 48px 28px;
-}
-.drink-grid .drink {
-  grid-column: span 2;
-}
-.drink-grid .drink:nth-child(1) {
-  grid-column: span 3;
-}
-.drink-grid .drink:nth-child(2) {
-  grid-column: span 3;
-}
-.drink-image {
-  position: relative;
-  overflow: hidden;
-  background: #eae5da;
-}
-.drink-image .photo img {
-  aspect-ratio: 1;
-  transition: transform 0.4s var(--ease);
-}
-.drink:hover .drink-image img {
-  transform: scale(1.025);
-}
-.product-number {
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  font-size: 15px;
-}
-.drink-copy {
-  padding: 24px 0;
-}
-.drink-title {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: baseline;
-  margin-bottom: 8px;
-}
-.drink-title h3 {
-  font-size: 23px;
-}
-.drink-title > span {
-  white-space: nowrap;
-  font-size: 16px;
-}
-.drink-copy p {
-  font-size: 16px;
-}
-.drink-copy .note {
-  margin-bottom: 16px;
-}
-.sensory {
-  color: var(--muted);
-}
-.note {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--muted);
-}
-.assumption {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--muted);
-  max-width: 100%;
-  margin-top: 24px;
-  overflow-wrap: break-word;
-}
-.world {
-  background: #eeeae1;
-}
-.interior .photo img {
-  aspect-ratio: 1.5;
-  object-fit: cover;
-}
-.interior figcaption {
-  font-size: 15px;
-  margin-top: 16px;
-}
-.ritual-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 56px;
-}
-.ritual-grid img {
-  aspect-ratio: 0.8;
-}
-.ritual-grid figcaption {
-  font-size: 16px;
-  display: flex;
-  gap: 16px;
-  margin-top: 16px;
-}
-.ritual-grid figcaption span {
-  color: var(--muted);
-}
-.charts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-bottom: 24px;
-}
-.chart {
-  padding: 40px;
-  background: #eeeae1;
-  border-top: 1px solid var(--tea);
-}
-.chart figcaption {
-  font-size: 19px;
-  font-weight: 600;
-}
-.bars {
-  display: flex;
-  gap: 48px;
-  height: 240px;
-  align-items: flex-end;
-  max-width: 380px;
-  margin: 24px auto 40px;
-}
-.bar-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-.bar-column strong {
-  font-size: 27px;
-  font-weight: 500;
-}
-.bar {
-  width: 100%;
-  background: var(--tea);
-}
-.bar-column:first-child .bar {
-  background: #687c6a;
-}
-.chart a {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 15px;
-  min-height: 44px;
-}
-.market-travel {
-  margin: 40px 0 24px;
-}
-.market h3 {
-  margin: 48px 0 24px;
-}
-.three-grid,
-.formats,
-.roadmap,
-.scenario-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-.three-grid article {
-  border-top: 1px solid var(--line);
-  padding-top: 24px;
-}
-.economics {
-  background: var(--tea);
-  color: var(--paper);
-  max-width: none;
-}
-.economics .note,
-.economics .assumption {
-  color: #d5dfd6;
-}
-.currency {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin: 0 0 32px;
-  padding: 0;
-  border: 0;
-}
-.currency legend {
-  float: left;
-  padding: 8px 24px 8px 0;
-  font-size: 15px;
-}
-.currency button {
-  min-width: 60px;
-  min-height: 44px;
-  border: 1px solid #82988b;
-  border-radius: 4px;
-  background: transparent;
-}
-.currency button[aria-pressed="true"] {
-  background: var(--paper);
-  color: var(--tea);
-}
-.model-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-}
-.sliders label {
-  display: block;
-  margin-bottom: 24px;
-}
-.sliders label span {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-.sliders output {
-  font-weight: 600;
-  white-space: nowrap;
-}
-input[type="range"] {
-  width: 100%;
-  height: 44px;
-  accent-color: var(--paper);
-  cursor: pointer;
-  background: transparent;
-}
-.model-results {
-  border-left: 1px solid #70867a;
-  padding-left: 48px;
-}
-.ebitda {
-  display: block;
-  font-size: clamp(36px, 4vw, 72px);
-  letter-spacing: -0.045em;
-  line-height: 1.2;
-  margin: 16px 0 40px;
-  font-weight: 500;
-}
-.result-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px 24px;
-}
-.result-grid dt {
-  font-size: 15px;
-  color: #d5dfd6;
-}
-.result-grid dd {
-  margin: 8px 0 0;
-  font-size: 25px;
-  line-height: 1.3;
-}
-.model h3 {
-  margin: 48px 0 24px;
-}
-.scenario {
-  padding: 28px 24px;
-  border: 1px solid #70867a;
-}
-.scenario.base {
-  background: var(--paper);
-  color: var(--tea);
-}
-.scenario > p {
-  margin-top: 12px;
-  font-size: 15px;
-}
-.scenario dl {
-  margin: 24px 0 0;
-}
-.scenario dl > div {
-  padding: 14px 0;
-  border-top: 1px solid #849489;
-}
-.scenario dt {
-  font-size: 15px;
-}
-.scenario dd {
-  font-size: 24px;
-  margin: 4px 0 0;
-}
-.model + .note {
-  margin-top: 24px;
-}
-.format {
-  padding: 32px;
-  border: 1px solid var(--line);
-}
-.format.selected {
-  background: #e9ede3;
-}
-.format-plan {
-  display: flex;
-  border: 2px solid var(--tea);
-  height: 110px;
-  width: 150px;
-  align-items: flex-end;
-  padding: 12px;
-  gap: 8px;
-  margin: 8px 0 40px;
-}
-.format-plan i {
-  display: block;
-  width: 26px;
-  height: 38px;
-  background: var(--tea);
-}
-.format-plan i:last-child {
-  margin-left: auto;
-  height: 75px;
-  width: 12px;
-}
-.format h3 {
-  margin-bottom: 24px;
-}
-.format strong {
-  font-weight: 500;
-  font-size: 34px;
-}
-.roadmap {
-  margin: 64px 0 32px;
-}
-.roadmap article {
-  border-top: 2px solid var(--tea);
-  padding-top: 24px;
-}
-.roadmap h3 {
-  margin: 20px 0;
-}
-.funds {
-  background: #eeeae1;
-}
-.funds-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 80px;
-}
-.funds-total strong {
-  display: block;
-  font-size: clamp(44px, 5vw, 84px);
-  letter-spacing: -0.055em;
-  font-weight: 500;
-}
-.funds-total .photo {
-  max-width: 360px;
-  margin-top: 32px;
-}
-.funds-total img {
-  aspect-ratio: 0.8;
-}
-.fund-row {
-  margin-bottom: 28px;
-}
-.fund-row > div:first-child {
-  display: flex;
-  gap: 24px;
-  justify-content: space-between;
-}
-.fund-row h3 {
-  font-size: 19px;
-}
-.fund-row strong {
-  white-space: nowrap;
-}
-.fund-row p {
-  font-size: 15px;
-  color: var(--muted);
-}
-.allocation {
-  height: 6px;
-  background: #d6dacd;
-  margin: 14px 0;
-}
-.allocation span {
-  display: block;
-  height: 6px;
-  background: var(--tea);
-}
-.funds > h3 {
-  margin-top: 48px;
-}
-.terms {
-  margin: 32px 0 0;
-}
-.terms > div {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 32px;
-  border-top: 1px solid #c4cbbf;
-  padding: 24px 0;
-}
-.terms dt {
-  font-weight: 600;
-}
-.terms dd {
-  margin: 0;
-  font-size: 16px;
-  max-width: 65ch;
-}
-.two-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-}
-.evidence {
-  border-top: 1px solid var(--line);
-  padding-top: 24px;
-}
-.evidence p {
-  margin-top: 12px;
-}
-.risks {
-  margin-top: 24px;
-}
-.evidence + .evidence {
-  margin-top: 0;
-}
-#traction > h3 {
-  margin-top: 64px;
-}
-details {
-  border-top: 1px solid var(--line);
-  padding: 16px 0;
-}
-summary {
-  cursor: pointer;
-  min-height: 44px;
-  align-content: center;
-  font-size: 17px;
-}
-summary span {
-  float: right;
-}
-details p {
-  padding: 16px 0;
-}
-.team {
-  background: #eeeae1;
-}
-.team-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 64px;
-  align-items: center;
-}
-.founder-mark {
-  font-size: 160px;
-  letter-spacing: -0.12em;
-  line-height: 1;
-  display: grid;
-  place-items: center;
-  aspect-ratio: 1;
-  background: var(--tea);
-  color: var(--paper);
-  max-width: 320px;
-}
-.team-row .eyebrow {
-  margin: 16px 0 24px;
-}
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-}
-.contact .section-heading h2 {
-  font-size: clamp(36px, 4vw, 64px);
-}
-.contact-links {
-  display: grid;
-  gap: 24px;
-  margin-top: 32px;
-}
-.lead-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-content: start;
-}
-.lead-form label {
-  font-size: 15px;
-  display: block;
-}
-.lead-form input:not([type="checkbox"]),
-.lead-form select {
-  display: block;
-  width: 100%;
-  margin-top: 8px;
-  min-height: 52px;
-  padding: 12px;
-  border: 1px solid #adb9a9;
-  border-radius: 2px;
-  background: var(--paper);
-  color: var(--ink);
-  font-size: 16px;
-}
-.span-all {
-  grid-column: 1/-1;
-}
-.lead-form .consent {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 44px;
-}
-.consent input {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-  accent-color: var(--tea);
-}
-.honeypot {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-.confirmation {
-  border: 1px solid var(--tea);
-  padding: 40px;
-  align-self: start;
-}
-.confirmation p {
-  margin: 24px 0;
-}
-.footer {
-  background: var(--tea);
-  color: var(--paper);
-  padding: 80px 6vw 0;
-  overflow: hidden;
-}
-.footer .note {
-  color: #d5dfd6;
-}
-.footer-top {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 120px;
-}
-.footer h2 {
-  font-size: clamp(32px, 3.3vw, 52px);
-  margin: 20px 0 32px;
-  max-width: 16ch;
-}
-.footer .lead-form {
-  max-width: 600px;
-}
-.footer-location {
-  padding-top: 50px;
-}
-.footer-location p {
-  margin-top: 16px;
-}
-.footer-location a {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  margin-top: 16px;
-}
-.footer-bottom {
-  display: flex;
-  gap: 32px;
-  justify-content: space-between;
-  border-top: 1px solid #6c8375;
-  padding-top: 24px;
-  margin-top: 48px;
-  font-size: 15px;
-}
-.footer-bottom p {
-  max-width: 60ch;
-}
-.footer-wordmark {
-  font-size: clamp(160px, 31vw, 580px);
-  letter-spacing: -0.095em;
-  font-weight: 500;
-  line-height: 0.9;
-  text-align: center;
-  padding-top: 64px;
-  padding-bottom: 24px;
-  user-select: none;
-}
-.footer details {
-  margin-top: 48px;
-  border-color: #6c8375;
-}
-.subhero {
-  padding-top: 96px;
-  padding-bottom: 64px;
-}
-.subhero h1 {
-  max-width: 14ch;
-  margin: 24px 0;
-}
-.subhero .intro {
-  margin: 32px 0;
-  max-width: 50ch;
-}
-.subhero + .signatures {
-  padding-top: 32px;
-}
-.full-menu {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px 32px;
-}
-.full-menu .drink {
-  border-bottom: 1px solid var(--line);
-}
-.full-menu .drink-title {
-  display: block;
-}
-.full-menu .drink-title > span {
-  display: block;
-  margin-top: 12px;
-}
-.brand-lockup {
-  font-size: clamp(100px, 20vw, 300px);
-  letter-spacing: -0.09em;
-  background: var(--tea);
-  color: var(--paper);
-  line-height: 1.2;
-  margin: 64px 0 32px;
-  text-align: center;
-  padding: 48px;
-}
-.brand-lockup span {
-  font-size: 30px;
-  letter-spacing: 0;
-  margin-left: 24px;
-}
-.press-page .hero-actions {
-  margin: 32px 0 64px;
-}
-.mobile-cta {
-  display: none;
-}
-@media (min-width: 1920px) {
-  .hero-copy {
-    margin-left: calc((100vw - 1680px) / 2);
-  }
-}
-@media (max-width: 1023px) {
-  .header {
-    gap: 24px;
-    padding: 0 4vw;
-  }
-  .header nav {
-    gap: 24px;
-  }
-  .section {
-    padding: 80px 5vw;
-  }
-  .hero-copy {
-    width: 53%;
-    margin-left: 3vw;
-    padding: 24px;
-  }
-  .model-grid {
-    gap: 32px;
-  }
-  .model-results {
-    padding-left: 24px;
-  }
-  .funds-grid {
-    gap: 32px;
-  }
-  .contact {
-    gap: 32px;
-  }
-  .lead-form {
-    grid-template-columns: 1fr;
-  }
-  .lead-form > * {
-    grid-column: 1;
-  }
-  .footer-top {
-    gap: 48px;
-  }
-  .ritual-grid {
-    gap: 16px;
-  }
-  .full-menu {
-    grid-template-columns: 1fr 1fr;
-  }
-  .scenario {
-    padding: 20px 16px;
-  }
-  .scenario dd {
-    font-size: 21px;
-  }
-}
-@media (max-width: 767px) {
-  html {
-    scroll-padding-top: 20px;
-  }
-  .header {
-    height: 76px;
-    gap: 16px;
-    padding: 0 20px;
-  }
-  .wordmark {
-    font-size: 39px;
-  }
-  .wordmark span {
-    font-size: 15px;
-  }
-  .header nav {
-    gap: 12px;
-  }
-  .header nav a {
-    font-size: 15px;
-  }
-  .header nav a:first-child {
-    display: none;
-  }
-  .language {
-    padding: 8px 12px;
-  }
-  .hero {
-    height: 88svh;
-    min-height: 690px;
-    max-height: 920px;
-    align-items: flex-end;
-    padding-bottom: 60px;
-  }
-  .hero-media {
-    inset: 0;
-  }
-  .hero-media .photo img {
-    object-position: 70% center;
-  }
-  .hero-copy {
-    width: calc(100% - 40px);
-    margin: 0 20px;
-    padding: 22px;
-    background: rgba(247, 244, 238, 0.98);
-  }
-  .hero h1 {
-    font-size: clamp(39px, 9.8vw, 56px);
-  }
-  .hero-copy .eyebrow {
-    margin-bottom: 14px;
-    font-size: 15px;
-  }
-  .hero-copy .intro {
-    margin: 18px 0 20px;
-    font-size: 18px;
-  }
-  .hero-actions {
-    gap: 12px;
-  }
-  .hero-actions .button {
-    padding: 12px 16px;
-    gap: 12px;
-  }
-  .hero-note {
-    bottom: 16px;
-    left: 20px;
-    max-width: calc(100% - 90px);
-    font-size: 15px;
-    line-height: 1.35;
-    padding: 4px 8px;
-  }
-  .hero-index {
-    top: 20px;
-    right: 20px;
-  }
-  .film-toggle {
-    bottom: 16px;
-    right: 16px;
-  }
-  .section {
-    padding: 64px 20px;
-  }
-  h2 {
-    font-size: clamp(34px, 8.7vw, 46px);
-  }
-  .section-heading {
-    margin-bottom: 32px;
-  }
-  .section-heading .eyebrow {
-    margin-bottom: 20px;
-  }
-  .section-heading .intro {
-    margin-top: 20px;
-  }
-  .thesis {
-    min-height: 520px;
-    padding: 64px 24px;
-  }
-  .thesis h2 {
-    font-size: clamp(38px, 9.5vw, 52px);
-  }
-  .thesis p:last-child {
-    font-size: 18px;
-  }
-  .section-top {
-    display: block;
-    margin-bottom: 32px;
-  }
-  .section-top .text-link {
-    margin-top: 20px;
-  }
-  .drink-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    scrollbar-width: thin;
-    padding-bottom: 16px;
-    overscroll-behavior-x: contain;
-  }
-  .drink-grid .drink {
-    flex: 0 0 88%;
-    min-width: 0;
-    scroll-snap-align: start;
-  }
-  .drink-title {
-    display: block;
-  }
-  .drink-title > span {
-    display: block;
-    margin-top: 8px;
-  }
-  .drink-title h3 {
-    font-size: 24px;
-  }
-  .drink-copy {
-    padding: 20px 0;
-  }
-  .ritual-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px 16px;
-    margin-top: 32px;
-  }
-  .ritual-grid figcaption {
-    display: block;
-    font-size: 15px;
-  }
-  .ritual-grid figcaption span {
-    display: block;
-    margin-bottom: 4px;
-  }
-  .charts {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .chart {
-    padding: 24px;
-  }
-  .chart figcaption {
-    font-size: 17px;
-  }
-  .bars {
-    height: 230px;
-    gap: 40px;
-    margin-bottom: 24px;
-  }
-  .bar-column strong {
-    font-size: 25px;
-  }
-  .three-grid,
-  .formats,
-  .roadmap,
-  .scenario-grid,
-  .two-grid {
-    grid-template-columns: 1fr;
-  }
-  .three-grid {
-    gap: 32px;
-  }
-  .market-travel {
-    margin-top: 32px;
-  }
-  .model-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .model-results {
-    border-left: 0;
-    border-top: 1px solid #70867a;
-    padding: 32px 0 0;
-  }
-  .ebitda {
-    font-size: clamp(38px, 11vw, 56px);
-    margin: 16px 0 32px;
-  }
-  .result-grid {
-    gap: 24px 16px;
-  }
-  .result-grid dd {
-    font-size: 23px;
-  }
-  .currency {
-    flex-wrap: wrap;
-  }
-  .currency legend {
-    float: none;
-    width: 100%;
-    margin-bottom: 8px;
-  }
-  .scenario {
-    padding: 24px;
-  }
-  .scenario dl > div {
-    display: flex;
-    gap: 16px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .scenario dd {
-    white-space: nowrap;
-    font-size: 21px;
-  }
-  .scenario dt {
-    max-width: 55%;
-  }
-  .format {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 12px 20px;
-    padding: 24px;
-  }
-  .format-plan {
-    grid-column: 2;
-    grid-row: 1/5;
-    width: 76px;
-    height: 100px;
-    padding: 8px;
-    margin: 0;
-    align-self: center;
-  }
-  .format-plan i {
-    width: 14px;
-    height: 24px;
-  }
-  .format-plan i:last-child {
-    height: 60px;
-    width: 8px;
-  }
-  .format h3 {
-    margin-bottom: 12px;
-    font-size: 23px;
-  }
-  .format strong {
-    font-size: 30px;
-  }
-  .format p {
-    grid-column: 1;
-    margin: 0;
-    font-size: 15px;
-  }
-  .roadmap {
-    gap: 32px;
-    margin-top: 48px;
-  }
-  .funds-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .funds-total strong {
-    font-size: 58px;
-  }
-  .funds-total .photo {
-    display: none;
-  }
-  .fund-row > div:first-child {
-    gap: 16px;
-  }
-  .fund-row h3 {
-    font-size: 18px;
-  }
-  .fund-row strong {
-    font-size: 16px;
-  }
-  .terms > div {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .team-row {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .founder-mark {
-    max-width: 180px;
-    font-size: 100px;
-  }
-  .contact {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .lead-form {
-    gap: 20px;
-  }
-  .footer {
-    padding: 64px 20px 96px;
-  }
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-  .footer-location {
-    padding-top: 0;
-  }
-  .footer h2 {
-    max-width: 100%;
-  }
-  .footer-bottom {
-    display: block;
-  }
-  .footer-bottom p {
-    margin-top: 24px;
-  }
-  .footer-wordmark {
-    font-size: 31vw;
-    padding-top: 48px;
-  }
-  .mobile-cta {
-    display: flex;
-    position: fixed;
-    z-index: 30;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--paper);
-    padding: 12px 16px max(12px, env(safe-area-inset-bottom));
-    gap: 12px;
-    border-top: 1px solid var(--line);
-  }
-  .mobile-cta .button {
-    font-size: 15px;
-    min-height: 48px;
-    padding: 10px 12px;
-    gap: 8px;
-  }
-  .mobile-cta .primary {
-    flex: 1;
-  }
-  .subhero {
-    padding-top: 64px;
-  }
-  .subhero h1 {
-    font-size: clamp(39px, 10vw, 54px);
-  }
-  .full-menu {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .full-menu .drink-image {
-    max-width: 360px;
-  }
-  .brand-lockup {
-    margin: 40px 0 24px;
-    padding: 32px 16px;
-  }
-  .brand-lockup span {
-    font-size: 20px;
-    margin-left: 12px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-  .film {
-    display: none;
-  }
-}
-@media print {
-  .header,
-  .footer,
-  .mobile-cta,
-  .film,
-  .film-toggle,
-  .hero-actions,
-  .lead-form {
-    display: none;
-  }
-  .section {
-    padding: 24px 0;
-  }
-  .full-menu {
-    grid-template-columns: 1fr 1fr;
-  }
-  .photo {
-    display: none;
-  }
-  body {
-    font-size: 15px;
-  }
-  .drink {
-    break-inside: avoid;
-  }
-  a {
-    color: inherit;
-  }
-  h1 {
-    font-size: 38px;
-  }
-  h2 {
-    font-size: 30px;
-  }
-}
-.market-travel a,
-.economics > .note a,
-details > a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-}
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .interior img {
-      animation: ritual-focus linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 45%;
-    }
-    @keyframes ritual-focus {
-      from {
-        transform: scale(1.06);
-      }
-      to {
-        transform: scale(1);
-      }
-    }
-  }
-}
-.drink-grid:focus-visible {
-  outline: 3px solid #937100;
-  outline-offset: 6px;
-}
-@media (max-width: 767px) {
-  .hero-media {
-    height: 56%;
-    bottom: auto;
-  }
-  .hero-media .photo img,
-  .hero-media .film {
-    object-position: center 72%;
-  }
-  .hero-copy {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 8px;
-  }
-  .hero-note {
-    top: 16px;
-    bottom: auto;
-    max-width: 65%;
-    background: rgba(247, 244, 238, 0.95);
-  }
-  .hero-index {
-    top: 24px;
-  }
-  .hero-media .film-toggle {
-    bottom: auto;
-    top: 72px;
-    right: 16px;
-  }
-  .hero {
-    background: #ddd7c9;
-  }
-  .hero h1 {
-    font-size: clamp(34px, 9vw, 42px);
-  }
-}
+@theme inline{--font-sans:var(--sans);--font-mono:var(--mono)}
+:root{--paper:#f3f1ea;--ink:#172e28;--muted:#58645d;--line:#bcc3b8;--ease:cubic-bezier(.22,1,.36,1);font-synthesis:none;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans),sans-serif;font-size:16px;-webkit-font-smoothing:antialiased}::selection{background:var(--ink);color:var(--paper)}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer;color:inherit}button:disabled{cursor:wait}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:2px solid currentColor;outline-offset:5px}img{max-width:100%;display:block}h1,h2,h3,p{margin:0}button{border:0;background:none}h1,h2,h3{font-weight:500}ul,ol{padding:0;list-style:none;margin:0}dl,dd{margin:0}main{min-width:0}.system{overflow:clip}.micro,.edition,.rail,.topbar nav,.section-head,.thesis-foot,.specs,.price,.source-foot,.market-caption,.market-bottom a,.market-bottom strong,.chart-values,.result-grid dd,.ebitda,.sliders output,.currency,.model-toolbar,.scenario-comparison dd,.format dl,.term-facts dt,.allocation-key,.gates,.footer,.number{font-family:var(--mono),monospace;font-variant-numeric:tabular-nums}.micro{font-size:11px;line-height:1.6;letter-spacing:.06em}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;clip:rect(0,0,0,0);overflow:hidden;white-space:nowrap}.skip{position:fixed;z-index:100;top:-100px;left:20px;background:var(--ink);color:var(--paper);padding:15px}.skip:focus{top:10px}.topbar{height:76px;position:fixed;top:0;left:0;right:0;z-index:30;background:var(--paper);display:flex;align-items:center;padding:0 4vw;border-bottom:1px solid var(--line);gap:32px}.wordmark{font-size:32px;font-weight:600;letter-spacing:-2px;line-height:1}.wordmark span{font:10px var(--mono);vertical-align:top;margin:2px 0 0 3px;display:inline-block}.edition{font-size:10px;letter-spacing:.08em}.topbar nav{display:flex;gap:30px;align-items:center;margin-left:auto;font-size:12px}.topbar nav a{min-height:44px;display:flex;align-items:center}.topbar nav a:hover{text-decoration:underline;text-underline-offset:5px}.language{border-left:1px solid var(--line);padding-left:25px}.rail{position:fixed;top:39%;left:28px;width:108px;z-index:20;mix-blend-mode:difference;color:#e8d1d7}.rail nav{display:flex;flex-direction:column;gap:16px}.rail a{font-size:9px;display:flex;align-items:center;gap:12px;min-height:16px}.rail a span:last-child{opacity:0;transition:opacity .25s var(--ease)}.rail a:hover span:last-child,.rail a[aria-current] span:last-child{opacity:1}.rail a[aria-current] span:first-child{border-bottom:1px solid}.progress-cup{margin-top:34px;display:flex;gap:9px;align-items:center;font-size:9px}.progress-cup svg{width:27px;height:44px}.cup-liquid{fill:currentColor;transform:scaleY(0);transform-origin:16px 49px}.top-progress{height:2px;position:fixed;top:75px;left:0;right:0;z-index:35}.top-progress i{display:block;height:100%;background:var(--ink);transform:scaleX(0);transform-origin:left}.section{position:relative;padding:55px 5vw 84px 12vw;scroll-margin-top:76px}.section-head{display:flex;justify-content:space-between;align-items:center;border-top:1px solid currentColor;padding-top:14px;font-size:11px;letter-spacing:.05em;transform-origin:left;margin-bottom:65px}.section-head span:nth-child(2){margin-left:auto;margin-right:35px}.section-head span:last-child{font-size:18px;line-height:.6}.section-title{font-size:clamp(38px,4.5vw,70px);line-height:1.04;letter-spacing:-.05em;max-width:100%;margin-bottom:48px}.reveal-line{display:block;overflow:hidden;clip-path:inset(0)}.reveal-line>span{display:block}.thesis{min-height:100svh;padding-top:116px;display:flex;flex-direction:column}.thesis .section-head{margin-bottom:30px}.status{margin-bottom:28px}.thesis h1{font-size:clamp(90px,10vw,175px);font-weight:500;letter-spacing:-.073em;line-height:.99;flex:1;display:flex;flex-direction:column;justify-content:center}.thesis h1 span:last-child{color:#566b5e}.thesis-foot{display:flex;align-items:flex-end;justify-content:space-between;font-size:10px;margin-top:46px;letter-spacing:.03em}.arrow-link{font-size:32px;min-width:50px;min-height:50px;border:1px solid var(--line);display:grid;place-items:center}.product{border-top:1px solid var(--line);padding-bottom:50px}.product-intro{position:relative}.product .section-title{position:absolute;top:90px;z-index:2;max-width:44%;pointer-events:none}.cup-stage{position:relative;min-height:740px;height:85svh;max-height:950px;overflow:hidden;margin-top:-30px}.stage-grid{position:absolute;inset:8% 1%;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px),linear-gradient(to bottom,var(--line) 1px,transparent 1px);background-size:25% 25%;opacity:.35}.cup-render{position:absolute;width:min(48%,460px);height:92%;left:49%;top:2%;mix-blend-mode:multiply;display:grid;place-items:center}.cup-render picture{display:block;width:100%;height:100%}.cup-render img{width:100%;height:100%;object-fit:contain}.cup-canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;visibility:hidden}.cup-canvas[data-ready=true]{visibility:visible}.cup-shadow{position:absolute;background:#172e28;width:24%;height:18px;left:59%;bottom:10%;border-radius:50%;filter:blur(12px);opacity:.09}.stage-corner{position:absolute}.top-left{left:0;top:48%}.bottom-left{left:0;bottom:5%}.bottom-right{right:0;bottom:5%}.gallery-region{margin-top:45px}.gallery-heading{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-top:1px solid var(--line);gap:20px}.gallery-heading>span:nth-child(2){margin-left:auto}.gallery-button{width:44px;height:44px;border:1px solid var(--line);font-size:19px}.gallery-button+button{border-left:0}.gallery{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;scroll-behavior:auto}.gallery::-webkit-scrollbar{display:none}.drink{flex:0 0 calc((100% - 40px)/3);min-width:0;scroll-snap-align:start}.drink-image{position:relative;background:#eeeae0}.drink-image img{width:100%;height:auto;mix-blend-mode:multiply}.drink-code{position:absolute;top:18px;left:16px;z-index:1}.drink-description{padding-top:22px}.drink-name{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.drink-name h3{font-size:clamp(17px,1.6vw,24px);line-height:1.2;letter-spacing:-.025em;min-width:0}.price{font-size:14px;white-space:nowrap;padding-top:2px}.other-name{font-size:12px;color:var(--muted);margin-top:8px;min-height:32px}.tea-base{font-size:10px;min-height:44px;margin-top:15px}.specs{border-top:1px solid var(--line);font-size:9px}.specs>div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}.specs dt{color:var(--muted)}.specs dd{text-align:right}.assumption{font-size:11px;line-height:1.65;color:var(--muted);max-width:950px;margin-top:30px}.market{background:var(--ink);color:var(--paper);margin-top:36px}.market .section-head{border-color:#77877d}.market-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.market-card>.micro{color:#c4d0c8}.chart-values{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:32px}.chart-values strong{font-weight:400;font-size:clamp(32px,4.2vw,65px);letter-spacing:-.075em}.chart-values small{display:block;font-size:11px;margin-top:10px;color:#c4d0c8}.chart-values>span{font-size:24px}.data-chart{display:block;width:100%;height:120px;margin-top:25px;overflow:visible}.chart-grid{stroke:#66796f;stroke-width:.5;fill:none}.chart-line{stroke:var(--paper);stroke-width:2;fill:none}.chart-reveal{transform-origin:left}.market-caption{display:flex;justify-content:space-between;gap:12px;font-size:10px;margin-top:20px}.market-caption a,.market-bottom a{text-decoration:underline;text-underline-offset:4px}.market-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;border-top:1px solid #77877d;margin-top:55px;padding-top:28px}.market-bottom article{min-width:0;display:flex;flex-direction:column;gap:20px}.market-bottom strong{font-size:clamp(36px,4.5vw,68px);font-weight:400;letter-spacing:-.075em;line-height:1.1}.market-bottom strong .micro{display:block;letter-spacing:.06em;font-size:10px;margin-bottom:5px}.market-bottom a{font-size:10px;margin-top:auto}.source-foot{display:flex;justify-content:space-between;gap:25px;margin-top:50px;color:#c4d0c8;font-size:9px}.number{display:inline-block}.economics-scroll{height:180svh;position:relative}.economics-pin{position:sticky;top:100px;background:var(--paper);padding-bottom:16px}.model-toolbar{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0}.scenario-tabs{display:flex;gap:4px;flex-wrap:wrap}.scenario-tabs button,.currency button{font-size:10px;padding:10px 12px;min-height:40px}.scenario-tabs button[aria-pressed=true],.currency button[aria-pressed=true]{background:var(--ink);color:var(--paper)}.currency{display:flex;padding:0;border:1px solid var(--line);margin:0}.model-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:7%;padding:40px 0 28px}.sliders{display:flex;flex-direction:column;gap:24px}.sliders label>span{display:flex;justify-content:space-between;gap:15px;font-size:13px}.sliders output{font-size:13px;white-space:nowrap}.sliders input{display:block;width:100%;margin:12px 0 0;accent-color:var(--ink);height:22px;cursor:ew-resize}.ebitda{display:block;white-space:nowrap;font-weight:400;font-size:clamp(36px,4vw,64px);letter-spacing:-.055em;line-height:1.3;margin:10px 0 26px}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}.result-grid>div:first-child{grid-column:1/-1}.result-grid dt{font-size:11px;color:var(--muted);margin-bottom:5px}.result-grid dd{font-size:17px}.model-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px;gap:15px}.model-bottom button{font-size:11px;padding:10px 0}.scenario-comparison{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px}.scenario-comparison article{border-top:1px solid var(--ink);padding-top:18px;min-width:0}.scenario-comparison h3{font-size:17px;margin-bottom:10px}.scenario-comparison dl{margin-top:20px}.scenario-comparison dl>div{display:flex;justify-content:space-between;gap:10px;font-size:11px;padding:9px 0;border-bottom:1px solid var(--line)}.model-assumptions{margin-top:40px}.model-assumptions .assumption{margin-top:10px}.baseline{display:flex;flex-wrap:wrap;gap:15px 40px;margin-top:25px}.scale{border-top:1px solid var(--line)}.format-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}.format{border-top:1px solid var(--line);padding-top:15px;min-width:0}.format-heading{display:flex;justify-content:space-between;align-items:center;gap:15px}.format-heading h3{font-size:25px;letter-spacing:-.04em;margin-right:auto}.format-diagram{height:170px;display:flex;align-items:center;justify-content:center;padding:25px 10px}.format-diagram>div{border:1px solid var(--ink);height:80px;display:flex;align-items:center;justify-content:space-evenly;position:relative}.format-diagram>div:before{content:'';position:absolute;inset:-10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.format-diagram i{height:15px;width:15px;border:1px solid var(--line)}.format dl>div{display:flex;justify-content:space-between;gap:15px;padding:14px 0;border-top:1px solid var(--line);font-size:11px}.format dl dd{font-size:15px;white-space:nowrap}.scale-repeat{margin-top:45px}.terms{background:#e8ebe2}.term-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:35px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.term-facts dt{font-size:10px;margin-bottom:13px}.term-facts dd{font-size:22px;letter-spacing:-.035em;line-height:1.2}.terms-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;margin-top:40px}.allocation{display:flex;height:24px;gap:3px;margin:22px 0;transform-origin:left}.allocation span{background:color-mix(in srgb,var(--ink),var(--paper) var(--tone))}.allocation-key li{font-size:11px;display:flex;justify-content:space-between;gap:15px;padding:8px 0;border-bottom:1px solid var(--line)}.gates{font-size:12px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}.gates li{border-bottom:1px solid var(--line);padding:0 0 18px}.risks-title{margin-top:40px}.risks{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:15px}.risks>div{display:grid;grid-template-columns:30% 15px 1fr;gap:10px;font-size:12px;border-top:1px solid var(--line);padding:16px 0}.contact{padding-top:60px;padding-bottom:90px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8%}.contact .section-title{font-size:clamp(36px,4vw,62px)}.download{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;margin-top:50px;font-size:13px}.calendar-pending{display:block;margin-top:22px;color:var(--muted);font-size:12px}.investor-form{display:flex;flex-direction:column;gap:23px}.investor-form label:not(.check){display:flex;flex-direction:column;font-size:12px;gap:10px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:22px}.investor-form input:not([type=checkbox]),.investor-form select{border:0;border-bottom:1px solid var(--muted);border-radius:0;background:transparent;min-height:42px;min-width:0;width:100%;padding:8px 0;color:var(--ink);font-size:16px}.check{display:flex;align-items:flex-start;gap:12px;font-size:12px;line-height:1.5}.check input{width:17px;height:17px;accent-color:var(--ink);margin:1px 0 0;flex-shrink:0}.cta{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:16px 22px;font-size:14px;transition:transform .3s var(--ease);text-align:left}.cta:active{transform:scale(.97)}.cta span{font-size:22px}.investor-form .assumption{margin-top:0}.privacy{font-size:10px;color:var(--muted);line-height:1.5}.honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.form-error{font-size:12px;color:#8a2417}.confirmation{border:1px solid var(--line);padding:32px;min-height:350px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}.confirmation h3{font-size:34px;letter-spacing:-.04em}.confirmation p{font-size:14px;line-height:1.6}.footer{padding:25px 5vw 25px 12vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:10px;gap:20px}.page-wipe{position:fixed;inset:0;background:var(--ink);z-index:99;visibility:hidden;pointer-events:none}.error-page{min-height:100svh;padding:10vw;display:flex;flex-direction:column;justify-content:center;gap:30px}.error-page>span{font:100px var(--mono)}
+@media(min-width:1024px){.gallery-region{height:190svh}.gallery-pin{position:sticky;top:100px}.gallery-heading{position:sticky;top:76px;background:var(--paper);z-index:3;height:65px}.gallery-pin{top:145px}.gallery{scroll-snap-type:none}.drink-image img{max-height:42svh;object-fit:contain}.drink-image{min-height:260px}.drink-code{top:12px}}
+@media(min-width:1800px){.section{padding-right:8vw;padding-left:14vw}.thesis h1{font-size:185px}.thesis{min-height:1000px}.cup-stage{height:800px}.rail{left:4vw}.drink-image img{max-height:500px}.economics-pin{top:120px}.model-grid{padding:55px 0}.section-title{font-size:78px}}
+@media(max-width:1023px){.rail{display:none}.section{padding-left:5vw}.footer{padding-left:5vw}.topbar{padding:0 5vw}.section-head{margin-bottom:45px}.thesis{padding-top:116px}.thesis h1{font-size:13vw}.cup-stage{min-height:600px}.cup-render{left:45%;width:52%}.product .section-title{max-width:50%;font-size:5.5vw}.drink{flex-basis:46%}.market-grid{gap:30px}.market-caption{flex-direction:column}.terms-grid{gap:35px}.model-toolbar{gap:10px}.scenario-tabs button{font-size:9px;padding:8px}.format-grid{gap:20px}.scenario-comparison{gap:20px}}
+@media(max-width:767px){html{scroll-padding-top:72px}.topbar{height:64px;padding:0 20px;gap:16px}.wordmark{font-size:29px}.edition{display:none}.topbar nav{gap:16px;font-size:11px}.language{padding-left:16px}.top-progress{top:63px}.section{padding:38px 20px 52px;scroll-margin-top:64px}.section-head{font-size:10px;padding-top:12px;margin-bottom:38px}.section-head span:nth-child(2){margin-right:20px}.section-title{font-size:clamp(34px,8vw,53px);margin-bottom:32px;line-height:1.08;letter-spacing:-.047em}.thesis{padding-top:96px;min-height:100svh;max-height:1000px;padding-bottom:25px}.thesis .section-head{margin-bottom:26px}.status{font-size:9px;margin-bottom:30px}.thesis h1{font-size:clamp(58px,13.65vw,103px);line-height:1.08;letter-spacing:-.065em}.thesis-foot{font-size:8px;gap:14px;align-items:flex-end;margin-top:35px}.thesis-foot span{max-width:115px;line-height:1.6}.arrow-link{font-size:26px;min-width:42px;min-height:42px}.product .section-title{position:relative;top:auto;max-width:100%;font-size:clamp(36px,9vw,54px);z-index:1}.cup-stage{height:65svh;min-height:430px;max-height:650px;margin-top:-15px}.cup-render{left:9%;width:82%;height:96%;top:0}.stage-grid{inset:3% 0 9%;background-size:25% 25%}.cup-shadow{left:29%;width:45%;bottom:8%}.top-left{top:4%;font-size:8px}.bottom-left{bottom:0;font-size:8px}.bottom-right{bottom:0;font-size:8px}.gallery-region{margin-top:35px}.gallery-heading{gap:15px}.gallery-heading .micro{font-size:9px}.gallery-button{height:40px;width:40px}.gallery{margin-right:-20px;padding-right:20px;gap:16px;scroll-padding-right:20px}.drink{flex-basis:86%;scroll-snap-stop:normal}.drink-image img{max-height:52svh;object-fit:contain}.drink-code{font-size:9px}.drink-name h3{font-size:23px}.drink-description{padding-top:20px}.other-name{font-size:12px;min-height:20px}.tea-base{font-size:9px;min-height:30px}.specs{font-size:9px}.price{font-size:15px}.assumption{font-size:10px;margin-top:24px}.market{margin-top:0}.market-grid{grid-template-columns:1fr;gap:40px}.chart-values{margin-top:20px}.chart-values strong{font-size:42px;letter-spacing:-.07em}.chart-values small{font-size:10px;margin-top:6px}.data-chart{height:86px;margin-top:15px}.market-caption{flex-direction:row;font-size:9px;margin-top:12px;align-items:flex-start}.market-caption a{text-align:right;max-width:52%}.market-bottom{gap:20px 15px;margin-top:35px;padding-top:24px;grid-template-columns:1fr 1fr}.market-bottom article:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;align-items:center}.market-bottom article:last-child strong{grid-column:2;grid-row:1/3;text-align:right}.market-bottom article:last-child a{grid-column:1}.market-bottom article>.micro{font-size:9px}.market-bottom article{gap:16px}.market-bottom strong{font-size:38px}.market-bottom a{font-size:8px}.source-foot{flex-direction:column;font-size:8px;gap:10px;margin-top:30px}.economics-scroll{height:180svh}.economics-pin{top:76px}.model-toolbar{flex-wrap:wrap;padding:10px 0;gap:8px}.scenario-tabs{width:100%;justify-content:space-between;gap:0}.scenario-tabs button{font-size:8px;padding:8px 6px;min-height:35px}.currency{margin-left:auto}.currency button{font-size:9px;padding:5px 12px;min-height:28px}.model-grid{display:flex;flex-direction:column-reverse;gap:22px;padding:20px 0 16px}.results .micro{font-size:9px}.ebitda{font-size:clamp(33px,9vw,49px);margin:5px 0 15px}.result-grid{grid-template-columns:repeat(3,1fr);gap:12px 10px}.result-grid>div:first-child{grid-column:auto}.result-grid dt{font-size:8px;line-height:1.4}.result-grid dd{font-size:11px}.result-grid>div:nth-child(4),.result-grid>div:nth-child(5){grid-column:auto}.sliders{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}.sliders label>span{font-size:9px;gap:6px;flex-wrap:wrap;min-height:30px;align-items:flex-start}.sliders output{font-size:10px}.sliders input{margin-top:3px;height:24px}.model-bottom{font-size:8px;padding-top:6px}.model-bottom button{font-size:9px;min-height:40px}.scenario-comparison{grid-template-columns:1fr;gap:22px;margin-top:20px}.scenario-comparison article{display:grid;grid-template-columns:1fr 1.4fr;gap:0 20px}.scenario-comparison h3{font-size:16px;grid-column:1}.scenario-comparison .micro{font-size:9px;grid-column:1}.scenario-comparison dl{grid-column:2;grid-row:1/3;margin-top:0}.scenario-comparison dl>div{font-size:9px;padding:7px 0}.model-assumptions{margin-top:28px}.model-assumptions>.micro{font-size:9px}.baseline{font-size:9px;gap:10px}.format-grid{grid-template-columns:1fr;gap:30px}.format-heading h3{font-size:26px}.format-diagram{height:105px;padding:22px 0}.format-diagram>div{height:60px;max-width:220px}.format dl{display:grid;grid-template-columns:1fr 1fr;gap:0 25px}.format dl>div{font-size:8px;padding:11px 0;gap:7px}.format dl dd{font-size:13px}.scale-repeat{font-size:9px;margin-top:28px}.term-facts{grid-template-columns:1fr;gap:22px;margin-top:20px;padding:22px 0}.term-facts>div{display:grid;grid-template-columns:1fr 1.3fr;gap:20px;align-items:start}.term-facts dt{font-size:9px;margin:0}.term-facts dd{font-size:19px}.terms-grid{grid-template-columns:1fr;gap:32px;margin-top:25px}.terms-grid h3{font-size:10px}.allocation{margin:18px 0;height:18px}.allocation-key li{font-size:10px}.gates{font-size:10px;gap:15px}.gates li{padding-bottom:14px}.risks{grid-template-columns:1fr}.risks>div{font-size:11px}.contact-grid{grid-template-columns:1fr;gap:40px}.contact .section-title{font-size:clamp(34px,8vw,49px)}.download{margin-top:25px;padding:18px 0;font-size:12px}.calendar-pending{margin-top:15px;font-size:11px}.investor-form{gap:20px}.form-row{grid-template-columns:1fr;gap:20px}.investor-form label:not(.check){font-size:11px}.check{font-size:11px}.cta{font-size:13px;min-height:56px}.footer{font-size:8px;padding:22px 20px;flex-wrap:wrap;gap:12px}.footer span:last-child{margin-left:auto}.confirmation h3{font-size:29px}.confirmation{padding:24px}.contact{padding-bottom:50px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.economics-scroll,.gallery-region{height:auto!important}.economics-pin,.gallery-pin,.gallery-heading{position:relative;top:auto}.gallery{scroll-snap-type:x mandatory}.cup-canvas{display:none}.cup-liquid{transform:scaleY(1)!important}.top-progress i{transform:scaleX(1)!important}.cta:active{transform:none}.page-wipe{display:none}}
 
-.film-mobile {
-  display: none;
-}
-@media (max-width: 767px) {
-  .film-mobile {
-    display: block;
-  }
-  .film-desktop {
-    display: none;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .film {
-    display: none;
-  }
-}
-.hero h1 {
-  font-size: clamp(40px, 6vw, 88px);
-}
-@media (max-width: 767px) {
-  .hero h1 {
-    font-size: clamp(34px, 9vw, 42px);
-  }
-  .hero .hero-actions {
-    gap: 8px;
-  }
-  .hero .hero-actions .button {
-    padding-inline: 12px;
-    gap: 8px;
-  }
-}
+/* Explicit rail surface keeps contrast stable over every section. */
+.thesis h1{font-family:"Xoxo Thesis",var(--sans),sans-serif}
+.rail{mix-blend-mode:normal;color:var(--ink);background:var(--paper);padding:12px 8px;width:116px;left:20px}
+.mobile-cup{display:none}
+@media(max-width:767px){.mobile-cup{display:block;position:fixed;right:7px;bottom:8px;width:20px;height:34px;z-index:20;color:var(--ink);background:var(--paper);pointer-events:none}}
+
+/* Small bilingual headline subset is inline to avoid a critical font round trip. */
+@font-face{font-family:"Xoxo Thesis";font-style:normal;font-weight:500;font-display:swap;src:url(data:font/woff2;base64,d09GMgABAAAAAAncAA4AAAAAFQAAAAmEAAMzdQAAAAAAAAAAAAAAAAAAAAAAAAAAGigbiVAcgSAGYACBTBEMCpUIkGgBNgIkA4EwC1oABCAFghQHIBuVEaOijnJSdyH5qwPekP5JQkkMxRZFW52tamcZi193bVULI/dh0TEGq9Mhyqd6jKFo+RosKLxFUK2RPXP7HwZF6IBYArGOMBEaZYRMxUaSRQvkCMZ/Wmvv/5lZmTU73ZtzWMQSJDHNZEIiRDItMnyefW9ApUJYJ4U0YpHWH9aCOu2J0PT+bZmWIH4zPFxNoPJ/H8Dvm8uZQGF+mRySBHKVu0kBdZ+vTeyergJgxagODsdSe9eU0SEK+bquFbbG5NM8pN88Ub7AQyhQxmzUhEFUwLJoO+EA9YQa6zk5o+ReoTMb3a8fjpIUkQwX+XY/hgADASSJmge5NOLrIrVFHvHtPrqkrdvgDILBYxsLacA+VVhOAez8fCkD1CRQfwTUkAwZxGbnThQyYBARPiEelwS9IChMkKCDfREkxVikhZAsoU1fVuitaOAQfLkewmA/JrcVYo4sQhzuJDlal5wzknNZE3n8C7v7QocEfR2elNih8GF9gVAmV2jrUvzqCiOmmGM5V0SDUJKg18y6HbtmnBAsLi2SmIxnGqmAVBfa1UdV2Ny6hTxRI+JoS8YXWhYa8QVAbFRPQW13SAJp7F2ZVUfBj6+qqy3X8VwA7tcG6VcDDzwdRQotVVd/Uc7YcWPHFyCoU9mM+OVZhLFjK9tftxGvXHZKR29+bsk+OZfepcFAMZaq2Lq6AsQVEQgAQYGmt1mFzMxtIVeMHe22kT6jUVksV+PVDNcR6oY4KZ/kSDpyjo3rZhp31n8tW10Xg9owOU7ErPzqFuqjKU8Z0CCGhphPC8xDvbDdnvx+Oz6F3Q3s+euAF7n3wlzuk65oXjmLjS6ADiIZnHUl/Y2sitG+SkxZXeuBcVDnvOuBfeb6VoUSq83ADA0XGfBZiKBJzGODHo6gqBbgzYmkCCnbk95d8jCmwcb8ndb80gphEmmc9H3BaLRmo388/b02HvL8pcU0aEWye0SW8/SThslwENeHfIlYlg06VTVWW0LerE/myniq4/JRHsItfG/xxlWgfStyQE/Xk51zA2SAJdu8xjXeP9PCreL/l9AORxcIIPvmQ0zAkPo4sOo/mMMstM9YdSto3qJlCWlZxTbcoMZpaFM0ddM3a3O2cP1BYRjIySggUko1XbP8Wat/9SlcsAIopIaaqvKf9/19fvfu3t7d2liOhIUMzKXrLwJhGbAbMBu6adA6sAawq+hOdATqqz+GvCqWz/0+zJrVvNHRSxFMwZleGjrVcUZBkVIZZvkp+X51IDlRftrpbAOcqQX1i2Qvpac1ORmZYogL5ka9BMQgDnECKK0dmm/VeKcbRSBZ8CCfKKD7zNOYFbLO/Fa14iAAONJt1mdg2qR4DekHJomCxISCA3FBWL2Et9+QLLFDQYx2RMKzBl2Z1SNjFICoF8HMSTSCL50nuNqGFbQnQkljBy60hu8/ttgsamTME7LmxRFXOHPWIG/lutaE6EJIXWmP0SpcjhHVui9ckII/DkfYFzXCucHNA4RgC6eTWOkse/PwMh6Gh3mjLNjR5+g5El4jzMq11NJb29rtwN48E6d4RLD7fkJk1uBcwuk0sQsdV+OoXt9Ot2VrDgDTcbVtneMqNTX5eiHqjBfif6bhCDiqvxgPpXUCHnkExox1hrA+Senf9VXpYjrsPq/3P/X9cG7d5rrNFtkfgBYH6L5u/xg+qy1Dpkv6jp5n3OivVh0gMVSk2SkxM+rt6Q83KDaBizytE3PX4X7/7gbYW91d5vgsVJ86GX2LIPvVORTTm5OIFoUMc8guE5oooKRdT43e6oMaPmT84MEU3kjAQmDGecg2I4QJmehmSqu8bEbuWErPRGpk1x2eUhShTugXLoR/NgB6kd98auvWeLe8e9EUi/Gu2yQgKTs5VT+kg4SvrPUJjq8awJ4l6IeBjoEfIOgDGPFBdKmergePFa9Kh2v+1MpVhA9jV73tUWvdwcScnaaod9GhzjdGZwggV/1iFPTDltQrNwYCOcXH2Kx0hCUu1xuNUeMhLJcZDzRfAQ6Ga15/14voPLG1OQdNka3YCOOP0Rm6HoQf3Vt4y3qgakfbV9/9aPq6fLWMvth3vlcOr3PpOsDVL4bz4ReXOsAwLGvUiOHTjgUqOXZBu7QqsdTc0Jq6rW33CtruIWtwE66kZkhJwedTrk/qTXGp3qgzm/RmJfmBNGI0mIG7PvW/u6lKnbmvYREy9aZqY9cK+qUPX6LRrLz/4fuAuOvG2COxG+8CuS9qPg0MWSAYCj1E3y38EsOfH3qGrleou266Kw7Vg2+aHlDBe+hwFSOAwBf8WTr/JKtNcGbVW171xVe78zjh4gqdMpnAif+nTBwPbuZczeAx7uJsBn1YKBYX1PQbNQMzghJeXBRTaqRz8xJtHF2EJ8R+bPzzAyMc8QJ4tk5dtDaLd23esv35/Esum9UBmxs3+vOPAsGwyoLYVVHGRGzXfc3N9+2aiEUZKrsFAYupfxD2lP+/CooNCYPdtWLEy1beUgdpduoRHS+gVb+fVlifZu/6dqHu50buY0jyTa4yyTdh6+nD1jTcosEoI73R7fn8Fh+B6hYdM1qGqzUbxVfwRxICwX2fdMHPsC3hLpPmcTMHRj6dGKjY+5vMxTiGOJOBMGzqCib0GpkW4gvvHR2l9/0WanbbNRhmn+SBJ/KPCrVxHJ7WauJfOE5oH9O9f//w7vAwMhLaPQzYiGzW3u+2klGRwmAgsSHZX+vfNjTHUZFXplbFMrDdU5QW3aZrXTwlqYXFI+U687um5hjOd8t1qrm8dKGPON7UAWtaP64n+8ec1HF/BtmLoE3jgV49Gm3BV5onKoSJJDZxQBTYfvf5tZlRl6zPka4BqPrLWV3id9H0QR3LE+KTomugmwnPVfJFEsbizPlbB3ici5ulQwIDBLq5N9InnpnpNvKb09i9B94+WSnjG6+FjKxLx8u/wCy3QMA/M2d3VRAvY0o9zM6ceJNJloX4TxMNDrsCd2KaNLJ1sOfU6ZeMS4nVDHNHYz/DTNqmzfpIvrHAZoe5plSCg93t9m3Cpy0aY0pG7fAZxqU6PnZCjEij7ejt3PE9k0V9OIJr0RfjTrUuEUvm2MDHkcC5FX28qyIFrR9IAN2k7CtjoW9Dsa/My5SOn7m0jPxZKytno4KEVWtKxm1at2GbcUbPZVwoCiDExbQ9aWnjVB7FvVjGuCzWNWJJXPVV1gZZ9WhNUJRQ5N94VVna/B7DRQVFCZEpIltWZ2A20BslcmU/LqGMViW0Vtm2AwAAAA==) format("woff2")}
 ````
 
 ## src/app/investors/page.tsx
 
 ````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("uk", "investors");
-export default function Page() {
-  return <Experience locale="uk" kind="investors" />;
-}
+import {System} from "@/components/v2/System";
+import {getCopy,pathFor,origin} from "@/lib/content";
+const c=getCopy("uk");
+export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("uk","investors"),languages:{uk:origin+pathFor("uk","investors"),en:origin+pathFor("en","investors")}}};
+export default function Page(){return <System locale="uk" view="investors"/>;}
 ````
 
 ## src/app/layout.tsx
 
 ````tsx
-import { Manrope, Noto_Serif } from "next/font/google";
-import type { Metadata, Viewport } from "next";
-import uk from "../../content/uk.json";
-import { origin } from "@/lib/investor-content";
-import "./globals.css";
-const manrope = Manrope({
-  subsets: ["latin", "latin-ext", "cyrillic"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-const display = Noto_Serif({
-  subsets: ["latin", "cyrillic"],
-  weight: "500",
-  variable: "--font-display-face",
-  display: "swap",
-});
-export const metadata: Metadata = {
-  metadataBase: new URL(origin),
-  title: uk.metadata.home,
-  description: uk.metadata.description,
-  icons: { icon: "/press/favicon.svg" },
-};
-export const viewport: Viewport = {
-  themeColor: "#173f35",
-  width: "device-width",
-  initialScale: 1,
-};
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html
-      lang="uk"
-      className={`${manrope.variable} ${display.variable}`}
-      suppressHydrationWarning
-    >
-      <body>{children}</body>
-    </html>
-  );
-}
+import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import uk from '../../content/uk.json';
+import { origin } from '@/lib/content';
+import './globals.css';
+const sans = IBM_Plex_Sans({ subsets:['latin','cyrillic'], weight:'500', preload:false, variable:'--sans', display:'swap' });
+const mono = IBM_Plex_Mono({ subsets:['latin','cyrillic'], weight:'400', preload:false, variable:'--mono', display:'swap' });
+export const metadata: Metadata = { metadataBase:new URL(origin),title:uk.metadata.title,description:uk.metadata.description,icons:{icon:'/favicon.svg'} };
+export const viewport: Viewport = { themeColor:'#f3f1ea',width:'device-width',initialScale:1 };
+export default function Layout({children}:{children:React.ReactNode}) { return <html lang="uk" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning><body>{children}</body></html>; }
 ````
 
 ## src/app/manifest.ts
 
 ````typescript
-import uk from "../../content/uk.json";
 export const dynamic = "force-static";
-export default function manifest() {
-  return {
-    name: uk.brand,
-    short_name: uk.wordmark,
-    description: uk.metadata.description,
-    start_url: "/",
-    display: "standalone" as const,
-    background_color: "#f7f4ee",
-    theme_color: "#173f35",
-    lang: "uk",
-  };
-}
+export default function manifest(){return {name:'XoXo Tea',short_name:'XoXo',start_url:'/',display:'standalone' as const,background_color:'#f3f1ea',theme_color:'#172e28',icons:[{src:'/favicon.svg',sizes:'any',type:'image/svg+xml'}]};}
 ````
 
 ## src/app/menu/page.tsx
 
 ````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("uk", "menu");
-export default function Page() {
-  return <Experience locale="uk" kind="menu" />;
-}
+import {System} from "@/components/v2/System";
+import {getCopy,pathFor,origin} from "@/lib/content";
+const c=getCopy("uk");
+export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("uk","menu"),languages:{uk:origin+pathFor("uk","menu"),en:origin+pathFor("en","menu")}}};
+export default function Page(){return <System locale="uk" view="menu"/>;}
 ````
 
 ## src/app/not-found.tsx
 
 ````tsx
-import Link from "next/link";
-import uk from "../../content/uk.json";
-export default function NotFound() {
-  return (
-    <main className="section subhero">
-      <h1>{uk.notFound.title}</h1>
-      <Link className="button primary" href="/">
-        {uk.notFound.body}
-      </Link>
-    </main>
-  );
-}
+import Link from 'next/link';
+import uk from '../../content/uk.json';
+export default function NotFound(){return <main className="error-page"><span>404</span><h1>{uk.notFound}</h1><Link href="/">{uk.back}</Link></main>;}
 ````
 
 ## src/app/page.tsx
 
 ````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("uk", "home");
-export default function Page() {
-  return <Experience locale="uk" kind="home" />;
-}
-````
-
-## src/app/press/page.tsx
-
-````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = pageMetadata("uk", "press");
-export default function Page() {
-  return <Experience locale="uk" kind="press" />;
-}
+import {System} from "@/components/v2/System";
+import {getCopy,pathFor,origin} from "@/lib/content";
+const c=getCopy("uk");
+export const metadata={title:c.metadata.title,description:c.metadata.description,alternates:{canonical:origin+pathFor("uk",""),languages:{uk:origin+pathFor("uk",""),en:origin+pathFor("en","")}}};
+export default function Page(){return <System locale="uk" view="all"/>;}
 ````
 
 ## src/app/robots.ts
 
 ````typescript
-import { origin } from "@/lib/investor-content";
 export const dynamic = "force-static";
-export default function robots() {
-  return {
-    rules: { userAgent: "*", allow: "/" },
-    sitemap: origin + "/sitemap.xml",
-  };
-}
-````
-
-## src/app/ru/page.tsx
-
-````tsx
-import { Experience, pageMetadata } from "@/components/investor/Experience";
-export const metadata = {
-  ...pageMetadata("uk", "home"),
-  robots: { index: false, follow: true },
-};
-export default function Page() {
-  return <Experience locale="uk" />;
-}
+import { origin } from '@/lib/content';
+export default function robots(){return {rules:{userAgent:'*',allow:'/'},sitemap:origin+'/sitemap.xml'};}
 ````
 
 ## src/app/sitemap.ts
 
 ````typescript
-import type { MetadataRoute } from "next";
-import { origin, route } from "@/lib/investor-content";
 export const dynamic = "force-static";
-export default function sitemap(): MetadataRoute.Sitemap {
-  return (["uk", "en"] as const).flatMap((l) =>
-    ["", "menu", "investors", "press"].map((p) => ({
-      url: origin + route(l, p),
-      lastModified: new Date("2026-09-13"),
-      priority: p ? 0.7 : 1,
-    })),
-  );
-}
+import {origin,pathFor} from '@/lib/content';
+export default function sitemap(){return (['uk','en'] as const).flatMap(lang=>['','menu','investors'].map(p=>({url:origin+pathFor(lang,p),lastModified:new Date('2026-09-13'),alternates:{languages:{uk:origin+pathFor('uk',p),en:origin+pathFor('en',p)}}})));}
 ````
 
-## src/components/investor/Behavior.tsx
+## src/components/v2/Contact.tsx
 
 ````tsx
-"use client";
-import { useEffect } from "react";
-import { connection } from "@/lib/investor-content";
-export function track(
-  name: string,
-  props: Record<string, string | number> = {},
-) {
-  const w = window as Window & {
-    plausible?: (
-      name: string,
-      options: { props: Record<string, string | number> },
-    ) => void;
-  };
-  w.plausible?.(name, { props });
-}
-export function getAttribution() {
-  try {
-    return JSON.parse(
-      sessionStorage.getItem("xoxo-attribution") || "{}",
-    ) as Record<string, string>;
-  } catch {
-    return {};
-  }
-}
-export function Behavior({ locale }: { locale: "uk" | "en" }) {
-  useEffect(() => {
-    document.documentElement.lang = locale;
-    const params = new URLSearchParams(location.search),
-      attribution: Record<string, string> = {};
-    for (const key of [
-      "ref",
-      "utm_source",
-      "utm_medium",
-      "utm_campaign",
-      "utm_content",
-      "utm_term",
-    ]) {
-      const value = params.get(key);
-      if (value) attribution[key] = value.slice(0, 150);
-    }
-    try {
-      if (Object.keys(attribution).length)
-        sessionStorage.setItem("xoxo-attribution", JSON.stringify(attribution));
-    } catch {}
-    const click = (event: MouseEvent) => {
-      const target = (event.target as Element).closest<HTMLElement>(
-        "[data-track]",
-      );
-      if (target) track("CTA", { action: target.dataset.track || "", locale });
-    };
-    document.addEventListener("click", click);
-    const seen = new Set<string>();
-    const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !seen.has(entry.target.id)) {
-            seen.add(entry.target.id);
-            track("Investor section", { section: entry.target.id, locale });
-          }
-        }),
-      { threshold: 0.2 },
-    );
-    document
-      .querySelectorAll("[data-investor]")
-      .forEach((el) => observer.observe(el));
-    const depths = new Set<number>();
-    const scroll = () => {
-      const max = document.documentElement.scrollHeight - innerHeight;
-      if (max <= 0) return;
-      const pct = (scrollY / max) * 100;
-      for (const depth of [25, 50, 75, 100])
-        if (pct >= depth - 1 && !depths.has(depth)) {
-          depths.add(depth);
-          track("Scroll depth", { depth, locale });
-        }
-    };
-    addEventListener("scroll", scroll, { passive: true });
-    let script: HTMLScriptElement | undefined;
-    if (
-      connection.plausible &&
-      !document.querySelector("[data-xoxo-analytics]")
-    ) {
-      script = document.createElement("script");
-      script.defer = true;
-      script.src = "https://plausible.io/js/script.manual.js";
-      script.dataset.domain = connection.plausible;
-      script.dataset.xoxoAnalytics = "true";
-      document.head.append(script);
-      script.onload = () => track("pageview");
-    }
-    return () => {
-      document.removeEventListener("click", click);
-      removeEventListener("scroll", scroll);
-      observer.disconnect();
-    };
-  }, [locale]);
-  return null;
+'use client';
+import {useRef,useState,type FormEvent} from 'react';
+import type {Copy} from '@/lib/content';
+export function Contact({c}:{c:Copy['contact']}){
+ const [state,setState]=useState('idle'),[error,setError]=useState('');const heading=useRef<HTMLHeadingElement>(null); const endpoint=process.env.NEXT_PUBLIC_LEAD_ENDPOINT||'';
+ async function submit(e:FormEvent<HTMLFormElement>){e.preventDefault();const f=e.currentTarget;const data=new FormData(f); const name=String(data.get('name')||'').trim(),contact=String(data.get('contact')||'').trim();if(!name||!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact)||/^@[A-Za-z][A-Za-z0-9_]{4,31}$/.test(contact))){setError(c.invalid);return;}if(data.get('website'))return;setError('');setState('sending');const params=new URLSearchParams(location.search);const payload={name,contact,organization:String(data.get('organization')||'').trim(),ticket:String(data.get('ticket')),dataRoom:data.get('dataRoom')==='on',consent:true,ref:params.get('ref')||'',utm:Object.fromEntries([...params.entries()].filter(([k])=>k.startsWith('utm_')))};
+ try{if(endpoint){const result=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:AbortSignal.timeout(12000)});if(!result.ok)throw new Error();setState('sent');}else{const url=URL.createObjectURL(new Blob([c.notSent+'\n\n'+JSON.stringify(payload,null,2)],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=c.file;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setState('prepared');}requestAnimationFrame(()=>heading.current?.focus());}catch{setState('idle');setError(c.error);}}
+ if(state==='prepared'||state==='sent')return <div className="confirmation" role="status"><span className="micro">07 / 01</span><h3 tabIndex={-1} ref={heading}>{state==='sent'?c.sent:c.success}</h3><p>{state==='sent'?c.sentBody:c.successBody}</p><button className="cta" onClick={()=>setState('idle')}>{c.again} ↗</button></div>;
+ return <form className="investor-form" onSubmit={submit}><div className="form-row"><label>{c.name}<input name="name" autoComplete="name" required maxLength={100}/></label><label>{c.org}<input name="organization" autoComplete="organization" maxLength={150}/></label></div><label>{c.email}<input name="contact" required autoComplete="email" maxLength={254}/></label><label>{c.range}<select name="ticket">{c.ranges.map(x=><option key={x}>{x}</option>)}</select></label><label className="check"><input type="checkbox" name="dataRoom"/>{c.room}</label><label className="check"><input type="checkbox" name="consent" required/>{c.consent}</label><div className="honey" aria-hidden="true"><label>{c.trap}<input name="website" tabIndex={-1} autoComplete="off"/></label></div>{error&&<p role="alert" className="form-error">{error}</p>}<button className="cta magnet" disabled={state==='sending'}>{state==='sending'?c.sending:endpoint?c.send:c.submit}<span aria-hidden="true">↗</span></button>{!endpoint&&<p className="assumption">{c.notice}</p>}<p className="privacy">{c.privacy}</p></form>;
 }
 ````
 
-## src/components/investor/CityMap.tsx
+## src/components/v2/CupSequence.tsx
 
 ````tsx
-"use client";
-import { useState } from "react";
-export function CityMap({ label, title }: { label: string; title: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div>
-      {open ? (
-        <iframe
-          title={title}
-          src="https://www.google.com/maps?q=Mykolaiv%2C%20Ukraine&output=embed"
-          width="100%"
-          height="240"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          style={{ border: 0 }}
-        />
-      ) : (
-        <button
-          className="button outline"
-          type="button"
-          onClick={() => setOpen(true)}
-          data-track="city-map"
-        >
-          {label} ↗
-        </button>
-      )}
-    </div>
-  );
+'use client';
+import {useEffect,useRef} from 'react';
+// A generated sequence is deliberately optional. Never fabricate turntable views from a flat photograph.
+export function CupSequence({alt,label}:{alt:string;label:string}){const canvas=useRef<HTMLCanvasElement>(null);
+ useEffect(()=>{const el=canvas.current;if(!el)return;const reduced=matchMedia('(prefers-reduced-motion: reduce)');let stopped=false;const bitmaps:ImageBitmap[]=[];let frame=0;const stage=el.closest('[data-cup-stage]');let controller:AbortController|undefined;
+ const draw=(e:Event)=>{frame=(e as CustomEvent<number>).detail;const b=bitmaps[frame];if(!b||reduced.matches)return;const ctx=el.getContext('2d');if(ctx){el.width=b.width;el.height=b.height;ctx.drawImage(b,0,0);el.dataset.ready='true';}};
+ const observer=new IntersectionObserver(async entries=>{if(!entries.some(x=>x.isIntersecting)||reduced.matches)return;observer.disconnect();controller=new AbortController();try{const res=await fetch('/sequence/manifest.json',{signal:controller.signal});const manifest=await res.json();if(!Array.isArray(manifest.frames)||manifest.frames.length!==36)return;for(let i=0;i<36;i++){if(stopped||reduced.matches)break;const blob=await fetch(manifest.frames[i],{signal:controller.signal}).then(r=>r.blob());bitmaps[i]=await createImageBitmap(blob);draw(new CustomEvent('cupframe',{detail:frame}));await new Promise<void>(r=>requestAnimationFrame(()=>r()));}}catch{/* Static product photography remains available. */}},{rootMargin:'100px'});
+ const change=()=>{if(reduced.matches){controller?.abort();el.dataset.ready='false';}else if(stage)observer.observe(stage);};if(stage){observer.observe(stage);stage.addEventListener('cupframe',draw);}reduced.addEventListener('change',change);return()=>{stopped=true;controller?.abort();observer.disconnect();stage?.removeEventListener('cupframe',draw);reduced.removeEventListener('change',change);bitmaps.forEach(b=>b.close());};},[]);
+ return <><picture><source type="image/avif" srcSet="/drinks/drink-0-480.avif 480w, /drinks/drink-0-960.avif 960w" sizes="(max-width: 767px) 82vw, 440px"/><img src="/drinks/drink-0-480.webp" width="720" height="960" loading="lazy" decoding="async" alt={alt}/></picture><canvas ref={canvas} className="cup-canvas" width={900} height={1200} role="img" aria-label={label}/></>;
 }
 ````
 
-## src/components/investor/Economics.tsx
+## src/components/v2/Economics.tsx
 
 ````tsx
-"use client";
-import { useRef, useState } from "react";
-import type { Copy, Locale } from "@/lib/investor-content";
-import { calculate, defaults, scenarios, formatMoney } from "@/lib/store-model";
-export function Economics({
-  c,
-  locale,
-}: {
-  c: Copy["economics"];
-  locale: Locale;
-}) {
-  const [inputs, setInputs] = useState(defaults),
-    [usd, setUsd] = useState(false);
-  const result = calculate(inputs);
-  const number = useRef<HTMLElement>(null);
-  const animateNumber = () => {
-    if (!matchMedia("(prefers-reduced-motion: reduce)").matches)
-      import("framer-motion/dom/mini")
-        .then(({ animate }) => {
-          if (number.current)
-            animate(
-              number.current,
-              {
-                opacity: [0.5, 1],
-                transform: ["translateY(4px)", "translateY(0px)"],
-              },
-              { duration: 0.2 },
-            );
-        })
-        .catch(() => {});
-  };
-  const money = (n: number) => formatMoney(n, locale, usd);
-  const fields = [
-    { key: "cups", min: 30, max: 350, step: 5 },
-    { key: "ticket", min: 120, max: 260, step: 5 },
-    { key: "rent", min: 15000, max: 120000, step: 5000 },
-    { key: "staff", min: 100000, max: 350000, step: 10000 },
-  ] as const;
-  return (
-    <div className="model">
-      <fieldset className="currency">
-        <legend>{c.currency}</legend>
-        <button type="button" aria-pressed={!usd} onClick={() => setUsd(false)}>
-          {c.uah}
-        </button>
-        <button type="button" aria-pressed={usd} onClick={() => setUsd(true)}>
-          {c.usd}
-        </button>
-      </fieldset>
-      <div className="model-grid">
-        <div className="sliders">
-          {fields.map((f) => (
-            <label key={f.key} htmlFor={f.key}>
-              <span>
-                {c[f.key]}
-                <output htmlFor={f.key}>
-                  {f.key === "cups" ? inputs[f.key] : money(inputs[f.key])}
-                </output>
-              </span>
-              <input
-                id={f.key}
-                type="range"
-                min={f.min}
-                max={f.max}
-                step={f.step}
-                value={inputs[f.key]}
-                aria-valuetext={
-                  f.key === "cups"
-                    ? String(inputs[f.key])
-                    : money(inputs[f.key])
-                }
-                onChange={(e) => {
-                  setInputs({ ...inputs, [f.key]: Number(e.target.value) });
-                  animateNumber();
-                }}
-              />
-            </label>
-          ))}
-        </div>
-        <div className="model-results" aria-live="polite" aria-atomic="true">
-          <p>{c.ebitda}</p>
-          <strong ref={number} className="ebitda">
-            {money(result.ebitda)}
-          </strong>
-          <dl className="result-grid">
-            <div>
-              <dt>{c.gross}</dt>
-              <dd>
-                {(result.grossMargin * 100).toLocaleString(locale, {
-                  maximumFractionDigits: 1,
-                })}
-                %
-              </dd>
-            </div>
-            <div>
-              <dt>{c.contribution}</dt>
-              <dd>{money(result.contribution)}</dd>
-            </div>
-            <div>
-              <dt>{c.payback}</dt>
-              <dd>
-                {result.payback === null
-                  ? c.none
-                  : result.payback.toLocaleString(locale, {
-                      maximumFractionDigits: 1,
-                    })}
-              </dd>
-            </div>
-            <div>
-              <dt>{c.breakEven}</dt>
-              <dd>{result.breakEven ?? c.none}</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-      <h3>{c.scenarioTitle}</h3>
-      <div className="scenario-grid">
-        {scenarios.map((s, i) => {
-          const r = calculate(s);
-          return (
-            <article key={i} className={i === 1 ? "scenario base" : "scenario"}>
-              <h4>{c.scenarios[i]}</h4>
-              <p>
-                {s.cups} · {c.cups} / {money(s.ticket)}
-              </p>
-              <dl>
-                {[
-                  [c.revenue, money(r.revenue)],
-                  [c.ebitda, money(r.ebitda)],
-                  [
-                    c.payback,
-                    r.payback === null
-                      ? c.none
-                      : r.payback.toLocaleString(locale, {
-                          maximumFractionDigits: 1,
-                        }),
-                  ],
-                ].map(([label, value]) => (
-                  <div key={label}>
-                    <dt>{label}</dt>
-                    <dd>{value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </article>
-          );
-        })}
-      </div>
-      <p className="assumption">{c.assumptions}</p>
-      <p className="note">{c.explanation}</p>
-    </div>
-  );
+'use client';
+import {useEffect,useRef,useState} from 'react';
+import {calculate,defaults,scenarios,formatMoney,model,type Inputs} from '@/lib/store-model';
+import type {Copy,Locale} from '@/lib/content';
+export function Economics({c,extra,locale}:{c:Copy['economics'];extra:Copy['economicsExtra'];locale:Locale}){
+ const [inputs,setInputs]=useState(defaults),[usd,setUsd]=useState(false),[active,setActive]=useState(1),[custom,setCustom]=useState(false); const ref=useRef<HTMLDivElement>(null);
+ const result=calculate(inputs);const money=(n:number)=>formatMoney(n,locale,usd);
+ useEffect(()=>{const el=ref.current;if(!el)return;const update=(event:Event)=>{if(custom)return;const i=(event as CustomEvent<number>).detail;setActive(i);setInputs(scenarios[i]);};el.addEventListener('scenario',update);return()=>el.removeEventListener('scenario',update);},[custom]);
+ const fields=[{key:'cups',min:30,max:350,step:5},{key:'ticket',min:120,max:260,step:5},{key:'rent',min:15000,max:120000,step:5000},{key:'staff',min:100000,max:350000,step:10000}] as const;
+ const choose=(i:number)=>{setActive(i);setInputs(scenarios[i]);setCustom(true);};
+ return <><div className="economics-scroll" data-economics ref={ref}><div className="economics-pin"><div className="model-toolbar"><div className="scenario-tabs" role="group" aria-label={extra.scenario}>{[1,0,2].map(i=><button key={i} type="button" aria-pressed={!custom&&active===i||custom&&active===i} onClick={()=>choose(i)}>{c.scenarios[i]}</button>)}</div><fieldset className="currency"><legend className="sr-only">{c.currency}</legend><button type="button" aria-pressed={!usd} onClick={()=>setUsd(false)}>{c.uah}</button><button type="button" aria-pressed={usd} onClick={()=>setUsd(true)}>{c.usd}</button></fieldset></div><div className="model-grid"><div className="sliders">{fields.map(f=><label key={f.key} htmlFor={f.key}><span>{c[f.key]}<output htmlFor={f.key}>{f.key==='cups'?inputs[f.key]:money(inputs[f.key])}</output></span><input id={f.key} type="range" min={f.min} max={f.max} step={f.step} value={inputs[f.key]} aria-valuetext={f.key==='cups'?String(inputs[f.key]):money(inputs[f.key])} onChange={e=>{setCustom(true);setActive(-1);setInputs({...inputs,[f.key]:Number(e.target.value)} as Inputs);}}/></label>)}</div><div className="results"><p className="micro">{c.ebitda} / {extra.period}</p><strong className="ebitda" data-ebitda>{money(result.ebitda)}</strong><dl className="result-grid">{[[c.revenue,money(result.revenue)],[c.gross,`${(result.grossMargin*100).toLocaleString(locale,{maximumFractionDigits:1})}%`],[c.contribution,money(result.contribution)],[c.payback,result.payback===null?c.none:result.payback.toLocaleString(locale,{maximumFractionDigits:1})],[c.breakEven,result.breakEven??c.none]].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl></div></div><div className="model-bottom micro"><span>{custom?extra.custom:extra.scroll}</span><button type="button" onClick={()=>{setCustom(false);setInputs(defaults);setActive(1);}}>{extra.reset} ↺</button></div></div></div><div className="scenario-comparison">{[1,0,2].map(i=>{const s=scenarios[i],v=calculate(s);return <article key={i}><h3>{c.scenarios[i]}</h3><div className="micro">{s.cups} / {money(s.ticket)}</div><dl><div><dt>{c.revenue}</dt><dd>{money(v.revenue)}</dd></div><div><dt>{c.ebitda}</dt><dd>{money(v.ebitda)}</dd></div><div><dt>{c.payback}</dt><dd>{v.payback?.toLocaleString(locale,{maximumFractionDigits:1})??c.none}</dd></div></dl></article>})}</div><div className="model-assumptions"><p className="micro">{extra.tag}</p><p className="assumption">{c.assumptions}</p><p className="assumption">{c.explanation}</p><div className="baseline micro"><span>{extra.funding} / {money(model.funding)}</span><span>{extra.exchange} / 42 UAH = 1 USD</span></div></div></>;
 }
 ````
 
-## src/components/investor/Experience.tsx
+## src/components/v2/Runtime.tsx
 
 ````tsx
-import { CityMap } from "./CityMap";
-import type { Metadata } from "next";
-import {
-  copy,
-  route,
-  origin,
-  connection,
-  type Locale,
-  type Copy,
-} from "@/lib/investor-content";
-import { formatMoney } from "@/lib/store-model";
-import { Photo } from "./Photo";
-import { Film } from "./Film";
-import { Behavior } from "./Behavior";
-import { Economics } from "./Economics";
-import { LeadForm } from "./LeadForm";
-export type PageKind = "home" | "menu" | "investors" | "press";
-export function pageMetadata(locale: Locale, kind: PageKind): Metadata {
-  const c = copy(locale),
-    path = kind === "home" ? "" : kind;
-  return {
-    title: c.metadata[kind],
-    description: c.metadata.description,
-    alternates: {
-      canonical: origin + route(locale, path),
-      languages: {
-        "uk-UA": origin + route("uk", path),
-        en: origin + route("en", path),
-        "x-default": origin + route("uk", path),
-      },
-    },
-    openGraph: {
-      title: c.metadata[kind],
-      description: c.metadata.description,
-      locale: locale === "uk" ? "uk_UA" : "en_US",
-      images: [
-        { url: "/assets/og.jpg", width: 1200, height: 630, alt: c.hero.alt },
-      ],
-      url: origin + route(locale, path),
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: c.metadata[kind],
-      description: c.metadata.description,
-      images: ["/assets/og.jpg"],
-    },
-  };
-}
-function Heading({
-  label,
-  title,
-  body,
-}: {
-  label: string;
-  title: string;
-  body?: string;
-}) {
-  return (
-    <div className="section-heading">
-      <p className="eyebrow">{label}</p>
-      <h2>{title}</h2>
-      {body && <p className="intro">{body}</p>}
-    </div>
-  );
-}
-function Signatures({
-  c,
-  locale,
-  full = false,
-}: {
-  c: Copy;
-  locale: Locale;
-  full?: boolean;
-}) {
-  return (
-    <section id="menu" className="section signatures">
-      <div className="section-top">
-        <Heading {...c.signature} />
-        {!full && (
-          <a
-            className="text-link"
-            href={route(locale, "menu")}
-            data-track="full-menu"
-          >
-            {c.signature.all} ↗
-          </a>
-        )}
-      </div>
-      <div
-        className={full ? "full-menu" : "drink-grid"}
-        tabIndex={full ? undefined : 0}
-        role={full ? undefined : "region"}
-        aria-label={full ? undefined : c.signature.title}
-      >
-        {c.drinks.slice(0, full ? undefined : 5).map((d, i) => (
-          <article className="drink" key={d.name}>
-            {d.image && i < 5 && (
-              <div className="drink-image">
-                <Photo name={d.image} alt={`${d.name}: ${d.base}`} />
-                <span className="product-number" aria-hidden="true">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
-            )}
-            <div className="drink-copy">
-              <div className="drink-title">
-                <h3>{d.name}</h3>
-                <span>{formatMoney(d.price, locale)}</span>
-              </div>
-              <p lang={locale === "uk" ? "en" : "uk"} className="note">
-                {d.other}
-              </p>
-              <p>{d.base}</p>
-              <p className="sensory">{d.line}</p>
-              {full && (
-                <p className="note">
-                  {c.signature.size} · {c.signature.allergens}: {d.allergens}
-                </p>
-              )}
-            </div>
-          </article>
-        ))}
-      </div>
-      <p className="assumption">{c.signature.note}</p>
-      {full && <p>{c.signature.crossContact}</p>}
-    </section>
-  );
-}
-function Market({ c }: { c: Copy }) {
-  const sources = [
-    {
-      title: c.market.global,
-      values: [3.35, 3.62],
-      labels: ["2025", "2026"],
-      note: c.market.globalNote,
-      url: "https://www.researchandmarkets.com/reports/5851209/bubble-tea-market-report",
-      publisher: c.sources.global,
-    },
-    {
-      title: c.market.europe,
-      values: [727.2, 1262.6],
-      labels: ["2026", "2033"],
-      note: c.market.europeNote,
-      url: "https://www.persistencemarketresearch.com/market-research/europe-bubble-tea-market.asp",
-      publisher: c.sources.europe,
-    },
-  ];
-  return (
-    <section className="section market" id="market" data-investor>
-      <Heading {...c.market} />
-      <div className="charts">
-        {sources.map((s) => (
-          <figure className="chart" key={s.title}>
-            <figcaption>{s.title}</figcaption>
-            <div className="bars">
-              {s.values.map((n, i) => (
-                <div className="bar-column" key={n}>
-                  <strong>{n.toLocaleString("uk-UA")}</strong>
-                  <div
-                    className="bar"
-                    style={{ height: `${(n / Math.max(...s.values)) * 145}px` }}
-                  />
-                  <span>{s.labels[i]}</span>
-                </div>
-              ))}
-            </div>
-            <p>{s.note}</p>
-            <a
-              href={s.url}
-              target="_blank"
-              rel="noreferrer"
-              data-track="market-source"
-            >
-              {s.publisher} ↗
-            </a>
-          </figure>
-        ))}
-      </div>
-      <p className="note">
-        {c.market.date}. {c.market.scope}
-      </p>
-      <p className="market-travel">
-        {c.market.travel}{" "}
-        <a
-          href="https://global.chinadaily.com.cn/a/202607/13/WS6a543cffa310986e2b464e2b.html"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {c.sources.chinaDaily} ↗
-        </a>{" "}
-        ·{" "}
-        <a
-          href="https://global.chagee.com/id/en"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {c.sources.chagee} ↗
-        </a>
-      </p>
-      <details>
-        <summary>{c.market.fmi}</summary>
-        <a
-          href="https://www.futuremarketinsights.com/reports/demand-for-bubble-tea-in-eu"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {c.sources.fmi} ↗
-        </a>
-      </details>
-      <h3>{c.market.localTitle}</h3>
-      <div className="three-grid">
-        {c.market.local.map(([a, b]) => (
-          <article key={a}>
-            <h4>{a}</h4>
-            <p className="assumption">{b}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-function Scale({ c }: { c: Copy }) {
-  return (
-    <section id="scale" className="section" data-investor>
-      <Heading {...c.scale} />
-      <div className="formats">
-        {c.scale.formats.map((f, i) => (
-          <article
-            className={i === 1 ? "format selected" : "format"}
-            key={f[0]}
-          >
-            <span className="format-plan" aria-hidden="true">
-              <i />
-              <i />
-              <i />
-            </span>
-            <h3>{f[0]}</h3>
-            <strong>{f[1]}</strong>
-            <p>{f[2]}</p>
-            <p>{f[3]}</p>
-          </article>
-        ))}
-      </div>
-      <p className="assumption">{c.scale.note}</p>
-      <div className="roadmap">
-        {c.scale.roadmap.map(([a, b, d]) => (
-          <article key={a}>
-            <p className="eyebrow">{a}</p>
-            <h3>{b}</h3>
-            <p>{d}</p>
-          </article>
-        ))}
-      </div>
-      <p>{c.scale.future}</p>
-    </section>
-  );
-}
-function Funds({ c, locale }: { c: Copy; locale: Locale }) {
-  return (
-    <section id="funds" className="section funds" data-investor>
-      <Heading {...c.funds} />
-      <div className="funds-grid">
-        <div className="funds-total">
-          <p>{c.funds.budget}</p>
-          <strong>{c.funds.amount}</strong>
-          <Photo name="packaging-0" ratio={0.8} alt={c.pressPage.logo} />
-        </div>
-        <div>
-          {c.funds.items.map(([name, amount, milestone]) => (
-            <div className="fund-row" key={name}>
-              <div>
-                <h3>{name}</h3>
-                <strong>{formatMoney(Number(amount), locale)}</strong>
-              </div>
-              <div className="allocation" aria-hidden="true">
-                <span
-                  style={{ width: `${(Number(amount) / 2100000) * 100}%` }}
-                />
-              </div>
-              <p>{milestone}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <p className="assumption">{c.funds.note}</p>
-      <h3>{c.funds.termsTitle}</h3>
-      <dl className="terms">
-        {c.funds.terms.map(([a, b]) => (
-          <div key={a}>
-            <dt>{a}</dt>
-            <dd>{b}</dd>
-          </div>
-        ))}
-      </dl>
-    </section>
-  );
-}
-function Traction({ c }: { c: Copy }) {
-  return (
-    <section className="section" id="traction" data-investor>
-      <Heading {...c.traction} />
-      <div className="two-grid">
-        {c.traction.items.map(([a, b]) => (
-          <article className="evidence" key={a}>
-            <h3>{a}</h3>
-            <p>{b}</p>
-          </article>
-        ))}
-      </div>
-      <h3>{c.traction.riskTitle}</h3>
-      <div className="risks">
-        {c.traction.risks.map(([a, b]) => (
-          <details key={a}>
-            <summary>
-              {a}
-              <span aria-hidden="true">+</span>
-            </summary>
-            <p>{b}</p>
-          </details>
-        ))}
-      </div>
-    </section>
-  );
-}
-function Team({ c }: { c: Copy }) {
-  return (
-    <section className="section team" id="team" data-investor>
-      <Heading {...c.team} />
-      <div className="team-row">
-        <div className="founder-mark" aria-hidden="true">
-          {c.wordmark.slice(0, 2)}
-        </div>
-        <div>
-          <h3>{c.team.name}</h3>
-          <p className="eyebrow">{c.team.role}</p>
-          <p className="intro">{c.team.bio}</p>
-          <p>{c.team.advisors}</p>
-          <p className="assumption">{c.team.note}</p>
-        </div>
-      </div>
-    </section>
-  );
-}
-function Contact({ c, locale }: { c: Copy; locale: Locale }) {
-  return (
-    <section className="section contact" id="contact" data-investor>
-      <div>
-        <Heading {...c.contact} />
-        <p>{c.contact.roomNote}</p>
-        <div className="contact-links">
-          <a
-            className="button outline"
-            href={`/assets/xoxo-one-pager-${locale}.pdf`}
-            download
-            data-track="one-pager"
-          >
-            {c.contact.pdf} ↗
-          </a>
-          {connection.calendar ? (
-            <a
-              className="text-link"
-              href={connection.calendar}
-              target="_blank"
-              rel="noreferrer"
-              data-track="calendar"
-            >
-              {c.contact.calendar} ↗
-            </a>
-          ) : (
-            <p className="note">{c.contact.calendarPending}</p>
-          )}
-        </div>
-      </div>
-      <LeadForm c={c.contact} locale={locale} />
-    </section>
-  );
-}
-export function Experience({
-  locale,
-  kind = "home",
-}: {
-  locale: Locale;
-  kind?: PageKind;
-}) {
-  const c = copy(locale),
-    path = kind === "home" ? "" : kind;
-  const structured = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: c.brand,
-        url: origin,
-        description: c.metadata.description,
-        logo: origin + "/press/xoxo-green.svg",
-      },
-      {
-        "@type": "LocalBusiness",
-        name: c.brand,
-        description: c.hero.note,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Миколаїв",
-          addressCountry: "UA",
-        },
-        url: origin,
-        hasMenu: origin + route(locale, "menu"),
-      },
-    ],
-  };
-  return (
-    <>
-      <Behavior locale={locale} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structured).replace(/</g, "\\u003c"),
-        }}
-      />
-      <a className="skip" href="#main">
-        {c.skip}
-      </a>
-      <header className="header" lang={locale}>
-        <a className="wordmark" href={route(locale)}>
-          {c.wordmark}
-          <span>{c.brandSuffix}</span>
-        </a>
-        <nav aria-label={c.navigation}>
-          <a href={route(locale, "menu")} data-track="nav-menu">
-            {c.menu}
-          </a>
-          <a href={route(locale, "investors")} data-track="nav-investors">
-            {c.investors}
-          </a>
-        </nav>
-        <a
-          className="language"
-          href={route(locale === "uk" ? "en" : "uk", path)}
-          hrefLang={locale === "uk" ? "en" : "uk"}
-          aria-label={c.otherLocaleLabel}
-        >
-          {c.otherLocale}
-        </a>
-      </header>
-      <main id="main" lang={locale}>
-        {kind === "home" && (
-          <>
-            <section className="hero">
-              <div className="hero-media">
-                <Photo name="hero" alt={c.hero.alt} ratio={16 / 9} hero />
-                <Film pause={c.hero.pause} play={c.hero.play} />
-              </div>
-              <div className="hero-copy">
-                <p className="eyebrow">{c.hero.eyebrow}</p>
-                <h1>{c.hero.title}</h1>
-                <p className="intro">{c.hero.description}</p>
-                <div className="hero-actions">
-                  <a
-                    href="#contact"
-                    className="button primary"
-                    data-track="hero-invest"
-                  >
-                    {c.invest}
-                    <span aria-hidden="true">↗</span>
-                  </a>
-                  <a
-                    href="#menu"
-                    className="button outline"
-                    data-track="hero-menu"
-                  >
-                    {c.menu}
-                  </a>
-                </div>
-              </div>
-              <p className="hero-note">{c.hero.note}</p>
-              <div className="hero-index" aria-hidden="true">
-                01 — ∞
-              </div>
-            </section>
-            <section className="section thesis">
-              <p className="eyebrow">{c.thesis.label}</p>
-              <h2>{c.thesis.title}</h2>
-              <p>{c.thesis.body}</p>
-            </section>
-            <Signatures c={c} locale={locale} />
-            <section id="world" className="section world">
-              <Heading {...c.world} />
-              <figure className="interior">
-                <Photo
-                  name="interior-0"
-                  alt={c.world.interiorAlt}
-                  ratio={1.5}
-                />
-                <figcaption>{c.world.caption}</figcaption>
-              </figure>
-              <div className="ritual-grid">
-                {[9, 8, 10, 11].map((n, i) => (
-                  <figure key={n}>
-                    <Photo
-                      name={`ritual-${n === 9 ? 1 : n === 8 ? 0 : n === 10 ? 2 : 3}`}
-                      alt={c.world.ritualAlt[i]}
-                      ratio={0.8}
-                    />
-                    <figcaption>
-                      <span>0{i + 1}</span>
-                      {c.world.ritual[i]}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            </section>
-          </>
-        )}
-        {kind === "menu" && (
-          <>
-            <section className="subhero section">
-              <p className="eyebrow">{c.signature.subtitle}</p>
-              <h1>{c.signature.title}</h1>
-              <p>{c.signature.body}</p>
-              <a
-                className="text-link"
-                href={`/assets/xoxo-menu-${locale}.pdf`}
-                download
-                data-track="menu-pdf"
-              >
-                {c.signature.print} ↗
-              </a>
-            </section>
-            <Signatures c={c} locale={locale} full />
-          </>
-        )}
-        {kind === "investors" && (
-          <section className="section subhero investor-intro">
-            <p className="eyebrow">{c.hero.eyebrow}</p>
-            <h1>{c.funds.title}</h1>
-            <p className="intro">{c.funds.body}</p>
-            <a
-              href="#contact"
-              className="button primary"
-              data-track="investor-intro"
-            >
-              {c.meet} ↗
-            </a>
-          </section>
-        )}
-        {(kind === "home" || kind === "investors") && (
-          <>
-            <Market c={c} />
-            <section className="section economics" id="economics" data-investor>
-              <Heading {...c.economics} />
-              <Economics c={c.economics} locale={locale} />
-              <p className="note">
-                {c.economics.benchmark}{" "}
-                <a
-                  href="https://dojobusiness.com/blogs/news/bubble-tea-business-worth-it"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {c.sources.dojo} ↗
-                </a>{" "}
-                ·{" "}
-                <a
-                  href="https://store.yenchuan.co/blog/2026-guide-for-beginners/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {c.sources.yenchuan} ↗
-                </a>
-              </p>
-            </section>
-            <Scale c={c} />
-            <Funds c={c} locale={locale} />
-            <Traction c={c} />
-            <Team c={c} />
-            <Contact c={c} locale={locale} />
-          </>
-        )}
-        {kind === "press" && (
-          <section className="section subhero press-page">
-            <p className="eyebrow">{c.pressPage.label}</p>
-            <h1>{c.pressPage.title}</h1>
-            <p className="intro">{c.pressPage.body}</p>
-            <div
-              className="brand-lockup"
-              aria-label={c.wordmark + " " + c.brandSuffix}
-            >
-              {c.wordmark}
-              <span>{c.brandSuffix}</span>
-            </div>
-            <p>{c.pressPage.guidance}</p>
-            <div className="hero-actions">
-              <a
-                className="button primary"
-                href="/press/xoxo-logo-pack.zip"
-                download
-                data-track="logo-pack"
-              >
-                {c.pressPage.pack} ↗
-              </a>
-              <a
-                className="button outline"
-                href="/press/asset-manifest.json"
-                download
-                data-track="assets"
-              >
-                {c.pressPage.assets} ↗
-              </a>
-            </div>
-            <div className="two-grid">
-              <Photo name="packaging-0" alt={c.pressPage.logo} ratio={0.8} />
-              <Photo name="packaging-1" alt={c.pressPage.logo} ratio={0.8} />
-            </div>
-          </section>
-        )}
-      </main>
-      <footer className="footer" lang={locale}>
-        <div className="footer-top">
-          <div>
-            <p className="eyebrow">{c.tagline}</p>
-            <h2>{c.contact.waitlistTitle}</h2>
-            <LeadForm c={c.contact} locale={locale} waitlist />
-          </div>
-          <div className="footer-location">
-            <h3>{c.footer.city}</h3>
-            <p>{c.footer.location}</p>
-            <p>{c.footer.hours}</p>
-            <p>{c.footer.social}</p>
-            <CityMap label={c.footer.map} title={c.footer.mapLabel} />
-            <p className="note">{c.footer.mapLabel}</p>
-            <a href={route(locale, "press")}>{c.press}</a>
-          </div>
-        </div>
-        <details id="privacy">
-          <summary>{c.footer.privacy}</summary>
-          <p>{c.contact.privacy}</p>
-        </details>
-        <div className="footer-bottom">
-          <span>{c.footer.copyright}</span>
-          <p>{c.footer.legal}</p>
-        </div>
-        <div className="footer-wordmark" aria-hidden="true">
-          {c.wordmark}
-        </div>
-      </footer>
-      <div className="mobile-cta" lang={locale}>
-        <a
-          href={
-            kind === "menu" || kind === "press"
-              ? route(locale, "investors") + "#contact"
-              : "#contact"
-          }
-          className="button primary"
-          data-track="mobile-invest"
-        >
-          {c.meet} ↗
-        </a>
-        <a
-          href={route(locale, "menu")}
-          className="button outline"
-          data-track="mobile-menu"
-        >
-          {c.menu}
-        </a>
-      </div>
-    </>
-  );
+'use client';
+import {useEffect} from 'react';
+import type {Locale} from '@/lib/content';
+export function Runtime({locale}:{locale:Locale}){
+ useEffect(()=>{
+ document.documentElement.lang=locale;const root=document.documentElement;const reduced=matchMedia('(prefers-reduced-motion: reduce)');const fine=matchMedia('(hover: hover) and (pointer: fine)');let raf=0,disposed=false;const animations=new Set<Animation>();const cleanup:(()=>void)[]=[];let scenario=-1;
+ const all=<T extends Element=HTMLElement>(s:string)=>Array.from(document.querySelectorAll<T>(s));
+ const sections=all<HTMLElement>('main > section');const cup=document.querySelector<HTMLElement>('[data-cup-stage]');const econ=document.querySelector<HTMLElement>('[data-economics]');const gallery=document.querySelector<HTMLElement>('.gallery');const galleryRegion=document.querySelector<HTMLElement>('.gallery-region');const progress=all<HTMLElement>('.top-progress i,.cup-liquid');const progressLabel=document.querySelector('[data-progress-label]');const counters=all<HTMLElement>('[data-count]');
+ const play=(el:HTMLElement,frames:Keyframe[],duration=450,delay=0)=>{el.style.willChange='transform';const a=el.animate(frames,{duration,delay,easing:'cubic-bezier(.22,1,.36,1)',fill:'backwards'});animations.add(a);a.finished.catch(()=>{}).finally(()=>{animations.delete(a);el.style.willChange='';});};
+ const reveal=new IntersectionObserver(entries=>{for(const {target,isIntersecting} of entries){if(!isIntersecting)continue;reveal.unobserve(target);if(reduced.matches)continue;const el=target as HTMLElement;if(el.matches('.section-title')){el.querySelectorAll<HTMLElement>('.reveal-line>span').forEach((line,i)=>play(line,[{transform:'translateY(110%)'},{transform:'translateY(0)'}],450,i*60));}else if(el.matches('[data-count]')){el.style.minWidth=el.getBoundingClientRect().width+'px';const v=Number(el.dataset.count),dec=Number(el.dataset.decimals||0),suffix=el.dataset.suffix||'';let start:number|undefined;const fmt=new Intl.NumberFormat(locale,{minimumFractionDigits:dec,maximumFractionDigits:dec});const update=(now:number)=>{if(disposed||reduced.matches){el.textContent=fmt.format(v)+suffix;return;}start??=now;const p=Math.min((now-start)/500,1),eased=1-Math.pow(1-p,3);el.textContent=fmt.format(v*eased)+suffix;if(p<1)requestAnimationFrame(update);};requestAnimationFrame(update);}else{play(el,[{transform:'scaleX(0)'},{transform:'scaleX(1)'}]);}}},{threshold:.15});
+ all('.section-title,.section-head,.chart-reveal,.allocation,[data-count]').forEach(e=>reveal.observe(e));
+ const updateGallery=()=>{if(!gallery)return;const step=(gallery.firstElementChild as HTMLElement)?.offsetWidth+parseFloat(getComputedStyle(gallery).columnGap);const i=Math.min(5,Math.max(0,Math.round(gallery.scrollLeft/step)));const label=document.querySelector('[data-gallery-index]');if(label)label.textContent=String(i+1).padStart(2,'0');};
+ const update=()=>{raf=0;if(disposed)return;const h=innerHeight,p=Math.max(0,Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-h)));if(!reduced.matches){progress.forEach(el=>el.style.transform=el.classList.contains('cup-liquid')?`scaleY(${p})`:`scaleX(${p})`);if(progressLabel)progressLabel.textContent=String(Math.round(p*100)).padStart(2,'0')+'%';}
+ let active=sections[0]?.id;for(const s of sections){if(s.getBoundingClientRect().top<h*.45)active=s.id;}all<HTMLAnchorElement>('[data-section-link]').forEach(a=>{if(a.dataset.sectionLink===active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+ if(cup&&!reduced.matches){const box=cup.getBoundingClientRect();if(box.bottom>0&&box.top<h){const q=Math.max(0,Math.min(1,(h-box.top)/(h+box.height)));cup.querySelectorAll<HTMLElement>('[data-depth]').forEach(el=>el.style.transform=`translate3d(0,${(q-.5)*40*Number(el.dataset.depth)}px,0)`);const f=Math.min(35,Math.floor(q*36));cup.dispatchEvent(new CustomEvent('cupframe',{detail:f}));if(cup.querySelector('[data-ready="true"]')){const angle=document.querySelector('[data-angle]');if(angle)angle.textContent=String(f*10).padStart(3,'0')+'°';}}}
+ if(econ&&!reduced.matches){const b=econ.getBoundingClientRect(),q=Math.max(0,Math.min(.999,-b.top/Math.max(1,b.height-h))),i=[1,0,2][Math.floor(q*3)];if(b.top<h&&b.bottom>0&&i!==scenario){scenario=i;econ.dispatchEvent(new CustomEvent('scenario',{detail:i}));}}
+ if(gallery&&galleryRegion&&innerWidth>=1024&&!reduced.matches){const b=galleryRegion.getBoundingClientRect();if(b.top<90&&b.bottom>h*.5){const q=Math.max(0,Math.min(1,(90-b.top)/Math.max(1,b.height-h)));gallery.scrollLeft=q*(gallery.scrollWidth-gallery.clientWidth);updateGallery();}}
+ };const onScroll=()=>{if(!raf)raf=requestAnimationFrame(update);};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll,{passive:true});gallery?.addEventListener('scroll',updateGallery,{passive:true});
+ const change=()=>{root.dataset.reduced=String(reduced.matches);if(reduced.matches){animations.forEach(a=>a.cancel());all<HTMLElement>('[data-depth]').forEach(e=>e.style.transform='');counters.forEach(el=>el.textContent=new Intl.NumberFormat(locale,{maximumFractionDigits:Number(el.dataset.decimals||0),minimumFractionDigits:Number(el.dataset.decimals||0)}).format(Number(el.dataset.count))+(el.dataset.suffix||''));progress.forEach(e=>e.style.transform='');}onScroll();};reduced.addEventListener('change',change);change();
+ for(const [selector,dir] of [['[data-gallery-prev]',-1],['[data-gallery-next]',1]] as const){const b=document.querySelector(selector);const handler=()=>{if(gallery)gallery.scrollBy({left:dir*((gallery.firstElementChild as HTMLElement).offsetWidth+parseFloat(getComputedStyle(gallery).columnGap)),behavior:reduced.matches?'instant':'smooth'});};b?.addEventListener('click',handler);cleanup.push(()=>b?.removeEventListener('click',handler));}
+ const magnet=(e:Event)=>(e.target as Element)?.closest<HTMLElement>('.magnet');
+ const move=(e:PointerEvent)=>{const el=magnet(e);if(!el||reduced.matches||!fine.matches)return;const b=el.getBoundingClientRect();el.style.willChange='transform';el.style.transform=`translate3d(${(e.clientX-b.left-b.width/2)*.08}px,${(e.clientY-b.top-b.height/2)*.12}px,0)`;};
+ const leave=(e:PointerEvent)=>{const el=magnet(e);if(!el||e.relatedTarget instanceof Node&&el.contains(e.relatedTarget))return;el.style.transform='';el.style.willChange='';};
+ const down=(e:PointerEvent)=>{const el=magnet(e);if(el&&!reduced.matches)el.style.transform='scale(.97)';};
+ const up=(e:PointerEvent)=>{const el=magnet(e);if(!el||reduced.matches)return;import('framer-motion/dom/mini').then(({animate})=>{if(!disposed&&el.isConnected)animate(el,{transform:'scale(1)'},{duration:.3,ease:[.22,1,.36,1]});});};
+ document.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerout',leave,{passive:true});document.addEventListener('pointerdown',down,{passive:true});document.addEventListener('pointerup',up,{passive:true});
+ cleanup.push(()=>{document.removeEventListener('pointermove',move);document.removeEventListener('pointerout',leave);document.removeEventListener('pointerdown',down);document.removeEventListener('pointerup',up);});
+ const navigate=(e:MouseEvent)=>{const a=(e.target as HTMLElement).closest<HTMLAnchorElement>('a[href]');if(!a||a.hasAttribute('download')||a.target||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0||reduced.matches)return;const u=new URL(a.href);if(u.origin!==location.origin||u.pathname===location.pathname)return;e.preventDefault();const wipe=document.querySelector<HTMLElement>('.page-wipe');if(!wipe){location.assign(u.href);return;}wipe.style.transform='translateY(100%)';wipe.style.visibility='visible';const animation=wipe.animate([{transform:'translateY(100%)'},{transform:'translateY(0)'}],{duration:240,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});animation.finished.then(()=>{sessionStorage.setItem('xoxo-transition','1');location.assign(u.href);});};document.addEventListener('click',navigate);
+ const wipe=document.querySelector<HTMLElement>('.page-wipe');if(wipe&&sessionStorage.getItem('xoxo-transition')){sessionStorage.removeItem('xoxo-transition');if(!reduced.matches){wipe.style.visibility='visible';const a=wipe.animate([{transform:'translateY(0)'},{transform:'translateY(-100%)'}],{duration:350,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});a.finished.then(()=>wipe.style.visibility='hidden');}}
+ return()=>{disposed=true;cancelAnimationFrame(raf);reveal.disconnect();animations.forEach(a=>a.cancel());removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);gallery?.removeEventListener('scroll',updateGallery);reduced.removeEventListener('change',change);document.removeEventListener('click',navigate);cleanup.forEach(f=>f());};
+ },[locale]);return null;
 }
 ````
 
-## src/components/investor/Film.tsx
+## src/components/v2/System.tsx
 
 ````tsx
-"use client";
-import { useEffect, useRef, useState } from "react";
-export function Film({
-  pause,
-  play,
-  pour = false,
-}: {
-  pause: string;
-  play: string;
-  pour?: boolean;
-}) {
-  const mobile = useRef<HTMLVideoElement>(null),
-    desktop = useRef<HTMLVideoElement>(null);
-  const [allowed, setAllowed] = useState(false),
-    [playing, setPlaying] = useState(true);
-  useEffect(() => {
-    const mq = matchMedia("(prefers-reduced-motion: reduce)");
-    const connection = (
-      navigator as Navigator & {
-        connection?: {
-          saveData?: boolean;
-          effectiveType?: string;
-          addEventListener?: (t: string, f: () => void) => void;
-          removeEventListener?: (t: string, f: () => void) => void;
-        };
-      }
-    ).connection;
-    const viewport = matchMedia("(max-width: 767px)");
-    const update = () => {
-      const ok =
-        !mq.matches &&
-        !connection?.saveData &&
-        !["slow-2g", "2g", "3g"].includes(connection?.effectiveType || "");
-      setAllowed(ok);
-      const small = !pour && viewport.matches;
-      const selected = small ? mobile.current : desktop.current;
-      for (const video of [mobile.current, desktop.current]) {
-        if (video && video !== selected) video.pause();
-        if (!ok && video?.getAttribute("src")) {
-          video.pause();
-          video.removeAttribute("src");
-          video.load();
-        }
-      }
-      if (ok) {
-        const video = selected;
-        if (video) {
-          if (!video.getAttribute("src"))
-            video.src = pour
-              ? "/assets/pour.mp4"
-              : small
-                ? "/assets/hero-mobile-fast.mp4"
-                : "/assets/hero-desktop.mp4";
-          if (video.paused)
-            video
-              .play()
-              .then(() => setPlaying(true))
-              .catch(() => setPlaying(false));
-        }
-      }
-    };
-    if (document.readyState === "complete") update();
-    else window.addEventListener("load", update, { once: true });
-    mq.addEventListener("change", update);
-    viewport.addEventListener("change", update);
-    connection?.addEventListener?.("change", update);
-    return () => {
-      window.removeEventListener("load", update);
-      mq.removeEventListener("change", update);
-      viewport.removeEventListener("change", update);
-      connection?.removeEventListener?.("change", update);
-    };
-  }, [pour]);
-  return (
-    <>
-      <link
-        rel="preload"
-        as="image"
-        href={
-          pour
-            ? "/assets/pour-poster-960.webp"
-            : "/assets/hero-mobile-poster-960.webp"
-        }
-        media={pour ? undefined : "(max-width: 767px)"}
-        fetchPriority="high"
-      />
-      {!pour && (
-        <link
-          rel="preload"
-          as="image"
-          href="/assets/hero-desktop-poster-960.webp"
-          media="(min-width: 768px)"
-          fetchPriority="high"
-        />
-      )}
-      {!pour && (
-        <video
-          id="hero-film-mobile"
-          suppressHydrationWarning
-          ref={mobile}
-          className="film film-mobile"
-          muted
-          autoPlay
-          playsInline
-          loop
-          preload="none"
-          poster="/assets/hero-mobile-poster-960.webp"
-          aria-hidden="true"
-        />
-      )}
-      <video
-        id={pour ? "pour-film" : "hero-film-desktop"}
-        suppressHydrationWarning
-        ref={desktop}
-        className={`film ${pour ? "" : "film-desktop"}`}
-        muted
-        autoPlay
-        playsInline
-        loop
-        preload="none"
-        poster={
-          pour
-            ? "/assets/pour-poster-960.webp"
-            : "/assets/hero-desktop-poster-960.webp"
-        }
-        aria-hidden="true"
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `(()=>{const c=navigator.connection;if(matchMedia('(prefers-reduced-motion: reduce)').matches||c?.saveData||['slow-2g','2g','3g'].includes(c?.effectiveType))return;const small=${pour ? "false" : "matchMedia('(max-width: 767px)').matches"};const v=document.getElementById(small?'hero-film-mobile':'${pour ? "pour-film" : "hero-film-desktop"}');if(v){v.muted=true;v.src=small?'/assets/hero-mobile-fast.mp4':'${pour ? "/assets/pour.mp4" : "/assets/hero-desktop.mp4"}';v.play().catch(()=>{});}})();`,
-        }}
-      />
-      {allowed && (
-        <button
-          className="film-toggle"
-          aria-label={playing ? pause : play}
-          onClick={() => {
-            const v = [mobile.current, desktop.current].find((v) =>
-              v?.getAttribute("src"),
-            );
-            if (v) {
-              if (playing) {
-                v.pause();
-                setPlaying(false);
-              } else
-                v.play()
-                  .then(() => setPlaying(true))
-                  .catch(() => setPlaying(false));
-            }
-          }}
-        >
-          {playing ? "Ⅱ" : "▷"}
-        </button>
-      )}
-    </>
-  );
+import type { CSSProperties } from 'react';
+import { getCopy, pathFor, type Copy, type Locale } from '@/lib/content';
+import { calculate, scenarios, model, formatMoney } from '@/lib/store-model';
+import { Runtime } from './Runtime';
+import { Economics } from './Economics';
+import { Contact } from './Contact';
+import { CupSequence } from './CupSequence';
+const ids=['thesis','product','market','economics','scale','terms','contact'];
+export function Title({lines}:{lines:string[]}){return <h2 className="section-title">{lines.map((line,i)=><span className="reveal-line" key={line}><span style={{'--delay':`${i*60}ms`} as CSSProperties}>{line}</span></span>)}</h2>}
+function Head({i,c}:{i:number;c:Copy}){return <div className="section-head"><span>{String(i+1).padStart(2,'0')} / 07</span><span>{c.sections[i]}</span><span aria-hidden="true">+</span></div>}
+function Num({v,decimals=0,suffix='',locale}:{v:number;decimals?:number;suffix?:string;locale:Locale}){const n=new Intl.NumberFormat(locale,{maximumFractionDigits:decimals,minimumFractionDigits:decimals}).format(v);return <span className="number" data-count={v} data-decimals={decimals} data-suffix={suffix}>{n}{suffix}</span>}
+export function System({locale='uk',view='all'}:{locale?:Locale;view?:'all'|'menu'|'investors'}){
+ const c=getCopy(locale); const visible=(id:string)=>view==='all'||(view==='menu'?['product','contact'].includes(id):['market','economics','scale','terms','contact'].includes(id));
+ const here=view==='all'?'':view; const home=pathFor(locale);
+ return <div lang={locale} className="system"><Runtime locale={locale}/><a href="#main" className="skip">{c.nav.skip}</a>
+ <header className="topbar"><a href={home} className="wordmark" aria-label={c.brand+' / '+c.nav.home}>{c.brand}</a><span className="edition">{c.edition}</span><nav aria-label={c.nav.label}><a href={pathFor(locale,'menu')}>{c.nav.menu}</a><a href={pathFor(locale,'investors')}>{c.nav.investors}</a><a href={pathFor(locale==='uk'?'en':'uk',here)} className="language" hrefLang={locale==='uk'?'en':'uk'}>{locale==='uk'?'EN':'UA'}</a></nav></header>
+ <aside className="rail"><nav aria-label={c.nav.index}>{ids.filter(visible).map(id=><a key={id} href={`#${id}`} data-section-link={id}><span>{String(ids.indexOf(id)+1).padStart(2,'0')}</span><span>{c.sections[ids.indexOf(id)]}</span></a>)}</nav><div className="progress-cup" aria-hidden="true"><svg viewBox="0 0 32 52"><defs><clipPath id="cup-clip"><path d="M6 14h20l-3 33H9z"/></clipPath></defs><g clipPath="url(#cup-clip)"><rect className="cup-liquid" x="4" y="14" width="24" height="35"/></g><path d="M6 14h20l-3 33H9zM4 14h24M7 11q9-15 18 0M17 12l3-11" fill="none" stroke="currentColor" strokeWidth="1"/></svg><span data-progress-label>00%</span></div></aside>
+ <div className="top-progress" aria-hidden="true"><i/></div><svg className="mobile-cup" viewBox="0 0 32 52" aria-hidden="true"><defs><clipPath id="mobile-cup-clip"><path d="M6 14h20l-3 33H9z"/></clipPath></defs><g clipPath="url(#mobile-cup-clip)"><rect className="cup-liquid" x="4" y="14" width="24" height="35"/></g><path d="M6 14h20l-3 33H9zM4 14h24M7 11q9-15 18 0M17 12l3-11" fill="none" stroke="currentColor" strokeWidth="1"/></svg><main id="main">{view!=="all"&&<h1 className="sr-only">{view==="menu"?c.nav.menu:c.nav.investors}</h1>}
+ {visible('thesis')&&<section id="thesis" className="section thesis"><Head i={0} c={c}/><p className="micro status">{c.status}</p><h1>{c.thesis.map(line=><span key={line}>{line}</span>)}</h1><div className="thesis-foot"><span>{c.thesisFoot[0]}</span><span>{c.thesisFoot[1]}</span><a className="magnet arrow-link" href="#product" aria-label={c.sections[1]}>↓</a></div></section>}
+ {visible('product')&&<section id="product" className="section product"><div className="product-intro"><Head i={1} c={c}/><Title lines={c.product.title}/><div className="cup-stage" data-cup-stage><div className="stage-grid" data-depth="0.25" aria-hidden="true"/><div className="cup-shadow" data-depth="0.6" aria-hidden="true"/><div className="cup-render" data-depth="1"><CupSequence alt={c.product.alt} label={c.product.rotate}/></div><div className="stage-corner top-left micro">{c.product.subtitle}</div><div className="stage-corner bottom-left micro">{c.product.rotate}</div><div className="stage-corner bottom-right micro">{c.product.angle} / <span data-angle>000°</span></div></div></div>
+ <div className="gallery-region"><div className="gallery-heading"><span className="micro">{c.product.collection}</span><span className="micro"><span data-gallery-index>01</span> / 06</span><div><button className="gallery-button" data-gallery-prev aria-label={c.product.previous}>←</button><button className="gallery-button" data-gallery-next aria-label={c.product.next}>→</button></div></div><div className="gallery-pin"><div className="gallery" tabIndex={0} aria-label={c.product.collection}>{c.product.drinks.map((d,i)=><article className="drink" key={d.name}><div className="drink-image"><span className="drink-code micro">D / {String(i+1).padStart(2,'0')}</span><picture><source type="image/avif" srcSet={`/drinks/drink-${i}-480.avif 480w, /drinks/drink-${i}-960.avif 960w`} sizes="(max-width: 767px) 82vw, 32vw"/><img src={`/drinks/drink-${i}-480.webp`} srcSet={`/drinks/drink-${i}-480.webp 480w, /drinks/drink-${i}-960.webp 960w`} sizes="(max-width: 767px) 82vw, 32vw" width="720" height="960" loading="lazy" decoding="async" alt={`${d.name}. ${c.product.alt}`}/></picture></div><div className="drink-description"><div className="drink-name"><h3>{d.name}</h3><span className="price">{d.price} ₴</span></div><p className="other-name">{d.other}</p><p className="micro tea-base">{d.tea}</p><dl className="specs"><div><dt>{c.product.volume}</dt><dd>{c.units.volume}</dd></div><div><dt>{c.product.energy}</dt><dd>{c.product.kcal}</dd></div><div><dt>{c.product.sugar}</dt><dd>{c.units.sugar}</dd></div></dl></div></article>)}</div></div></div><p className="assumption">{c.product.assumption}</p></section>}
+ {visible('market')&&<section id="market" className="section market"><Head i={2} c={c}/><Title lines={c.market.title}/><div className="market-grid">{[{label:c.market.world,from:3.35,to:3.62,y1:'2025',y2:'2026',cagr:8.4,source:0,decimals:2},{label:c.market.europe,from:727.2,to:1262.6,y1:'2026',y2:'2033',cagr:8.2,source:1,decimals:1}].map((x,i)=><article key={x.label} className="market-card"><p className="micro">{x.label}</p><div className="chart-values"><div><strong><Num v={x.from} decimals={x.decimals} locale={locale}/></strong><small>{x.y1}</small></div><span aria-hidden="true">→</span><div><strong><Num v={x.to} decimals={x.decimals} locale={locale}/></strong><small>{x.y2}</small></div></div><svg className="data-chart" viewBox="0 0 500 100" role="img" aria-label={c.market.chart}><path className="chart-grid" d="M0 24H500M0 60H500M0 96H500M1 0V100M166 0V100M333 0V100M499 0V100"/><g className="chart-reveal"><path className="chart-line" d={i===0?'M1 80L499 12':'M1 90L499 6'}/></g></svg><div className="market-caption"><span><Num v={x.cagr} decimals={1} suffix="%" locale={locale}/> {c.market.cagr}</span><a href={c.sources[x.source].url} target="_blank" rel="noreferrer">{c.sources[x.source].name} ↗</a></div></article>)}</div><div className="market-bottom"><article><span className="micro">{c.market.eu}</span><strong><Num v={10} suffix="%" locale={locale}/></strong><a href={c.sources[2].url} target="_blank" rel="noreferrer">{c.sources[2].name} ↗</a></article><article><span className="micro">{c.market.stores}</span><strong><Num v={4000} suffix="+" locale={locale}/></strong><a href={c.sources[3].url} target="_blank" rel="noreferrer">{c.sources[3].name} ↗</a></article><article><span className="micro">{c.market.overseas}</span><strong><span className="micro">{c.market.nearly} </span><Num v={600} suffix="%" locale={locale}/></strong><a href={c.sources[4].url} target="_blank" rel="noreferrer">{c.sources[4].name} ↗</a></article></div><div className="source-foot micro"><span>{c.market.forecast}</span><span>{c.market.historical}</span></div></section>}
+ {visible('economics')&&<section id="economics" className="section economics"><Head i={3} c={c}/><Title lines={c.economicsTitle}/><Economics c={c.economics} extra={c.economicsExtra} locale={locale}/></section>}
+ {visible('scale')&&<section id="scale" className="section scale"><Head i={4} c={c}/><Title lines={c.scale.title}/><div className="format-grid">{scenarios.map((s,i)=><article className="format" key={i}><div className="format-heading"><span className="micro">0{i+1}</span><h3>{c.scale.formats[i]}</h3><span aria-hidden="true">↗</span></div><div className="format-diagram" aria-hidden="true"><div style={{width:`${45+i*22}%`}}><i/><i/><i/><i/></div></div><dl>{[c.scale.areas[i],formatMoney(model.funding,locale),s.cups,calculate(s).payback?.toLocaleString(locale,{maximumFractionDigits:1})].map((v,j)=><div key={j}><dt>{c.scale.labels[j+1]}</dt><dd>{v}</dd></div>)}</dl></article>)}</div><p className="micro scale-repeat">{c.scale.repeat}</p><p className="assumption">{c.scale.note}</p></section>}
+ {visible('terms')&&<section id="terms" className="section terms"><Head i={5} c={c}/><Title lines={c.terms.title}/><p className="assumption">{c.terms.tag}</p><dl className="term-facts">{[[c.terms.instrument,c.terms.instrumentValue],[c.terms.ticket,c.terms.ticketValue],[c.terms.return,c.terms.returnValue]].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><div className="terms-grid"><div><h3 className="micro">{c.terms.funds}</h3><div className="allocation" aria-hidden="true">{[35,25,20,12,8].map((n,i)=><span key={n} style={{flex:n,'--tone':`${20+i*15}%`} as CSSProperties}/>)}</div><ol className="allocation-key">{c.terms.allocations.map((x,i)=><li key={x}><span>{x}</span><span>{[35,25,20,12,8][i]}%</span></li>)}</ol></div><ol className="gates">{c.terms.gates.map(x=><li key={x}>{x}</li>)}</ol></div><h3 className="micro risks-title">{c.terms.risksTitle}</h3><div className="risks">{c.terms.risks.map(([a,b])=><div key={a}><span>{a}</span><span>→</span><span>{b}</span></div>)}</div><p className="assumption">{c.terms.note}</p></section>}
+ {visible('contact')&&<section id="contact" className="section contact"><Head i={6} c={c}/><div className="contact-grid"><div><Title lines={c.contact.title}/><p className="micro">{c.contact.lead}</p><a className="download magnet" href={`/downloads/xoxo-${locale}.pdf`} download>{c.contact.download}<span>↗</span></a>{process.env.NEXT_PUBLIC_CALENDAR_URL?<a className="download magnet" href={process.env.NEXT_PUBLIC_CALENDAR_URL}>{c.contact.calendar}<span>↗</span></a>:<span className="calendar-pending">{c.contact.calendar}</span>}</div><Contact c={c.contact}/></div></section>}
+ </main><footer className="footer">{c.footer.map(s=><span key={s}>{s}</span>)}</footer><div className="page-wipe" aria-hidden="true"/></div>;
 }
 ````
 
-## src/components/investor/LeadForm.tsx
-
-````tsx
-"use client";
-import { useState, type FormEvent } from "react";
-import { connection, type Copy, type Locale } from "@/lib/investor-content";
-import { getAttribution, track } from "./Behavior";
-export function LeadForm({
-  c,
-  locale,
-  waitlist = false,
-}: {
-  c: Copy["contact"];
-  locale: Locale;
-  waitlist?: boolean;
-}) {
-  const [state, setState] = useState<
-    "idle" | "sending" | "sent" | "error" | "draft"
-  >("idle");
-  const id = waitlist ? "waitlist" : "meeting";
-  async function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const data = new FormData(form);
-    const contact = String(data.get("contact") || "").trim();
-    const nameInput = form.elements.namedItem(
-      "name",
-    ) as HTMLInputElement | null;
-    if (nameInput && !nameInput.value.trim()) {
-      nameInput.setCustomValidity(c.nameInvalid);
-      nameInput.reportValidity();
-      return;
-    }
-    const input = form.elements.namedItem("contact") as HTMLInputElement;
-    if (
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact) &&
-      (!/^@[A-Za-z][A-Za-z0-9_]{4,31}$/.test(contact) || waitlist)
-    ) {
-      input.setCustomValidity(c.invalid);
-      input.reportValidity();
-      return;
-    }
-    if (data.get("website")) return;
-    const payload = {
-      kind: waitlist ? "waitlist" : String(data.get("kind") || "meeting"),
-      name: String(data.get("name") || "")
-        .trim()
-        .slice(0, 100),
-      organization: String(data.get("organization") || "")
-        .trim()
-        .slice(0, 150),
-      ticket: String(data.get("ticket") || ""),
-      contact,
-      consent: true,
-      locale,
-      attribution: getAttribution(),
-    };
-    if (!connection.endpoint) {
-      const blob = new Blob([JSON.stringify(payload, null, 2)], {
-        type: "text/plain;charset=utf-8",
-      });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `xoxo-${id}-request.txt`;
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-      setState("draft");
-      track("Request draft", { kind: payload.kind });
-      return;
-    }
-    setState("sending");
-    track("Form submit", { kind: payload.kind });
-    try {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 15000);
-      let response: Response;
-      try {
-        response = await fetch(connection.endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-          signal: controller.signal,
-        });
-      } finally {
-        clearTimeout(timer);
-      }
-      if (!response.ok) throw new Error("Delivery failed");
-      setState("sent");
-      track("Form success", { kind: payload.kind });
-      form.reset();
-    } catch {
-      setState("error");
-      track("Form error", { kind: payload.kind });
-    }
-  }
-  if (state === "sent")
-    return (
-      <div className="confirmation" role="status">
-        <h3>{c.sent}</h3>
-        <p>{c.sentBody}</p>
-        <button className="button" onClick={() => setState("idle")}>
-          {c.again}
-        </button>
-      </div>
-    );
-  return (
-    <form className="lead-form" onSubmit={submit}>
-      <div className="honeypot" aria-hidden="true">
-        <input
-          name="website"
-          tabIndex={-1}
-          autoComplete="off"
-          aria-label="website"
-        />
-      </div>
-      {!waitlist && (
-        <>
-          <label htmlFor={`${id}-name`}>
-            {c.name}
-            <input
-              id={`${id}-name`}
-              name="name"
-              required
-              maxLength={100}
-              autoComplete="name"
-              onInput={(e) => e.currentTarget.setCustomValidity("")}
-            />
-          </label>
-          <label htmlFor={`${id}-org`}>
-            {c.org}
-            <input
-              id={`${id}-org`}
-              name="organization"
-              maxLength={150}
-              autoComplete="organization"
-            />
-          </label>
-          <label htmlFor={`${id}-ticket`}>
-            {c.ticket}
-            <select id={`${id}-ticket`} name="ticket">
-              {c.ranges.map((r) => (
-                <option key={r} value={r}>
-                  {r}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label htmlFor={`${id}-kind`}>
-            {c.room}
-            <select id={`${id}-kind`} name="kind">
-              <option value="meeting">{c.send}</option>
-              <option value="data-room">{c.room}</option>
-            </select>
-          </label>
-        </>
-      )}
-      <label className="span-all" htmlFor={`${id}-contact`}>
-        {waitlist ? c.emailOnly : c.email}
-        <input
-          id={`${id}-contact`}
-          name="contact"
-          type={waitlist ? "email" : "text"}
-          autoComplete="email"
-          required
-          maxLength={254}
-          onInput={(e) => e.currentTarget.setCustomValidity("")}
-        />
-      </label>
-      <label className="consent span-all">
-        <input type="checkbox" required name="consent" />
-        {c.consent}
-      </label>
-      {!connection.endpoint && <p className="note span-all">{c.unavailable}</p>}
-      <button
-        className="button primary span-all"
-        type="submit"
-        disabled={state === "sending"}
-        data-track={id}
-      >
-        {state === "sending"
-          ? c.sending
-          : connection.endpoint
-            ? waitlist
-              ? c.waitlist
-              : c.send
-            : c.draft}
-        <span aria-hidden="true">↗</span>
-      </button>
-      <div className="span-all" role="status">
-        {state === "error" && <p>{c.error}</p>}
-        {state === "draft" && <p>{c.draftNote}</p>}
-      </div>
-      {connection.email && (
-        <a
-          className="span-all text-link"
-          href={`mailto:${connection.email}`}
-          data-track="email"
-        >
-          {connection.email}
-        </a>
-      )}
-    </form>
-  );
-}
-````
-
-## src/components/investor/Photo.tsx
-
-````tsx
-"use client";
-import Image from "next/image";
-const widths = [480, 960, 1600];
-export function Photo({
-  name,
-  alt,
-  ratio = 1,
-  hero = false,
-  className = "",
-}: {
-  name: string;
-  alt: string;
-  ratio?: number;
-  hero?: boolean;
-  className?: string;
-}) {
-  const sizes = hero
-    ? "100vw"
-    : "(max-width: 767px) 85vw, (max-width: 1200px) 45vw, 33vw";
-  return (
-    <picture className={`photo ${className}`}>
-      {hero && (
-        <source
-          media="(max-width: 767px)"
-          type="image/avif"
-          srcSet={widths
-            .map((w) => `/assets/hero-mobile-poster-${w}.avif ${w}w`)
-            .join(", ")}
-          sizes="100vw"
-        />
-      )}
-      <source
-        type="image/avif"
-        srcSet={widths.map((w) => `/assets/${name}-${w}.avif ${w}w`).join(", ")}
-        sizes={sizes}
-      />
-      <Image
-        src={`/assets/${name}-960.webp`}
-        alt={alt}
-        width={960}
-        height={Math.round(960 / ratio)}
-        sizes={sizes}
-        loader={({ width }) =>
-          `/assets/${name}-${width <= 480 ? 480 : width <= 960 ? 960 : 1600}.webp`
-        }
-        fetchPriority={hero ? "high" : undefined}
-        loading={hero ? "eager" : "lazy"}
-      />
-    </picture>
-  );
-}
-````
-
-## src/lib/investor-content.ts
+## src/lib/content.ts
 
 ````typescript
-import uk from "../../content/uk.json";
-import en from "../../content/en.json";
-export type Locale = "uk" | "en";
-export type Copy = typeof en;
-export function copy(locale: Locale): Copy {
-  return locale === "uk" ? uk : en;
-}
-export function route(locale: Locale, path = "") {
-  return `${locale === "en" ? "/en" : ""}/${path ? path + "/" : ""}`;
-}
-export const origin =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://xoxotea.vercel.app";
-export const connection = {
-  endpoint: process.env.NEXT_PUBLIC_LEAD_ENDPOINT || "",
-  calendar: process.env.NEXT_PUBLIC_CALENDAR_URL || "",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
-  plausible: process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN || "",
-};
+import uk from '../../content/uk.json';
+import en from '../../content/en.json';
+export type Locale = 'uk' | 'en';
+export type Copy = typeof uk;
+export const getCopy = (locale: Locale): Copy => locale === 'uk' ? uk : en;
+export const pathFor = (locale: Locale, path = '') => `${locale === 'en' ? '/en' : ''}/${path ? path + '/' : ''}`;
+export const origin = process.env.NEXT_PUBLIC_SITE_URL || 'https://xoxotea.vercel.app';
 ````
 
 ## src/lib/store-model.ts
@@ -9438,27 +7031,7 @@ export function formatMoney(value: number, locale: "uk" | "en", usd = false) {
 ## tailwind.config.ts
 
 ````typescript
-// Tailwind v4 runtime tokens are declared with @theme in globals.css.
-// This typed mirror makes the brief's token contract easy to inspect.
-const config = {
-  theme: {
-    extend: {
-      colors: {
-        tea: "#173f35",
-        paper: "#f7f4ee",
-        ink: "#182a25",
-        accent: "#dbfb6b",
-        muted: "#59665c",
-      },
-      fontFamily: {
-        display: ["var(--font-display-face)", "serif"],
-        sans: ["var(--font-manrope)", "sans-serif"],
-      },
-      borderRadius: { sm: "2px", DEFAULT: "4px" },
-      transitionTimingFunction: { brand: "cubic-bezier(0.22,1,0.36,1)" },
-    },
-  },
-};
+const config = { theme: { extend: { colors: { paper: "#f3f1ea", ink: "#172e28", muted: "#58645d", line: "#bcc3b8" } } } };
 
 export default config;
 ````
@@ -9543,20 +7116,43 @@ test("invalid inputs fail explicitly", () =>
   "framework": "nextjs",
   "trailingSlash": true,
   "redirects": [
-    { "source": "/uk", "destination": "/", "permanent": true },
-    { "source": "/uk/:path*", "destination": "/:path*", "permanent": true },
-    { "source": "/ru", "destination": "/", "permanent": true }
+    {
+      "source": "/uk",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ru",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
-      "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public,max-age=86400" }]
+      "source": "/drinks/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public,max-age=86400"
+        }
+      ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]
