@@ -1,0 +1,390 @@
+{
+  "testedAt": "2026-09-14T09:00:58.721Z",
+  "environment": "Chromium emulated viewports; not physical hardware",
+  "results": [
+    {
+      "width": 360,
+      "route": "/",
+      "documentWidth": 360,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 360,
+      "route": "/en/",
+      "documentWidth": 360,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 360,
+      "route": "/menu/",
+      "documentWidth": 360,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 360,
+      "route": "/en/menu/",
+      "documentWidth": 360,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 360,
+      "route": "/investors/",
+      "documentWidth": 360,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 360,
+      "route": "/en/investors/",
+      "documentWidth": 360,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "documentWidth": 390,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/en/",
+      "documentWidth": 390,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/menu/",
+      "documentWidth": 390,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/en/menu/",
+      "documentWidth": 390,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/investors/",
+      "documentWidth": 390,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/en/investors/",
+      "documentWidth": 390,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 430,
+      "route": "/",
+      "documentWidth": 430,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 430,
+      "route": "/en/",
+      "documentWidth": 430,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 430,
+      "route": "/menu/",
+      "documentWidth": 430,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 430,
+      "route": "/en/menu/",
+      "documentWidth": 430,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 430,
+      "route": "/investors/",
+      "documentWidth": 430,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 430,
+      "route": "/en/investors/",
+      "documentWidth": 430,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "documentWidth": 768,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 768,
+      "route": "/en/",
+      "documentWidth": 768,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 768,
+      "route": "/menu/",
+      "documentWidth": 768,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 768,
+      "route": "/en/menu/",
+      "documentWidth": 768,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 768,
+      "route": "/investors/",
+      "documentWidth": 768,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 768,
+      "route": "/en/investors/",
+      "documentWidth": 768,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "documentWidth": 1024,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "route": "/en/",
+      "documentWidth": 1024,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "route": "/menu/",
+      "documentWidth": 1024,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "route": "/en/menu/",
+      "documentWidth": 1024,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "route": "/investors/",
+      "documentWidth": 1024,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1024,
+      "route": "/en/investors/",
+      "documentWidth": 1024,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "documentWidth": 1440,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/en/",
+      "documentWidth": 1440,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/menu/",
+      "documentWidth": 1440,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/en/menu/",
+      "documentWidth": 1440,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/investors/",
+      "documentWidth": 1440,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/en/investors/",
+      "documentWidth": 1440,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": []
+    },
+    {
+      "width": 1920,
+      "route": "/",
+      "documentWidth": 1920,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "route": "/en/",
+      "documentWidth": 1920,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "route": "/menu/",
+      "documentWidth": 1920,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "route": "/en/menu/",
+      "documentWidth": 1920,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "route": "/investors/",
+      "documentWidth": 1920,
+      "lang": "uk",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    },
+    {
+      "width": 1920,
+      "route": "/en/investors/",
+      "documentWidth": 1920,
+      "lang": "en",
+      "overflow": [],
+      "errors": [],
+      "violations": null
+    }
+  ],
+  "reduced": {
+    "preference": "true",
+    "pin": "relative",
+    "canvas": "none",
+    "animations": 0
+  }
+}

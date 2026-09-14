@@ -1,0 +1,26 @@
+{
+  "mobile": {
+    "scores": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 2483.8770000000004,
+    "cls": 0.0012415510953955964,
+    "bytes": 293021
+  },
+  "desktop": {
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 586.3393000000001,
+    "cls": 0.0032530396703259125,
+    "bytes": 284532
+  },
+  "environment": "Local production gzip server, Chromium 153, Lighthouse 13.4.1; mobile default simulation; desktop 1440x900; font naming metadata subsequently changed to comply with OFL reserved name.",
+  "javascriptGzipBytes": 146302
+}

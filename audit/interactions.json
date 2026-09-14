@@ -1,0 +1,51 @@
+{
+  "environment": "Emulated Chromium; does not certify physical Android 60fps",
+  "results": [
+    {
+      "width": 390,
+      "parallax": [
+        "translate3d(0px, 0.388889px, 0px)",
+        "translate3d(0px, 0.933333px, 0px)",
+        "translate3d(0px, 1.55556px, 0px)"
+      ],
+      "progress": "scaleX(0.111944)",
+      "gallery": "06",
+      "cycle": [
+        "Базовий",
+        "Обережний",
+        "Сильний"
+      ],
+      "conservative": "77 540 ₴",
+      "changed": "72 540 ₴",
+      "usd": "$1 727",
+      "invalid": 2,
+      "fallback": "07 / 01\nЗапит підготовлено.\n\nФайл готовий. Запит не надіслано. Передайте його засновнику через ваш наявний канал зв’язку.\n\nПідготувати ще один запит ↗",
+      "press": "scale(0.97)",
+      "gzipJs": 146302,
+      "transition": "hidden"
+    },
+    {
+      "width": 1440,
+      "parallax": [
+        "translate3d(0px, -0.192192px, 0px)",
+        "translate3d(0px, -0.461261px, 0px)",
+        "translate3d(0px, -0.768769px, 0px)"
+      ],
+      "progress": "scaleX(0.099827)",
+      "gallery": "04",
+      "cycle": [
+        "Базовий",
+        "Обережний",
+        "Сильний"
+      ],
+      "conservative": "77 540 ₴",
+      "changed": "72 540 ₴",
+      "usd": "$1 727",
+      "invalid": 2,
+      "fallback": "07 / 01\nЗапит підготовлено.\n\nФайл готовий. Запит не надіслано. Передайте його засновнику через ваш наявний канал зв’язку.\n\nПідготувати ще один запит ↗",
+      "press": "scale(0.97)",
+      "gzipJs": 146302,
+      "transition": "hidden"
+    }
+  ]
+}
